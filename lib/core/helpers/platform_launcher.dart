@@ -7,6 +7,13 @@ import '../../features/pharmacies/domain/pharmacy.dart';
 class PlatformLauncher {
   const PlatformLauncher._();
 
+  static Future<void> openExternalUrl(String url) async {
+    await launchUrl(
+      Uri.parse(url),
+      mode: LaunchMode.externalApplication,
+    );
+  }
+
   static Future<void> callPhone(String phoneNumber) async {
     // TODO(api): Track failed launch attempts when analytics is introduced.
     final phoneUri = Uri(scheme: 'tel', path: phoneNumber);

@@ -10,7 +10,6 @@ class HomeMapSection extends StatelessWidget {
     required this.mapController,
     required this.pharmacies,
     required this.selectedPharmacyId,
-    required this.sheetExtent,
     required this.userLocation,
     required this.onPharmacySelected,
     super.key,
@@ -19,14 +18,12 @@ class HomeMapSection extends StatelessWidget {
   final MapController mapController;
   final List<Pharmacy> pharmacies;
   final String? selectedPharmacyId;
-  final double sheetExtent;
   final LatLng? userLocation;
   final ValueChanged<String> onPharmacySelected;
 
   @override
   Widget build(BuildContext context) {
     final center = pharmacies.first.location;
-    final visibleMapCenterY = -sheetExtent;
 
     return Stack(
       fit: StackFit.expand,
@@ -39,8 +36,7 @@ class HomeMapSection extends StatelessWidget {
           ),
           children: [
             TileLayer(
-              urlTemplate:
-                  'https://basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+              urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
               userAgentPackageName: 'com.example.nobetci_app',
             ),
             MarkerLayer(
@@ -88,7 +84,7 @@ class HomeMapSection extends StatelessWidget {
           child: DecoratedBox(
             decoration: BoxDecoration(
               gradient: RadialGradient(
-                center: Alignment(0, visibleMapCenterY),
+                center: const Alignment(0, -0.34),
                 radius: 0.95,
                 colors: [
                   const Color(0xFF38BDF8).withValues(alpha: 0.2),

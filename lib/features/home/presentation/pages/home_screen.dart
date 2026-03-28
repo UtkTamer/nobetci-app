@@ -4,6 +4,7 @@ import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 
 import '../../../../core/constants/app_constants.dart';
+import '../../../../core/helpers/platform_launcher.dart';
 import '../../../../core/services/location_service.dart';
 import '../../../pharmacies/data/mock_pharmacy_repository.dart';
 import '../../../pharmacies/domain/pharmacy.dart';
@@ -136,6 +137,7 @@ class _HomeScreenState extends State<HomeScreen> {
             final sheetInset = constraints.maxHeight * _sheetExtent;
             final isSheetExpanded =
                 _sheetExtent > AppConstants.initialSheetSize + 0.02;
+            final showMapAttribution = !isSheetExpanded;
 
             return Stack(
               children: [
@@ -143,9 +145,21 @@ class _HomeScreenState extends State<HomeScreen> {
                   mapController: _mapController,
                   pharmacies: _pharmacies,
                   selectedPharmacyId: _selectedPharmacyId,
-                  sheetExtent: _sheetExtent,
                   userLocation: _userLocation,
                   onPharmacySelected: _onPharmacySelected,
+                ),
+                Positioned(
+                  left: 12,
+                  bottom: sheetInset + 10,
+                  child: AnimatedOpacity(
+                    duration: const Duration(milliseconds: 180),
+                    curve: Curves.easeOutCubic,
+                    opacity: showMapAttribution ? 1 : 0,
+                    child: IgnorePointer(
+                      ignoring: !showMapAttribution,
+                      child: const _MapAttribution(),
+                    ),
+                  ),
                 ),
                 Positioned(
                   right: 20,
@@ -252,6 +266,47 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             );
           },
+        ),
+      ),
+    );
+  }
+}
+
+class _MapAttribution extends StatelessWidget {
+  const _MapAttribution();
+
+  static const _legalUrl = 'https://www.openstreetmap.org/copyright';
+
+  @override
+  Widget build(BuildContext context) {
+    final textStyle = Theme.of(context).textTheme.bodySmall?.copyWith(
+      color: const Color(0xFFE2E8F0),
+      fontWeight: FontWeight.w600,
+      fontSize: 11,
+    );
+
+    return DecoratedBox(
+      decoration: const BoxDecoration(),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 2),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text('© OpenStreetMap', style: textStyle),
+            const SizedBox(width: 8),
+            GestureDetector(
+              behavior: HitTestBehavior.opaque,
+              onTap: () => PlatformLauncher.openExternalUrl(_legalUrl),
+              child: Text(
+                'Legal',
+                style: textStyle?.copyWith(
+                  color: const Color(0xFFBFDBFE),
+                  decoration: TextDecoration.underline,
+                  decorationColor: const Color(0xFFBFDBFE),
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
