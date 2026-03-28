@@ -1,0 +1,23 @@
+name: nobetci_app
+description: "Turkey on-duty pharmacy app prototype with map and bottom sheet."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_map: ^8.2.2
+  geolocator: ^14.0.2
+  latlong2: ^0.9.1
+  url_launcher: ^6.3.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
