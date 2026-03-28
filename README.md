@@ -1,17 +1,45 @@
-# nobetci_app
+# Nobetci App
 
-A new Flutter project.
+Nobetci App, yakındaki nobetci eczaneleri harita ve alt liste deneyimiyle gosteren bir Flutter prototipidir.
 
-## Getting Started
+## Ozellikler
 
-This project is a starting point for a Flutter application.
+- Harita uzerinde nobetci eczaneleri marker olarak gosterir.
+- Alttaki eczane panelinde arama ve detay acma deneyimi sunar.
+- Haritadan bir eczane secildiginde alt panel buyur ve ilgili eczanenin detaylari acilir.
+- Konum butonu ile kullanicinin mevcut konumu merkeze alinir.
+- Kullanicinin mevcut konumu harita uzerinde nokta olarak gosterilir.
+- Eczane kartlari icinden arama, arama ve yol tarifi aksiyonlari sunulur.
 
-A few resources to get you started if this is your first Flutter project:
+## Teknolojiler
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- Flutter
+- flutter_map
+- geolocator
+- url_launcher
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Proje Yapisi
+
+- `lib/features/home`: ana ekran, harita ve ust seviye etkileşimler
+- `lib/features/pharmacies`: eczane domain modeli, mock veri ve liste/panel bilesenleri
+- `lib/core`: sabitler, yardimci servisler ve ortak utility katmani
+- `test`: widget testleri
+
+## Calistirma
+
+```bash
+/Users/utkusair/flutter/bin/flutter pub get
+/Users/utkusair/flutter/bin/flutter run
+```
+
+## Test ve Analiz
+
+```bash
+/Users/utkusair/flutter/bin/flutter test
+/Users/utkusair/flutter/bin/flutter analyze
+```
+
+## Notlar
+
+- Konum ozelligi icin cihaz veya simulatorde konum izni verilmelidir.
+- Harita marker secimi ve konum butonu davranislari widget testleri ile dogrulanmistir.
