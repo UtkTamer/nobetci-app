@@ -149,13 +149,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 Positioned(
                   right: 20,
-                  bottom: sheetInset + 16,
-                  child: SafeArea(
-                    top: false,
-                    child: _LocateMeButton(
-                      isLoading: _isLocatingUser,
-                      onPressed: _centerOnUserLocation,
-                    ),
+                  bottom: sheetInset + 10,
+                  child: _LocateMeButton(
+                    isLoading: _isLocatingUser,
+                    onPressed: _centerOnUserLocation,
                   ),
                 ),
                 if (isSheetExpanded)
@@ -274,18 +271,18 @@ class _LocateMeButton extends StatelessWidget {
       child: InkWell(
         key: const ValueKey('locate_me_button'),
         onTap: isLoading ? null : onPressed,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(999),
         child: Ink(
-          width: 58,
-          height: 58,
+          width: 42,
+          height: 42,
           decoration: BoxDecoration(
             color: const Color(0xFF020617).withValues(alpha: 0.9),
-            borderRadius: BorderRadius.circular(20),
+            shape: BoxShape.circle,
             boxShadow: const [
               BoxShadow(
                 color: Color(0x66000000),
-                blurRadius: 20,
-                offset: Offset(0, 10),
+                blurRadius: 16,
+                offset: Offset(0, 8),
               ),
             ],
             border: Border.all(
@@ -298,10 +295,10 @@ class _LocateMeButton extends StatelessWidget {
               child: isLoading
                   ? const SizedBox(
                       key: ValueKey('locate_loading'),
-                      width: 22,
-                      height: 22,
+                      width: 16,
+                      height: 16,
                       child: CircularProgressIndicator(
-                        strokeWidth: 2.4,
+                        strokeWidth: 2,
                         valueColor: AlwaysStoppedAnimation<Color>(
                           Color(0xFF38BDF8),
                         ),
@@ -311,7 +308,7 @@ class _LocateMeButton extends StatelessWidget {
                       key: ValueKey('locate_icon'),
                       Icons.near_me_rounded,
                       color: Colors.white,
-                      size: 24,
+                      size: 18,
                     ),
             ),
           ),
