@@ -240,6 +240,9 @@ class _PharmacyBottomSheetState extends State<PharmacyBottomSheet> {
   @override
   Widget build(BuildContext context) {
     final filteredPharmacies = _filteredPharmacies;
+    final isExpanded =
+        _draggableController.isAttached &&
+        _draggableController.size > widget.initialChildSize + 0.02;
 
     return NotificationListener<DraggableScrollableNotification>(
       onNotification: (notification) {
@@ -294,16 +297,34 @@ class _PharmacyBottomSheetState extends State<PharmacyBottomSheet> {
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text(
-                                      'Açık Eczaneler',
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .titleLarge
-                                          ?.copyWith(
-                                            fontWeight: FontWeight.w700,
-                                            letterSpacing: -0.5,
-                                            color: Colors.white,
+                                    Row(
+                                      children: [
+                                        Expanded(
+                                          child: Text(
+                                            'Açık Eczaneler',
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .titleLarge
+                                                ?.copyWith(
+                                                  fontWeight: FontWeight.w700,
+                                                  letterSpacing: -0.5,
+                                                  color: Colors.white,
+                                                ),
                                           ),
+                                        ),
+                                        const SizedBox(width: 12),
+                                        if (isExpanded)
+                                          _SheetCollapseButton(
+                                            onTap: () {
+                                              FocusScope.of(context).unfocus();
+                                              unawaited(
+                                                _animateSheetTo(
+                                                  widget.initialChildSize,
+                                                ),
+                                              );
+                                            },
+                                          ),
+                                      ],
                                     ),
                                     const SizedBox(height: 16),
                                     DecoratedBox(
@@ -483,6 +504,40 @@ class _PinnedHandleHeader extends StatelessWidget {
         ),
         padding: const EdgeInsets.only(top: 10),
         child: const SheetDragHandle(),
+      ),
+    );
+  }
+}
+
+class _SheetCollapseButton extends StatelessWidget {
+  const _SheetCollapseButton({required this.onTap});
+
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Colors.transparent,
+      child: InkWell(
+        key: const ValueKey('sheet_collapse_button'),
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(18),
+        child: Ink(
+          width: 38,
+          height: 38,
+          decoration: BoxDecoration(
+            color: const Color(0xFF2C2C2E),
+            shape: BoxShape.circle,
+            border: Border.all(
+              color: Colors.white.withValues(alpha: 0.06),
+            ),
+          ),
+          child: const Icon(
+            Icons.close_rounded,
+            color: Colors.white,
+            size: 20,
+          ),
+        ),
       ),
     );
   }

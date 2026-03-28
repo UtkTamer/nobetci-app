@@ -36,8 +36,10 @@ class HomeMapSection extends StatelessWidget {
           ),
           children: [
             TileLayer(
-              urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+              urlTemplate:
+                  'https://basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
               userAgentPackageName: 'com.example.nobetci_app',
+              maxZoom: 20,
             ),
             MarkerLayer(
               markers: [

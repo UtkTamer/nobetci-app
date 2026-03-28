@@ -275,7 +275,8 @@ class _HomeScreenState extends State<HomeScreen> {
 class _MapAttribution extends StatelessWidget {
   const _MapAttribution();
 
-  static const _legalUrl = 'https://www.openstreetmap.org/copyright';
+  static const _cartoUrl = 'https://carto.com/attributions';
+  static const _osmLegalUrl = 'https://www.openstreetmap.org/copyright';
 
   @override
   Widget build(BuildContext context) {
@@ -289,16 +290,26 @@ class _MapAttribution extends StatelessWidget {
       decoration: const BoxDecoration(),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 2),
-        child: Row(
+        child: Column(
           mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('© OpenStreetMap', style: textStyle),
-            const SizedBox(width: 8),
             GestureDetector(
               behavior: HitTestBehavior.opaque,
-              onTap: () => PlatformLauncher.openExternalUrl(_legalUrl),
+              onTap: () => PlatformLauncher.openExternalUrl(_cartoUrl),
               child: Text(
-                'Legal',
+                '© CARTO',
+                style: textStyle?.copyWith(
+                  color: const Color(0xFFE2E8F0),
+                ),
+              ),
+            ),
+            const SizedBox(height: 2),
+            GestureDetector(
+              behavior: HitTestBehavior.opaque,
+              onTap: () => PlatformLauncher.openExternalUrl(_osmLegalUrl),
+              child: Text(
+                '© OpenStreetMap',
                 style: textStyle?.copyWith(
                   color: const Color(0xFFBFDBFE),
                   decoration: TextDecoration.underline,
