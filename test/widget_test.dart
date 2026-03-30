@@ -18,7 +18,8 @@ void main() {
     await tester.pumpWidget(const NobetciApp());
     await tester.pumpAndSettle();
 
-    expect(find.text('Yakindaki Nobetci Eczaneler'), findsOneWidget);
+    expect(find.byKey(const ValueKey('city_dropdown')), findsOneWidget);
+    expect(find.text('İstanbul'), findsWidgets);
     expect(find.text('Merkez Eczanesi'), findsWidgets);
     expect(find.text('0.6 km'), findsOneWidget);
     expect(find.text('Açık Eczaneler'), findsOneWidget);
