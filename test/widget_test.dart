@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:nobetci_app/app/app.dart';
 import 'package:nobetci_app/core/services/location_service.dart';
+import 'package:nobetci_app/features/pharmacies/data/repositories/mock_api_pharmacy_repository.dart';
 import 'package:latlong2/latlong.dart';
 
 class _FakeLocationService implements LocationService {
@@ -15,28 +16,24 @@ class _FakeLocationService implements LocationService {
 
 void main() {
   testWidgets('home screen renders pharmacy list', (tester) async {
-    await tester.pumpWidget(const NobetciApp());
+    await tester.pumpWidget(
+      NobetciApp(pharmacyRepository: const MockApiPharmacyRepository()),
+    );
     await tester.pumpAndSettle();
 
     expect(find.byKey(const ValueKey('city_dropdown')), findsOneWidget);
-    expect(find.text('İstanbul'), findsWidgets);
+    expect(find.text('Ankara'), findsWidgets);
     expect(find.text('Merkez Eczanesi'), findsWidgets);
-    expect(find.text('0.6 km'), findsOneWidget);
+    expect(find.text('Ankara için 3 eczane listeleniyor'), findsOneWidget);
     expect(find.text('Açık Eczaneler'), findsOneWidget);
     expect(find.text('Eczane ara'), findsOneWidget);
-    expect(
-      find.text('Osmanağa Mah. Söğütlüçeşme Cad. No:42 Kadıköy / İstanbul'),
-      findsNothing,
-    );
-    expect(find.text('Son doğrulama: 27.03.2026 00:45'), findsNothing);
-    expect(
-      find.text('Caferağa Mah. Moda Cad. No:118 Kadıköy / İstanbul'),
-      findsNothing,
-    );
+    expect(find.text('Son güncelleme: 30.03.2026 09:00'), findsOneWidget);
   });
 
   testWidgets('pharmacy list can be searched', (tester) async {
-    await tester.pumpWidget(const NobetciApp());
+    await tester.pumpWidget(
+      NobetciApp(pharmacyRepository: const MockApiPharmacyRepository()),
+    );
     await tester.pumpAndSettle();
 
     await tester.enterText(find.byType(TextField), 'olmayan');
@@ -48,18 +45,17 @@ void main() {
   testWidgets('tapping a map marker expands and opens pharmacy details', (
     tester,
   ) async {
-    await tester.pumpWidget(const NobetciApp());
+    await tester.pumpWidget(
+      NobetciApp(pharmacyRepository: const MockApiPharmacyRepository()),
+    );
     await tester.pumpAndSettle();
 
-    await tester.tap(find.byKey(const ValueKey('map_marker_kadikoy-merkez')));
+    await tester.tap(find.byKey(const ValueKey('map_marker_ankara-merkez')));
     await tester.pump();
     await tester.pumpAndSettle();
 
-    expect(
-      find.text('Osmanağa Mah. Söğütlüçeşme Cad. No:42 Kadıköy / İstanbul'),
-      findsOneWidget,
-    );
-    expect(find.text('Son doğrulama: 27.03.2026 00:45'), findsOneWidget);
+    expect(find.text('Ankara Merkez Mah. Sağlık Cad. No:42'), findsOneWidget);
+    expect(find.text('Son doğrulama: 30.03.2026 08:45'), findsOneWidget);
     expect(find.text('Ara'), findsOneWidget);
     expect(find.text('Yol Tarifi'), findsOneWidget);
   });
@@ -68,8 +64,9 @@ void main() {
     tester,
   ) async {
     await tester.pumpWidget(
-      const NobetciApp(
+      NobetciApp(
         locationService: _FakeLocationService(LatLng(40.9899, 29.0301)),
+        pharmacyRepository: MockApiPharmacyRepository(),
       ),
     );
     await tester.pumpAndSettle();

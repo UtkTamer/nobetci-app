@@ -11,6 +11,15 @@ abstract class LocationService {
   Future<LatLng> determinePosition();
 }
 
+class FixedLocationService implements LocationService {
+  const FixedLocationService(this.location);
+
+  final LatLng location;
+
+  @override
+  Future<LatLng> determinePosition() async => location;
+}
+
 class GeolocatorLocationService implements LocationService {
   const GeolocatorLocationService();
 

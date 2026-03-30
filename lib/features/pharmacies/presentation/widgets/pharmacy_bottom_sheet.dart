@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 import '../../../../shared/widgets/sheet_drag_handle.dart';
+import '../../../home/presentation/models/home_screen_status.dart';
 import '../../domain/pharmacy.dart';
 import 'pharmacy_list_item.dart';
 
@@ -35,6 +36,10 @@ class PharmacyBottomSheet extends StatefulWidget {
     required this.initialChildSize,
     required this.maxChildSize,
     required this.controller,
+    required this.status,
+    this.errorMessage,
+    this.onRetry,
+    this.onRefresh,
     this.onExtentChanged,
     super.key,
   });
@@ -46,6 +51,10 @@ class PharmacyBottomSheet extends StatefulWidget {
   final double initialChildSize;
   final double maxChildSize;
   final PharmacyBottomSheetController controller;
+  final HomeScreenStatus status;
+  final String? errorMessage;
+  final VoidCallback? onRetry;
+  final Future<void> Function()? onRefresh;
   final ValueChanged<double>? onExtentChanged;
 
   @override
@@ -80,6 +89,14 @@ class _PharmacyBottomSheetState extends State<PharmacyBottomSheet> {
   @override
   void didUpdateWidget(covariant PharmacyBottomSheet oldWidget) {
     super.didUpdateWidget(oldWidget);
+
+    if (oldWidget.pharmacies != widget.pharmacies) {
+      _itemKeys
+        ..clear()
+        ..addEntries(
+          widget.pharmacies.map((pharmacy) => MapEntry(pharmacy.id, GlobalKey())),
+        );
+    }
 
     if (oldWidget.selectedPharmacyId == widget.selectedPharmacyId ||
         widget.selectedPharmacyId == null) {
@@ -387,27 +404,11 @@ class _PharmacyBottomSheetState extends State<PharmacyBottomSheet> {
                             ),
                             SliverPadding(
                               padding: const EdgeInsets.fromLTRB(20, 0, 20, 24),
-                              sliver: filteredPharmacies.isEmpty
-                                  ? SliverToBoxAdapter(
-                                      child: Container(
-                                        padding: const EdgeInsets.all(20),
-                                        decoration: BoxDecoration(
-                                          color: const Color(0xFF242426),
-                                          borderRadius:
-                                              BorderRadius.circular(22),
-                                        ),
-                                        child: Text(
-                                          'Aramaya uygun eczane bulunamadı.',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .bodyLarge
-                                              ?.copyWith(
-                                                color: const Color(0xFFAEAEB2),
-                                              ),
-                                        ),
-                                      ),
-                                    )
-                                  : SliverList(
+                              sliver: _buildContentSliver(
+                                    context,
+                                    filteredPharmacies,
+                                  ) ??
+                                  SliverList(
                                       delegate: SliverChildBuilderDelegate(
                                         (context, index) {
                                           if (index.isOdd) {
@@ -471,6 +472,156 @@ class _PharmacyBottomSheetState extends State<PharmacyBottomSheet> {
           );
         },
       ),
+    );
+  }
+
+  Widget? _buildContentSliver(
+    BuildContext context,
+    List<Pharmacy> filteredPharmacies,
+  ) {
+    if (widget.status == HomeScreenStatus.loading) {
+      return const SliverToBoxAdapter(
+        child: _StatusCard(
+          child: _LoadingState(),
+        ),
+      );
+    }
+
+    if (widget.status == HomeScreenStatus.error) {
+      return SliverToBoxAdapter(
+        child: _StatusCard(
+          child: _ErrorState(
+            message: widget.errorMessage ?? 'Bir sorun oluştu.',
+            onRetry: widget.onRetry,
+          ),
+        ),
+      );
+    }
+
+    if (widget.pharmacies.isEmpty) {
+      return SliverToBoxAdapter(
+        child: _StatusCard(
+          child: _EmptyState(
+            onRefresh: widget.onRefresh,
+          ),
+        ),
+      );
+    }
+
+    if (filteredPharmacies.isEmpty) {
+      return SliverToBoxAdapter(
+        child: _StatusCard(
+          child: Text(
+            'Aramaya uygun eczane bulunamadı.',
+            style: Theme.of(
+              context,
+            ).textTheme.bodyLarge?.copyWith(color: const Color(0xFFAEAEB2)),
+          ),
+        ),
+      );
+    }
+
+    return null;
+  }
+}
+
+class _StatusCard extends StatelessWidget {
+  const _StatusCard({required this.child});
+
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        color: const Color(0xFF242426),
+        borderRadius: BorderRadius.circular(22),
+      ),
+      child: child,
+    );
+  }
+}
+
+class _LoadingState extends StatelessWidget {
+  const _LoadingState();
+
+  @override
+  Widget build(BuildContext context) {
+    return const Row(
+      children: [
+        SizedBox(
+          width: 18,
+          height: 18,
+          child: CircularProgressIndicator(
+            strokeWidth: 2,
+            valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF34C759)),
+          ),
+        ),
+        SizedBox(width: 12),
+        Expanded(
+          child: Text(
+            'Nöbetçi eczane verileri yükleniyor...',
+            style: TextStyle(color: Color(0xFFAEAEB2)),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class _ErrorState extends StatelessWidget {
+  const _ErrorState({
+    required this.message,
+    required this.onRetry,
+  });
+
+  final String message;
+  final VoidCallback? onRetry;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          message,
+          style: Theme.of(
+            context,
+          ).textTheme.bodyLarge?.copyWith(color: const Color(0xFFAEAEB2)),
+        ),
+        const SizedBox(height: 12),
+        FilledButton(
+          onPressed: onRetry,
+          child: const Text('Tekrar Dene'),
+        ),
+      ],
+    );
+  }
+}
+
+class _EmptyState extends StatelessWidget {
+  const _EmptyState({required this.onRefresh});
+
+  final Future<void> Function()? onRefresh;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Bu şehir için aktif nöbetçi eczane verisi bulunamadı.',
+          style: Theme.of(
+            context,
+          ).textTheme.bodyLarge?.copyWith(color: const Color(0xFFAEAEB2)),
+        ),
+        const SizedBox(height: 12),
+        FilledButton(
+          onPressed: onRefresh == null ? null : () => unawaited(onRefresh!()),
+          child: const Text('Yeniden Yükle'),
+        ),
+      ],
     );
   }
 }

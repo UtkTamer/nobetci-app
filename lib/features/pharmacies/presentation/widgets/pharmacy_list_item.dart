@@ -50,8 +50,9 @@ class PharmacyListItem extends StatelessWidget {
                 children: [
                   _PharmacyListItemHeader(
                     name: pharmacy.name,
-                    distanceLabel:
-                        '${pharmacy.distanceKm.toStringAsFixed(1)} km',
+                    distanceLabel: pharmacy.distanceKm.isFinite
+                        ? '${pharmacy.distanceKm.toStringAsFixed(1)} km'
+                        : 'Konum yok',
                     isExpanded: isExpanded,
                     titleStyle: titleStyle,
                     distanceStyle: distanceStyle,
@@ -158,12 +159,30 @@ class _ExpandedPharmacyDetails extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 8),
+        if (pharmacy.district.isNotEmpty) ...[
+          Text(
+            pharmacy.district,
+            style: Theme.of(
+              context,
+            ).textTheme.bodySmall?.copyWith(color: const Color(0xFF8E8E93)),
+          ),
+          const SizedBox(height: 8),
+        ],
         Text(
           'Son doğrulama: ${DateTimeFormatter.formatShort(pharmacy.lastVerifiedAt)}',
           style: Theme.of(
             context,
           ).textTheme.bodySmall?.copyWith(color: const Color(0xFF8E8E93)),
         ),
+        if (pharmacy.source.isNotEmpty) ...[
+          const SizedBox(height: 6),
+          Text(
+            'Kaynak: ${pharmacy.source}',
+            style: Theme.of(
+              context,
+            ).textTheme.bodySmall?.copyWith(color: const Color(0xFF8E8E93)),
+          ),
+        ],
         const SizedBox(height: 16),
         Row(
           children: [
@@ -186,9 +205,13 @@ class _ExpandedPharmacyDetails extends StatelessWidget {
                   backgroundColor: const Color(0xFF34C759),
                   foregroundColor: const Color(0xFF04130A),
                 ),
-                onPressed: () => PlatformLauncher.openDirections(pharmacy),
+                onPressed: pharmacy.hasCoordinates
+                    ? () => PlatformLauncher.openDirections(pharmacy)
+                    : null,
                 icon: const Icon(Icons.directions_outlined),
-                label: const Text('Yol Tarifi'),
+                label: Text(
+                  pharmacy.hasCoordinates ? 'Yol Tarifi' : 'Konum Yok',
+                ),
               ),
             ),
           ],

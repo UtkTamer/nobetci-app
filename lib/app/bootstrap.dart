@@ -12,5 +12,5 @@ void bootstrap() {
       statusBarBrightness: Brightness.dark,
     ),
   );
-  runApp(const NobetciApp());
+  runApp(NobetciApp());
 }

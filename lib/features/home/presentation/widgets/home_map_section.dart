@@ -23,7 +23,10 @@ class HomeMapSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final center = pharmacies.first.location;
+    final pharmacyWithCoordinates = pharmacies.where((item) => item.hasCoordinates);
+    final center = pharmacyWithCoordinates.isNotEmpty
+        ? pharmacyWithCoordinates.first.location
+        : const LatLng(39.0, 35.0);
 
     return Stack(
       fit: StackFit.expand,
@@ -43,19 +46,19 @@ class HomeMapSection extends StatelessWidget {
             ),
             MarkerLayer(
               markers: [
-                ...pharmacies.map(
-                  (pharmacy) => Marker(
-                    width: 64,
-                    height: 64,
-                    point: pharmacy.location,
-                    child: _MapMarker(
-                      key: ValueKey('map_marker_${pharmacy.id}'),
-                      label: pharmacy.name,
-                      isSelected: pharmacy.id == selectedPharmacyId,
-                      onTap: () => onPharmacySelected(pharmacy.id),
+                for (final pharmacy in pharmacies)
+                  if (pharmacy.hasCoordinates)
+                    Marker(
+                      width: 64,
+                      height: 64,
+                      point: pharmacy.location,
+                      child: _MapMarker(
+                        key: ValueKey('map_marker_${pharmacy.id}'),
+                        label: pharmacy.name,
+                        isSelected: pharmacy.id == selectedPharmacyId,
+                        onTap: () => onPharmacySelected(pharmacy.id),
+                      ),
                     ),
-                  ),
-                ),
                 if (userLocation != null)
                   Marker(
                     width: 30,

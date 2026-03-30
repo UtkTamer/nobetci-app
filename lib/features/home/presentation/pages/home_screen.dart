@@ -6,56 +6,74 @@ import 'package:latlong2/latlong.dart';
 import '../../../../core/constants/app_constants.dart';
 import '../../../../core/helpers/platform_launcher.dart';
 import '../../../../core/services/location_service.dart';
-import '../../../pharmacies/data/mock_pharmacy_repository.dart';
+import '../models/home_screen_status.dart';
+import '../../../pharmacies/data/models/pharmacy_feed.dart';
+import '../../../pharmacies/data/repositories/pharmacy_repository.dart';
+import '../../../pharmacies/data/repositories/remote_pharmacy_repository.dart';
 import '../../../pharmacies/domain/pharmacy.dart';
 import '../../../pharmacies/presentation/widgets/pharmacy_bottom_sheet.dart';
 import '../widgets/home_map_section.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({
+  HomeScreen({
     this.locationService = const GeolocatorLocationService(),
+    PharmacyRepository? pharmacyRepository,
     super.key,
-  });
+  }) : pharmacyRepository = pharmacyRepository ?? RemotePharmacyRepository();
 
   final LocationService locationService;
+  final PharmacyRepository pharmacyRepository;
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  static const List<String> _cities = [
-    'İstanbul',
-    'Ankara',
-    'İzmir',
-    'Bursa',
-    'Antalya',
-  ];
-
-  final _repository = const MockPharmacyRepository();
   final _mapController = MapController();
   final _sheetController = PharmacyBottomSheetController();
-  late final List<Pharmacy> _pharmacies;
-  late final Pharmacy _nearestPharmacy;
+  List<String> _cities = const [];
+  List<Pharmacy> _pharmacies = const [];
   double _mapViewportHeight = 0;
   double _sheetExtent = AppConstants.initialSheetSize;
   double _mapDragDistance = 0;
   String? _selectedPharmacyId;
-  String _selectedCity = _cities.first;
+  String? _selectedCity;
   LatLng? _userLocation;
   bool _isLocatingUser = false;
+  HomeScreenStatus _status = HomeScreenStatus.idle;
+  String? _errorMessage;
+  DateTime? _updatedAt;
+  bool _isStale = false;
 
   @override
   void initState() {
     super.initState();
-    _pharmacies = _repository.getPharmacies();
-    _pharmacies.sort(
-      (left, right) => left.distanceKm.compareTo(right.distanceKm),
-    );
-    _nearestPharmacy = _pharmacies.first;
+    _primeUserLocation();
+    _loadInitialData();
+  }
+
+  Future<void> _primeUserLocation() async {
+    try {
+      final currentLocation = await widget.locationService.determinePosition();
+
+      if (!mounted) {
+        return;
+      }
+
+      setState(() {
+        _userLocation = currentLocation;
+        _pharmacies = _applyDistanceSorting(_pharmacies, currentLocation);
+      });
+    } catch (_) {
+      // Keep initial load resilient if location cannot be resolved.
+    }
   }
 
   void _onPharmacySelected(String pharmacyId) {
+    if (_pharmacies.isEmpty) {
+      return;
+    }
+
     final isSamePharmacy = _selectedPharmacyId == pharmacyId;
     final nextSelectedPharmacyId = isSamePharmacy ? null : pharmacyId;
 
@@ -71,16 +89,180 @@ class _HomeScreenState extends State<HomeScreen> {
     final selectedPharmacy = _pharmacies.firstWhere(
       (pharmacy) => pharmacy.id == nextSelectedPharmacyId,
     );
-    final visibleMapCenterOffset = Offset(
-      0,
-      -(_mapViewportHeight * AppConstants.initialSheetSize) / 2,
-    );
-    _mapController.move(
-      selectedPharmacy.location,
-      AppConstants.focusZoom,
-      offset: visibleMapCenterOffset,
-    );
+
+    if (selectedPharmacy.hasCoordinates) {
+      final visibleMapCenterOffset = Offset(
+        0,
+        -(_mapViewportHeight * AppConstants.initialSheetSize) / 2,
+      );
+      _mapController.move(
+        selectedPharmacy.location,
+        AppConstants.focusZoom,
+        offset: visibleMapCenterOffset,
+      );
+    }
+
     _sheetController.expandToMax(AppConstants.maxSheetSize);
+  }
+
+  Future<void> _loadInitialData() async {
+    setState(() {
+      _status = HomeScreenStatus.loading;
+      _errorMessage = null;
+    });
+
+    try {
+      final cities = await widget.pharmacyRepository.fetchCities();
+      if (!mounted) {
+        return;
+      }
+
+      final selectedCity = _preferredInitialCity(cities);
+      PharmacyFeed? feed;
+      if (selectedCity != null) {
+        feed = await widget.pharmacyRepository.fetchOnDutyPharmacies(
+          selectedCity,
+        );
+      }
+
+      if (!mounted) {
+        return;
+      }
+
+      final pharmacies = _applyDistanceSorting(
+        feed?.pharmacies ?? const [],
+        _userLocation,
+      );
+      _syncMapToFirstCoordinate(pharmacies);
+
+      setState(() {
+        _cities = cities;
+        _selectedCity = selectedCity;
+        _pharmacies = pharmacies;
+        _updatedAt = feed?.updatedAt;
+        _isStale = feed?.isStale ?? false;
+        _status = HomeScreenStatus.loaded;
+      });
+    } on PharmacyRepositoryException catch (error) {
+      if (!mounted) {
+        return;
+      }
+
+      setState(() {
+        _status = HomeScreenStatus.error;
+        _errorMessage = error.message;
+      });
+    } catch (_) {
+      if (!mounted) {
+        return;
+      }
+
+      setState(() {
+        _status = HomeScreenStatus.error;
+        _errorMessage = 'Veri yüklenirken bir sorun oluştu.';
+      });
+    }
+  }
+
+  Future<void> _loadCity(String city, {bool isRefresh = false}) async {
+    setState(() {
+      _status = isRefresh ? HomeScreenStatus.refreshing : HomeScreenStatus.loading;
+      _selectedCity = city;
+      _errorMessage = null;
+      _selectedPharmacyId = null;
+    });
+
+    try {
+      final feed = await widget.pharmacyRepository.fetchOnDutyPharmacies(city);
+      if (!mounted) {
+        return;
+      }
+
+      final pharmacies = _applyDistanceSorting(feed.pharmacies, _userLocation);
+      _syncMapToFirstCoordinate(pharmacies);
+
+      setState(() {
+        _pharmacies = pharmacies;
+        _updatedAt = feed.updatedAt;
+        _isStale = feed.isStale;
+        _status = HomeScreenStatus.loaded;
+      });
+    } on PharmacyRepositoryException catch (error) {
+      if (!mounted) {
+        return;
+      }
+
+      setState(() {
+        _status = HomeScreenStatus.error;
+        _errorMessage = error.message;
+      });
+    } catch (_) {
+      if (!mounted) {
+        return;
+      }
+
+      setState(() {
+        _status = HomeScreenStatus.error;
+        _errorMessage = 'Seçilen şehir için veri alınamadı.';
+      });
+    }
+  }
+
+  String? _preferredInitialCity(List<String> cities) {
+    if (cities.isEmpty) {
+      return null;
+    }
+
+    for (final city in cities) {
+      if (city.toLowerCase() == 'ankara') {
+        return city;
+      }
+    }
+
+    return cities.first;
+  }
+
+  void _syncMapToFirstCoordinate(List<Pharmacy> pharmacies) {
+    final firstWithCoordinates = pharmacies.where((item) => item.hasCoordinates);
+    if (firstWithCoordinates.isEmpty) {
+      return;
+    }
+
+    _mapController.move(firstWithCoordinates.first.location, AppConstants.defaultZoom);
+  }
+
+  List<Pharmacy> _applyDistanceSorting(
+    List<Pharmacy> pharmacies,
+    LatLng? userLocation,
+  ) {
+    if (userLocation == null) {
+      return pharmacies;
+    }
+
+    const distance = Distance();
+    final withDistance = pharmacies
+        .map((pharmacy) {
+          if (!pharmacy.hasCoordinates) {
+            return pharmacy.copyWith(distanceKm: double.infinity);
+          }
+
+          final meters = distance(userLocation, pharmacy.location);
+          return pharmacy.copyWith(distanceKm: meters / 1000);
+        })
+        .toList();
+
+    withDistance.sort((left, right) => left.distanceKm.compareTo(right.distanceKm));
+    return withDistance;
+  }
+
+  Pharmacy? get _nearestPharmacy {
+    for (final pharmacy in _pharmacies) {
+      if (pharmacy.distanceKm.isFinite) {
+        return pharmacy;
+      }
+    }
+
+    return null;
   }
 
   Future<void> _centerOnUserLocation() async {
@@ -101,6 +283,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
       setState(() {
         _userLocation = currentLocation;
+        _pharmacies = _applyDistanceSorting(_pharmacies, currentLocation);
       });
 
       _mapController.move(currentLocation, AppConstants.userLocationZoom);
@@ -133,6 +316,11 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final selectedCity = _selectedCity;
+    final hasData = _status == HomeScreenStatus.loaded ||
+        _status == HomeScreenStatus.refreshing;
+    final nearestPharmacy = _nearestPharmacy;
+
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
@@ -214,59 +402,78 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        _CityDropdown(
-                          value: _selectedCity,
-                          items: _cities,
-                          onChanged: (city) {
-                            if (city == null || city == _selectedCity) {
-                              return;
-                            }
+                        if (_cities.isNotEmpty && selectedCity != null)
+                          _CityDropdown(
+                            value: selectedCity,
+                            items: _cities,
+                            onChanged: (city) {
+                              if (city == null || city == _selectedCity) {
+                                return;
+                              }
 
-                            setState(() {
-                              _selectedCity = city;
-                            });
-                          },
-                        ),
+                              _loadCity(city);
+                            },
+                          ),
                         const SizedBox(height: 6),
                         Text(
-                          '$_selectedCity için ${_pharmacies.length} eczane listeleniyor',
+                          _buildStatusSummary(),
                           style: Theme.of(context).textTheme.bodyMedium
                               ?.copyWith(color: const Color(0xFFCBD5E1)),
                         ),
-                        const Spacer(),
-                        Align(
-                          alignment: Alignment.centerLeft,
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: const Color(
-                                0xFF020617,
-                              ).withValues(alpha: 0.7),
-                              borderRadius: BorderRadius.circular(999),
-                              border: Border.all(
-                                color: Colors.white.withValues(alpha: 0.08),
-                              ),
+                        if (_updatedAt != null) ...[
+                          const SizedBox(height: 6),
+                          Text(
+                            _isStale
+                                ? 'Son güncelleme eski olabilir: ${_formatTimestamp(_updatedAt!)}'
+                                : 'Son güncelleme: ${_formatTimestamp(_updatedAt!)}',
+                            style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                              color: _isStale
+                                  ? const Color(0xFFFBBF24)
+                                  : const Color(0xFF94A3B8),
                             ),
-                            child: Chip(
-                              side: BorderSide.none,
-                              backgroundColor: Colors.transparent,
-                              label: Text(
-                                '${_nearestPharmacy.distanceKm.toStringAsFixed(1)} km uzakta',
+                          ),
+                        ],
+                        const Spacer(),
+                        if (nearestPharmacy != null)
+                          Align(
+                            alignment: Alignment.centerLeft,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: const Color(
+                                  0xFF020617,
+                                ).withValues(alpha: 0.7),
+                                borderRadius: BorderRadius.circular(999),
+                                border: Border.all(
+                                  color: Colors.white.withValues(alpha: 0.08),
+                                ),
+                              ),
+                              child: Chip(
+                                side: BorderSide.none,
+                                backgroundColor: Colors.transparent,
+                                label: Text(
+                                  '${nearestPharmacy.distanceKm.toStringAsFixed(1)} km uzakta',
+                                ),
                               ),
                             ),
                           ),
-                        ),
                       ],
                     ),
                   ),
                 ),
                 PharmacyBottomSheet(
                   controller: _sheetController,
-                  pharmacies: _pharmacies,
+                  pharmacies: hasData ? _pharmacies : const [],
                   selectedPharmacyId: _selectedPharmacyId,
                   onPharmacySelected: _onPharmacySelected,
                   minChildSize: AppConstants.minSheetSize,
                   initialChildSize: AppConstants.initialSheetSize,
                   maxChildSize: AppConstants.maxSheetSize,
+                  status: _status,
+                  errorMessage: _errorMessage,
+                  onRetry: selectedCity == null ? null : () => _loadCity(selectedCity),
+                  onRefresh: selectedCity == null
+                      ? null
+                      : () => _loadCity(selectedCity, isRefresh: true),
                   onExtentChanged: (extent) {
                     if (_sheetExtent == extent) {
                       return;
@@ -283,6 +490,31 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
     );
+  }
+
+  String _buildStatusSummary() {
+    if (_status == HomeScreenStatus.loading) {
+      return 'Nöbetçi eczane verileri yükleniyor';
+    }
+
+    if (_status == HomeScreenStatus.refreshing) {
+      return '${_selectedCity ?? 'Seçili şehir'} için veriler yenileniyor';
+    }
+
+    if (_status == HomeScreenStatus.error) {
+      return _errorMessage ?? 'Veri alınamadı';
+    }
+
+    return '${_selectedCity ?? 'Seçili şehir'} için ${_pharmacies.length} eczane listeleniyor';
+  }
+
+  String _formatTimestamp(DateTime value) {
+    final day = value.day.toString().padLeft(2, '0');
+    final month = value.month.toString().padLeft(2, '0');
+    final year = value.year;
+    final hour = value.hour.toString().padLeft(2, '0');
+    final minute = value.minute.toString().padLeft(2, '0');
+    return '$day.$month.$year $hour:$minute';
   }
 }
 
@@ -316,6 +548,13 @@ class _CityDropdown extends StatelessWidget {
               key: const ValueKey('city_dropdown'),
               borderRadius: borderRadius,
               onTap: () async {
+                final availableCities = items
+                    .where((city) => city != value)
+                    .toList();
+                if (availableCities.isEmpty) {
+                  return;
+                }
+
                 final button = context.findRenderObject() as RenderBox;
                 final overlay = Overlay.of(context).context.findRenderObject()
                     as RenderBox;
@@ -349,9 +588,7 @@ class _CityDropdown extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(22),
                   ),
-                  items: items
-                      .where((city) => city != value)
-                      .toList()
+                  items: availableCities
                       .asMap()
                       .entries
                       .map((entry) {
