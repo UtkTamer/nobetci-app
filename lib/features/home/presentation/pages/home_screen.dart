@@ -24,6 +24,14 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  static const List<String> _cities = [
+    'İstanbul',
+    'Ankara',
+    'İzmir',
+    'Bursa',
+    'Antalya',
+  ];
+
   final _repository = const MockPharmacyRepository();
   final _mapController = MapController();
   final _sheetController = PharmacyBottomSheetController();
@@ -33,6 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
   double _sheetExtent = AppConstants.initialSheetSize;
   double _mapDragDistance = 0;
   String? _selectedPharmacyId;
+  String _selectedCity = _cities.first;
   LatLng? _userLocation;
   bool _isLocatingUser = false;
 
@@ -205,17 +214,22 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          'Yakindaki Nobetci Eczaneler',
-                          style: Theme.of(context).textTheme.headlineSmall
-                              ?.copyWith(
-                                fontWeight: FontWeight.w700,
-                                color: Colors.white,
-                              ),
+                        _CityDropdown(
+                          value: _selectedCity,
+                          items: _cities,
+                          onChanged: (city) {
+                            if (city == null || city == _selectedCity) {
+                              return;
+                            }
+
+                            setState(() {
+                              _selectedCity = city;
+                            });
+                          },
                         ),
                         const SizedBox(height: 6),
                         Text(
-                          '${_pharmacies.length} eczane listeleniyor',
+                          '$_selectedCity için ${_pharmacies.length} eczane listeleniyor',
                           style: Theme.of(context).textTheme.bodyMedium
                               ?.copyWith(color: const Color(0xFFCBD5E1)),
                         ),
@@ -267,6 +281,138 @@ class _HomeScreenState extends State<HomeScreen> {
             );
           },
         ),
+      ),
+    );
+  }
+}
+
+class _CityDropdown extends StatelessWidget {
+  const _CityDropdown({
+    required this.value,
+    required this.items,
+    required this.onChanged,
+  });
+
+  final String value;
+  final List<String> items;
+  final ValueChanged<String?> onChanged;
+
+  @override
+  Widget build(BuildContext context) {
+    const dropdownRadius = 22.0;
+    final borderRadius = BorderRadius.circular(dropdownRadius);
+    final textStyle = Theme.of(context).textTheme.titleMedium?.copyWith(
+      fontWeight: FontWeight.w700,
+      color: Colors.white,
+      letterSpacing: -0.3,
+    );
+    return IntrinsicWidth(
+      child: Builder(
+        builder: (context) {
+          return Material(
+            color: const Color(0xFF242426),
+            borderRadius: borderRadius,
+            child: InkWell(
+              key: const ValueKey('city_dropdown'),
+              borderRadius: borderRadius,
+              onTap: () async {
+                final button = context.findRenderObject() as RenderBox;
+                final overlay = Overlay.of(context).context.findRenderObject()
+                    as RenderBox;
+                const menuOffset = 8.0;
+                final position = RelativeRect.fromRect(
+                  Rect.fromPoints(
+                    button.localToGlobal(
+                      Offset(0, button.size.height + menuOffset),
+                      ancestor: overlay,
+                    ),
+                    button.localToGlobal(
+                      Offset(
+                        button.size.width,
+                        button.size.height + menuOffset,
+                      ),
+                      ancestor: overlay,
+                    ),
+                  ),
+                  Offset.zero & overlay.size,
+                );
+
+                final selectedCity = await showMenu<String>(
+                  context: context,
+                  position: position,
+                  constraints: BoxConstraints(minWidth: button.size.width),
+                  elevation: 8,
+                  shadowColor: const Color(0xFF020617).withValues(alpha: 0.2),
+                  color: const Color(0xFF242426),
+                  surfaceTintColor: Colors.transparent,
+                  menuPadding: const EdgeInsets.symmetric(vertical: 6),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(22),
+                  ),
+                  items: items
+                      .where((city) => city != value)
+                      .toList()
+                      .asMap()
+                      .entries
+                      .map((entry) {
+                    final index = entry.key;
+                    final city = entry.value;
+                    final isLast = index == items.length - 1;
+
+                    return PopupMenuItem<String>(
+                      value: city,
+                      padding: EdgeInsets.zero,
+                      child: Container(
+                        height: 48,
+                        padding: const EdgeInsets.symmetric(horizontal: 16),
+                        decoration: BoxDecoration(
+                          border: isLast
+                              ? null
+                              : Border(
+                                  bottom: BorderSide(
+                                    color: Colors.white.withValues(alpha: 0.05),
+                                  ),
+                                ),
+                        ),
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          city,
+                          style: textStyle?.copyWith(
+                            color: const Color(0xFFD1D1D6),
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    );
+                  }).toList(),
+                );
+
+                if (selectedCity != null) {
+                  onChanged(selectedCity);
+                }
+              },
+              child: Container(
+                height: 48,
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                decoration: BoxDecoration(
+                  borderRadius: borderRadius,
+                  border: Border.all(color: Colors.white.withValues(alpha: 0.05)),
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(value, style: textStyle),
+                    const SizedBox(width: 8),
+                    const Icon(
+                      Icons.keyboard_arrow_down_rounded,
+                      color: Color(0xFF8E8E93),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          );
+        },
       ),
     );
   }
@@ -333,27 +479,25 @@ class _LocateMeButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.transparent,
+      color: const Color(0xFF242426),
+      shape: const CircleBorder(),
       child: InkWell(
         key: const ValueKey('locate_me_button'),
         onTap: isLoading ? null : onPressed,
-        borderRadius: BorderRadius.circular(999),
+        customBorder: const CircleBorder(),
         child: Ink(
-          width: 42,
-          height: 42,
+          width: 44,
+          height: 44,
           decoration: BoxDecoration(
-            color: const Color(0xFF020617).withValues(alpha: 0.9),
             shape: BoxShape.circle,
-            boxShadow: const [
+            border: Border.all(color: Colors.white.withValues(alpha: 0.05)),
+            boxShadow: [
               BoxShadow(
-                color: Color(0x66000000),
-                blurRadius: 16,
-                offset: Offset(0, 8),
+                color: const Color(0xFF020617).withValues(alpha: 0.18),
+                blurRadius: 18,
+                offset: const Offset(0, 10),
               ),
             ],
-            border: Border.all(
-              color: Colors.white.withValues(alpha: 0.1),
-            ),
           ),
           child: Center(
             child: AnimatedSwitcher(
@@ -366,7 +510,7 @@ class _LocateMeButton extends StatelessWidget {
                       child: CircularProgressIndicator(
                         strokeWidth: 2,
                         valueColor: AlwaysStoppedAnimation<Color>(
-                          Color(0xFF38BDF8),
+                          Color(0xFF34C759),
                         ),
                       ),
                     )
