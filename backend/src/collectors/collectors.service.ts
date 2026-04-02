@@ -8,6 +8,7 @@ import { StorageService } from '../storage/storage.service';
 @Injectable()
 export class CollectorsService {
   private readonly logger = new Logger(CollectorsService.name);
+  private readonly inFlightRefreshes = new Map<string, Promise<void>>();
 
   constructor(
     private readonly sourcesService: SourcesService,
@@ -19,11 +20,55 @@ export class CollectorsService {
   async refreshAllCities(): Promise<void> {
     const adapters = this.sourcesService.getAll();
     for (const adapter of adapters) {
-      await this.refreshCity(adapter.citySlug);
+      try {
+        await this.refreshCity(adapter.citySlug);
+      } catch (error) {
+        const message =
+          error instanceof Error ? error.message : 'Unknown collection error';
+        this.logger.warn(
+          `City refresh skipped for ${adapter.citySlug}: ${message}`,
+        );
+      }
     }
   }
 
   async refreshCity(citySlug: string): Promise<void> {
+    const inFlightRefresh = this.inFlightRefreshes.get(citySlug);
+    if (inFlightRefresh != null) {
+      await inFlightRefresh;
+      return;
+    }
+
+    const refreshPromise = this.performRefreshCity(citySlug).finally(() => {
+      this.inFlightRefreshes.delete(citySlug);
+    });
+    this.inFlightRefreshes.set(citySlug, refreshPromise);
+
+    await refreshPromise;
+  }
+
+  async refreshCityIfNeeded(citySlug: string, maxAgeMs: number): Promise<boolean> {
+    const lastFetch = await this.storageService.getLastSuccessfulFetch(citySlug);
+    if (
+      lastFetch != null &&
+      Date.now() - lastFetch.finishedAt.getTime() <= maxAgeMs
+    ) {
+      return false;
+    }
+
+    await this.refreshCity(citySlug);
+    return true;
+  }
+
+  triggerBackgroundRefreshIfNeeded(citySlug: string, maxAgeMs: number): void {
+    void this.refreshCityIfNeeded(citySlug, maxAgeMs).catch((error) => {
+      const message =
+        error instanceof Error ? error.message : 'Unknown collection error';
+      this.logger.warn(`Background refresh failed for ${citySlug}: ${message}`);
+    });
+  }
+
+  private async performRefreshCity(citySlug: string): Promise<void> {
     const adapter = this.sourcesService
       .getAll()
       .find((item) => item.citySlug === citySlug);
@@ -37,16 +82,28 @@ export class CollectorsService {
     try {
       const parsed = await adapter.fetchAndParse();
       const normalized = this.normalizerService.normalize(parsed);
+      const shouldGeocodeMissingRecords = adapter.sourceName !== 'e-Devlet / TİTCK';
 
       for (const record of normalized) {
-        if (record.latitude == null || record.longitude == null) {
-          const geocode = await this.geocodingService.resolve(
-            `${record.address}, ${record.cityDisplayName}, Türkiye`,
-          );
+        if (
+          shouldGeocodeMissingRecords &&
+          (record.latitude == null || record.longitude == null)
+        ) {
+          try {
+            const geocode = await this.geocodingService.resolve(
+              `${record.address}, ${record.cityDisplayName}, Türkiye`,
+            );
 
-          if (geocode != null) {
-            record.latitude = geocode.latitude;
-            record.longitude = geocode.longitude;
+            if (geocode != null) {
+              record.latitude = geocode.latitude;
+              record.longitude = geocode.longitude;
+            }
+          } catch (error) {
+            const message =
+              error instanceof Error ? error.message : 'Unknown geocoding error';
+            this.logger.warn(
+              `Geocoding skipped for ${record.name} in ${citySlug}: ${message}`,
+            );
           }
         }
       }

@@ -17,6 +17,6 @@ export class GeocodeCacheEntity {
   @Column({ type: 'double precision' })
   longitude!: number;
 
-  @Column({ type: 'datetime' })
+  @Column({ type: 'timestamp' })
   lastResolvedAt!: Date;
 }

@@ -20,9 +20,9 @@ export class SourceFetchRunEntity {
   @Column({ type: 'text', nullable: true })
   errorMessage!: string | null;
 
-  @Column({ type: 'datetime' })
+  @Column({ type: 'timestamp' })
   startedAt!: Date;
 
-  @Column({ type: 'datetime' })
+  @Column({ type: 'timestamp' })
   finishedAt!: Date;
 }

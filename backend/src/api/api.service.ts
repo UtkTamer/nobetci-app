@@ -1,13 +1,17 @@
 import { Injectable } from '@nestjs/common';
 
+import { CollectorsService } from '../collectors/collectors.service';
 import { SourcesService } from '../sources/sources.service';
 import { StorageService } from '../storage/storage.service';
+
+const staleThresholdMs = 18 * 60 * 60 * 1000;
 
 @Injectable()
 export class ApiService {
   constructor(
     private readonly storageService: StorageService,
     private readonly sourcesService: SourcesService,
+    private readonly collectorsService: CollectorsService,
   ) {}
 
   async listCities() {
@@ -42,9 +46,16 @@ export class ApiService {
       this.storageService.getLastSuccessfulFetch(citySlug),
     ]);
 
-    const updatedAt = lastFetch?.finishedAt ?? new Date();
-    const isStale = Date.now() - updatedAt.getTime() > 18 * 60 * 60 * 1000;
     const source = this.sourcesService.getBySlug(citySlug);
+    if (source != null) {
+      this.collectorsService.triggerBackgroundRefreshIfNeeded(
+        citySlug,
+        staleThresholdMs,
+      );
+    }
+
+    const updatedAt = lastFetch?.finishedAt ?? new Date();
+    const isStale = Date.now() - updatedAt.getTime() > staleThresholdMs;
     const cityDisplayName =
       records[0]?.cityDisplayName ??
       source?.cityDisplayName ??

@@ -1,16 +1,15 @@
-import { HttpService } from '@nestjs/axios';
-import { Injectable } from '@nestjs/common';
+import { HttpService } from "@nestjs/axios";
+import { Injectable } from "@nestjs/common";
 
-import { GenericDutySourceAdapter } from '../generic-duty-source.adapter';
+import { EDevletDutySourceAdapter } from "../edevlet-duty-source.adapter";
 
 @Injectable()
-export class IstanbulDutySourceAdapter extends GenericDutySourceAdapter {
+export class IstanbulDutySourceAdapter extends EDevletDutySourceAdapter {
   constructor(httpService: HttpService) {
     super(httpService, {
-      citySlug: 'istanbul',
-      cityDisplayName: 'İstanbul',
-      sourceName: 'İstanbul Eczacı Odası',
-      sourceUrl: 'https://www.istanbuleczaciodasi.org.tr/nobetci-eczaneler',
+      citySlug: "istanbul",
+      cityDisplayName: "İstanbul",
+      plateCode: "34",
     });
   }
 }

@@ -7,6 +7,7 @@ import '../../../../core/constants/app_constants.dart';
 import '../../../../core/helpers/platform_launcher.dart';
 import '../../../../core/services/location_service.dart';
 import '../models/home_screen_status.dart';
+import '../../../pharmacies/data/models/city_option.dart';
 import '../../../pharmacies/data/models/pharmacy_feed.dart';
 import '../../../pharmacies/data/repositories/pharmacy_repository.dart';
 import '../../../pharmacies/data/repositories/remote_pharmacy_repository.dart';
@@ -31,13 +32,13 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final _mapController = MapController();
   final _sheetController = PharmacyBottomSheetController();
-  List<String> _cities = const [];
+  List<CityOption> _cities = const [];
   List<Pharmacy> _pharmacies = const [];
   double _mapViewportHeight = 0;
   double _sheetExtent = AppConstants.initialSheetSize;
   double _mapDragDistance = 0;
   String? _selectedPharmacyId;
-  String? _selectedCity;
+  String? _selectedCitySlug;
   LatLng? _userLocation;
   bool _isLocatingUser = false;
   HomeScreenStatus _status = HomeScreenStatus.idle;
@@ -121,7 +122,7 @@ class _HomeScreenState extends State<HomeScreen> {
       PharmacyFeed? feed;
       if (selectedCity != null) {
         feed = await widget.pharmacyRepository.fetchOnDutyPharmacies(
-          selectedCity,
+          selectedCity.slug,
         );
       }
 
@@ -137,7 +138,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
       setState(() {
         _cities = cities;
-        _selectedCity = selectedCity;
+        _selectedCitySlug = selectedCity?.slug;
         _pharmacies = pharmacies;
         _updatedAt = feed?.updatedAt;
         _isStale = feed?.isStale ?? false;
@@ -164,16 +165,20 @@ class _HomeScreenState extends State<HomeScreen> {
     }
   }
 
-  Future<void> _loadCity(String city, {bool isRefresh = false}) async {
+  Future<void> _loadCity(CityOption city, {bool isRefresh = false}) async {
     setState(() {
-      _status = isRefresh ? HomeScreenStatus.refreshing : HomeScreenStatus.loading;
-      _selectedCity = city;
+      _status = isRefresh
+          ? HomeScreenStatus.refreshing
+          : HomeScreenStatus.loading;
+      _selectedCitySlug = city.slug;
       _errorMessage = null;
       _selectedPharmacyId = null;
     });
 
     try {
-      final feed = await widget.pharmacyRepository.fetchOnDutyPharmacies(city);
+      final feed = await widget.pharmacyRepository.fetchOnDutyPharmacies(
+        city.slug,
+      );
       if (!mounted) {
         return;
       }
@@ -208,13 +213,13 @@ class _HomeScreenState extends State<HomeScreen> {
     }
   }
 
-  String? _preferredInitialCity(List<String> cities) {
+  CityOption? _preferredInitialCity(List<CityOption> cities) {
     if (cities.isEmpty) {
       return null;
     }
 
     for (final city in cities) {
-      if (city.toLowerCase() == 'ankara') {
+      if (city.slug == 'ankara') {
         return city;
       }
     }
@@ -223,12 +228,17 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   void _syncMapToFirstCoordinate(List<Pharmacy> pharmacies) {
-    final firstWithCoordinates = pharmacies.where((item) => item.hasCoordinates);
+    final firstWithCoordinates = pharmacies.where(
+      (item) => item.hasCoordinates,
+    );
     if (firstWithCoordinates.isEmpty) {
       return;
     }
 
-    _mapController.move(firstWithCoordinates.first.location, AppConstants.defaultZoom);
+    _mapController.move(
+      firstWithCoordinates.first.location,
+      AppConstants.defaultZoom,
+    );
   }
 
   List<Pharmacy> _applyDistanceSorting(
@@ -240,18 +250,18 @@ class _HomeScreenState extends State<HomeScreen> {
     }
 
     const distance = Distance();
-    final withDistance = pharmacies
-        .map((pharmacy) {
-          if (!pharmacy.hasCoordinates) {
-            return pharmacy.copyWith(distanceKm: double.infinity);
-          }
+    final withDistance = pharmacies.map((pharmacy) {
+      if (!pharmacy.hasCoordinates) {
+        return pharmacy.copyWith(distanceKm: double.infinity);
+      }
 
-          final meters = distance(userLocation, pharmacy.location);
-          return pharmacy.copyWith(distanceKm: meters / 1000);
-        })
-        .toList();
+      final meters = distance(userLocation, pharmacy.location);
+      return pharmacy.copyWith(distanceKm: meters / 1000);
+    }).toList();
 
-    withDistance.sort((left, right) => left.distanceKm.compareTo(right.distanceKm));
+    withDistance.sort(
+      (left, right) => left.distanceKm.compareTo(right.distanceKm),
+    );
     return withDistance;
   }
 
@@ -292,18 +302,16 @@ class _HomeScreenState extends State<HomeScreen> {
         return;
       }
 
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(error.message)),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(error.message)));
     } catch (_) {
       if (!mounted) {
         return;
       }
 
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Konum alinirken bir sorun olustu.'),
-        ),
+        const SnackBar(content: Text('Konum alinirken bir sorun olustu.')),
       );
     } finally {
       if (mounted) {
@@ -316,8 +324,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final selectedCity = _selectedCity;
-    final hasData = _status == HomeScreenStatus.loaded ||
+    final selectedCity = _selectedCityOption;
+    final hasData =
+        _status == HomeScreenStatus.loaded ||
         _status == HomeScreenStatus.refreshing;
     final nearestPharmacy = _nearestPharmacy;
 
@@ -407,7 +416,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             value: selectedCity,
                             items: _cities,
                             onChanged: (city) {
-                              if (city == null || city == _selectedCity) {
+                              if (city == null ||
+                                  city.slug == _selectedCitySlug) {
                                 return;
                               }
 
@@ -426,11 +436,12 @@ class _HomeScreenState extends State<HomeScreen> {
                             _isStale
                                 ? 'Son güncelleme eski olabilir: ${_formatTimestamp(_updatedAt!)}'
                                 : 'Son güncelleme: ${_formatTimestamp(_updatedAt!)}',
-                            style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                              color: _isStale
-                                  ? const Color(0xFFFBBF24)
-                                  : const Color(0xFF94A3B8),
-                            ),
+                            style: Theme.of(context).textTheme.bodySmall
+                                ?.copyWith(
+                                  color: _isStale
+                                      ? const Color(0xFFFBBF24)
+                                      : const Color(0xFF94A3B8),
+                                ),
                           ),
                         ],
                         const Spacer(),
@@ -470,7 +481,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   maxChildSize: AppConstants.maxSheetSize,
                   status: _status,
                   errorMessage: _errorMessage,
-                  onRetry: selectedCity == null ? null : () => _loadCity(selectedCity),
+                  onRetry: selectedCity == null
+                      ? null
+                      : () => _loadCity(selectedCity),
                   onRefresh: selectedCity == null
                       ? null
                       : () => _loadCity(selectedCity, isRefresh: true),
@@ -493,19 +506,21 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   String _buildStatusSummary() {
+    final selectedCityName = _selectedCityOption?.name ?? 'Seçili şehir';
+
     if (_status == HomeScreenStatus.loading) {
       return 'Nöbetçi eczane verileri yükleniyor';
     }
 
     if (_status == HomeScreenStatus.refreshing) {
-      return '${_selectedCity ?? 'Seçili şehir'} için veriler yenileniyor';
+      return '$selectedCityName için veriler yenileniyor';
     }
 
     if (_status == HomeScreenStatus.error) {
       return _errorMessage ?? 'Veri alınamadı';
     }
 
-    return '${_selectedCity ?? 'Seçili şehir'} için ${_pharmacies.length} eczane listeleniyor';
+    return '$selectedCityName için ${_pharmacies.length} eczane listeleniyor';
   }
 
   String _formatTimestamp(DateTime value) {
@@ -516,6 +531,21 @@ class _HomeScreenState extends State<HomeScreen> {
     final minute = value.minute.toString().padLeft(2, '0');
     return '$day.$month.$year $hour:$minute';
   }
+
+  CityOption? get _selectedCityOption {
+    final selectedCitySlug = _selectedCitySlug;
+    if (selectedCitySlug == null) {
+      return null;
+    }
+
+    for (final city in _cities) {
+      if (city.slug == selectedCitySlug) {
+        return city;
+      }
+    }
+
+    return null;
+  }
 }
 
 class _CityDropdown extends StatelessWidget {
@@ -525,9 +555,9 @@ class _CityDropdown extends StatelessWidget {
     required this.onChanged,
   });
 
-  final String value;
-  final List<String> items;
-  final ValueChanged<String?> onChanged;
+  final CityOption value;
+  final List<CityOption> items;
+  final ValueChanged<CityOption?> onChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -549,15 +579,15 @@ class _CityDropdown extends StatelessWidget {
               borderRadius: borderRadius,
               onTap: () async {
                 final availableCities = items
-                    .where((city) => city != value)
+                    .where((city) => city.slug != value.slug)
                     .toList();
                 if (availableCities.isEmpty) {
                   return;
                 }
 
                 final button = context.findRenderObject() as RenderBox;
-                final overlay = Overlay.of(context).context.findRenderObject()
-                    as RenderBox;
+                final overlay =
+                    Overlay.of(context).context.findRenderObject() as RenderBox;
                 const menuOffset = 8.0;
                 final position = RelativeRect.fromRect(
                   Rect.fromPoints(
@@ -576,7 +606,7 @@ class _CityDropdown extends StatelessWidget {
                   Offset.zero & overlay.size,
                 );
 
-                final selectedCity = await showMenu<String>(
+                final selectedCity = await showMenu<CityOption>(
                   context: context,
                   position: position,
                   constraints: BoxConstraints(minWidth: button.size.width),
@@ -588,15 +618,12 @@ class _CityDropdown extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(22),
                   ),
-                  items: availableCities
-                      .asMap()
-                      .entries
-                      .map((entry) {
+                  items: availableCities.asMap().entries.map((entry) {
                     final index = entry.key;
                     final city = entry.value;
-                    final isLast = index == items.length - 1;
+                    final isLast = index == availableCities.length - 1;
 
-                    return PopupMenuItem<String>(
+                    return PopupMenuItem<CityOption>(
                       value: city,
                       padding: EdgeInsets.zero,
                       child: Container(
@@ -613,7 +640,7 @@ class _CityDropdown extends StatelessWidget {
                         ),
                         alignment: Alignment.centerLeft,
                         child: Text(
-                          city,
+                          city.name,
                           style: textStyle?.copyWith(
                             color: const Color(0xFFD1D1D6),
                             fontWeight: FontWeight.w600,
@@ -633,12 +660,14 @@ class _CityDropdown extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 decoration: BoxDecoration(
                   borderRadius: borderRadius,
-                  border: Border.all(color: Colors.white.withValues(alpha: 0.05)),
+                  border: Border.all(
+                    color: Colors.white.withValues(alpha: 0.05),
+                  ),
                 ),
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Text(value, style: textStyle),
+                    Text(value.name, style: textStyle),
                     const SizedBox(width: 8),
                     const Icon(
                       Icons.keyboard_arrow_down_rounded,
@@ -682,9 +711,7 @@ class _MapAttribution extends StatelessWidget {
               onTap: () => PlatformLauncher.openExternalUrl(_cartoUrl),
               child: Text(
                 '© CARTO',
-                style: textStyle?.copyWith(
-                  color: const Color(0xFFE2E8F0),
-                ),
+                style: textStyle?.copyWith(color: const Color(0xFFE2E8F0)),
               ),
             ),
             const SizedBox(height: 2),

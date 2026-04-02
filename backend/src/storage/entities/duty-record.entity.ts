@@ -30,13 +30,13 @@ export class DutyRecordEntity {
   @Column()
   sourceUrl!: string;
 
-  @Column({ type: 'datetime', nullable: true })
+  @Column({ type: 'timestamp', nullable: true })
   dutyStart!: Date | null;
 
-  @Column({ type: 'datetime', nullable: true })
+  @Column({ type: 'timestamp', nullable: true })
   dutyEnd!: Date | null;
 
-  @Column({ type: 'datetime' })
+  @Column({ type: 'timestamp' })
   lastVerifiedAt!: Date;
 
   @Column({ type: 'boolean', default: true })

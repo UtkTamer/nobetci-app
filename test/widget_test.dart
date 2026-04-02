@@ -42,6 +42,28 @@ void main() {
     expect(find.text('Aramaya uygun eczane bulunamadı.'), findsOneWidget);
   });
 
+  testWidgets('city dropdown switches to another city feed', (tester) async {
+    await tester.pumpWidget(
+      NobetciApp(pharmacyRepository: const MockApiPharmacyRepository()),
+    );
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.byKey(const ValueKey('city_dropdown')));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('İzmir').last);
+    await tester.pump();
+    await tester.pumpAndSettle();
+
+    expect(find.text('İzmir için 3 eczane listeleniyor'), findsOneWidget);
+    expect(find.text('İzmir Merkez Mah. Sağlık Cad. No:42'), findsNothing);
+
+    await tester.tap(find.byKey(const ValueKey('map_marker_izmir-merkez')));
+    await tester.pump();
+    await tester.pumpAndSettle();
+
+    expect(find.text('İzmir Merkez Mah. Sağlık Cad. No:42'), findsOneWidget);
+  });
+
   testWidgets('tapping a map marker expands and opens pharmacy details', (
     tester,
   ) async {

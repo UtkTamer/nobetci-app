@@ -3,26 +3,25 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 import '../../domain/pharmacy.dart';
+import '../models/city_option.dart';
 import '../models/pharmacy_feed.dart';
 import 'pharmacy_repository.dart';
 
 class RemotePharmacyRepository extends PharmacyRepository {
-  RemotePharmacyRepository({
-    http.Client? client,
-    String? baseUrl,
-  }) : _client = client ?? http.Client(),
-       _baseUrl =
-           baseUrl ??
-           const String.fromEnvironment(
-             'NOBETCI_API_BASE_URL',
-             defaultValue: 'http://localhost:3000',
-           );
+  RemotePharmacyRepository({http.Client? client, String? baseUrl})
+    : _client = client ?? http.Client(),
+      _baseUrl =
+          baseUrl ??
+          const String.fromEnvironment(
+            'NOBETCI_API_BASE_URL',
+            defaultValue: 'http://localhost:3000',
+          );
 
   final http.Client _client;
   final String _baseUrl;
 
   @override
-  Future<List<String>> fetchCities() async {
+  Future<List<CityOption>> fetchCities() async {
     final uri = Uri.parse('$_baseUrl/cities');
     final response = await _client.get(uri);
 
@@ -34,18 +33,26 @@ class RemotePharmacyRepository extends PharmacyRepository {
 
     final decoded = jsonDecode(response.body);
     if (decoded is! List) {
-      throw const PharmacyRepositoryException('Şehir listesi formatı geçersiz.');
+      throw const PharmacyRepositoryException(
+        'Şehir listesi formatı geçersiz.',
+      );
     }
 
-    return decoded
-        .map((item) => item is Map<String, dynamic> ? item['name'] : null)
-        .whereType<String>()
-        .toList();
+    return decoded.whereType<Map<String, dynamic>>().map((item) {
+      final slug = item['slug'] as String?;
+      final name = item['name'] as String?;
+      if (slug == null || name == null) {
+        throw const PharmacyRepositoryException(
+          'Şehir listesi formatı geçersiz.',
+        );
+      }
+
+      return CityOption(slug: slug, name: name);
+    }).toList();
   }
 
   @override
-  Future<PharmacyFeed> fetchOnDutyPharmacies(String city) async {
-    final citySlug = _slugify(city);
+  Future<PharmacyFeed> fetchOnDutyPharmacies(String citySlug) async {
     final uri = Uri.parse('$_baseUrl/pharmacies/on-duty?city=$citySlug');
     final response = await _client.get(uri);
 
@@ -57,16 +64,20 @@ class RemotePharmacyRepository extends PharmacyRepository {
 
     final decoded = jsonDecode(response.body);
     if (decoded is! Map<String, dynamic>) {
-      throw const PharmacyRepositoryException('Eczane verisi formatı geçersiz.');
+      throw const PharmacyRepositoryException(
+        'Eczane verisi formatı geçersiz.',
+      );
     }
 
     final pharmaciesJson = decoded['pharmacies'];
     if (pharmaciesJson is! List) {
-      throw const PharmacyRepositoryException('Eczane listesi formatı geçersiz.');
+      throw const PharmacyRepositoryException(
+        'Eczane listesi formatı geçersiz.',
+      );
     }
 
     return PharmacyFeed(
-      city: decoded['cityDisplayName'] as String? ?? city,
+      city: decoded['cityDisplayName'] as String? ?? citySlug,
       updatedAt: DateTime.parse(decoded['updatedAt'] as String),
       isStale: decoded['isStale'] as bool? ?? false,
       pharmacies: pharmaciesJson
@@ -94,31 +105,6 @@ class RemotePharmacyRepository extends PharmacyRepository {
       source: json['source'] as String? ?? '',
       sourceUrl: json['sourceUrl'] as String? ?? '',
     );
-  }
-
-  String _slugify(String value) {
-    const replacements = {
-      'ç': 'c',
-      'ğ': 'g',
-      'ı': 'i',
-      'ö': 'o',
-      'ş': 's',
-      'ü': 'u',
-      'Ç': 'c',
-      'Ğ': 'g',
-      'İ': 'i',
-      'Ö': 'o',
-      'Ş': 's',
-      'Ü': 'u',
-    };
-
-    final normalized = value
-        .split('')
-        .map((char) => replacements[char] ?? char)
-        .join()
-        .toLowerCase();
-
-    return normalized.replaceAll(RegExp(r'[^a-z0-9]+'), '-').trim();
   }
 }
 

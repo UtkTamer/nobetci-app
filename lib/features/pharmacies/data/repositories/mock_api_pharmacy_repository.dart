@@ -1,4 +1,5 @@
 import '../../domain/pharmacy.dart';
+import '../models/city_option.dart';
 import '../models/pharmacy_feed.dart';
 import 'pharmacy_repository.dart';
 
@@ -6,21 +7,24 @@ class MockApiPharmacyRepository extends PharmacyRepository {
   const MockApiPharmacyRepository();
 
   static const _cities = [
-    'İstanbul',
-    'Ankara',
-    'İzmir',
-    'Bursa',
-    'Antalya',
+    CityOption(slug: 'istanbul', name: 'İstanbul'),
+    CityOption(slug: 'ankara', name: 'Ankara'),
+    CityOption(slug: 'izmir', name: 'İzmir'),
+    CityOption(slug: 'bursa', name: 'Bursa'),
+    CityOption(slug: 'antalya', name: 'Antalya'),
   ];
 
   @override
-  Future<List<String>> fetchCities() async => _cities;
+  Future<List<CityOption>> fetchCities() async => _cities;
 
   @override
-  Future<PharmacyFeed> fetchOnDutyPharmacies(String city) async {
+  Future<PharmacyFeed> fetchOnDutyPharmacies(String citySlug) async {
+    final city =
+        _cities.where((option) => option.slug == citySlug).firstOrNull?.name ??
+        citySlug;
     final pharmacies = <Pharmacy>[
       Pharmacy(
-        id: '${_slug(city)}-merkez',
+        id: '$citySlug-merkez',
         name: 'Merkez Eczanesi',
         address: '$city Merkez Mah. Sağlık Cad. No:42',
         phoneNumber: '+902120001111',
@@ -32,10 +36,10 @@ class MockApiPharmacyRepository extends PharmacyRepository {
         latitude: 40.9906,
         longitude: 29.0287,
         source: '$city Eczacı Odası',
-        sourceUrl: 'https://example.com/${_slug(city)}',
+        sourceUrl: 'https://example.com/$citySlug',
       ),
       Pharmacy(
-        id: '${_slug(city)}-sifa',
+        id: '$citySlug-sifa',
         name: 'Şifa Eczanesi',
         address: '$city Çarşı Mah. Belediye Sok. No:12',
         phoneNumber: '+902120002222',
@@ -47,10 +51,10 @@ class MockApiPharmacyRepository extends PharmacyRepository {
         latitude: 40.9857,
         longitude: 29.0319,
         source: '$city Eczacı Odası',
-        sourceUrl: 'https://example.com/${_slug(city)}',
+        sourceUrl: 'https://example.com/$citySlug',
       ),
       Pharmacy(
-        id: '${_slug(city)}-hayat',
+        id: '$citySlug-hayat',
         name: 'Hayat Eczanesi',
         address: '$city Hastane Mah. Acil Sok. No:19',
         phoneNumber: '+902120003333',
@@ -62,7 +66,7 @@ class MockApiPharmacyRepository extends PharmacyRepository {
         latitude: null,
         longitude: null,
         source: '$city Eczacı Odası',
-        sourceUrl: 'https://example.com/${_slug(city)}',
+        sourceUrl: 'https://example.com/$citySlug',
       ),
     ];
 
@@ -73,14 +77,4 @@ class MockApiPharmacyRepository extends PharmacyRepository {
       pharmacies: pharmacies,
     );
   }
-
-  String _slug(String value) =>
-      value
-          .toLowerCase()
-          .replaceAll('ı', 'i')
-          .replaceAll('ğ', 'g')
-          .replaceAll('ü', 'u')
-          .replaceAll('ş', 's')
-          .replaceAll('ö', 'o')
-          .replaceAll('ç', 'c');
 }
