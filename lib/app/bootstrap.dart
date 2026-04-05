@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 
 import 'app.dart';
 
-void bootstrap() {
+Future<void> bootstrap() async {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(

@@ -14,7 +14,7 @@ class RemotePharmacyRepository extends PharmacyRepository {
           baseUrl ??
           const String.fromEnvironment(
             'NOBETCI_API_BASE_URL',
-            defaultValue: 'http://localhost:3000',
+            defaultValue: 'https://nobetci-app-production.up.railway.app',
           );
 
   final http.Client _client;
@@ -23,12 +23,10 @@ class RemotePharmacyRepository extends PharmacyRepository {
   @override
   Future<List<CityOption>> fetchCities() async {
     final uri = Uri.parse('$_baseUrl/cities');
-    final response = await _client.get(uri);
+    final response = await _get(uri);
 
     if (response.statusCode != 200) {
-      throw const PharmacyRepositoryException(
-        'Şehir listesi alınamadı. Lütfen tekrar deneyin.',
-      );
+      throw _mapException(response.statusCode);
     }
 
     final decoded = jsonDecode(response.body);
@@ -54,12 +52,10 @@ class RemotePharmacyRepository extends PharmacyRepository {
   @override
   Future<PharmacyFeed> fetchOnDutyPharmacies(String citySlug) async {
     final uri = Uri.parse('$_baseUrl/pharmacies/on-duty?city=$citySlug');
-    final response = await _client.get(uri);
+    final response = await _get(uri);
 
     if (response.statusCode != 200) {
-      throw const PharmacyRepositoryException(
-        'Nöbetçi eczane verisi alınamadı. Lütfen tekrar deneyin.',
-      );
+      throw _mapException(response.statusCode);
     }
 
     final decoded = jsonDecode(response.body);
@@ -104,6 +100,14 @@ class RemotePharmacyRepository extends PharmacyRepository {
       longitude: (json['longitude'] as num?)?.toDouble(),
       source: json['source'] as String? ?? '',
       sourceUrl: json['sourceUrl'] as String? ?? '',
+    );
+  }
+
+  Future<http.Response> _get(Uri uri) async => _client.get(uri);
+
+  PharmacyRepositoryException _mapException(int statusCode) {
+    return const PharmacyRepositoryException(
+      'Nöbetçi eczane verisi alınamadı. Lütfen tekrar deneyin.',
     );
   }
 }

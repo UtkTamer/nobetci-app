@@ -82,13 +82,9 @@ export class CollectorsService {
     try {
       const parsed = await adapter.fetchAndParse();
       const normalized = this.normalizerService.normalize(parsed);
-      const shouldGeocodeMissingRecords = adapter.sourceName !== 'e-Devlet / TİTCK';
 
       for (const record of normalized) {
-        if (
-          shouldGeocodeMissingRecords &&
-          (record.latitude == null || record.longitude == null)
-        ) {
+        if (record.latitude == null || record.longitude == null) {
           try {
             const geocode = await this.geocodingService.resolve(
               `${record.address}, ${record.cityDisplayName}, Türkiye`,

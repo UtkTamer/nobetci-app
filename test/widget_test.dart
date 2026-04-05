@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:latlong2/latlong.dart';
 import 'package:nobetci_app/app/app.dart';
 import 'package:nobetci_app/core/services/location_service.dart';
 import 'package:nobetci_app/features/pharmacies/data/repositories/mock_api_pharmacy_repository.dart';
-import 'package:latlong2/latlong.dart';
 
 class _FakeLocationService implements LocationService {
   const _FakeLocationService(this.location);

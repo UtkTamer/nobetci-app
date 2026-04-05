@@ -22,12 +22,11 @@ class NobetciApp extends StatelessWidget {
       title: 'Nobetci',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light(),
-      onGenerateRoute: (settings) =>
-          AppRouter.onGenerateRoute(
-            settings,
-            locationService: locationService,
-            pharmacyRepository: pharmacyRepository,
-          ),
+      onGenerateRoute: (settings) => AppRouter.onGenerateRoute(
+        settings,
+        locationService: locationService,
+        pharmacyRepository: pharmacyRepository,
+      ),
       initialRoute: AppRouter.home,
     );
   }

@@ -4,6 +4,7 @@ import { ScheduleModule } from '@nestjs/schedule';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { ApiModule } from './api/api.module';
+import { AuthModule } from './auth/auth.module';
 import { CollectorsModule } from './collectors/collectors.module';
 import { GeocodingModule } from './geocoding/geocoding.module';
 import { SchedulerFeatureModule } from './scheduler/scheduler.module';
@@ -49,6 +50,7 @@ import { StorageModule } from './storage/storage.module';
         };
       },
     }),
+    AuthModule,
     StorageModule,
     GeocodingModule,
     SourcesModule,

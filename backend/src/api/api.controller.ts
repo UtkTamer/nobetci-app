@@ -3,8 +3,10 @@ import {
   Get,
   ParseFloatPipe,
   Query,
+  UseGuards,
 } from '@nestjs/common';
 
+import { AdminRefreshGuard } from '../auth/admin-refresh.guard';
 import { CollectorsService } from '../collectors/collectors.service';
 import { ApiService } from './api.service';
 
@@ -44,6 +46,7 @@ export class ApiController {
   }
 
   @Get('admin/refresh')
+  @UseGuards(AdminRefreshGuard)
   async refresh(@Query('city') city?: string) {
     if (city != null && city.length > 0) {
       await this.collectorsService.refreshCity(city);
