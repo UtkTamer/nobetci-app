@@ -86,8 +86,12 @@ export class CollectorsService {
       for (const record of normalized) {
         if (record.latitude == null || record.longitude == null) {
           try {
+            const districtPart =
+              record.districtName.length > 0
+                ? `${record.districtName}, `
+                : '';
             const geocode = await this.geocodingService.resolve(
-              `${record.address}, ${record.cityDisplayName}, Türkiye`,
+              `${record.address}, ${districtPart}${record.cityDisplayName}, Türkiye`,
             );
 
             if (geocode != null) {

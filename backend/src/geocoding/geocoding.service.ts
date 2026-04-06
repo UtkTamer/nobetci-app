@@ -29,6 +29,9 @@ export class GeocodingService {
       };
     }
 
+    const cleanedAddress = this.cleanTurkishAddress(rawAddress);
+    this.logger.debug(`Geocoding: "${rawAddress}" → "${cleanedAddress}"`);
+
     await this.waitForRateLimit();
 
     let lastError: unknown = null;
@@ -48,7 +51,7 @@ export class GeocodingService {
             'https://nominatim.openstreetmap.org/search',
             {
               params: {
-                q: rawAddress,
+                q: cleanedAddress,
                 format: 'jsonv2',
                 limit: 1,
               },
@@ -93,6 +96,47 @@ export class GeocodingService {
       await GeocodingService.sleep(NOMINATIM_RATE_LIMIT_MS - elapsed);
     }
     this.lastNominatimCallAt = Date.now();
+  }
+
+  /**
+   * Cleans a raw Turkish pharmacy address for better Nominatim results.
+   *
+   * Example:
+   *   "BAHÇELİEVLER MAH. AŞKAABAT CAD. NO:29/4"
+   *   → "Bahçelievler Mahallesi Aşkaabat Caddesi"
+   */
+  cleanTurkishAddress(raw: string): string {
+    let address = raw;
+
+    // Remove building/apartment numbers: NO:29/4, NO: 23/E, No: 12 A
+    address = address.replace(/\bNO\s*:\s*\S+/gi, '');
+    // Remove standalone block/apartment references: BLK, KAT, D:, DAİRE
+    address = address.replace(/\b(BLK|BLOK|KAT|D:|DAİRE)\s*\S*/gi, '');
+
+    // Expand common Turkish abbreviations
+    address = address.replace(/\bMAH\.\s*/gi, 'Mahallesi ');
+    address = address.replace(/\bMAH\b/gi, 'Mahallesi');
+    address = address.replace(/\bCAD\.\s*/gi, 'Caddesi ');
+    address = address.replace(/\bCAD\b/gi, 'Caddesi');
+    address = address.replace(/\bSOK\.\s*/gi, 'Sokak ');
+    address = address.replace(/\bSOK\b/gi, 'Sokak');
+    address = address.replace(/\bSK\.\s*/gi, 'Sokak ');
+    address = address.replace(/\bSK\b/gi, 'Sokak');
+    address = address.replace(/\bBLV\.\s*/gi, 'Bulvarı ');
+    address = address.replace(/\bBLV\b/gi, 'Bulvarı');
+    address = address.replace(/\bMEV\.\s*/gi, 'Mevkii ');
+    address = address.replace(/\bMEVKİİ\b/gi, 'Mevkii');
+    address = address.replace(/\bSİT\.\s*/gi, 'Sitesi ');
+
+    // Convert to title case (UPPERCASE → Title Case)
+    address = address
+      .toLocaleLowerCase('tr')
+      .replace(/(^|\s)\S/g, (char) => char.toLocaleUpperCase('tr'));
+
+    // Clean up extra spaces
+    address = address.replace(/\s+/g, ' ').trim();
+
+    return address;
   }
 
   private static sleep(ms: number): Promise<void> {
