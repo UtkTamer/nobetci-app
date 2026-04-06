@@ -13,6 +13,7 @@ dependencies:
   geolocator: ^14.0.2
   http: ^1.4.0
   latlong2: ^0.9.1
+  shared_preferences: ^2.3.4
   url_launcher: ^6.3.2
 
 dev_dependencies:

@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../domain/pharmacy.dart';
 import '../models/city_option.dart';
@@ -20,16 +21,55 @@ class RemotePharmacyRepository extends PharmacyRepository {
   final http.Client _client;
   final String _baseUrl;
 
+  static const _citiesCacheKey = '_cache_cities';
+  static const _pharmacyCachePrefix = '_cache_pharmacies_';
+
   @override
   Future<List<CityOption>> fetchCities() async {
-    final uri = Uri.parse('$_baseUrl/cities');
-    final response = await _get(uri);
+    try {
+      final uri = Uri.parse('$_baseUrl/cities');
+      final response = await _get(uri);
 
-    if (response.statusCode != 200) {
-      throw _mapException(response.statusCode);
+      if (response.statusCode != 200) {
+        throw _mapException(response.statusCode);
+      }
+
+      final cities = _parseCities(response.body);
+      await _saveToCache(_citiesCacheKey, response.body);
+      return cities;
+    } catch (_) {
+      final cached = await _loadFromCache(_citiesCacheKey);
+      if (cached != null) return _parseCities(cached);
+      rethrow;
     }
+  }
 
-    final decoded = jsonDecode(response.body);
+  @override
+  Future<PharmacyFeed> fetchOnDutyPharmacies(String citySlug) async {
+    final cacheKey = '$_pharmacyCachePrefix$citySlug';
+
+    try {
+      final uri = Uri.parse('$_baseUrl/pharmacies/on-duty?city=$citySlug');
+      final response = await _get(uri);
+
+      if (response.statusCode != 200) {
+        throw _mapException(response.statusCode);
+      }
+
+      final feed = _parseFeed(response.body, citySlug);
+      await _saveToCache(cacheKey, response.body);
+      return feed;
+    } catch (_) {
+      final cached = await _loadFromCache(cacheKey);
+      if (cached != null) {
+        return _parseFeed(cached, citySlug, forceStale: true);
+      }
+      rethrow;
+    }
+  }
+
+  List<CityOption> _parseCities(String body) {
+    final decoded = jsonDecode(body);
     if (decoded is! List) {
       throw const PharmacyRepositoryException(
         'Şehir listesi formatı geçersiz.',
@@ -49,16 +89,12 @@ class RemotePharmacyRepository extends PharmacyRepository {
     }).toList();
   }
 
-  @override
-  Future<PharmacyFeed> fetchOnDutyPharmacies(String citySlug) async {
-    final uri = Uri.parse('$_baseUrl/pharmacies/on-duty?city=$citySlug');
-    final response = await _get(uri);
-
-    if (response.statusCode != 200) {
-      throw _mapException(response.statusCode);
-    }
-
-    final decoded = jsonDecode(response.body);
+  PharmacyFeed _parseFeed(
+    String body,
+    String citySlug, {
+    bool forceStale = false,
+  }) {
+    final decoded = jsonDecode(body);
     if (decoded is! Map<String, dynamic>) {
       throw const PharmacyRepositoryException(
         'Eczane verisi formatı geçersiz.',
@@ -75,7 +111,7 @@ class RemotePharmacyRepository extends PharmacyRepository {
     return PharmacyFeed(
       city: decoded['cityDisplayName'] as String? ?? citySlug,
       updatedAt: DateTime.parse(decoded['updatedAt'] as String),
-      isStale: decoded['isStale'] as bool? ?? false,
+      isStale: forceStale || (decoded['isStale'] as bool? ?? false),
       pharmacies: pharmaciesJson
           .whereType<Map<String, dynamic>>()
           .map(_pharmacyFromJson)
@@ -101,6 +137,24 @@ class RemotePharmacyRepository extends PharmacyRepository {
       source: json['source'] as String? ?? '',
       sourceUrl: json['sourceUrl'] as String? ?? '',
     );
+  }
+
+  Future<void> _saveToCache(String key, String body) async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString(key, body);
+    } catch (_) {
+      // Cache yazma hatası kritik değil, sessizce geç.
+    }
+  }
+
+  Future<String?> _loadFromCache(String key) async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      return prefs.getString(key);
+    } catch (_) {
+      return null;
+    }
   }
 
   Future<http.Response> _get(Uri uri) async => _client.get(uri);

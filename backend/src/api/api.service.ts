@@ -111,6 +111,42 @@ export class ApiService {
     };
   }
 
+  async getHealth() {
+    const sources = this.sourcesService.getAll();
+    const cityHealthItems = await Promise.all(
+      sources.map(async (source) => {
+        const [lastFetch, records] = await Promise.all([
+          this.storageService.getLastSuccessfulFetch(source.citySlug),
+          this.storageService.getOnDutyPharmacies(source.citySlug),
+        ]);
+
+        const total = records.length;
+        const withCoords = records.filter(
+          (r) => r.pharmacy.latitude != null && r.pharmacy.longitude != null,
+        ).length;
+        const coordCoveragePct =
+          total === 0 ? 0 : Math.round((withCoords / total) * 100);
+
+        return {
+          city: source.citySlug,
+          cityDisplayName: source.cityDisplayName,
+          lastRefreshedAt: lastFetch?.finishedAt?.toISOString() ?? null,
+          pharmacyCount: total,
+          withCoordinates: withCoords,
+          coordCoveragePct,
+          isStale: lastFetch == null ||
+            Date.now() - lastFetch.finishedAt.getTime() > staleThresholdMs,
+        };
+      }),
+    );
+
+    return {
+      ok: true,
+      checkedAt: new Date().toISOString(),
+      cities: cityHealthItems,
+    };
+  }
+
   private distanceKm(lat1: number, lon1: number, lat2: number, lon2: number) {
     const toRadians = (value: number) => (value * Math.PI) / 180;
     const earthRadiusKm = 6371;

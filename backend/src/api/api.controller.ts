@@ -45,6 +45,11 @@ export class ApiController {
     return this.apiService.getNearby(city, lat, lng, district);
   }
 
+  @Get('health')
+  async health() {
+    return this.apiService.getHealth();
+  }
+
   @Get('admin/refresh')
   @UseGuards(AdminRefreshGuard)
   async refresh(@Query('city') city?: string) {

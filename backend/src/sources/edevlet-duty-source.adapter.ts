@@ -162,7 +162,14 @@ export class EDevletDutySourceAdapter implements DutySourceAdapter {
       return `${this.sourceUrl}?nobetci=Eczaneler`;
     }
 
-    for (let attempt = 0; attempt < 10; attempt += 1) {
+    const maxAttempts = 20;
+    const delayMs = 3000;
+
+    for (let attempt = 0; attempt < maxAttempts; attempt += 1) {
+      if (attempt > 0) {
+        await EDevletDutySourceAdapter.sleep(delayMs);
+      }
+
       const response = await firstValueFrom(
         this.httpService.post<{
           requestStatus?: string;
@@ -198,7 +205,13 @@ export class EDevletDutySourceAdapter implements DutySourceAdapter {
       }
     }
 
-    throw new Error(`Timed out while waiting e-Devlet results for ${this.citySlug}`);
+    throw new Error(
+      `Timed out while waiting e-Devlet results for ${this.citySlug} after ${maxAttempts} attempts`,
+    );
+  }
+
+  private static sleep(ms: number): Promise<void> {
+    return new Promise((resolve) => setTimeout(resolve, ms));
   }
 
   private async fetchResultsHtml(

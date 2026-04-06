@@ -13,13 +13,24 @@ export class SchedulerService implements OnModuleInit {
     void this.preloadCities();
   }
 
+  // 06:00 UTC = 09:00 Türkiye (sabah)
   @Cron(CronExpression.EVERY_DAY_AT_6AM)
   async morningRefresh(): Promise<void> {
+    this.logger.log('Morning refresh starting');
     await this.collectorsService.refreshAllCities();
   }
 
-  @Cron(CronExpression.EVERY_DAY_AT_6PM)
+  // 09:00 UTC = 12:00 Türkiye (öğlen)
+  @Cron('0 9 * * *')
+  async noonRefresh(): Promise<void> {
+    this.logger.log('Noon refresh starting');
+    await this.collectorsService.refreshAllCities();
+  }
+
+  // 15:00 UTC = 18:00 Türkiye (akşam)
+  @Cron('0 15 * * *')
   async eveningRefresh(): Promise<void> {
+    this.logger.log('Evening refresh starting');
     await this.collectorsService.refreshAllCities();
   }
 
