@@ -21,7 +21,7 @@ class PlatformLauncher {
   }
 
   static Future<void> openDirections(Pharmacy pharmacy) async {
-    // TODO(api): Prefer backend-provided deep links if different providers are supported.
+    // TODO(api): Prefer source-provided deep links if different providers are supported.
     if (!pharmacy.hasCoordinates) {
       return;
     }

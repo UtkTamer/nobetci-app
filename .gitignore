@@ -110,12 +110,6 @@ coverage/
 # Symbols
 app.*.symbols
 
-# Local backend artifacts
-backend/node_modules/
-backend/dist/
-backend/.data/
-backend/.env
-
 # Scripts
 scripts/node_modules/
 

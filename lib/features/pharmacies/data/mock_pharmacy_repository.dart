@@ -5,7 +5,7 @@ class MockPharmacyRepository {
 
   List<Pharmacy> getPharmacies() {
     // TODO(api): Replace this mock source with a remote pharmacy datasource.
-    // TODO(api): Map backend response fields into the Pharmacy domain model.
+    // TODO(api): Map API response fields into the Pharmacy domain model.
     return [
       Pharmacy(
         id: 'kadikoy-merkez',
