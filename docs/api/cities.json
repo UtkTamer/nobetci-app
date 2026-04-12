@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "ankara",
+    "name": "Ankara"
+  },
+  {
+    "slug": "istanbul",
+    "name": "İstanbul"
+  },
+  {
+    "slug": "izmir",
+    "name": "İzmir"
+  },
+  {
+    "slug": "bursa",
+    "name": "Bursa"
+  },
+  {
+    "slug": "antalya",
+    "name": "Antalya"
+  }
+]

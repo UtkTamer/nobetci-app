@@ -2,11 +2,13 @@ name: Refresh pharmacies
 
 on:
   schedule:
-    # 06:00 Europe/Istanbul
+    # 06:00 Europe/Istanbul = 03:00 UTC
     - cron: '0 3 * * *'
-    # 18:00 Europe/Istanbul
-    - cron: '0 15 * * *'
   workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
 
 jobs:
   refresh:
@@ -14,28 +16,30 @@ jobs:
     timeout-minutes: 15
 
     steps:
-      - name: Validate refresh URL secret
-        env:
-          BACKEND_REFRESH_URL: ${{ secrets.BACKEND_REFRESH_URL }}
-          BACKEND_REFRESH_TOKEN: ${{ secrets.BACKEND_REFRESH_TOKEN }}
-        run: |
-          if [ -z "$BACKEND_REFRESH_URL" ]; then
-            echo "BACKEND_REFRESH_URL secret is not set."
-            exit 1
-          fi
-          if [ -z "$BACKEND_REFRESH_TOKEN" ]; then
-            echo "BACKEND_REFRESH_TOKEN secret is not set."
-            exit 1
-          fi
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Trigger backend refresh
-        env:
-          BACKEND_REFRESH_URL: ${{ secrets.BACKEND_REFRESH_URL }}
-          BACKEND_REFRESH_TOKEN: ${{ secrets.BACKEND_REFRESH_TOKEN }}
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        working-directory: scripts
+        run: npm ci
+
+      - name: Run pharmacy refresh
+        working-directory: scripts
+        run: node refresh.mjs
+
+      - name: Commit updated data and cache
         run: |
-          curl --fail --show-error --silent \
-            --max-time 600 \
-            --retry 3 \
-            --retry-delay 5 \
-            -H "x-admin-refresh-token: $BACKEND_REFRESH_TOKEN" \
-            "$BACKEND_REFRESH_URL"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/api/ scripts/geocode-cache.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: refresh pharmacy data [skip ci]"
+            git push
+          fi

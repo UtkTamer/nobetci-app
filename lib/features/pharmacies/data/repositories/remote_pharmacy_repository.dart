@@ -15,7 +15,7 @@ class RemotePharmacyRepository extends PharmacyRepository {
           baseUrl ??
           const String.fromEnvironment(
             'NOBETCI_API_BASE_URL',
-            defaultValue: 'https://nobetci-app-production.up.railway.app',
+            defaultValue: 'https://utktamer.github.io/nobetci-app/api',
           );
 
   final http.Client _client;
@@ -27,7 +27,7 @@ class RemotePharmacyRepository extends PharmacyRepository {
   @override
   Future<List<CityOption>> fetchCities() async {
     try {
-      final uri = Uri.parse('$_baseUrl/cities');
+      final uri = Uri.parse('$_baseUrl/cities.json');
       final response = await _get(uri);
 
       if (response.statusCode != 200) {
@@ -49,7 +49,7 @@ class RemotePharmacyRepository extends PharmacyRepository {
     final cacheKey = '$_pharmacyCachePrefix$citySlug';
 
     try {
-      final uri = Uri.parse('$_baseUrl/pharmacies/on-duty?city=$citySlug');
+      final uri = Uri.parse('$_baseUrl/$citySlug.json');
       final response = await _get(uri);
 
       if (response.statusCode != 200) {
