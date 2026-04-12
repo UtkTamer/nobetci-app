@@ -1,11 +1,11 @@
 {
   "ok": true,
-  "checkedAt": "2026-04-12T09:14:05.313Z",
+  "checkedAt": "2026-04-12T09:46:52.055Z",
   "cities": [
     {
       "city": "ankara",
       "cityDisplayName": "Ankara",
-      "lastRefreshedAt": "2026-04-12T09:07:06.812Z",
+      "lastRefreshedAt": "2026-04-12T09:45:40.006Z",
       "pharmacyCount": 51,
       "withCoordinates": 51,
       "coordCoveragePct": 100
@@ -13,16 +13,15 @@
     {
       "city": "istanbul",
       "cityDisplayName": "İstanbul",
-      "lastRefreshedAt": null,
-      "pharmacyCount": 0,
-      "withCoordinates": 0,
-      "coordCoveragePct": 0,
-      "error": "read ECONNRESET"
+      "lastRefreshedAt": "2026-04-12T09:46:49.645Z",
+      "pharmacyCount": 32,
+      "withCoordinates": 32,
+      "coordCoveragePct": 100
     },
     {
       "city": "izmir",
       "cityDisplayName": "İzmir",
-      "lastRefreshedAt": "2026-04-12T09:10:24.083Z",
+      "lastRefreshedAt": "2026-04-12T09:46:50.698Z",
       "pharmacyCount": 69,
       "withCoordinates": 69,
       "coordCoveragePct": 100
@@ -30,7 +29,7 @@
     {
       "city": "bursa",
       "cityDisplayName": "Bursa",
-      "lastRefreshedAt": "2026-04-12T09:12:06.322Z",
+      "lastRefreshedAt": "2026-04-12T09:46:51.372Z",
       "pharmacyCount": 36,
       "withCoordinates": 36,
       "coordCoveragePct": 100
@@ -38,7 +37,7 @@
     {
       "city": "antalya",
       "cityDisplayName": "Antalya",
-      "lastRefreshedAt": "2026-04-12T09:14:05.311Z",
+      "lastRefreshedAt": "2026-04-12T09:46:52.054Z",
       "pharmacyCount": 37,
       "withCoordinates": 37,
       "coordCoveragePct": 100

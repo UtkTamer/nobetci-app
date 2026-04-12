@@ -1,7 +1,7 @@
 {
   "city": "antalya",
   "cityDisplayName": "Antalya",
-  "updatedAt": "2026-04-12T09:14:05.311Z",
+  "updatedAt": "2026-04-12T09:46:52.054Z",
   "isStale": false,
   "pharmacies": [
     {
@@ -14,7 +14,7 @@
       "longitude": 31.7861509,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -28,7 +28,7 @@
       "longitude": 30.8138963,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -42,7 +42,7 @@
       "longitude": 31.9905885,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -56,7 +56,7 @@
       "longitude": 32.0002816,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -70,7 +70,7 @@
       "longitude": 31.858548,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -84,7 +84,7 @@
       "longitude": 32.0010799,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -98,7 +98,7 @@
       "longitude": 29.9876151,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -112,7 +112,7 @@
       "longitude": 30.6122683,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -126,7 +126,7 @@
       "longitude": 29.9183623,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -140,7 +140,7 @@
       "longitude": 30.1565224,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -154,7 +154,7 @@
       "longitude": 30.1445334,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -168,7 +168,7 @@
       "longitude": 30.1445334,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -182,7 +182,7 @@
       "longitude": 32.3184567,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -196,7 +196,7 @@
       "longitude": 29.4126791,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -210,7 +210,7 @@
       "longitude": 29.6325398,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -224,7 +224,7 @@
       "longitude": 29.6413365,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -238,7 +238,7 @@
       "longitude": 30.5644078,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -252,7 +252,7 @@
       "longitude": 30.6783514,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -266,7 +266,7 @@
       "longitude": 30.7174185,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -280,7 +280,7 @@
       "longitude": 30.7120435,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -294,7 +294,7 @@
       "longitude": 30.716756,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -308,7 +308,7 @@
       "longitude": 30.6451498,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -322,7 +322,7 @@
       "longitude": 30.6574541,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -336,7 +336,7 @@
       "longitude": 30.6163056,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -350,7 +350,7 @@
       "longitude": 30.6503649,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -364,7 +364,7 @@
       "longitude": 30.1970497,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -378,7 +378,7 @@
       "longitude": 30.2869169,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -392,7 +392,7 @@
       "longitude": 31.4508645,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -406,7 +406,7 @@
       "longitude": 31.4438207,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -420,7 +420,7 @@
       "longitude": 30.6800744,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -434,7 +434,7 @@
       "longitude": 30.6918797,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -448,7 +448,7 @@
       "longitude": 30.7232928,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -462,7 +462,7 @@
       "longitude": 30.709842,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -476,7 +476,7 @@
       "longitude": 30.7359431,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -490,7 +490,7 @@
       "longitude": 30.7359431,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -504,7 +504,7 @@
       "longitude": 30.7673181,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -518,7 +518,7 @@
       "longitude": 31.0577502,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-12T09:14:05.311Z",
+      "lastVerifiedAt": "2026-04-12T09:46:52.054Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     }

@@ -770,5 +770,133 @@
   "orta mah. atatürk cad. no:311/a": {
     "latitude": 36.8626513,
     "longitude": 31.0577502
+  },
+  "çınarlık sokak no:5/a burgazada": {
+    "latitude": 40.8796692,
+    "longitude": 29.066949
+  },
+  "ayyıldız caddesi no:25/a heybeliada": {
+    "latitude": 40.8781951,
+    "longitude": 29.099859
+  },
+  "ıskele caddesı no:3/b kınalıada ıstanbul": {
+    "latitude": 40.9100423,
+    "longitude": 29.0529902
+  },
+  "ziya gökalp mah. hürriyet bulvarı no: 21h": {
+    "latitude": 41.0745493,
+    "longitude": 28.7864545
+  },
+  "rüzgarlıbahçe mah. ferit inal cad. no:35/b": {
+    "latitude": 41.096401,
+    "longitude": 29.0951559
+  },
+  "paşabahçe mah. beyaz erguvan cad. no:46/a": {
+    "latitude": 41.1163207,
+    "longitude": 29.097968
+  },
+  "petrol iş mah. rahvanlar cad. no:29b": {
+    "latitude": 40.898562,
+    "longitude": 29.1773372
+  },
+  "atalar mah. tecerdağı cad. no:61b": {
+    "latitude": 40.9007539,
+    "longitude": 29.1835508
+  },
+  "halkalı merkez mahallesi şehit yılmaz özdemir caddesi 1242. sokak no: 1/10 küçükçekmece/istanbul": {
+    "latitude": 41.0356342,
+    "longitude": 28.7925691
+  },
+  "halkalı merkez mah. altıner sok. no:9/11b": {
+    "latitude": 41.0356342,
+    "longitude": 28.7925691
+  },
+  "kanarya mah. tavuskuşu cad. no:14 kuçukçekmece/ist.": {
+    "latitude": 41.008684,
+    "longitude": 28.7774562
+  },
+  "cumhuriyet mah. inönü cad. no:57/a": {
+    "latitude": 40.9963738,
+    "longitude": 28.7755248
+  },
+  "yeşilova mah. reyhan cad. no:51/a": {
+    "latitude": 40.9926844,
+    "longitude": 28.7855022
+  },
+  "kemalpaşa mahallesi halkalı caddesi :113/b": {
+    "latitude": 41.0266663,
+    "longitude": 28.7905759
+  },
+  "sülüntepe mah. hacı bektaşi veli cad. no : 38": {
+    "latitude": 40.9157999,
+    "longitude": 29.2788899
+  },
+  "dumlupınar mah. bulut sok. no: 4ba": {
+    "latitude": 40.8920988,
+    "longitude": 29.2483221
+  },
+  "güzelyalı mahallesi anadolu caddesi no:1/d": {
+    "latitude": 40.8604577,
+    "longitude": 29.2818778
+  },
+  "kavakpınar mah. abdi ipekçi cad. no: 71/c": {
+    "latitude": 40.880001,
+    "longitude": 29.2867128
+  },
+  "çamçeşme mah.aydınlı cad. no:16/d": {
+    "latitude": 40.8719741,
+    "longitude": 29.270921
+  },
+  "doğu mah. ortanca cad. no:73/b": {
+    "latitude": 40.8777065,
+    "longitude": 29.2337342
+  },
+  "yeni mah. süreyyapaşa cad. no:62e": {
+    "latitude": 40.8860231,
+    "longitude": 29.2203016
+  },
+  "abdurrahmangazi mah. alpaslan cad.. no: 2/1e": {
+    "latitude": 40.9923179,
+    "longitude": 29.2333854
+  },
+  "yenidoğan mah. atatürk cad. no:295/a": {
+    "latitude": 41.0051973,
+    "longitude": 29.254404
+  },
+  "atatürk mah.ulaş sok.no: 3/a": {
+    "latitude": 41.0106272,
+    "longitude": 29.2232789
+  },
+  "meclis mah. teraziler cad. no:6/b": {
+    "latitude": 41.0116129,
+    "longitude": 29.1950605
+  },
+  "postane mah. istasyon caddesi no:5": {
+    "latitude": 40.8171756,
+    "longitude": 29.3041108
+  },
+  "şifa mah. emiroğlu cad. no:91b": {
+    "latitude": 40.8377704,
+    "longitude": 29.3601674
+  },
+  "çakmak mah. uzunayna cad. no:1/b": {
+    "latitude": 41.0160837,
+    "longitude": 29.1290785
+  },
+  "adem yavuz mah. esenlik sok. no:14/a": {
+    "latitude": 41.0197375,
+    "longitude": 29.1555922
+  },
+  "dumlupınar mah. malatya cd. no:81/a": {
+    "latitude": 41.0501198,
+    "longitude": 29.0915498
+  },
+  "istiklal mah. anafartalar cad. no:13/a": {
+    "latitude": 41.0155708,
+    "longitude": 29.1005166
+  },
+  "istiklal mah. kavaklıdere cad. no:13/b": {
+    "latitude": 41.0184199,
+    "longitude": 29.1002205
   }
 }
