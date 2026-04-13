@@ -23,7 +23,9 @@ class HomeMapSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final pharmacyWithCoordinates = pharmacies.where((item) => item.hasCoordinates);
+    final pharmacyWithCoordinates = pharmacies.where(
+      (item) => item.hasCoordinates,
+    );
     final center = pharmacyWithCoordinates.isNotEmpty
         ? pharmacyWithCoordinates.first.location
         : const LatLng(39.0, 35.0);
@@ -61,8 +63,8 @@ class HomeMapSection extends StatelessWidget {
                     ),
                 if (userLocation != null)
                   Marker(
-                    width: 30,
-                    height: 30,
+                    width: 64,
+                    height: 64,
                     point: userLocation!,
                     child: const _UserLocationMarker(),
                   ),
@@ -104,23 +106,74 @@ class HomeMapSection extends StatelessWidget {
   }
 }
 
-class _UserLocationMarker extends StatelessWidget {
+class _UserLocationMarker extends StatefulWidget {
   const _UserLocationMarker();
 
   @override
+  State<_UserLocationMarker> createState() => _UserLocationMarkerState();
+}
+
+class _UserLocationMarkerState extends State<_UserLocationMarker>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 1800),
+    )..repeat();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return Container(
-      key: const ValueKey('user_location_marker'),
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        color: const Color(0xFF0EA5E9).withValues(alpha: 0.28),
-      ),
-      padding: const EdgeInsets.all(6),
+    return AnimatedBuilder(
+      animation: _controller,
+      builder: (context, child) {
+        final progress = Curves.easeOut.transform(_controller.value);
+        final pulseScale = 0.9 + (progress * 1.6);
+        final pulseOpacity = 0.28 * (1 - progress);
+
+        return Center(
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              Transform.scale(
+                scale: pulseScale,
+                child: Container(
+                  width: 24,
+                  height: 24,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: const Color(
+                      0xFF0EA5E9,
+                    ).withValues(alpha: pulseOpacity),
+                  ),
+                ),
+              ),
+              child!,
+            ],
+          ),
+        );
+      },
       child: Container(
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: const Color(0xFF38BDF8),
-          border: Border.all(color: Colors.white, width: 3),
+        key: const ValueKey('user_location_marker'),
+        width: 28,
+        height: 28,
+        padding: const EdgeInsets.all(5),
+        child: Container(
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: const Color(0xFF38BDF8),
+            border: Border.all(color: Colors.white, width: 4),
+          ),
         ),
       ),
     );
