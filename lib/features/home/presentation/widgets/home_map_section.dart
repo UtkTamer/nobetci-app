@@ -94,7 +94,7 @@ class HomeMapSection extends StatelessWidget {
                 center: const Alignment(0, -0.34),
                 radius: 0.95,
                 colors: [
-                  const Color(0xFF38BDF8).withValues(alpha: 0.2),
+                  const Color(0xFF38BDF8).withValues(alpha: 0.1),
                   Colors.transparent,
                 ],
               ),

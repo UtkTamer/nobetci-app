@@ -21,6 +21,8 @@ class AppTheme {
       useMaterial3: true,
       fontFamily: fontFamily,
       colorScheme: colorScheme,
+      splashColor: colorScheme.primary.withValues(alpha: 0.06),
+      highlightColor: colorScheme.primary.withValues(alpha: 0.03),
       scaffoldBackgroundColor: const Color(0xFFF5F7F8),
       appBarTheme: const AppBarTheme(
         centerTitle: false,
