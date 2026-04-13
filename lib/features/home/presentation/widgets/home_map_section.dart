@@ -5,6 +5,29 @@ import 'package:latlong2/latlong.dart';
 import '../../../../core/constants/app_constants.dart';
 import '../../../pharmacies/domain/pharmacy.dart';
 
+final _topGradientDecoration = BoxDecoration(
+  gradient: LinearGradient(
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
+    colors: [
+      const Color(0xFF020617).withValues(alpha: 0.28),
+      const Color(0xFF020617).withValues(alpha: 0.08),
+      const Color(0xFF020617).withValues(alpha: 0.38),
+    ],
+  ),
+);
+
+final _radialGradientDecoration = BoxDecoration(
+  gradient: RadialGradient(
+    center: const Alignment(0, -0.34),
+    radius: 0.95,
+    colors: [
+      const Color(0xFF38BDF8).withValues(alpha: 0.1),
+      Colors.transparent,
+    ],
+  ),
+);
+
 class HomeMapSection extends StatelessWidget {
   const HomeMapSection({
     required this.mapController,
@@ -73,33 +96,10 @@ class HomeMapSection extends StatelessWidget {
           ],
         ),
         IgnorePointer(
-          child: DecoratedBox(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  const Color(0xFF020617).withValues(alpha: 0.28),
-                  const Color(0xFF020617).withValues(alpha: 0.08),
-                  const Color(0xFF020617).withValues(alpha: 0.38),
-                ],
-              ),
-            ),
-          ),
+          child: DecoratedBox(decoration: _topGradientDecoration),
         ),
         IgnorePointer(
-          child: DecoratedBox(
-            decoration: BoxDecoration(
-              gradient: RadialGradient(
-                center: const Alignment(0, -0.34),
-                radius: 0.95,
-                colors: [
-                  const Color(0xFF38BDF8).withValues(alpha: 0.1),
-                  Colors.transparent,
-                ],
-              ),
-            ),
-          ),
+          child: DecoratedBox(decoration: _radialGradientDecoration),
         ),
       ],
     );

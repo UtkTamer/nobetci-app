@@ -24,6 +24,13 @@ class RemotePharmacyRepository extends PharmacyRepository {
   static const _citiesCacheKey = '_cache_cities';
   static const _pharmacyCachePrefix = '_cache_pharmacies_';
 
+  static SharedPreferences? _prefsInstance;
+
+  Future<SharedPreferences> _getPrefs() async {
+    _prefsInstance ??= await SharedPreferences.getInstance();
+    return _prefsInstance!;
+  }
+
   @override
   Future<List<CityOption>> fetchCities() async {
     try {
@@ -141,7 +148,7 @@ class RemotePharmacyRepository extends PharmacyRepository {
 
   Future<void> _saveToCache(String key, String body) async {
     try {
-      final prefs = await SharedPreferences.getInstance();
+      final prefs = await _getPrefs();
       await prefs.setString(key, body);
     } catch (_) {
       // Cache yazma hatası kritik değil, sessizce geç.
@@ -150,7 +157,7 @@ class RemotePharmacyRepository extends PharmacyRepository {
 
   Future<String?> _loadFromCache(String key) async {
     try {
-      final prefs = await SharedPreferences.getInstance();
+      final prefs = await _getPrefs();
       return prefs.getString(key);
     } catch (_) {
       return null;

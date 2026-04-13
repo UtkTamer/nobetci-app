@@ -18,22 +18,18 @@ class PharmacyListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final titleStyle = Theme.of(
-      context,
-    ).textTheme.titleMedium?.copyWith(
+    final textTheme = Theme.of(context).textTheme;
+    final titleStyle = textTheme.titleMedium?.copyWith(
       fontWeight: FontWeight.w700,
       color: Colors.white,
       letterSpacing: -0.3,
     );
-    final distanceStyle = Theme.of(context).textTheme.bodyMedium?.copyWith(
+    final distanceStyle = textTheme.bodyMedium?.copyWith(
       color: const Color(0xFF8E8E93),
       fontWeight: FontWeight.w600,
     );
 
-    return AnimatedContainer(
-      duration: const Duration(milliseconds: 280),
-      curve: Curves.easeOutCubic,
-      child: Card(
+    return Card(
         color: const Color(0xFF242426),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(22)),
         child: InkWell(
@@ -89,7 +85,6 @@ class PharmacyListItem extends StatelessWidget {
             ),
           ),
         ),
-      ),
     );
   }
 }

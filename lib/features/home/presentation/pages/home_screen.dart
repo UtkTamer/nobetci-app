@@ -35,10 +35,12 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final _mapController = MapController();
   final _sheetController = PharmacyBottomSheetController();
+  final _sheetExtentNotifier = ValueNotifier<double>(AppConstants.initialSheetSize);
   List<CityOption> _cities = const [];
+  Map<String, CityOption> _cityMap = const {};
   List<Pharmacy> _pharmacies = const [];
+  Map<String, Pharmacy> _pharmacyMap = const {};
   double _mapViewportHeight = 0;
-  double _sheetExtent = AppConstants.initialSheetSize;
   double _mapDragDistance = 0;
   String? _selectedPharmacyId;
   String? _selectedCitySlug;
@@ -49,11 +51,22 @@ class _HomeScreenState extends State<HomeScreen> {
   DateTime? _updatedAt;
   bool _isStale = false;
 
+  // Distance sort memoization
+  List<Pharmacy>? _distanceSortCache;
+  List<Pharmacy>? _distanceSortInput;
+  LatLng? _distanceSortLocation;
+
   @override
   void initState() {
     super.initState();
     _primeUserLocation();
     _loadInitialData();
+  }
+
+  @override
+  void dispose() {
+    _sheetExtentNotifier.dispose();
+    super.dispose();
   }
 
   Future<void> _primeUserLocation() async {
@@ -66,7 +79,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
       setState(() {
         _userLocation = currentLocation;
-        _pharmacies = _applyDistanceSorting(_pharmacies, currentLocation);
+        _updatePharmacies(_applyDistanceSorting(_pharmacies, currentLocation));
       });
     } catch (_) {
       // Keep initial load resilient if location cannot be resolved.
@@ -90,9 +103,8 @@ class _HomeScreenState extends State<HomeScreen> {
       return;
     }
 
-    final selectedPharmacy = _pharmacies.firstWhere(
-      (pharmacy) => pharmacy.id == nextSelectedPharmacyId,
-    );
+    final selectedPharmacy = _pharmacyMap[nextSelectedPharmacyId];
+    if (selectedPharmacy == null) return;
 
     if (selectedPharmacy.hasCoordinates) {
       final visibleMapCenterOffset = Offset(
@@ -140,9 +152,9 @@ class _HomeScreenState extends State<HomeScreen> {
       _syncMapToFirstCoordinate(pharmacies);
 
       setState(() {
-        _cities = cities;
+        _updateCities(cities);
         _selectedCitySlug = selectedCity?.slug;
-        _pharmacies = pharmacies;
+        _updatePharmacies(pharmacies);
         _updatedAt = feed?.updatedAt;
         _isStale = feed?.isStale ?? false;
         _status = HomeScreenStatus.loaded;
@@ -190,7 +202,7 @@ class _HomeScreenState extends State<HomeScreen> {
       _syncMapToFirstCoordinate(pharmacies);
 
       setState(() {
-        _pharmacies = pharmacies;
+        _updatePharmacies(pharmacies);
         _updatedAt = feed.updatedAt;
         _isStale = feed.isStale;
         _status = HomeScreenStatus.loaded;
@@ -252,12 +264,21 @@ class _HomeScreenState extends State<HomeScreen> {
       return pharmacies;
     }
 
+    final locationChanged = _distanceSortLocation == null ||
+        _distanceSortLocation!.latitude != userLocation.latitude ||
+        _distanceSortLocation!.longitude != userLocation.longitude;
+
+    if (!locationChanged &&
+        identical(_distanceSortInput, pharmacies) &&
+        _distanceSortCache != null) {
+      return _distanceSortCache!;
+    }
+
     const distance = Distance();
     final withDistance = pharmacies.map((pharmacy) {
       if (!pharmacy.hasCoordinates) {
         return pharmacy.copyWith(distanceKm: double.infinity);
       }
-
       final meters = distance(userLocation, pharmacy.location);
       return pharmacy.copyWith(distanceKm: meters / 1000);
     }).toList();
@@ -265,7 +286,21 @@ class _HomeScreenState extends State<HomeScreen> {
     withDistance.sort(
       (left, right) => left.distanceKm.compareTo(right.distanceKm),
     );
+
+    _distanceSortCache = withDistance;
+    _distanceSortInput = pharmacies;
+    _distanceSortLocation = userLocation;
     return withDistance;
+  }
+
+  void _updatePharmacies(List<Pharmacy> pharmacies) {
+    _pharmacies = pharmacies;
+    _pharmacyMap = {for (final p in pharmacies) p.id: p};
+  }
+
+  void _updateCities(List<CityOption> cities) {
+    _cities = cities;
+    _cityMap = {for (final c in cities) c.slug: c};
   }
 
   Pharmacy? get _nearestPharmacy {
@@ -296,7 +331,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
       setState(() {
         _userLocation = currentLocation;
-        _pharmacies = _applyDistanceSorting(_pharmacies, currentLocation);
+        _updatePharmacies(_applyDistanceSorting(_pharmacies, currentLocation));
       });
 
       _mapController.move(currentLocation, AppConstants.userLocationZoom);
@@ -343,10 +378,6 @@ class _HomeScreenState extends State<HomeScreen> {
         body: LayoutBuilder(
           builder: (context, constraints) {
             _mapViewportHeight = constraints.maxHeight;
-            final sheetInset = constraints.maxHeight * _sheetExtent;
-            final isSheetExpanded =
-                _sheetExtent > AppConstants.initialSheetSize + 0.02;
-            final showMapAttribution = !isSheetExpanded;
 
             return Stack(
               children: [
@@ -357,54 +388,69 @@ class _HomeScreenState extends State<HomeScreen> {
                   userLocation: _userLocation,
                   onPharmacySelected: _onPharmacySelected,
                 ),
-                Positioned(
-                  left: 12,
-                  bottom: sheetInset + 10,
-                  child: AnimatedOpacity(
-                    duration: AppConstants.animationFast,
-                    curve: Curves.easeOutCubic,
-                    opacity: showMapAttribution ? 1 : 0,
-                    child: IgnorePointer(
-                      ignoring: !showMapAttribution,
-                      child: const MapAttribution(),
-                    ),
-                  ),
-                ),
-                Positioned(
-                  right: 20,
-                  bottom: sheetInset + 10,
-                  child: LocateMeButton(
-                    isLoading: _isLocatingUser,
-                    onPressed: _centerOnUserLocation,
-                  ),
-                ),
-                if (isSheetExpanded)
-                  Positioned(
-                    left: 0,
-                    top: 0,
-                    right: 0,
-                    bottom: sheetInset,
-                    child: GestureDetector(
-                      behavior: HitTestBehavior.translucent,
-                      onVerticalDragStart: (_) {
-                        _mapDragDistance = 0;
-                      },
-                      onVerticalDragUpdate: (details) {
-                        final delta = details.primaryDelta ?? 0;
-                        if (delta <= 0) {
-                          return;
-                        }
+                ValueListenableBuilder<double>(
+                  valueListenable: _sheetExtentNotifier,
+                  builder: (context, extent, _) {
+                    final sheetInset = constraints.maxHeight * extent;
+                    final isSheetExpanded =
+                        extent > AppConstants.initialSheetSize + 0.02;
+                    final showMapAttribution = !isSheetExpanded;
 
-                        _mapDragDistance += delta;
-                        if (_mapDragDistance > AppConstants.mapDragCollapseThreshold) {
-                          _mapDragDistance = 0;
-                          _sheetController.collapseToInitial(
-                            AppConstants.initialSheetSize,
-                          );
-                        }
-                      },
-                    ),
-                  ),
+                    return Stack(
+                      children: [
+                        Positioned(
+                          left: 12,
+                          bottom: sheetInset + 10,
+                          child: AnimatedOpacity(
+                            duration: AppConstants.animationFast,
+                            curve: Curves.easeOutCubic,
+                            opacity: showMapAttribution ? 1 : 0,
+                            child: IgnorePointer(
+                              ignoring: !showMapAttribution,
+                              child: const MapAttribution(),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          right: 20,
+                          bottom: sheetInset + 10,
+                          child: LocateMeButton(
+                            isLoading: _isLocatingUser,
+                            onPressed: _centerOnUserLocation,
+                          ),
+                        ),
+                        if (isSheetExpanded)
+                          Positioned(
+                            left: 0,
+                            top: 0,
+                            right: 0,
+                            bottom: sheetInset,
+                            child: GestureDetector(
+                              behavior: HitTestBehavior.translucent,
+                              onVerticalDragStart: (_) {
+                                _mapDragDistance = 0;
+                              },
+                              onVerticalDragUpdate: (details) {
+                                final delta = details.primaryDelta ?? 0;
+                                if (delta <= 0) {
+                                  return;
+                                }
+
+                                _mapDragDistance += delta;
+                                if (_mapDragDistance >
+                                    AppConstants.mapDragCollapseThreshold) {
+                                  _mapDragDistance = 0;
+                                  _sheetController.collapseToInitial(
+                                    AppConstants.initialSheetSize,
+                                  );
+                                }
+                              },
+                            ),
+                          ),
+                      ],
+                    );
+                  },
+                ),
                 SafeArea(
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
@@ -491,13 +537,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ? null
                       : () => _loadCity(selectedCity, isRefresh: true),
                   onExtentChanged: (extent) {
-                    if (_sheetExtent == extent) {
-                      return;
-                    }
-
-                    setState(() {
-                      _sheetExtent = extent;
-                    });
+                    _sheetExtentNotifier.value = extent;
                   },
                 ),
               ],
@@ -526,18 +566,6 @@ class _HomeScreenState extends State<HomeScreen> {
     return '$selectedCityName için ${_pharmacies.length} eczane listeleniyor';
   }
 
-  CityOption? get _selectedCityOption {
-    final selectedCitySlug = _selectedCitySlug;
-    if (selectedCitySlug == null) {
-      return null;
-    }
-
-    for (final city in _cities) {
-      if (city.slug == selectedCitySlug) {
-        return city;
-      }
-    }
-
-    return null;
-  }
+  CityOption? get _selectedCityOption =>
+      _selectedCitySlug != null ? _cityMap[_selectedCitySlug] : null;
 }

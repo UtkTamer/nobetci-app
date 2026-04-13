@@ -72,6 +72,10 @@ class _PharmacyBottomSheetState extends State<PharmacyBottomSheet> {
   double _handleDragDistance = 0;
   String _searchQuery = '';
 
+  // Search filter memoization
+  List<Pharmacy>? _filteredCache;
+  String? _lastFilterQuery;
+
   @override
   void initState() {
     super.initState();
@@ -98,6 +102,8 @@ class _PharmacyBottomSheetState extends State<PharmacyBottomSheet> {
         ..addEntries(
           widget.pharmacies.map((pharmacy) => MapEntry(pharmacy.id, GlobalKey())),
         );
+      _filteredCache = null;
+      _lastFilterQuery = null;
     }
 
     if (oldWidget.selectedPharmacyId == widget.selectedPharmacyId ||
@@ -244,16 +250,20 @@ class _PharmacyBottomSheetState extends State<PharmacyBottomSheet> {
 
   List<Pharmacy> get _filteredPharmacies {
     final normalizedQuery = _searchQuery.trim().toLowerCase();
-    if (normalizedQuery.isEmpty) {
-      return widget.pharmacies;
+    if (_lastFilterQuery == normalizedQuery && _filteredCache != null) {
+      return _filteredCache!;
     }
 
-    return widget.pharmacies.where((pharmacy) {
-      final haystack =
-          '${pharmacy.name} ${pharmacy.address} ${pharmacy.phoneNumber}'
-              .toLowerCase();
-      return haystack.contains(normalizedQuery);
-    }).toList();
+    _lastFilterQuery = normalizedQuery;
+    _filteredCache = normalizedQuery.isEmpty
+        ? widget.pharmacies
+        : widget.pharmacies.where((pharmacy) {
+            final haystack =
+                '${pharmacy.name} ${pharmacy.address} ${pharmacy.phoneNumber}'
+                    .toLowerCase();
+            return haystack.contains(normalizedQuery);
+          }).toList();
+    return _filteredCache!;
   }
 
   @override
@@ -413,17 +423,20 @@ class _PharmacyBottomSheetState extends State<PharmacyBottomSheet> {
                                   SliverList(
                                       delegate: SliverChildBuilderDelegate(
                                         (context, index) {
-                                          if (index.isOdd) {
-                                            return const SizedBox(height: 10);
-                                          }
-
                                           final pharmacy =
-                                              filteredPharmacies[index ~/ 2];
+                                              filteredPharmacies[index];
                                           final isExpanded = pharmacy.id ==
                                               widget.selectedPharmacyId;
 
-                                          return KeyedSubtree(
+                                          return Padding(
                                             key: _itemKeys[pharmacy.id],
+                                            padding: index <
+                                                    filteredPharmacies.length -
+                                                        1
+                                                ? const EdgeInsets.only(
+                                                    bottom: 10,
+                                                  )
+                                                : EdgeInsets.zero,
                                             child: PharmacyListItem(
                                               pharmacy: pharmacy,
                                               isExpanded: isExpanded,
@@ -434,8 +447,7 @@ class _PharmacyBottomSheetState extends State<PharmacyBottomSheet> {
                                             ),
                                           );
                                         },
-                                        childCount:
-                                            filteredPharmacies.length * 2 - 1,
+                                        childCount: filteredPharmacies.length,
                                       ),
                                     ),
                             ),
