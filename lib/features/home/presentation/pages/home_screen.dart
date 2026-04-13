@@ -4,16 +4,19 @@ import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 
 import '../../../../core/constants/app_constants.dart';
-import '../../../../core/helpers/platform_launcher.dart';
 import '../../../../core/services/location_service.dart';
 import '../models/home_screen_status.dart';
 import '../../../pharmacies/data/models/city_option.dart';
 import '../../../pharmacies/data/models/pharmacy_feed.dart';
+import '../../../../core/utils/date_time_formatter.dart';
 import '../../../pharmacies/data/repositories/pharmacy_repository.dart';
 import '../../../pharmacies/data/repositories/remote_pharmacy_repository.dart';
 import '../../../pharmacies/domain/pharmacy.dart';
 import '../../../pharmacies/presentation/widgets/pharmacy_bottom_sheet.dart';
+import '../widgets/city_dropdown.dart';
 import '../widgets/home_map_section.dart';
+import '../widgets/locate_me_button.dart';
+import '../widgets/map_attribution.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({
@@ -358,19 +361,19 @@ class _HomeScreenState extends State<HomeScreen> {
                   left: 12,
                   bottom: sheetInset + 10,
                   child: AnimatedOpacity(
-                    duration: const Duration(milliseconds: 180),
+                    duration: AppConstants.animationFast,
                     curve: Curves.easeOutCubic,
                     opacity: showMapAttribution ? 1 : 0,
                     child: IgnorePointer(
                       ignoring: !showMapAttribution,
-                      child: const _MapAttribution(),
+                      child: const MapAttribution(),
                     ),
                   ),
                 ),
                 Positioned(
                   right: 20,
                   bottom: sheetInset + 10,
-                  child: _LocateMeButton(
+                  child: LocateMeButton(
                     isLoading: _isLocatingUser,
                     onPressed: _centerOnUserLocation,
                   ),
@@ -393,7 +396,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         }
 
                         _mapDragDistance += delta;
-                        if (_mapDragDistance > 16) {
+                        if (_mapDragDistance > AppConstants.mapDragCollapseThreshold) {
                           _mapDragDistance = 0;
                           _sheetController.collapseToInitial(
                             AppConstants.initialSheetSize,
@@ -412,7 +415,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         if (_cities.isNotEmpty && selectedCity != null)
-                          _CityDropdown(
+                          CityDropdown(
                             value: selectedCity,
                             items: _cities,
                             onChanged: (city) {
@@ -434,8 +437,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           const SizedBox(height: 6),
                           Text(
                             _isStale
-                                ? 'Son güncelleme eski olabilir: ${_formatTimestamp(_updatedAt!)}'
-                                : 'Son güncelleme: ${_formatTimestamp(_updatedAt!)}',
+                                ? 'Son güncelleme eski olabilir: ${DateTimeFormatter.formatShort(_updatedAt!)}'
+                                : 'Son güncelleme: ${DateTimeFormatter.formatShort(_updatedAt!)}',
                             style: Theme.of(context).textTheme.bodySmall
                                 ?.copyWith(
                                   color: _isStale
@@ -523,15 +526,6 @@ class _HomeScreenState extends State<HomeScreen> {
     return '$selectedCityName için ${_pharmacies.length} eczane listeleniyor';
   }
 
-  String _formatTimestamp(DateTime value) {
-    final day = value.day.toString().padLeft(2, '0');
-    final month = value.month.toString().padLeft(2, '0');
-    final year = value.year;
-    final hour = value.hour.toString().padLeft(2, '0');
-    final minute = value.minute.toString().padLeft(2, '0');
-    return '$day.$month.$year $hour:$minute';
-  }
-
   CityOption? get _selectedCityOption {
     final selectedCitySlug = _selectedCitySlug;
     if (selectedCitySlug == null) {
@@ -545,249 +539,5 @@ class _HomeScreenState extends State<HomeScreen> {
     }
 
     return null;
-  }
-}
-
-class _CityDropdown extends StatelessWidget {
-  const _CityDropdown({
-    required this.value,
-    required this.items,
-    required this.onChanged,
-  });
-
-  final CityOption value;
-  final List<CityOption> items;
-  final ValueChanged<CityOption?> onChanged;
-
-  @override
-  Widget build(BuildContext context) {
-    const dropdownRadius = 22.0;
-    final borderRadius = BorderRadius.circular(dropdownRadius);
-    final textStyle = Theme.of(context).textTheme.titleMedium?.copyWith(
-      fontWeight: FontWeight.w700,
-      color: Colors.white,
-      letterSpacing: -0.3,
-    );
-    return IntrinsicWidth(
-      child: Builder(
-        builder: (context) {
-          return Material(
-            color: const Color(0xFF242426),
-            borderRadius: borderRadius,
-            child: InkWell(
-              key: const ValueKey('city_dropdown'),
-              borderRadius: borderRadius,
-              onTap: () async {
-                final availableCities = items
-                    .where((city) => city.slug != value.slug)
-                    .toList();
-                if (availableCities.isEmpty) {
-                  return;
-                }
-
-                final button = context.findRenderObject() as RenderBox;
-                final overlay =
-                    Overlay.of(context).context.findRenderObject() as RenderBox;
-                const menuOffset = 8.0;
-                final position = RelativeRect.fromRect(
-                  Rect.fromPoints(
-                    button.localToGlobal(
-                      Offset(0, button.size.height + menuOffset),
-                      ancestor: overlay,
-                    ),
-                    button.localToGlobal(
-                      Offset(
-                        button.size.width,
-                        button.size.height + menuOffset,
-                      ),
-                      ancestor: overlay,
-                    ),
-                  ),
-                  Offset.zero & overlay.size,
-                );
-
-                final selectedCity = await showMenu<CityOption>(
-                  context: context,
-                  position: position,
-                  constraints: BoxConstraints(minWidth: button.size.width),
-                  elevation: 8,
-                  shadowColor: const Color(0xFF020617).withValues(alpha: 0.2),
-                  color: const Color(0xFF242426),
-                  surfaceTintColor: Colors.transparent,
-                  menuPadding: const EdgeInsets.symmetric(vertical: 6),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(22),
-                  ),
-                  items: availableCities.asMap().entries.map((entry) {
-                    final index = entry.key;
-                    final city = entry.value;
-                    final isLast = index == availableCities.length - 1;
-
-                    return PopupMenuItem<CityOption>(
-                      value: city,
-                      padding: EdgeInsets.zero,
-                      child: Container(
-                        height: 48,
-                        padding: const EdgeInsets.symmetric(horizontal: 16),
-                        decoration: BoxDecoration(
-                          border: isLast
-                              ? null
-                              : Border(
-                                  bottom: BorderSide(
-                                    color: Colors.white.withValues(alpha: 0.05),
-                                  ),
-                                ),
-                        ),
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          city.name,
-                          style: textStyle?.copyWith(
-                            color: const Color(0xFFD1D1D6),
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ),
-                    );
-                  }).toList(),
-                );
-
-                if (selectedCity != null) {
-                  onChanged(selectedCity);
-                }
-              },
-              child: Container(
-                height: 48,
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                decoration: BoxDecoration(
-                  borderRadius: borderRadius,
-                  border: Border.all(
-                    color: Colors.white.withValues(alpha: 0.05),
-                  ),
-                ),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Text(value.name, style: textStyle),
-                    const SizedBox(width: 8),
-                    const Icon(
-                      Icons.keyboard_arrow_down_rounded,
-                      color: Color(0xFF8E8E93),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          );
-        },
-      ),
-    );
-  }
-}
-
-class _MapAttribution extends StatelessWidget {
-  const _MapAttribution();
-
-  static const _cartoUrl = 'https://carto.com/attributions';
-  static const _osmLegalUrl = 'https://www.openstreetmap.org/copyright';
-
-  @override
-  Widget build(BuildContext context) {
-    final textStyle = Theme.of(context).textTheme.bodySmall?.copyWith(
-      color: const Color(0xFFE2E8F0),
-      fontWeight: FontWeight.w600,
-      fontSize: 11,
-    );
-
-    return DecoratedBox(
-      decoration: const BoxDecoration(),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 2),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            GestureDetector(
-              behavior: HitTestBehavior.opaque,
-              onTap: () => PlatformLauncher.openExternalUrl(_cartoUrl),
-              child: Text(
-                '© CARTO',
-                style: textStyle?.copyWith(color: const Color(0xFFE2E8F0)),
-              ),
-            ),
-            const SizedBox(height: 2),
-            GestureDetector(
-              behavior: HitTestBehavior.opaque,
-              onTap: () => PlatformLauncher.openExternalUrl(_osmLegalUrl),
-              child: Text(
-                '© OpenStreetMap',
-                style: textStyle?.copyWith(
-                  color: const Color(0xFFBFDBFE),
-                  decoration: TextDecoration.underline,
-                  decorationColor: const Color(0xFFBFDBFE),
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class _LocateMeButton extends StatelessWidget {
-  const _LocateMeButton({required this.isLoading, required this.onPressed});
-
-  final bool isLoading;
-  final VoidCallback onPressed;
-
-  @override
-  Widget build(BuildContext context) {
-    return Material(
-      color: const Color(0xFF242426),
-      shape: const CircleBorder(),
-      child: InkWell(
-        key: const ValueKey('locate_me_button'),
-        onTap: isLoading ? null : onPressed,
-        customBorder: const CircleBorder(),
-        child: Ink(
-          width: 44,
-          height: 44,
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            border: Border.all(color: Colors.white.withValues(alpha: 0.05)),
-            boxShadow: [
-              BoxShadow(
-                color: const Color(0xFF020617).withValues(alpha: 0.18),
-                blurRadius: 18,
-                offset: const Offset(0, 10),
-              ),
-            ],
-          ),
-          child: Center(
-            child: AnimatedSwitcher(
-              duration: const Duration(milliseconds: 180),
-              child: isLoading
-                  ? const SizedBox(
-                      key: ValueKey('locate_loading'),
-                      width: 16,
-                      height: 16,
-                      child: CircularProgressIndicator(
-                        strokeWidth: 2,
-                        valueColor: AlwaysStoppedAnimation<Color>(
-                          Color(0xFF34C759),
-                        ),
-                      ),
-                    )
-                  : const Icon(
-                      key: ValueKey('locate_icon'),
-                      Icons.near_me_rounded,
-                      color: Colors.white,
-                      size: 18,
-                    ),
-            ),
-          ),
-        ),
-      ),
-    );
   }
 }

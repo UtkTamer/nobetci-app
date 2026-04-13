@@ -2,10 +2,12 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
-import '../../../../shared/widgets/sheet_drag_handle.dart';
+import '../../../../core/constants/app_constants.dart';
 import '../../../home/presentation/models/home_screen_status.dart';
 import '../../domain/pharmacy.dart';
 import 'pharmacy_list_item.dart';
+import 'pharmacy_sheet_header.dart';
+import 'pharmacy_sheet_states.dart';
 
 class PharmacyBottomSheetController {
   Future<void> Function(double targetSize)? _animateTo;
@@ -121,7 +123,7 @@ class _PharmacyBottomSheetState extends State<PharmacyBottomSheet> {
     try {
       await _draggableController.animateTo(
         targetSize,
-        duration: const Duration(milliseconds: 240),
+        duration: AppConstants.animationNormal,
         curve: Curves.easeOutCubic,
       );
     } finally {
@@ -154,7 +156,7 @@ class _PharmacyBottomSheetState extends State<PharmacyBottomSheet> {
 
     await Scrollable.ensureVisible(
       selectedItemContext,
-      duration: const Duration(milliseconds: 280),
+      duration: AppConstants.animationSlow,
       curve: Curves.easeOutCubic,
       alignment: 0.08,
     );
@@ -209,7 +211,7 @@ class _PharmacyBottomSheetState extends State<PharmacyBottomSheet> {
         _downwardPullDistance = 0;
       }
 
-      if (_downwardPullDistance > 22) {
+      if (_downwardPullDistance > AppConstants.listDragCollapseThreshold) {
         _downwardPullDistance = 0;
         unawaited(_animateSheetTo(widget.initialChildSize));
       }
@@ -225,7 +227,7 @@ class _PharmacyBottomSheetState extends State<PharmacyBottomSheet> {
         _downwardPullDistance += -notification.overscroll;
       }
 
-      if (_downwardPullDistance > 22) {
+      if (_downwardPullDistance > AppConstants.listDragCollapseThreshold) {
         _downwardPullDistance = 0;
         unawaited(_animateSheetTo(widget.initialChildSize));
       }
@@ -331,7 +333,7 @@ class _PharmacyBottomSheetState extends State<PharmacyBottomSheet> {
                                         ),
                                         const SizedBox(width: 12),
                                         if (isExpanded)
-                                          _SheetCollapseButton(
+                                          SheetCollapseButton(
                                             onTap: () {
                                               FocusScope.of(context).unfocus();
                                               unawaited(
@@ -446,7 +448,7 @@ class _PharmacyBottomSheetState extends State<PharmacyBottomSheet> {
                     top: 0,
                     left: 0,
                     right: 0,
-                    child: _PinnedHandleHeader(
+                    child: SheetPinnedHandle(
                       onTap: () {
                         final isExpanded =
                             _draggableController.isAttached &&
@@ -481,16 +483,16 @@ class _PharmacyBottomSheetState extends State<PharmacyBottomSheet> {
   ) {
     if (widget.status == HomeScreenStatus.loading) {
       return const SliverToBoxAdapter(
-        child: _StatusCard(
-          child: _LoadingState(),
+        child: SheetStatusCard(
+          child: SheetLoadingState(),
         ),
       );
     }
 
     if (widget.status == HomeScreenStatus.error) {
       return SliverToBoxAdapter(
-        child: _StatusCard(
-          child: _ErrorState(
+        child: SheetStatusCard(
+          child: SheetErrorState(
             message: widget.errorMessage ?? 'Bir sorun oluştu.',
             onRetry: widget.onRetry,
           ),
@@ -500,8 +502,8 @@ class _PharmacyBottomSheetState extends State<PharmacyBottomSheet> {
 
     if (widget.pharmacies.isEmpty) {
       return SliverToBoxAdapter(
-        child: _StatusCard(
-          child: _EmptyState(
+        child: SheetStatusCard(
+          child: SheetEmptyState(
             onRefresh: widget.onRefresh,
           ),
         ),
@@ -510,7 +512,7 @@ class _PharmacyBottomSheetState extends State<PharmacyBottomSheet> {
 
     if (filteredPharmacies.isEmpty) {
       return SliverToBoxAdapter(
-        child: _StatusCard(
+        child: SheetStatusCard(
           child: Text(
             'Aramaya uygun eczane bulunamadı.',
             style: Theme.of(
@@ -522,174 +524,5 @@ class _PharmacyBottomSheetState extends State<PharmacyBottomSheet> {
     }
 
     return null;
-  }
-}
-
-class _StatusCard extends StatelessWidget {
-  const _StatusCard({required this.child});
-
-  final Widget child;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(20),
-      decoration: BoxDecoration(
-        color: const Color(0xFF242426),
-        borderRadius: BorderRadius.circular(22),
-      ),
-      child: child,
-    );
-  }
-}
-
-class _LoadingState extends StatelessWidget {
-  const _LoadingState();
-
-  @override
-  Widget build(BuildContext context) {
-    return const Row(
-      children: [
-        SizedBox(
-          width: 18,
-          height: 18,
-          child: CircularProgressIndicator(
-            strokeWidth: 2,
-            valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF34C759)),
-          ),
-        ),
-        SizedBox(width: 12),
-        Expanded(
-          child: Text(
-            'Nöbetçi eczane verileri yükleniyor...',
-            style: TextStyle(color: Color(0xFFAEAEB2)),
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class _ErrorState extends StatelessWidget {
-  const _ErrorState({
-    required this.message,
-    required this.onRetry,
-  });
-
-  final String message;
-  final VoidCallback? onRetry;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          message,
-          style: Theme.of(
-            context,
-          ).textTheme.bodyLarge?.copyWith(color: const Color(0xFFAEAEB2)),
-        ),
-        const SizedBox(height: 12),
-        FilledButton(
-          onPressed: onRetry,
-          child: const Text('Tekrar Dene'),
-        ),
-      ],
-    );
-  }
-}
-
-class _EmptyState extends StatelessWidget {
-  const _EmptyState({required this.onRefresh});
-
-  final Future<void> Function()? onRefresh;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          'Bu şehir için aktif nöbetçi eczane verisi bulunamadı.',
-          style: Theme.of(
-            context,
-          ).textTheme.bodyLarge?.copyWith(color: const Color(0xFFAEAEB2)),
-        ),
-        const SizedBox(height: 12),
-        FilledButton(
-          onPressed: onRefresh == null ? null : () => unawaited(onRefresh!()),
-          child: const Text('Yeniden Yükle'),
-        ),
-      ],
-    );
-  }
-}
-
-class _PinnedHandleHeader extends StatelessWidget {
-  const _PinnedHandleHeader({
-    required this.onTap,
-    required this.onVerticalDragStart,
-    required this.onVerticalDragUpdate,
-    required this.onVerticalDragEnd,
-  });
-
-  final VoidCallback onTap;
-  final GestureDragStartCallback onVerticalDragStart;
-  final GestureDragUpdateCallback onVerticalDragUpdate;
-  final GestureDragEndCallback onVerticalDragEnd;
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      behavior: HitTestBehavior.opaque,
-      onTap: onTap,
-      onVerticalDragStart: onVerticalDragStart,
-      onVerticalDragUpdate: onVerticalDragUpdate,
-      onVerticalDragEnd: onVerticalDragEnd,
-      child: Container(
-        height: 42,
-        alignment: Alignment.topCenter,
-        decoration: const BoxDecoration(
-          color: Colors.transparent,
-        ),
-        padding: const EdgeInsets.only(top: 10),
-        child: const SheetDragHandle(),
-      ),
-    );
-  }
-}
-
-class _SheetCollapseButton extends StatelessWidget {
-  const _SheetCollapseButton({required this.onTap});
-
-  final VoidCallback onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    return Material(
-      color: Colors.transparent,
-      child: InkWell(
-        key: const ValueKey('sheet_collapse_button'),
-        onTap: onTap,
-        borderRadius: BorderRadius.circular(18),
-        child: Ink(
-          width: 38,
-          height: 38,
-          decoration: BoxDecoration(
-            color: const Color(0xFF2C2C2E),
-            shape: BoxShape.circle,
-            border: Border.all(
-              color: Colors.white.withValues(alpha: 0.06),
-            ),
-          ),
-          child: const Icon(
-            Icons.close_rounded,
-            color: Colors.white,
-            size: 20,
-          ),
-        ),
-      ),
-    );
   }
 }
