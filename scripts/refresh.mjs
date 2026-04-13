@@ -12,11 +12,87 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 // ---------------------------------------------------------------------------
 
 const CITIES = [
+  { slug: 'adana', displayName: 'Adana', plateCode: '1' },
+  { slug: 'adiyaman', displayName: 'Adıyaman', plateCode: '2' },
+  { slug: 'afyonkarahisar', displayName: 'Afyonkarahisar', plateCode: '3' },
+  { slug: 'agri', displayName: 'Ağrı', plateCode: '4' },
+  { slug: 'amasya', displayName: 'Amasya', plateCode: '5' },
   { slug: 'ankara', displayName: 'Ankara', plateCode: '6' },
+  { slug: 'antalya', displayName: 'Antalya', plateCode: '7' },
+  { slug: 'artvin', displayName: 'Artvin', plateCode: '8' },
+  { slug: 'aydin', displayName: 'Aydın', plateCode: '9' },
+  { slug: 'balikesir', displayName: 'Balıkesir', plateCode: '10' },
+  { slug: 'bilecik', displayName: 'Bilecik', plateCode: '11' },
+  { slug: 'bingol', displayName: 'Bingöl', plateCode: '12' },
+  { slug: 'bitlis', displayName: 'Bitlis', plateCode: '13' },
+  { slug: 'bolu', displayName: 'Bolu', plateCode: '14' },
+  { slug: 'burdur', displayName: 'Burdur', plateCode: '15' },
+  { slug: 'bursa', displayName: 'Bursa', plateCode: '16' },
+  { slug: 'canakkale', displayName: 'Çanakkale', plateCode: '17' },
+  { slug: 'cankiri', displayName: 'Çankırı', plateCode: '18' },
+  { slug: 'corum', displayName: 'Çorum', plateCode: '19' },
+  { slug: 'denizli', displayName: 'Denizli', plateCode: '20' },
+  { slug: 'diyarbakir', displayName: 'Diyarbakır', plateCode: '21' },
+  { slug: 'edirne', displayName: 'Edirne', plateCode: '22' },
+  { slug: 'elazig', displayName: 'Elazığ', plateCode: '23' },
+  { slug: 'erzincan', displayName: 'Erzincan', plateCode: '24' },
+  { slug: 'erzurum', displayName: 'Erzurum', plateCode: '25' },
+  { slug: 'eskisehir', displayName: 'Eskişehir', plateCode: '26' },
+  { slug: 'gaziantep', displayName: 'Gaziantep', plateCode: '27' },
+  { slug: 'giresun', displayName: 'Giresun', plateCode: '28' },
+  { slug: 'gumushane', displayName: 'Gümüşhane', plateCode: '29' },
+  { slug: 'hakkari', displayName: 'Hakkâri', plateCode: '30' },
+  { slug: 'hatay', displayName: 'Hatay', plateCode: '31' },
+  { slug: 'isparta', displayName: 'Isparta', plateCode: '32' },
+  { slug: 'mersin', displayName: 'Mersin', plateCode: '33' },
   { slug: 'istanbul', displayName: 'İstanbul', plateCode: '34' },
   { slug: 'izmir', displayName: 'İzmir', plateCode: '35' },
-  { slug: 'bursa', displayName: 'Bursa', plateCode: '16' },
-  { slug: 'antalya', displayName: 'Antalya', plateCode: '7' },
+  { slug: 'kars', displayName: 'Kars', plateCode: '36' },
+  { slug: 'kastamonu', displayName: 'Kastamonu', plateCode: '37' },
+  { slug: 'kayseri', displayName: 'Kayseri', plateCode: '38' },
+  { slug: 'kirklareli', displayName: 'Kırklareli', plateCode: '39' },
+  { slug: 'kirsehir', displayName: 'Kırşehir', plateCode: '40' },
+  { slug: 'kocaeli', displayName: 'Kocaeli', plateCode: '41' },
+  { slug: 'konya', displayName: 'Konya', plateCode: '42' },
+  { slug: 'kutahya', displayName: 'Kütahya', plateCode: '43' },
+  { slug: 'malatya', displayName: 'Malatya', plateCode: '44' },
+  { slug: 'manisa', displayName: 'Manisa', plateCode: '45' },
+  { slug: 'kahramanmaras', displayName: 'Kahramanmaraş', plateCode: '46' },
+  { slug: 'mardin', displayName: 'Mardin', plateCode: '47' },
+  { slug: 'mugla', displayName: 'Muğla', plateCode: '48' },
+  { slug: 'mus', displayName: 'Muş', plateCode: '49' },
+  { slug: 'nevsehir', displayName: 'Nevşehir', plateCode: '50' },
+  { slug: 'nigde', displayName: 'Niğde', plateCode: '51' },
+  { slug: 'ordu', displayName: 'Ordu', plateCode: '52' },
+  { slug: 'rize', displayName: 'Rize', plateCode: '53' },
+  { slug: 'sakarya', displayName: 'Sakarya', plateCode: '54' },
+  { slug: 'samsun', displayName: 'Samsun', plateCode: '55' },
+  { slug: 'siirt', displayName: 'Siirt', plateCode: '56' },
+  { slug: 'sinop', displayName: 'Sinop', plateCode: '57' },
+  { slug: 'sivas', displayName: 'Sivas', plateCode: '58' },
+  { slug: 'tekirdag', displayName: 'Tekirdağ', plateCode: '59' },
+  { slug: 'tokat', displayName: 'Tokat', plateCode: '60' },
+  { slug: 'trabzon', displayName: 'Trabzon', plateCode: '61' },
+  { slug: 'tunceli', displayName: 'Tunceli', plateCode: '62' },
+  { slug: 'sanliurfa', displayName: 'Şanlıurfa', plateCode: '63' },
+  { slug: 'usak', displayName: 'Uşak', plateCode: '64' },
+  { slug: 'van', displayName: 'Van', plateCode: '65' },
+  { slug: 'yozgat', displayName: 'Yozgat', plateCode: '66' },
+  { slug: 'zonguldak', displayName: 'Zonguldak', plateCode: '67' },
+  { slug: 'aksaray', displayName: 'Aksaray', plateCode: '68' },
+  { slug: 'bayburt', displayName: 'Bayburt', plateCode: '69' },
+  { slug: 'karaman', displayName: 'Karaman', plateCode: '70' },
+  { slug: 'kirikkale', displayName: 'Kırıkkale', plateCode: '71' },
+  { slug: 'batman', displayName: 'Batman', plateCode: '72' },
+  { slug: 'sirnak', displayName: 'Şırnak', plateCode: '73' },
+  { slug: 'bartin', displayName: 'Bartın', plateCode: '74' },
+  { slug: 'ardahan', displayName: 'Ardahan', plateCode: '75' },
+  { slug: 'igdir', displayName: 'Iğdır', plateCode: '76' },
+  { slug: 'yalova', displayName: 'Yalova', plateCode: '77' },
+  { slug: 'karabuk', displayName: 'Karabük', plateCode: '78' },
+  { slug: 'kilis', displayName: 'Kilis', plateCode: '79' },
+  { slug: 'osmaniye', displayName: 'Osmaniye', plateCode: '80' },
+  { slug: 'duzce', displayName: 'Düzce', plateCode: '81' },
 ];
 
 const EDEVLET_URL =
@@ -27,6 +103,11 @@ const NOMINATIM_DELAY_MS = 1200;
 const MAX_POLL_ATTEMPTS = 20;
 const POLL_DELAY_MS = 3000;
 const MAX_GEOCODE_RETRIES = 3;
+
+const CONCURRENCY = 3;
+const CITY_RETRY_ATTEMPTS = 2;
+const CITY_RETRY_DELAY_MS = 5000;
+const INTER_CITY_DELAY_MS = 2000;
 
 const CACHE_PATH = resolve(__dirname, 'geocode-cache.json');
 const OUTPUT_DIR = resolve(__dirname, '..', 'docs', 'api');
@@ -168,26 +249,26 @@ function saveCache() {
   writeFileSync(CACHE_PATH, JSON.stringify(geocodeCache, null, 2) + '\n');
 }
 
-let lastNominatimCall = 0;
+let nominatimQueue = Promise.resolve();
 
 async function nominatimQuery(query) {
-  // Rate limit
-  const now = Date.now();
-  const elapsed = now - lastNominatimCall;
-  if (elapsed < NOMINATIM_DELAY_MS) {
-    await sleep(NOMINATIM_DELAY_MS - elapsed);
-  }
-  lastNominatimCall = Date.now();
+  // Serialize all Nominatim calls to respect rate limit across concurrent workers
+  const result = nominatimQueue.then(async () => {
+    await sleep(NOMINATIM_DELAY_MS);
 
-  const response = await axios.get(NOMINATIM_URL, {
-    params: { q: query, format: 'jsonv2', limit: 1 },
-    headers: { 'User-Agent': 'nobetci-app/1.0' },
+    const response = await axios.get(NOMINATIM_URL, {
+      params: { q: query, format: 'jsonv2', limit: 1 },
+      headers: { 'User-Agent': 'nobetci-app/1.0' },
+    });
+
+    const data = response.data[0];
+    if (!data) return null;
+
+    return { latitude: Number(data.lat), longitude: Number(data.lon) };
   });
 
-  const result = response.data[0];
-  if (!result) return null;
-
-  return { latitude: Number(result.lat), longitude: Number(result.lon) };
+  nominatimQueue = result.catch(() => {});
+  return result;
 }
 
 function buildGeocodingQueries(rawAddress, district, city) {
@@ -445,12 +526,55 @@ async function refreshCity(city) {
 }
 
 // ---------------------------------------------------------------------------
+// Retry wrapper
+// ---------------------------------------------------------------------------
+
+async function refreshCityWithRetry(city) {
+  for (let attempt = 1; attempt <= CITY_RETRY_ATTEMPTS; attempt++) {
+    try {
+      return await refreshCity(city);
+    } catch (error) {
+      if (attempt < CITY_RETRY_ATTEMPTS) {
+        console.warn(
+          `  [${city.displayName}] Attempt ${attempt} failed: ${error.message}. Retrying in ${CITY_RETRY_DELAY_MS / 1000}s...`,
+        );
+        await sleep(CITY_RETRY_DELAY_MS);
+      } else {
+        throw error;
+      }
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Concurrency pool
+// ---------------------------------------------------------------------------
+
+async function runWithConcurrency(tasks, concurrency) {
+  const results = [];
+  let index = 0;
+
+  async function worker() {
+    while (index < tasks.length) {
+      const i = index++;
+      if (i > 0) await sleep(INTER_CITY_DELAY_MS);
+      results[i] = await tasks[i]();
+    }
+  }
+
+  const workers = Array.from({ length: Math.min(concurrency, tasks.length) }, () => worker());
+  await Promise.all(workers);
+  return results;
+}
+
+// ---------------------------------------------------------------------------
 // Main
 // ---------------------------------------------------------------------------
 
 async function main() {
   console.log('=== Nobetci Pharmacy Refresh ===');
-  console.log(`Date: ${new Date().toISOString()}\n`);
+  console.log(`Date: ${new Date().toISOString()}`);
+  console.log(`Cities: ${CITIES.length}, Concurrency: ${CONCURRENCY}\n`);
 
   mkdirSync(OUTPUT_DIR, { recursive: true });
   loadCache();
@@ -465,11 +589,11 @@ async function main() {
     JSON.stringify(citiesJson, null, 2) + '\n',
   );
 
-  const healthItems = [];
+  const healthItems = new Array(CITIES.length);
 
-  for (const city of CITIES) {
+  const tasks = CITIES.map((city, i) => async () => {
     try {
-      const output = await refreshCity(city);
+      const output = await refreshCityWithRetry(city);
       writeFileSync(
         resolve(OUTPUT_DIR, `${city.slug}.json`),
         JSON.stringify(output, null, 2) + '\n',
@@ -479,7 +603,7 @@ async function main() {
         (p) => p.latitude != null,
       ).length;
 
-      healthItems.push({
+      healthItems[i] = {
         city: city.slug,
         cityDisplayName: city.displayName,
         lastRefreshedAt: output.updatedAt,
@@ -489,10 +613,10 @@ async function main() {
           output.pharmacies.length === 0
             ? 0
             : Math.round((withCoords / output.pharmacies.length) * 100),
-      });
+      };
     } catch (error) {
       console.error(`  [${city.displayName}] FAILED: ${error.message}`);
-      healthItems.push({
+      healthItems[i] = {
         city: city.slug,
         cityDisplayName: city.displayName,
         lastRefreshedAt: null,
@@ -500,27 +624,35 @@ async function main() {
         withCoordinates: 0,
         coordCoveragePct: 0,
         error: error.message,
-      });
+      };
     }
-  }
+  });
+
+  await runWithConcurrency(tasks, CONCURRENCY);
+
+  // Persist geocode cache after all cities (not per-city, to avoid race conditions)
+  saveCache();
+
+  const succeeded = healthItems.filter((h) => !h.error).length;
+  const failed = healthItems.filter((h) => h.error).length;
 
   // Write health
   writeFileSync(
     resolve(OUTPUT_DIR, 'health.json'),
     JSON.stringify(
-      { ok: true, checkedAt: new Date().toISOString(), cities: healthItems },
+      { ok: failed === 0, checkedAt: new Date().toISOString(), cities: healthItems },
       null,
       2,
     ) + '\n',
   );
 
-  // Persist geocode cache
-  saveCache();
+  console.log(`\n=== Done ===`);
+  console.log(`Succeeded: ${succeeded}, Failed: ${failed}`);
+  console.log(`Output: ${OUTPUT_DIR}`);
 
-  console.log('\n=== Done ===');
-  console.log(
-    `Output: ${OUTPUT_DIR}`,
-  );
+  if (failed > 0) {
+    console.warn(`\nFailed cities: ${healthItems.filter((h) => h.error).map((h) => h.cityDisplayName).join(', ')}`);
+  }
 }
 
 main().catch((error) => {

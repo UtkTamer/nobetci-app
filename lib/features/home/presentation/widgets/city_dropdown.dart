@@ -64,7 +64,10 @@ class CityDropdown extends StatelessWidget {
                 final selectedCity = await showMenu<CityOption>(
                   context: context,
                   position: position,
-                  constraints: BoxConstraints(minWidth: button.size.width),
+                  constraints: BoxConstraints(
+                    minWidth: button.size.width,
+                    maxHeight: 5 * 48.0 + 12.0,
+                  ),
                   elevation: 8,
                   shadowColor: const Color(0xFF020617).withValues(alpha: 0.2),
                   color: const Color(0xFF242426),
