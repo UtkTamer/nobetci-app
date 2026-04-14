@@ -1,0 +1,92 @@
+{
+  "city": "bartin",
+  "cityDisplayName": "Bartın",
+  "updatedAt": "2026-04-14T06:48:25.582Z",
+  "isStale": false,
+  "pharmacies": [
+    {
+      "id": "b4c541ca0fd797e7a9d419a217fd1e00",
+      "name": "KAAN ECZANESİ",
+      "address": "AMASRA İLÇESİ KUM MAH. CUMHURİYET CAD. NO:19/A",
+      "phoneNumber": "0 - (378) 315 - 1999",
+      "district": "Amasra",
+      "latitude": 41.7481486,
+      "longitude": 32.3865588,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:48:25.582Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "b79cf08f5852ad5ac03565e5e806e1b6",
+      "name": "ŞİFA",
+      "address": "KOZCAĞIZ BELDESİ MERKEZ MAH.CUMHURİYET CAD.NO:41B",
+      "phoneNumber": "0 - (378) 233 - 1132",
+      "district": "Merkez",
+      "latitude": 41.6253659,
+      "longitude": 32.3626385,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:48:25.582Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "39de3cb394a0dee18da3a078a033835b",
+      "name": "ELİF",
+      "address": "KEMERKÖPRÜ MAH. 871.SOK.NO:12B",
+      "phoneNumber": "0 - (378) 227 - 0919",
+      "district": "Merkez",
+      "latitude": 41.7451402,
+      "longitude": 32.3809318,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:48:25.582Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "414a53a7d8218f85bc9067d8770f31e5",
+      "name": "Tökelek",
+      "address": "Kırtepe Mah. Eski Konak Cad. No:43A",
+      "phoneNumber": "0 - (532) 504 - 4964",
+      "district": "Merkez",
+      "latitude": 41.3371173,
+      "longitude": 32.3909123,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:48:25.582Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "a274c66e45aeb25260d276a079d15428",
+      "name": "TÜMER",
+      "address": "ABDİPAŞA BELDESİ AHMET ÖZSOY 1 SOK.NO:1-A",
+      "phoneNumber": "0 - (378) 426 - 5003",
+      "district": "Ulus",
+      "latitude": 41.5835599,
+      "longitude": 32.6397134,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:48:25.582Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "edf9ee352b90f09b0f7b97a00b367260",
+      "name": "BURAK ÇELİK",
+      "address": "MEZGELLER MAH.ZÜBEYDE HANIM CAD. NO:31/C",
+      "phoneNumber": "0 - (378) 416 - 2121",
+      "district": "Ulus",
+      "latitude": 41.5835599,
+      "longitude": 32.6397134,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:48:25.582Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    }
+  ]
+}

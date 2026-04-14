@@ -1,0 +1,92 @@
+{
+  "city": "bilecik",
+  "cityDisplayName": "Bilecik",
+  "updatedAt": "2026-04-14T05:44:14.770Z",
+  "isStale": false,
+  "pharmacies": [
+    {
+      "id": "88383cef9b0668fd1a35e26faae1aad2",
+      "name": "YEŞİLKENT",
+      "address": "YENİ MAHALLE İSMET İNÖNÜ CAD.NO: 40/C",
+      "phoneNumber": "0 - (228) 315 - 1329",
+      "district": "Bozüyük",
+      "latitude": 39.9022135,
+      "longitude": 30.0632133,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T05:44:14.770Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "da64aa01554461fc46681e7d01fd4d27",
+      "name": "GÖLPAZARI",
+      "address": "İSTİKLAL MAH. GAZİPAŞA MEYDANI NO:3/B",
+      "phoneNumber": "0 - (228) 411 - 3078",
+      "district": "Gölpazarı",
+      "latitude": 40.2839365,
+      "longitude": 30.3165356,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T05:44:14.770Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "bdb978add9b31286bdfd1c9138d40dac",
+      "name": "İKBAL",
+      "address": "Gazipaşa Mah. Tevfikbey Cad. No:48 BİLECİK/MERKEZ",
+      "phoneNumber": "0 - (228) 212 - 7117",
+      "district": "Merkez",
+      "latitude": 40.1406972,
+      "longitude": 29.9801595,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T05:44:14.770Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "d79f8260b6b12e6c34d7305b1d88b124",
+      "name": "ÇINAR",
+      "address": "CAMİKEBİR MAH. PROF DR YUNUS SÖYLET CAD. NO:31/C",
+      "phoneNumber": "0 - (228) 461 - 5890",
+      "district": "Osmaneli",
+      "latitude": 40.36431,
+      "longitude": 30.0274362,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T05:44:14.770Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "3697b1f6dd576be4ac94fba6b7953196",
+      "name": "HAYAT",
+      "address": "ÇARŞI MAH. BAHATTİN ŞEKER CAD. NO:25/A",
+      "phoneNumber": "0 - (228) 381 - 2044",
+      "district": "Pazaryeri",
+      "latitude": 39.9977711,
+      "longitude": 29.9132226,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T05:44:14.770Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "f7184fa459952f68cd455ef0c43e18a7",
+      "name": "KARDEŞLER",
+      "address": "KAYHAN MAH. ERTUĞRULGAZİ CAD.NO.47/B",
+      "phoneNumber": "0 - (228) 361 - 3121",
+      "district": "Söğüt",
+      "latitude": 40.0155518,
+      "longitude": 30.1814273,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T05:44:14.770Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    }
+  ]
+}

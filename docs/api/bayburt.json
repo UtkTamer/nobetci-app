@@ -1,0 +1,36 @@
+{
+  "city": "bayburt",
+  "cityDisplayName": "Bayburt",
+  "updatedAt": "2026-04-14T06:45:42.903Z",
+  "isStale": false,
+  "pharmacies": [
+    {
+      "id": "a4aff07238330dbdaa0b0286147dca4d",
+      "name": "ŞİMŞEK",
+      "address": "Şirin Mahallesi Dr.Ülkü Güney Caddesi No:29/B",
+      "phoneNumber": "0 - (553) 925 - 9878",
+      "district": "Demirözü",
+      "latitude": 40.1630281,
+      "longitude": 39.8912861,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:45:42.903Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "6064e457ed106a0ba417cbaa052a5c8b",
+      "name": "Ihlamur Eczanesi",
+      "address": "Tuzcuzade Mah. Vali Nihat Üçyıldız Cad. 40/A",
+      "phoneNumber": "0 - (458) 222 - 3333",
+      "district": "Merkez",
+      "latitude": 40.2568281,
+      "longitude": 40.2185042,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:45:42.903Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    }
+  ]
+}

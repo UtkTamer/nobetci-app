@@ -1,0 +1,92 @@
+{
+  "city": "karabuk",
+  "cityDisplayName": "Karabük",
+  "updatedAt": "2026-04-14T06:49:33.266Z",
+  "isStale": false,
+  "pharmacies": [
+    {
+      "id": "8def8663a30eabfcc60a29507c1eb777",
+      "name": "GÜLŞEN",
+      "address": "CANDAROĞULLARI MAH. HÜKÜMET CAD. NO:71/K",
+      "phoneNumber": "0 - (370) 461 - 2331",
+      "district": "Eflani",
+      "latitude": 41.4229445,
+      "longitude": 32.9581882,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:49:33.266Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "1fc0432e46a3fdd2a39099eec4119f22",
+      "name": "MUTLU",
+      "address": "MERKEZ MAH. HALİL HASANÇAVUŞOĞLU SOK. NO: 7/B",
+      "phoneNumber": "0 - (370) 818 - 1124",
+      "district": "Eskipazar",
+      "latitude": 40.9347269,
+      "longitude": 32.5406304,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:49:33.266Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "aff50ae99626fcc8530eb618e5392906",
+      "name": "GÖKÇINAR",
+      "address": "100.YIL MAH. PROF. DR. BURHANETTİN UYSAL CAD. NO:45D",
+      "phoneNumber": "0 - (370) 433 - 7119",
+      "district": "Merkez",
+      "latitude": 41.2183358,
+      "longitude": 32.6602122,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:49:33.266Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "13261933fe1e8013d55a6aad42a04ce2",
+      "name": "DİLEK",
+      "address": "BAYIR MAH. FEVZİ ÇAKMAK CAD. NO: 9",
+      "phoneNumber": "0 - (370) 415 - 3027",
+      "district": "Merkez",
+      "latitude": 41.197279,
+      "longitude": 32.6096863,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:49:33.266Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "05b8b64e747bc38d2eb34b10a0a11502",
+      "name": "MELİS",
+      "address": "Barış Mah. Prof. Dr. Necmettin Erbakan Bostanbükü Bulvarı Boğaziçi Konutları E Blok No:14E/1 Safranbolu KARABÜK",
+      "phoneNumber": "0 - (370) 712 - 3388",
+      "district": "Safranbolu",
+      "latitude": 41.2456658,
+      "longitude": 32.6929575,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:49:33.266Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "6a8e30178b931e933116fdb6b931d8fc",
+      "name": "DENİZ",
+      "address": "MERKEZ MAH.BÜLENT ECEVİT CAD.NO:6/A",
+      "phoneNumber": "0 - (370) 766 - 4200",
+      "district": "Yenice",
+      "latitude": 41.2006661,
+      "longitude": 32.3279252,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:49:33.266Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    }
+  ]
+}

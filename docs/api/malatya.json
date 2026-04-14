@@ -1,0 +1,78 @@
+{
+  "city": "malatya",
+  "cityDisplayName": "Malatya",
+  "updatedAt": "2026-04-14T06:19:22.117Z",
+  "isStale": false,
+  "pharmacies": [
+    {
+      "id": "6c155e2850f0376841dc25485e104970",
+      "name": "YENİ ÇARE",
+      "address": "Çöşnük Mah. Atabey Sok. No:8/A",
+      "phoneNumber": "0 - (422) 371 - 1215",
+      "district": "Battalgazi",
+      "latitude": 38.3455847,
+      "longitude": 38.3463653,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:19:22.117Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "d98befc1cb6af3105feefadbadd5d782",
+      "name": "AHMET EKEN",
+      "address": "Halfettin Mah. Şehit İ. Ahmet Sarıoğlu Sok. No:19/A",
+      "phoneNumber": "0 - (422) 326 - 0837",
+      "district": "Battalgazi",
+      "latitude": 38.3519839,
+      "longitude": 38.319455,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:19:22.117Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "a30d3a91183421c6ed948d1439875c80",
+      "name": "BAKAN",
+      "address": "Şifa Mah. İnönü Cad. No:143/D",
+      "phoneNumber": "0 - (422) 323 - 1768",
+      "district": "Battalgazi",
+      "latitude": 38.34834,
+      "longitude": 38.315914,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:19:22.117Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "cf191c4986f960cd1e66eb8344986b68",
+      "name": "CEYHAN",
+      "address": "Karakavak Mah. Barguzu Cad. No: 3/A",
+      "phoneNumber": "0 - (532) 113 - 2363",
+      "district": "Yeşilyurt",
+      "latitude": 38.335172,
+      "longitude": 38.2610259,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:19:22.117Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "367f8cda385309a3d1518dcac62c7c56",
+      "name": "GAR",
+      "address": "İnönü Mah. İstasyon Cad. No:30/C",
+      "phoneNumber": "0 - (546) 930 - 2304",
+      "district": "Yeşilyurt",
+      "latitude": 38.3496293,
+      "longitude": 38.2846248,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:19:22.117Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    }
+  ]
+}

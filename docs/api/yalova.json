@@ -1,0 +1,92 @@
+{
+  "city": "yalova",
+  "cityDisplayName": "Yalova",
+  "updatedAt": "2026-04-14T06:49:07.564Z",
+  "isStale": false,
+  "pharmacies": [
+    {
+      "id": "eb1fd8380f39ffdc79b174c3289ae092",
+      "name": "DEFNE",
+      "address": "MERKEZ MAH. DEVLET KARAYOLU CAD. NO:134/C",
+      "phoneNumber": "0 - (226) 462 - 9230",
+      "district": "Altınova",
+      "latitude": 40.6963485,
+      "longitude": 29.5099438,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:49:07.564Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "d2d295f889d8cbcc293e572d7a5f6f83",
+      "name": "İSKELE",
+      "address": "BAYIR MAH. ATATÜRK CAD. NO:123-C/12",
+      "phoneNumber": "0 - (554) 349 - 9338",
+      "district": "Armutlu",
+      "latitude": 40.514178,
+      "longitude": 28.833368,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:49:07.564Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "da9ef24b7b58e251e2ff36f46c62cf44",
+      "name": "DENİZ",
+      "address": "SAHİL MAH. YALI CAD. NO:22/7",
+      "phoneNumber": "0 - (226) 352 - 8017",
+      "district": "Çiftlikköy",
+      "latitude": 40.6654601,
+      "longitude": 29.3121355,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:49:07.564Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "bf0645d581cb53833043459c8248f5ff",
+      "name": "TUNÇ",
+      "address": "HARMANLAR MAH. 254. SOK. NO:2/8",
+      "phoneNumber": "0 - (226) 245 - 0700",
+      "district": "Çınarcık",
+      "latitude": 40.6413036,
+      "longitude": 29.0582744,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:49:07.564Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "f31f1ba4db0c630bd8eaf95655882136",
+      "name": "ATALAY",
+      "address": "Adnan Menderes Mah. Rahmi Üstel Cad. No:42/B İç Kapı No:5",
+      "phoneNumber": "0 - (538) 541 - 8277",
+      "district": "Merkez",
+      "latitude": 40.6482862,
+      "longitude": 29.259086,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:49:07.564Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "274f8db80e52166b5e7b858c69687d12",
+      "name": "MERKEZ",
+      "address": "RÜSTEMPAŞA MAH. DERE SOK. NO:7/A",
+      "phoneNumber": "0 - (226) 812 - 4324",
+      "district": "Merkez",
+      "latitude": 40.6566886,
+      "longitude": 29.2678546,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:49:07.564Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    }
+  ]
+}

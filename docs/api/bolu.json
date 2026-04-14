@@ -1,0 +1,78 @@
+{
+  "city": "bolu",
+  "cityDisplayName": "Bolu",
+  "updatedAt": "2026-04-14T05:46:14.430Z",
+  "isStale": false,
+  "pharmacies": [
+    {
+      "id": "d0daa19d2b69d88dc100e18a39971bc2",
+      "name": "ŞİFA",
+      "address": "Seviller Mah.Hükümet.Cad.No.5/A",
+      "phoneNumber": "0 - (374) 311 - 3241",
+      "district": "Gerede",
+      "latitude": 40.7991917,
+      "longitude": 32.194147,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T05:46:14.430Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "b96d0c5d4b43a968fd4814f3005a9419",
+      "name": "ÇALIK",
+      "address": "Yenice Mh. Selim Çapar Cd. No: 17/C",
+      "phoneNumber": "0 - (374) 451 - 2030",
+      "district": "Göynük",
+      "latitude": 40.3983169,
+      "longitude": 30.7866167,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T05:46:14.430Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "2b654a8902cd617005acc4cb387647f6",
+      "name": "MENGEN",
+      "address": "TÜRKBEYLİ MAH.ATATÜRK CAD.NO:24/A",
+      "phoneNumber": "0 - (374) 356 - 1205",
+      "district": "Mengen",
+      "latitude": 40.9404411,
+      "longitude": 32.075336,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T05:46:14.430Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "06458f642fb10edc2c8bcd18bb3ddb91",
+      "name": "MUDURNU",
+      "address": "SEYRANCIK MAH. BOLU CAD. NO:8",
+      "phoneNumber": "0 - (374) 421 - 3145",
+      "district": "Mudurnu",
+      "latitude": 40.463367,
+      "longitude": 31.2118641,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T05:46:14.430Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "586c5b73753bfe7745c8d17994e6e198",
+      "name": "AYÇİÇEĞİ",
+      "address": "ASİLBEY MAH.SULTAN REŞAT CAD.NO:82/D",
+      "phoneNumber": "0 - (374) 341 - 3341",
+      "district": "Yeniçağa",
+      "latitude": 40.7703852,
+      "longitude": 32.0336407,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T05:46:14.430Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "city": "isparta",
+  "cityDisplayName": "Isparta",
+  "updatedAt": "2026-04-14T06:01:06.588Z",
+  "isStale": false,
+  "pharmacies": [
+    {
+      "id": "79b539a863b74f58ac8901483672d5b5",
+      "name": "EZGİ",
+      "address": "KUTLUBEY MAH. 106. CADDE NO:14/7-8",
+      "phoneNumber": "0 - (246) 218 - 0377",
+      "district": "Merkez",
+      "latitude": 37.7636481,
+      "longitude": 30.5566986,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:01:06.588Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "61dafb402772e416de93492a63c9fca3",
+      "name": "IŞIK",
+      "address": "SANAYİ MAHALLESİ 3239.SOKAK NO:16/1",
+      "phoneNumber": "0 - (246) 549 - 5544",
+      "district": "Merkez",
+      "latitude": 37.7744967,
+      "longitude": 30.5565036,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:01:06.588Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "b5bca10afe43bfb944d0a2a278101b63",
+      "name": "YENİ",
+      "address": "ÇELEBİLER MAH. 126.CAD. NO:1/A",
+      "phoneNumber": "0 - (246) 218 - 1446",
+      "district": "Merkez",
+      "latitude": 37.7906288,
+      "longitude": 30.5407111,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:01:06.588Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    }
+  ]
+}

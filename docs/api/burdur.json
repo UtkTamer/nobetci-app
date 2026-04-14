@@ -1,0 +1,92 @@
+{
+  "city": "burdur",
+  "cityDisplayName": "Burdur",
+  "updatedAt": "2026-04-14T05:47:02.726Z",
+  "isStale": false,
+  "pharmacies": [
+    {
+      "id": "41b08c7a8d03045a4607f5023b6645ab",
+      "name": "NANELİMON ECZANESİ",
+      "address": "Yetmişevler Mahallesi Orhangazi Caddesi No:5/Z-6",
+      "phoneNumber": "0 - (248) 325 - 8878",
+      "district": "Bucak",
+      "latitude": 37.4567447,
+      "longitude": 30.5855392,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T05:47:02.726Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "9f9421532cb61370cfe18db2d0a4ef2e",
+      "name": "ŞENEL",
+      "address": "Pazar Mahallesi Cumhuriyet Caddesi No:69/A",
+      "phoneNumber": "0 - (248) 411 - 6070",
+      "district": "Gölhisar",
+      "latitude": 37.1440592,
+      "longitude": 29.5083626,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T05:47:02.726Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "d58f57c31a830447f8b42e2768a42481",
+      "name": "DEVA ECZANESİ",
+      "address": "BARBAROS MAHALLESİ HASTANE CADDESİ NO:21/A KARAMANLI/BURDUR",
+      "phoneNumber": "0 - (248) 531 - 2424",
+      "district": "Karamanlı",
+      "latitude": 37.3709275,
+      "longitude": 29.8225951,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T05:47:02.726Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "f4c5dbabf1d4f51ade099cd548b02e87",
+      "name": "HAYAT ECZANESİ",
+      "address": "YENİ MAHALLE ŞEHİT TEĞMEN HALİL DEMİRÖRS CADDESİ NO:2/B",
+      "phoneNumber": "0 - (248) 232 - 1010",
+      "district": "Merkez",
+      "latitude": 37.7248394,
+      "longitude": 30.2887286,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T05:47:02.726Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "3725fc62de31996eadf6c33e0e1101f0",
+      "name": "TEFENNİ ECZANESİ",
+      "address": "YOKUŞ MAHALLESİ BURDUR CADDESİ NO:4",
+      "phoneNumber": "0 - (248) 491 - 2036",
+      "district": "Tefenni",
+      "latitude": 37.3132492,
+      "longitude": 29.7759765,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T05:47:02.726Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "824f6d3ba2bfe3afe807e914a80ffe96",
+      "name": "SAĞLIK ECZANESİ",
+      "address": "Merkez Mahallesi Atatürk Caddesi İsmail Akıncı Apt. No:28/16",
+      "phoneNumber": "0 - (248) 618 - 1286",
+      "district": "Yeşilova",
+      "latitude": 37.5064376,
+      "longitude": 29.7552378,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T05:47:02.726Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    }
+  ]
+}

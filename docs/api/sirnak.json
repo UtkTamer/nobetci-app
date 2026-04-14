@@ -1,0 +1,78 @@
+{
+  "city": "sirnak",
+  "cityDisplayName": "Şırnak",
+  "updatedAt": "2026-04-14T06:47:06.034Z",
+  "isStale": false,
+  "pharmacies": [
+    {
+      "id": "fba135e176b0e9bd839a8c71178ba6b3",
+      "name": "SEMİH",
+      "address": "Elki Mahallesi 5. Cadde No:41/B",
+      "phoneNumber": "0 - (486) 311 - 2145",
+      "district": "Beytüşşebap",
+      "latitude": 37.5709495,
+      "longitude": 43.1702194,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:47:06.034Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "f44aa41c737ad3db88f49fdfd0d68274",
+      "name": "MALİK",
+      "address": "Cumhuriyet Mahallesi 1586. Cadde No:41/A",
+      "phoneNumber": "0 - (486) 616 - 1001",
+      "district": "Cizre",
+      "latitude": 37.3293658,
+      "longitude": 42.2190734,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:47:06.034Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "66b43818adcb90fcef7ca9ce938eb06f",
+      "name": "ÖZLEM",
+      "address": "Yeni Mahalle Alanya Caddesi 135.Sokak No:209/C",
+      "phoneNumber": "0 - (543) 201 - 2535",
+      "district": "İdil",
+      "latitude": 37.3401862,
+      "longitude": 41.8924031,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:47:06.034Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "a7b874d59522739cf5516c23067f10b6",
+      "name": "UMUT",
+      "address": "YENİŞEHİR MAHALLESİ 8. CADDE NO:53/A",
+      "phoneNumber": "0 - (542) 553 - 7373",
+      "district": "Silopi",
+      "latitude": 37.2452405,
+      "longitude": 42.464504,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:47:06.034Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "ef9c43c8b9179b118b18c3449c08d0a5",
+      "name": "ASLAN",
+      "address": "YEŞİLYOVA MAHALLESİ VATAN CADDESİ NO:10/D ULUDERE/ŞIRNAK",
+      "phoneNumber": "0 - (486) 351 - 3030",
+      "district": "Uludere",
+      "latitude": 37.4467396,
+      "longitude": 42.8513576,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:47:06.034Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "city": "rize",
+  "cityDisplayName": "Rize",
+  "updatedAt": "2026-04-14T06:28:58.119Z",
+  "isStale": false,
+  "pharmacies": [
+    {
+      "id": "3af10ae8c20ef35aa6045a39da609a43",
+      "name": "FURKAN BUÇAN",
+      "address": "DENİZ MAHALLESİ LÜTFÜ ALEMDAR CADDESİ NO: 27/A",
+      "phoneNumber": "0 - (533) 653 - 3754",
+      "district": "Ardeşen",
+      "latitude": 41.1923016,
+      "longitude": 40.9797509,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:28:58.119Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "b62380575c2be4e5a3dcb38d502b9366",
+      "name": "NUR",
+      "address": "YENİPAZAR MAH. 9 MART CAD. NO:109/A",
+      "phoneNumber": "0 - (464) 532 - 5070",
+      "district": "Çayeli",
+      "latitude": 41.0985291,
+      "longitude": 40.735438,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:28:58.119Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "9feb99e2da11b2f87366198d8c021809",
+      "name": "FINDIKLI",
+      "address": "MERKEZ MAH. 2. CAD. NO: 56/A",
+      "phoneNumber": "4 - (645) 113 - 189_",
+      "district": "Fındıklı",
+      "latitude": 41.2822038,
+      "longitude": 41.1536684,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:28:58.119Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "8e560dafd83c002de74e64f5c2242cef",
+      "name": "GÜLBAHAR",
+      "address": "GÜLBAHAR MAHALLESİ ŞEHİT OKTAY TÜRÜT SOKAK 9/B",
+      "phoneNumber": "0 - (464) 253 - 0717",
+      "district": "Merkez",
+      "latitude": 41.0256127,
+      "longitude": 40.5442071,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:28:58.119Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "2fb9715c1890c1990f0c5b08799b0992",
+      "name": "İMREN",
+      "address": "Piriçelebi Mahallesi Atatürk Caddesi No:336/B",
+      "phoneNumber": "0 - (464) 213 - 0994",
+      "district": "Merkez",
+      "latitude": 41.0247217,
+      "longitude": 40.4255154,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:28:58.119Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "547bf6339154b4176e68792df5bc925c",
+      "name": "BARIŞ",
+      "address": "PAZAR MAHALLESİ PROF.DR. MEHMET HABERAL CADDESİ NO:80A",
+      "phoneNumber": "0 - (464) 612 - 5631",
+      "district": "Pazar",
+      "latitude": 41.1499599,
+      "longitude": 40.9016122,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:28:58.119Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    }
+  ]
+}

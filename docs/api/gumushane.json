@@ -1,0 +1,92 @@
+{
+  "city": "gumushane",
+  "cityDisplayName": "Gümüşhane",
+  "updatedAt": "2026-04-14T06:00:02.137Z",
+  "isStale": false,
+  "pharmacies": [
+    {
+      "id": "eb6dc2f51b082e25b30b397596d9e2c0",
+      "name": "Aydın",
+      "address": "Atatürk Mahallesi, Zübeyde Hanım Caddesi No:3/C KELKİT/ GÜMÜŞHANE",
+      "phoneNumber": "0 - (507) 300 - 0029",
+      "district": "Kelkit",
+      "latitude": 40.1259544,
+      "longitude": 39.4355762,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:00:02.137Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "843523de4aa70279a4c6ae3a6d8ce3ca",
+      "name": "HUZUR",
+      "address": "Oltan Sungurlu Caddesi, No:45 KÖSE/GÜMÜŞHANE",
+      "phoneNumber": "0 - (456) 411 - 5202",
+      "district": "Köse",
+      "latitude": 40.2097298,
+      "longitude": 39.6530012,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:00:02.137Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "fd5697a0678aa8ab10a67ffcfd486acb",
+      "name": "Soylu",
+      "address": "Aşağı Uluköy Mahallesi, Uluköy Caddesi, No:14A-14B KÜRTÜN/ GÜMÜŞHANE",
+      "phoneNumber": "0 - (554) 626 - 5387",
+      "district": "Kürtün",
+      "latitude": 40.7018638,
+      "longitude": 39.0857106,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:00:02.137Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "ecd4a3d74db4d8d616851d3461d38af4",
+      "name": "ÖZKAN",
+      "address": "Karaer Mahallesi, Atatürk Caddesi,No:19/G GÜMÜŞHANE",
+      "phoneNumber": "0 - (456) 213 - 7890",
+      "district": "Merkez",
+      "latitude": 40.4617624,
+      "longitude": 39.4871276,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:00:02.137Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "6f32f44df6b9b2f3d9dd172c8aba7298",
+      "name": "ŞİFA",
+      "address": "Tekke Mahallesi Şehit Teğmen Tuna Kara Caddesi No:39\\B ŞİRAN/GÜMÜŞHANE",
+      "phoneNumber": "0 - (456) 511 - 8401",
+      "district": "Şiran",
+      "latitude": 40.1824594,
+      "longitude": 39.1175627,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:00:02.137Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "13531362f9a695b55377204d9d7c1dad",
+      "name": "Yaren",
+      "address": "Tugrulbey mah. Atatürk cad. No:109 Torul/Gümüşhane",
+      "phoneNumber": "0 - (538) 943 - 9172",
+      "district": "Torul",
+      "latitude": 40.5605609,
+      "longitude": 39.2933535,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:00:02.137Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    }
+  ]
+}

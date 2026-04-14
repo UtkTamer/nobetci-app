@@ -1,0 +1,50 @@
+{
+  "city": "ardahan",
+  "cityDisplayName": "Ardahan",
+  "updatedAt": "2026-04-14T06:47:53.524Z",
+  "isStale": false,
+  "pharmacies": [
+    {
+      "id": "1a63ef6091fff87a357a52e9ef378a1b",
+      "name": "AYAZ",
+      "address": "Yeni Mahalle, Çıldırlı Aşık Şenlik Caddesi No:6/B Çıldır/Ardahan",
+      "phoneNumber": "0 - (552) 409 - 6069",
+      "district": "Çıldır",
+      "latitude": 41.1265837,
+      "longitude": 43.1345966,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:47:53.524Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "3cbbd09e96684d86198a48d5f5d168ca",
+      "name": "UYGAR",
+      "address": "Hürriye Mahallesi, Atatürk Caddesi No:89/A Hanak/Ardahan",
+      "phoneNumber": "0 - (501) 525 - 9116",
+      "district": "Hanak",
+      "latitude": 41.2367701,
+      "longitude": 42.8449034,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:47:53.524Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "b20a957b4bb2559a59633247e153f7fb",
+      "name": "ARZU",
+      "address": "KAPTANPAŞA MAH. KONGRE CADDESİ NO: 32/A",
+      "phoneNumber": "0 - (478) 211 - 2389",
+      "district": "Merkez",
+      "latitude": 41.1102966,
+      "longitude": 42.7035585,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-14T06:47:53.524Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    }
+  ]
+}
