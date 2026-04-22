@@ -1,7 +1,36 @@
 {
   "city": "kirikkale",
   "cityDisplayName": "Kırıkkale",
-  "updatedAt": "2026-04-21T06:16:52.424Z",
+  "updatedAt": "2026-04-22T06:09:35.447Z",
   "isStale": false,
-  "pharmacies": []
+  "pharmacies": [
+    {
+      "id": "abe6ac6f22f713d515a92cb2a2a2f540",
+      "name": "AKBUDAK",
+      "address": "YENİDOĞAN MAH. HÜRRİYET CAD. DELİCE İŞ MERKEZİ GİRİŞİ NO:6/E MERKEZ/KIRIKKALE",
+      "phoneNumber": "0 - (318) 202 - 0360",
+      "district": "Merkez",
+      "latitude": 39.8414414,
+      "longitude": 33.5071091,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-22T06:09:35.447Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "ee359f17b8fd7ec4d08d184aa22d77da",
+      "name": "KAAN",
+      "address": "BAĞLARBAŞI MAH.HUZUR SOK. NO:1/B MERKEZ/KIRIKKALE",
+      "phoneNumber": "0 - (318) 230 - 0706",
+      "district": "Merkez",
+      "latitude": 39.8563597,
+      "longitude": 33.5006742,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-22T06:09:35.447Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    }
+  ]
 }
