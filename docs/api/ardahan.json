@@ -1,7 +1,64 @@
 {
   "city": "ardahan",
   "cityDisplayName": "Ardahan",
-  "updatedAt": "2026-04-25T05:50:04.567Z",
+  "updatedAt": "2026-04-26T06:06:24.157Z",
   "isStale": false,
-  "pharmacies": []
+  "pharmacies": [
+    {
+      "id": "1a63ef6091fff87a357a52e9ef378a1b",
+      "name": "AYAZ",
+      "address": "Yeni Mahalle, Çıldırlı Aşık Şenlik Caddesi No:6/B Çıldır/Ardahan",
+      "phoneNumber": "0 - (552) 409 - 6069",
+      "district": "Çıldır",
+      "latitude": 41.1265837,
+      "longitude": 43.1345966,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-26T06:06:24.157Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "93509e7b592e3e7c484aff6042fb4122",
+      "name": "BUDAK",
+      "address": "Kubilaybey Mahallesi Kars Caddesi 3. Sokak No:11",
+      "phoneNumber": "0 - (478) 411 - 3167",
+      "district": "Göle",
+      "latitude": 40.7930546,
+      "longitude": 42.6078403,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-26T06:06:24.157Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "3cbbd09e96684d86198a48d5f5d168ca",
+      "name": "UYGAR",
+      "address": "Hürriye Mahallesi, Atatürk Caddesi No:89/A Hanak/Ardahan",
+      "phoneNumber": "0 - (501) 525 - 9116",
+      "district": "Hanak",
+      "latitude": 41.2367701,
+      "longitude": 42.8449034,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-26T06:06:24.157Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "b20a957b4bb2559a59633247e153f7fb",
+      "name": "ARZU",
+      "address": "KAPTANPAŞA MAH. KONGRE CADDESİ NO: 32/A",
+      "phoneNumber": "0 - (478) 211 - 2389",
+      "district": "Merkez",
+      "latitude": 41.1102966,
+      "longitude": 42.7035585,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-26T06:06:24.157Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    }
+  ]
 }
