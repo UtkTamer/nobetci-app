@@ -1,7 +1,36 @@
 {
   "city": "kirikkale",
   "cityDisplayName": "Kırıkkale",
-  "updatedAt": "2026-04-26T06:06:04.127Z",
+  "updatedAt": "2026-04-27T06:38:27.676Z",
   "isStale": false,
-  "pharmacies": []
+  "pharmacies": [
+    {
+      "id": "4a6c0f6e2138d76e857d03b0a8a77b43",
+      "name": "KIRIKKALE",
+      "address": "TEPEBAŞI MAH.RAUF DENKTAŞ BUL.NO:50/B KIRIKKALE",
+      "phoneNumber": "0 - (318) 256 - 6692",
+      "district": "Merkez",
+      "latitude": 39.8423459,
+      "longitude": 33.5099289,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-27T06:38:27.676Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "7342e87614ffd375f46585e388a13183",
+      "name": "Yaşam",
+      "address": "Ovacık Mahallesi 575 Sokak No: 6/A Merkez/KIRIKKALE",
+      "phoneNumber": "0 - (544) 894 - 5200",
+      "district": "Merkez",
+      "latitude": 39.8498678,
+      "longitude": 33.502793,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-04-27T06:38:27.676Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    }
+  ]
 }
