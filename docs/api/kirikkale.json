@@ -1,34 +1,20 @@
 {
   "city": "kirikkale",
   "cityDisplayName": "Kırıkkale",
-  "updatedAt": "2026-04-27T06:38:27.676Z",
+  "updatedAt": "2026-04-28T06:40:05.797Z",
   "isStale": false,
   "pharmacies": [
     {
-      "id": "4a6c0f6e2138d76e857d03b0a8a77b43",
-      "name": "KIRIKKALE",
-      "address": "TEPEBAŞI MAH.RAUF DENKTAŞ BUL.NO:50/B KIRIKKALE",
-      "phoneNumber": "0 - (318) 256 - 6692",
+      "id": "83c6cb4d3fab80e7091783e228264edd",
+      "name": "SAMİ ECZANESİ",
+      "address": "Yenidoğan Mahallesi Zafer Caddesi No: 56-I Merkez/KIRIKKALE",
+      "phoneNumber": "0 - (318) 202 - 1313",
       "district": "Merkez",
-      "latitude": 39.8423459,
-      "longitude": 33.5099289,
+      "latitude": 39.8451696,
+      "longitude": 33.5053124,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-27T06:38:27.676Z",
-      "source": "e-Devlet / TİTCK",
-      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
-    },
-    {
-      "id": "7342e87614ffd375f46585e388a13183",
-      "name": "Yaşam",
-      "address": "Ovacık Mahallesi 575 Sokak No: 6/A Merkez/KIRIKKALE",
-      "phoneNumber": "0 - (544) 894 - 5200",
-      "district": "Merkez",
-      "latitude": 39.8498678,
-      "longitude": 33.502793,
-      "dutyStart": null,
-      "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-27T06:38:27.676Z",
+      "lastVerifiedAt": "2026-04-28T06:40:05.797Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     }
