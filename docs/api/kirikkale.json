@@ -1,36 +1,7 @@
 {
   "city": "kirikkale",
   "cityDisplayName": "Kırıkkale",
-  "updatedAt": "2026-04-30T06:37:18.120Z",
+  "updatedAt": "2026-05-01T06:32:59.861Z",
   "isStale": false,
-  "pharmacies": [
-    {
-      "id": "2efdc8efa11db56645e1f364dc77db1f",
-      "name": "AYTEKİN",
-      "address": "Güzeltepe Mahallesi Hürriyet Caddesi No: 79-B Merkez/KIRIKKALE",
-      "phoneNumber": "0 - (318) 333 - 0071",
-      "district": "Merkez",
-      "latitude": 39.8445566,
-      "longitude": 33.5031093,
-      "dutyStart": null,
-      "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-30T06:37:18.120Z",
-      "source": "e-Devlet / TİTCK",
-      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
-    },
-    {
-      "id": "64990d24c2c54000bbd7bb7f327753cf",
-      "name": "TUBA",
-      "address": "YAYLACIK MAHALLESİ 368. SOK. NO: 3 - A/B KIRIKKALE",
-      "phoneNumber": "0 - (318) 500 - 1000",
-      "district": "Merkez",
-      "latitude": 39.8423866,
-      "longitude": 33.4977359,
-      "dutyStart": null,
-      "dutyEnd": null,
-      "lastVerifiedAt": "2026-04-30T06:37:18.120Z",
-      "source": "e-Devlet / TİTCK",
-      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
-    }
-  ]
+  "pharmacies": []
 }
