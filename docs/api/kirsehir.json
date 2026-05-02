@@ -1,22 +1,7 @@
 {
   "city": "kirsehir",
   "cityDisplayName": "Kırşehir",
-  "updatedAt": "2026-05-01T06:27:21.062Z",
+  "updatedAt": "2026-05-02T05:48:27.727Z",
   "isStale": false,
-  "pharmacies": [
-    {
-      "id": "e5920f56acba5c2a590625e6b887b5a6",
-      "name": "ŞİFA",
-      "address": "YENİCE MAH. ENVER PAŞA CAD.NO:3/G MUCUR / KIRŞEHİR",
-      "phoneNumber": "0 - (386) 812 - 4065",
-      "district": "Mucur",
-      "latitude": 39.0598745,
-      "longitude": 34.3800057,
-      "dutyStart": null,
-      "dutyEnd": null,
-      "lastVerifiedAt": "2026-05-01T06:27:21.062Z",
-      "source": "e-Devlet / TİTCK",
-      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
-    }
-  ]
+  "pharmacies": []
 }
