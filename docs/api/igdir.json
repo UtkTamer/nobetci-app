@@ -1,64 +1,7 @@
 {
   "city": "igdir",
   "cityDisplayName": "Iğdır",
-  "updatedAt": "2026-05-02T05:56:22.451Z",
+  "updatedAt": "2026-05-03T06:22:20.953Z",
   "isStale": false,
-  "pharmacies": [
-    {
-      "id": "442eff36ded1af3f9dfc1d7d0e552097",
-      "name": "ÖZLEM",
-      "address": "Köprüler Mahallesi, Atatürk Caddesi, No: 29/A",
-      "phoneNumber": "0 - (476) 411 - 2244",
-      "district": "Aralık",
-      "latitude": 39.873699,
-      "longitude": 44.5160371,
-      "dutyStart": null,
-      "dutyEnd": null,
-      "lastVerifiedAt": "2026-05-02T05:56:22.451Z",
-      "source": "e-Devlet / TİTCK",
-      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
-    },
-    {
-      "id": "1835a21cb4d7674865cb19d438e18098",
-      "name": "NAZ",
-      "address": "Ergenekon Mahallesi Atatürk Caddesi No:2/B",
-      "phoneNumber": "0 - (506) 860 - 9102",
-      "district": "Karakoyunlu",
-      "latitude": 39.9718396,
-      "longitude": 44.1789212,
-      "dutyStart": null,
-      "dutyEnd": null,
-      "lastVerifiedAt": "2026-05-02T05:56:22.451Z",
-      "source": "e-Devlet / TİTCK",
-      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
-    },
-    {
-      "id": "17be5797c7100207d03f290cab43fb47",
-      "name": "ONUR",
-      "address": "Cumhuriyet Mahallesi,Kazım Karabekir Caddesi No:81",
-      "phoneNumber": "0 - (476) 226 - 1827",
-      "district": "Merkez",
-      "latitude": 36.3683332,
-      "longitude": 30.2863391,
-      "dutyStart": null,
-      "dutyEnd": null,
-      "lastVerifiedAt": "2026-05-02T05:56:22.451Z",
-      "source": "e-Devlet / TİTCK",
-      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
-    },
-    {
-      "id": "d6584f0590aa3cec2ae7df4340bdc7a4",
-      "name": "Tuzluca Sağlık",
-      "address": "Cumhuriyet Mahallesi, Sağlık Ocağı Yolu, No:35/A",
-      "phoneNumber": "0 - (476) 311 - 2323",
-      "district": "Tuzluca",
-      "latitude": 40.0402158,
-      "longitude": 43.6637878,
-      "dutyStart": null,
-      "dutyEnd": null,
-      "lastVerifiedAt": "2026-05-02T05:56:22.451Z",
-      "source": "e-Devlet / TİTCK",
-      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
-    }
-  ]
+  "pharmacies": []
 }
