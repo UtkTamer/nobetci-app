@@ -1,7 +1,64 @@
 {
   "city": "igdir",
   "cityDisplayName": "Iğdır",
-  "updatedAt": "2026-05-03T06:22:20.953Z",
+  "updatedAt": "2026-05-04T06:37:56.100Z",
   "isStale": false,
-  "pharmacies": []
+  "pharmacies": [
+    {
+      "id": "288f2a063451e41e92925d4b6f7eae72",
+      "name": "CAN",
+      "address": "Karşıyaka Mh. Milli Egemenlik Cd. No:37/C",
+      "phoneNumber": "0 - (551) 230 - 5253",
+      "district": "Aralık",
+      "latitude": 39.873699,
+      "longitude": 44.5160371,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-05-04T06:37:56.100Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "1835a21cb4d7674865cb19d438e18098",
+      "name": "NAZ",
+      "address": "Ergenekon Mahallesi Atatürk Caddesi No:2/B",
+      "phoneNumber": "0 - (506) 860 - 9102",
+      "district": "Karakoyunlu",
+      "latitude": 39.9718396,
+      "longitude": 44.1789212,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-05-04T06:37:56.100Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "85b538227212c3ae0c7a0dc7afad6445",
+      "name": "ŞAHİN",
+      "address": "Topçular Mh Vali Konağı Cd. No:17/G",
+      "phoneNumber": "0 - (476) 226 - 2222",
+      "district": "Merkez",
+      "latitude": 39.9218784,
+      "longitude": 44.0467957,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-05-04T06:37:56.100Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "bca1ec70dfae3825e80f70f7b931037d",
+      "name": "Tuzluca Doğa",
+      "address": "Cumhuriyet Mh Yakup Ulutaş Cd No:3/d Tuzluca",
+      "phoneNumber": "0 - (476) 311 - 2211",
+      "district": "Tuzluca",
+      "latitude": 40.0402158,
+      "longitude": 43.6637878,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-05-04T06:37:56.100Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    }
+  ]
 }
