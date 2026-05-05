@@ -1,7 +1,92 @@
 {
   "city": "kirikkale",
   "cityDisplayName": "Kırıkkale",
-  "updatedAt": "2026-05-04T06:37:36.827Z",
+  "updatedAt": "2026-05-05T06:09:47.669Z",
   "isStale": false,
-  "pharmacies": []
+  "pharmacies": [
+    {
+      "id": "73d965372b3c8fb0362c8a7cc333215c",
+      "name": "FEYZA",
+      "address": "YENİ MAH. SAMSUN CAD. NO:21/A BALIŞEYH/KIRIKKALE",
+      "phoneNumber": "0 - (536) 292 - 6648",
+      "district": "Balışeyh",
+      "latitude": 39.9097195,
+      "longitude": 33.7183432,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-05-05T06:09:47.669Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "9d147fe67a51a7ced5fd80329f23f1cd",
+      "name": "DELİCE",
+      "address": "CUMHURİYET MAH. ATATÜRK BULVARI NO:6/C DELİCE/KIRIKKALE",
+      "phoneNumber": "0 - (318) 618 - 5609",
+      "district": "Delice",
+      "latitude": 39.9455172,
+      "longitude": 34.0312969,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-05-05T06:09:47.669Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "6a03ba22ed3ae09863f16e30cfd5cc8c",
+      "name": "RANA",
+      "address": "BOZKURT MAH.MERT SOK:NO:36 KESKİN/KIRIKKALE",
+      "phoneNumber": "3 - (185) 153 - 257_",
+      "district": "Keskin",
+      "latitude": 39.6688119,
+      "longitude": 33.6155032,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-05-05T06:09:47.669Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "114494847efab5fd7e1f6ee4cee32dd0",
+      "name": "PETEK",
+      "address": "Yenimahalle Mah. 339 Sokak No: 22/A Merkez/KIRIKKALE93",
+      "phoneNumber": "0 - (553) 628 - 2827",
+      "district": "Merkez",
+      "latitude": 39.8366048,
+      "longitude": 33.4931789,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-05-05T06:09:47.669Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "441f80460f8bd312f8d825262bb8c5b1",
+      "name": "SALTIK",
+      "address": "YENİDOĞAN MAH.611 SOK. NO:2/E MERKEZ/KIRIKKALE",
+      "phoneNumber": "3 - (182) 250 - 697_",
+      "district": "Merkez",
+      "latitude": 39.8668363,
+      "longitude": 33.4854219,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-05-05T06:09:47.669Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "7fe1761fbc8b8a7b86499f3f7d58d02b",
+      "name": "Yenişehir",
+      "address": "Yenişehir Mah. Fevzi Çakmak Cad. No: 32/B Yahşihan/KIRIKKALE",
+      "phoneNumber": "0 - (505) 149 - 8056",
+      "district": "Yahşihan",
+      "latitude": 39.8497536,
+      "longitude": 33.452421,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-05-05T06:09:47.669Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    }
+  ]
 }
