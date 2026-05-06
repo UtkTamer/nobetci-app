@@ -1,7 +1,22 @@
 {
   "city": "van",
   "cityDisplayName": "Van",
-  "updatedAt": "2026-05-05T06:07:05.676Z",
+  "updatedAt": "2026-05-06T06:34:19.016Z",
   "isStale": false,
-  "pharmacies": []
+  "pharmacies": [
+    {
+      "id": "a8a1080691932620361feea7fafa55b7",
+      "name": "ONUR",
+      "address": "Şehit Jandarma Binbaşı Kıvanç Cesur Mah. Vali Münir Karaloğlu Cad. 7B",
+      "phoneNumber": "0 - (543) 944 - 5235",
+      "district": "Çaldıran",
+      "latitude": 39.1355203,
+      "longitude": 43.9029377,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-05-06T06:34:19.016Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    }
+  ]
 }
