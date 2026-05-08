@@ -1,20 +1,20 @@
 {
   "city": "van",
   "cityDisplayName": "Van",
-  "updatedAt": "2026-05-07T06:41:05.010Z",
+  "updatedAt": "2026-05-08T05:56:20.097Z",
   "isStale": false,
   "pharmacies": [
     {
-      "id": "f07bb27ad10afddbf1cbe3ae30791320",
-      "name": "ECZANE SAKİ",
-      "address": "ŞEHİT JANDARMA BİNBAŞI KIVANÇ CESUR MAH. VALİ MÜNİR KARALOĞLU CAD. NO:16",
-      "phoneNumber": "0 - (432) 412 - 2727",
+      "id": "530eea3aca29d1f19801d85b7b89abd1",
+      "name": "UZMAN",
+      "address": "BEYAZIT MAH. İLKOKUL CAD. NO:27F",
+      "phoneNumber": "0 - (432) 412 - 2247",
       "district": "Çaldıran",
       "latitude": 39.1355203,
       "longitude": 43.9029377,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-05-07T06:41:05.010Z",
+      "lastVerifiedAt": "2026-05-08T05:56:20.097Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     }
