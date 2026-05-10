@@ -1,7 +1,36 @@
 {
   "city": "osmaniye",
   "cityDisplayName": "Osmaniye",
-  "updatedAt": "2026-05-09T06:10:57.752Z",
+  "updatedAt": "2026-05-10T06:30:55.589Z",
   "isStale": false,
-  "pharmacies": []
+  "pharmacies": [
+    {
+      "id": "132d4b907823bf56b5fc7a0c5d6c3acd",
+      "name": "AÇIKGÖZ",
+      "address": "Bahçelievler Mah.Devlet Bahçeli Bulvarı No:11/C",
+      "phoneNumber": "0 - (328) 861 - 4433",
+      "district": "Bahçe",
+      "latitude": 37.1870677,
+      "longitude": 36.5589133,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-05-10T06:30:55.589Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    },
+    {
+      "id": "c248d21b01a57382df6eb1a630a48ea2",
+      "name": "DENİZ ECZANESİ",
+      "address": "İrfanlı Mahallesi Müdür Mehmet İslah Caddesi No:67/A",
+      "phoneNumber": "0 - (328) 876 - 7455",
+      "district": "Düziçi",
+      "latitude": 37.2401223,
+      "longitude": 36.4534072,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-05-10T06:30:55.589Z",
+      "source": "e-Devlet / TİTCK",
+      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
+    }
+  ]
 }

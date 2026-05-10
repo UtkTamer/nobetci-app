@@ -1,7 +1,7 @@
 {
   "city": "aksaray",
   "cityDisplayName": "Aksaray",
-  "updatedAt": "2026-05-09T06:10:07.782Z",
+  "updatedAt": "2026-05-10T06:29:47.947Z",
   "isStale": false,
   "pharmacies": [
     {
@@ -14,7 +14,7 @@
       "longitude": 33.9155769,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-05-09T06:10:07.782Z",
+      "lastVerifiedAt": "2026-05-10T06:29:47.947Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     },
@@ -28,63 +28,7 @@
       "longitude": 34.3452357,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-05-09T06:10:07.782Z",
-      "source": "e-Devlet / TİTCK",
-      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
-    },
-    {
-      "id": "acbc9a4bc8872d5862e8ff1f4d990968",
-      "name": "CANLI",
-      "address": "HACI HASANLI MAH. 29/GÜNDOĞDU CAD. GÜNEŞ İŞHANI NO:4",
-      "phoneNumber": "0 - (382) 212 - 8921",
-      "district": "Merkez",
-      "latitude": 38.4001048,
-      "longitude": 33.4129236,
-      "dutyStart": null,
-      "dutyEnd": null,
-      "lastVerifiedAt": "2026-05-09T06:10:07.782Z",
-      "source": "e-Devlet / TİTCK",
-      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
-    },
-    {
-      "id": "07288cced0b064a96bed6ba37a992903",
-      "name": "GÜLSÜN",
-      "address": "BÜYÜK BÖLCEK MAH. 2421 SOK. ŞEVVAL APT. NO:5/A",
-      "phoneNumber": "0 - (382) 215 - 4233",
-      "district": "Merkez",
-      "latitude": 38.3802702,
-      "longitude": 34.0030806,
-      "dutyStart": null,
-      "dutyEnd": null,
-      "lastVerifiedAt": "2026-05-09T06:10:07.782Z",
-      "source": "e-Devlet / TİTCK",
-      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
-    },
-    {
-      "id": "b19a938e0e5f64e5cc51d9b60c5c0ed7",
-      "name": "ŞÜKRÜ DİNÇ",
-      "address": "TACİN MAH. 92. CAD. NO:10/C",
-      "phoneNumber": "0 - (382) 213 - 4118",
-      "district": "Merkez",
-      "latitude": 38.3962468,
-      "longitude": 33.417794,
-      "dutyStart": null,
-      "dutyEnd": null,
-      "lastVerifiedAt": "2026-05-09T06:10:07.782Z",
-      "source": "e-Devlet / TİTCK",
-      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
-    },
-    {
-      "id": "63f109f28a0a182679bf36fbe4098027",
-      "name": "ÜNLÜ",
-      "address": "Hasas Mah. 46/Hasas Cad. No:131 AB/12",
-      "phoneNumber": "0 - (553) 155 - 8539",
-      "district": "Merkez",
-      "latitude": 38.3868388,
-      "longitude": 34.0180381,
-      "dutyStart": null,
-      "dutyEnd": null,
-      "lastVerifiedAt": "2026-05-09T06:10:07.782Z",
+      "lastVerifiedAt": "2026-05-10T06:29:47.947Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     }
