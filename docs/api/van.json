@@ -1,20 +1,20 @@
 {
   "city": "van",
   "cityDisplayName": "Van",
-  "updatedAt": "2026-05-10T06:29:08.560Z",
+  "updatedAt": "2026-05-11T07:02:04.310Z",
   "isStale": false,
   "pharmacies": [
     {
-      "id": "32430db8c0261438f43b908c25affaad",
-      "name": "YENİ ŞİFA",
-      "address": "VANYOLU CADDE NO:42",
-      "phoneNumber": "0 - (432) 412 - 2250",
+      "id": "50c808ee20642a6002023009ba69d423",
+      "name": "ATABAY",
+      "address": "ŞEHİT JANDARMA BİNBAŞI KIVANÇ CESUR MAH. VALİ MÜNİR KARAOĞLU CAD. NO: 18",
+      "phoneNumber": "0 - (543) 564 - 7282",
       "district": "Çaldıran",
       "latitude": 39.1355203,
       "longitude": 43.9029377,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-05-10T06:29:08.560Z",
+      "lastVerifiedAt": "2026-05-11T07:02:04.310Z",
       "source": "e-Devlet / TİTCK",
       "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
     }
