@@ -1,22 +1,7 @@
 {
   "city": "van",
   "cityDisplayName": "Van",
-  "updatedAt": "2026-05-13T06:47:09.943Z",
+  "updatedAt": "2026-05-14T06:28:36.124Z",
   "isStale": false,
-  "pharmacies": [
-    {
-      "id": "fc6b3fed874173b42a68a37feaad3541",
-      "name": "BARAN",
-      "address": "Şehit Jandarma Binbaşı Kıvanç Cesur Mah. Vali Münir Karaloğlu Cad. Dış Kapı No:6D",
-      "phoneNumber": "0 - (538) 376 - 4715",
-      "district": "Çaldıran",
-      "latitude": 39.1355203,
-      "longitude": 43.9029377,
-      "dutyStart": null,
-      "dutyEnd": null,
-      "lastVerifiedAt": "2026-05-13T06:47:09.943Z",
-      "source": "e-Devlet / TİTCK",
-      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
-    }
-  ]
+  "pharmacies": []
 }

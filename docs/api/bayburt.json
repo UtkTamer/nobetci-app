@@ -1,36 +1,7 @@
 {
   "city": "bayburt",
   "cityDisplayName": "Bayburt",
-  "updatedAt": "2026-05-13T06:47:49.053Z",
+  "updatedAt": "2026-05-14T06:28:40.962Z",
   "isStale": false,
-  "pharmacies": [
-    {
-      "id": "38cc789caa79ea168b6401738eb393ac",
-      "name": "HAYAT",
-      "address": "Şirin Mh. Dr. Ülkü Güney Caddesi.No:44/D",
-      "phoneNumber": "0 - (458) 411 - 6465",
-      "district": "Demirözü",
-      "latitude": 40.1630281,
-      "longitude": 39.8912861,
-      "dutyStart": null,
-      "dutyEnd": null,
-      "lastVerifiedAt": "2026-05-13T06:47:49.053Z",
-      "source": "e-Devlet / TİTCK",
-      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
-    },
-    {
-      "id": "f638a80e631356bdb87395f6a7160820",
-      "name": "Uzunlar",
-      "address": "Şeyhhayran Mh. Türkistan Cd. No:22/G Merkez/Bayburt",
-      "phoneNumber": "0 - (505) 750 - 6969",
-      "district": "Merkez",
-      "latitude": 40.2551608,
-      "longitude": 40.2205036,
-      "dutyStart": null,
-      "dutyEnd": null,
-      "lastVerifiedAt": "2026-05-13T06:47:49.053Z",
-      "source": "e-Devlet / TİTCK",
-      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
-    }
-  ]
+  "pharmacies": []
 }

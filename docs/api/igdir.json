@@ -1,50 +1,7 @@
 {
   "city": "igdir",
   "cityDisplayName": "Iğdır",
-  "updatedAt": "2026-05-13T06:48:55.481Z",
+  "updatedAt": "2026-05-14T06:28:47.438Z",
   "isStale": false,
-  "pharmacies": [
-    {
-      "id": "288f2a063451e41e92925d4b6f7eae72",
-      "name": "CAN",
-      "address": "Karşıyaka Mh. Milli Egemenlik Cd. No:37/C",
-      "phoneNumber": "0 - (551) 230 - 5253",
-      "district": "Aralık",
-      "latitude": 39.873699,
-      "longitude": 44.5160371,
-      "dutyStart": null,
-      "dutyEnd": null,
-      "lastVerifiedAt": "2026-05-13T06:48:55.481Z",
-      "source": "e-Devlet / TİTCK",
-      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
-    },
-    {
-      "id": "cd48b68dc0aac1aa2273653137871d76",
-      "name": "DEVA",
-      "address": "Emek Mahallesi, Evrenpaşa Caddesi, No:66",
-      "phoneNumber": "0 - (476) 226 - 1382",
-      "district": "Merkez",
-      "latitude": 39.9218784,
-      "longitude": 44.0467957,
-      "dutyStart": null,
-      "dutyEnd": null,
-      "lastVerifiedAt": "2026-05-13T06:48:55.481Z",
-      "source": "e-Devlet / TİTCK",
-      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
-    },
-    {
-      "id": "cc566cb685ca22aee51a037a2ea6a1be",
-      "name": "TURAN",
-      "address": "Cumhuriyet Mah.Yakup Ulutaş Cad.No:6/2/Tuzluca",
-      "phoneNumber": "0 - (533) 458 - 4976",
-      "district": "Tuzluca",
-      "latitude": 40.0402158,
-      "longitude": 43.6637878,
-      "dutyStart": null,
-      "dutyEnd": null,
-      "lastVerifiedAt": "2026-05-13T06:48:55.481Z",
-      "source": "e-Devlet / TİTCK",
-      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
-    }
-  ]
+  "pharmacies": []
 }

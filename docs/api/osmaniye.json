@@ -1,36 +1,7 @@
 {
   "city": "osmaniye",
   "cityDisplayName": "Osmaniye",
-  "updatedAt": "2026-05-13T06:49:13.580Z",
+  "updatedAt": "2026-05-14T06:28:51.230Z",
   "isStale": false,
-  "pharmacies": [
-    {
-      "id": "37c74ebfaa947ed98ef7b953b21fee1c",
-      "name": "LOKMAN HEKİM ECZANESİ",
-      "address": "Bahçelievler Mahallesi Dr. Devlet Bahçeli Bulvarı No:57/A",
-      "phoneNumber": "0 - (328) 861 - 2066",
-      "district": "Bahçe",
-      "latitude": 37.1870677,
-      "longitude": 36.5589133,
-      "dutyStart": null,
-      "dutyEnd": null,
-      "lastVerifiedAt": "2026-05-13T06:49:13.580Z",
-      "source": "e-Devlet / TİTCK",
-      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
-    },
-    {
-      "id": "a9c3ea65126e79f3f2637489230092d6",
-      "name": "ELMAS",
-      "address": "Yeşilova Mah. Aydınlar Sok. No:42",
-      "phoneNumber": "0 - (543) 261 - 3408",
-      "district": "Düziçi",
-      "latitude": 37.2401223,
-      "longitude": 36.4534072,
-      "dutyStart": null,
-      "dutyEnd": null,
-      "lastVerifiedAt": "2026-05-13T06:49:13.580Z",
-      "source": "e-Devlet / TİTCK",
-      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
-    }
-  ]
+  "pharmacies": []
 }

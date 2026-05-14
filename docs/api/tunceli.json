@@ -1,50 +1,7 @@
 {
   "city": "tunceli",
   "cityDisplayName": "Tunceli",
-  "updatedAt": "2026-05-13T06:46:33.487Z",
+  "updatedAt": "2026-05-14T06:28:33.044Z",
   "isStale": false,
-  "pharmacies": [
-    {
-      "id": "3dfce3178183a6bb59fafff8fe924ef0",
-      "name": "DİLAN BALIK ECZANESİ",
-      "address": "Hacı Cami mah. Park sok. 20/C",
-      "phoneNumber": "0 - (539) 860 - 3887",
-      "district": "Çemişgezek",
-      "latitude": 39.0628601,
-      "longitude": 38.9104258,
-      "dutyStart": null,
-      "dutyEnd": null,
-      "lastVerifiedAt": "2026-05-13T06:46:33.487Z",
-      "source": "e-Devlet / TİTCK",
-      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
-    },
-    {
-      "id": "1c7d1d4409d662fb8237ec8f4c92d218",
-      "name": "CİHANSER",
-      "address": "ATATÜRK MAH. 4.SOK NO:14/2 MAĞAZA 2 TUNCELİ",
-      "phoneNumber": "0 - (428) 212 - 2363",
-      "district": "Merkez",
-      "latitude": 39.1798795,
-      "longitude": 39.8296932,
-      "dutyStart": null,
-      "dutyEnd": null,
-      "lastVerifiedAt": "2026-05-13T06:46:33.487Z",
-      "source": "e-Devlet / TİTCK",
-      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
-    },
-    {
-      "id": "9093e8a2b3c8528d1b981fc7b057136c",
-      "name": "GÜVEN",
-      "address": "İstiklal Mahallesi Uğur Mumcu Caddesi No:24/A Pertek/TUNCELİ",
-      "phoneNumber": "0 - (428) 651 - 3228",
-      "district": "Pertek",
-      "latitude": 38.8677068,
-      "longitude": 39.3245813,
-      "dutyStart": null,
-      "dutyEnd": null,
-      "lastVerifiedAt": "2026-05-13T06:46:33.487Z",
-      "source": "e-Devlet / TİTCK",
-      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
-    }
-  ]
+  "pharmacies": []
 }

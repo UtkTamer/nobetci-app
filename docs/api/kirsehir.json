@@ -1,50 +1,7 @@
 {
   "city": "kirsehir",
   "cityDisplayName": "Kırşehir",
-  "updatedAt": "2026-05-13T06:40:24.704Z",
+  "updatedAt": "2026-05-14T06:28:09.433Z",
   "isStale": false,
-  "pharmacies": [
-    {
-      "id": "5b825f55d72d34b21b23c50cb8574bd4",
-      "name": "EMRAH ECZANESİ",
-      "address": "CUMA MAH.İSTİKLAL CAD.CUMHURİYET MEYDANI NO:17 KAMAN / KIRŞEHİR",
-      "phoneNumber": "0 - (386) 712 - 6002",
-      "district": "Kaman",
-      "latitude": 39.3588984,
-      "longitude": 33.7243959,
-      "dutyStart": null,
-      "dutyEnd": null,
-      "lastVerifiedAt": "2026-05-13T06:40:24.704Z",
-      "source": "e-Devlet / TİTCK",
-      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
-    },
-    {
-      "id": "1f326117e3a774cb126b26ebae5a56b6",
-      "name": "GENÇ ECZANE",
-      "address": "AŞIKPAŞA MAH. 1.SOKAK ÇELEBİ APT.ALTI NO:1",
-      "phoneNumber": "0 - (386) 213 - 7117",
-      "district": "Merkez",
-      "latitude": 39.1530011,
-      "longitude": 34.1639354,
-      "dutyStart": null,
-      "dutyEnd": null,
-      "lastVerifiedAt": "2026-05-13T06:40:24.704Z",
-      "source": "e-Devlet / TİTCK",
-      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
-    },
-    {
-      "id": "6ff5e2b02467d5d9349fb0bead930caf",
-      "name": "GÖKBAYRAK",
-      "address": "Aşıkpaşa Mah. 1. Sokak. Paşa Konağı Apt. No: 22/B Merkez / Kırşehir",
-      "phoneNumber": "0 - (505) 226 - 9785",
-      "district": "Merkez",
-      "latitude": 39.1530011,
-      "longitude": 34.1639354,
-      "dutyStart": null,
-      "dutyEnd": null,
-      "lastVerifiedAt": "2026-05-13T06:40:24.704Z",
-      "source": "e-Devlet / TİTCK",
-      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
-    }
-  ]
+  "pharmacies": []
 }

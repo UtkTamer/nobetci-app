@@ -1,64 +1,7 @@
 {
   "city": "ardahan",
   "cityDisplayName": "Ardahan",
-  "updatedAt": "2026-05-13T06:48:46.789Z",
+  "updatedAt": "2026-05-14T06:28:47.204Z",
   "isStale": false,
-  "pharmacies": [
-    {
-      "id": "b334f4832ef02876811f21bec48ad83b",
-      "name": "ŞEREF",
-      "address": "Dedekorkut Mahallesi Atıfababay Caddesi No:104/B",
-      "phoneNumber": "0 - (478) 311 - 2054",
-      "district": "Çıldır",
-      "latitude": 41.1265837,
-      "longitude": 43.1345966,
-      "dutyStart": null,
-      "dutyEnd": null,
-      "lastVerifiedAt": "2026-05-13T06:48:46.789Z",
-      "source": "e-Devlet / TİTCK",
-      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
-    },
-    {
-      "id": "72dab8523b461b0b29faaf6d40b78540",
-      "name": "Emek",
-      "address": "Kubilay bey Mah. Kars Cad. No:10 Göle/ARDAHAN",
-      "phoneNumber": "0 - (478) 411 - 3019",
-      "district": "Göle",
-      "latitude": 40.7930546,
-      "longitude": 42.6078403,
-      "dutyStart": null,
-      "dutyEnd": null,
-      "lastVerifiedAt": "2026-05-13T06:48:46.789Z",
-      "source": "e-Devlet / TİTCK",
-      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
-    },
-    {
-      "id": "842f8f807a8718ccf5aac0112e185534",
-      "name": "ARDAHAN YOLAÇAN",
-      "address": "Hürriyet Mahallesi Atatürk Caddesi No:82",
-      "phoneNumber": "0 - (478) 611 - 2542",
-      "district": "Hanak",
-      "latitude": 41.2367701,
-      "longitude": 42.8449034,
-      "dutyStart": null,
-      "dutyEnd": null,
-      "lastVerifiedAt": "2026-05-13T06:48:46.789Z",
-      "source": "e-Devlet / TİTCK",
-      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
-    },
-    {
-      "id": "1125817e6b90226ef4f00da6967c7ec2",
-      "name": "KÖMÜRCÜ",
-      "address": "İnönü Mahallesi Sağlık 1 Sokak No: 7/D",
-      "phoneNumber": "0 - (478) 211 - 6583",
-      "district": "Merkez",
-      "latitude": 41.1102966,
-      "longitude": 42.7035585,
-      "dutyStart": null,
-      "dutyEnd": null,
-      "lastVerifiedAt": "2026-05-13T06:48:46.789Z",
-      "source": "e-Devlet / TİTCK",
-      "sourceUrl": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama"
-    }
-  ]
+  "pharmacies": []
 }
