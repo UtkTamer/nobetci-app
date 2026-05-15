@@ -1,11 +1,11 @@
 {
-  "ok": true,
-  "checkedAt": "2026-05-14T06:28:53.423Z",
+  "ok": false,
+  "checkedAt": "2026-05-15T06:38:07.694Z",
   "cities": [
     {
       "city": "adana",
       "cityDisplayName": "Adana",
-      "lastRefreshedAt": "2026-05-14T06:27:28.090Z",
+      "lastRefreshedAt": "2026-05-15T06:36:35.279Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -13,7 +13,7 @@
     {
       "city": "adiyaman",
       "cityDisplayName": "Adıyaman",
-      "lastRefreshedAt": "2026-05-14T06:27:29.427Z",
+      "lastRefreshedAt": "2026-05-15T06:36:37.057Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -21,7 +21,7 @@
     {
       "city": "afyonkarahisar",
       "cityDisplayName": "Afyonkarahisar",
-      "lastRefreshedAt": "2026-05-14T06:27:29.741Z",
+      "lastRefreshedAt": "2026-05-15T06:36:36.394Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -29,7 +29,7 @@
     {
       "city": "agri",
       "cityDisplayName": "Ağrı",
-      "lastRefreshedAt": "2026-05-14T06:27:30.897Z",
+      "lastRefreshedAt": "2026-05-15T06:36:38.181Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -37,7 +37,7 @@
     {
       "city": "amasya",
       "cityDisplayName": "Amasya",
-      "lastRefreshedAt": "2026-05-14T06:27:32.548Z",
+      "lastRefreshedAt": "2026-05-15T06:36:39.640Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -45,7 +45,7 @@
     {
       "city": "ankara",
       "cityDisplayName": "Ankara",
-      "lastRefreshedAt": "2026-05-14T06:27:32.856Z",
+      "lastRefreshedAt": "2026-05-15T06:36:40.340Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -53,7 +53,7 @@
     {
       "city": "antalya",
       "cityDisplayName": "Antalya",
-      "lastRefreshedAt": "2026-05-14T06:27:33.983Z",
+      "lastRefreshedAt": "2026-05-15T06:36:41.475Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -61,7 +61,7 @@
     {
       "city": "artvin",
       "cityDisplayName": "Artvin",
-      "lastRefreshedAt": "2026-05-14T06:27:35.630Z",
+      "lastRefreshedAt": "2026-05-15T06:36:42.937Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -69,7 +69,7 @@
     {
       "city": "aydin",
       "cityDisplayName": "Aydın",
-      "lastRefreshedAt": "2026-05-14T06:27:35.926Z",
+      "lastRefreshedAt": "2026-05-15T06:36:44.261Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -77,7 +77,7 @@
     {
       "city": "balikesir",
       "cityDisplayName": "Balıkesir",
-      "lastRefreshedAt": "2026-05-14T06:27:37.099Z",
+      "lastRefreshedAt": "2026-05-15T06:36:44.686Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -85,7 +85,7 @@
     {
       "city": "bilecik",
       "cityDisplayName": "Bilecik",
-      "lastRefreshedAt": "2026-05-14T06:27:38.732Z",
+      "lastRefreshedAt": "2026-05-15T06:36:45.843Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -93,7 +93,7 @@
     {
       "city": "bingol",
       "cityDisplayName": "Bingöl",
-      "lastRefreshedAt": "2026-05-14T06:27:38.968Z",
+      "lastRefreshedAt": "2026-05-15T06:36:47.527Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -101,7 +101,7 @@
     {
       "city": "bitlis",
       "cityDisplayName": "Bitlis",
-      "lastRefreshedAt": "2026-05-14T06:27:40.218Z",
+      "lastRefreshedAt": "2026-05-15T06:36:48.534Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -109,7 +109,7 @@
     {
       "city": "bolu",
       "cityDisplayName": "Bolu",
-      "lastRefreshedAt": "2026-05-14T06:27:41.855Z",
+      "lastRefreshedAt": "2026-05-15T06:36:49.088Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -117,7 +117,7 @@
     {
       "city": "burdur",
       "cityDisplayName": "Burdur",
-      "lastRefreshedAt": "2026-05-14T06:27:42.074Z",
+      "lastRefreshedAt": "2026-05-15T06:36:50.413Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -125,7 +125,7 @@
     {
       "city": "bursa",
       "cityDisplayName": "Bursa",
-      "lastRefreshedAt": "2026-05-14T06:27:43.358Z",
+      "lastRefreshedAt": "2026-05-15T06:36:51.814Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -133,7 +133,7 @@
     {
       "city": "canakkale",
       "cityDisplayName": "Çanakkale",
-      "lastRefreshedAt": "2026-05-14T06:27:44.942Z",
+      "lastRefreshedAt": "2026-05-15T06:36:52.327Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -141,7 +141,7 @@
     {
       "city": "cankiri",
       "cityDisplayName": "Çankırı",
-      "lastRefreshedAt": "2026-05-14T06:27:45.434Z",
+      "lastRefreshedAt": "2026-05-15T06:36:53.667Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -149,7 +149,7 @@
     {
       "city": "corum",
       "cityDisplayName": "Çorum",
-      "lastRefreshedAt": "2026-05-14T06:27:46.138Z",
+      "lastRefreshedAt": "2026-05-15T06:36:55.070Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -157,7 +157,7 @@
     {
       "city": "denizli",
       "cityDisplayName": "Denizli",
-      "lastRefreshedAt": "2026-05-14T06:27:48.007Z",
+      "lastRefreshedAt": "2026-05-15T06:36:55.535Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -165,7 +165,7 @@
     {
       "city": "diyarbakir",
       "cityDisplayName": "Diyarbakır",
-      "lastRefreshedAt": "2026-05-14T06:27:48.888Z",
+      "lastRefreshedAt": "2026-05-15T06:36:56.930Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -173,7 +173,7 @@
     {
       "city": "edirne",
       "cityDisplayName": "Edirne",
-      "lastRefreshedAt": "2026-05-14T06:27:49.255Z",
+      "lastRefreshedAt": "2026-05-15T06:36:58.330Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -181,7 +181,7 @@
     {
       "city": "elazig",
       "cityDisplayName": "Elazığ",
-      "lastRefreshedAt": "2026-05-14T06:27:50.801Z",
+      "lastRefreshedAt": "2026-05-15T06:36:58.785Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -189,7 +189,7 @@
     {
       "city": "erzincan",
       "cityDisplayName": "Erzincan",
-      "lastRefreshedAt": "2026-05-14T06:27:51.977Z",
+      "lastRefreshedAt": "2026-05-15T06:37:00.210Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -197,7 +197,7 @@
     {
       "city": "erzurum",
       "cityDisplayName": "Erzurum",
-      "lastRefreshedAt": "2026-05-14T06:27:52.352Z",
+      "lastRefreshedAt": "2026-05-15T06:37:01.553Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -205,7 +205,7 @@
     {
       "city": "eskisehir",
       "cityDisplayName": "Eskişehir",
-      "lastRefreshedAt": "2026-05-14T06:27:53.924Z",
+      "lastRefreshedAt": "2026-05-15T06:37:02.042Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -213,7 +213,7 @@
     {
       "city": "gaziantep",
       "cityDisplayName": "Gaziantep",
-      "lastRefreshedAt": "2026-05-14T06:27:55.066Z",
+      "lastRefreshedAt": "2026-05-15T06:37:03.450Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -221,7 +221,7 @@
     {
       "city": "giresun",
       "cityDisplayName": "Giresun",
-      "lastRefreshedAt": "2026-05-14T06:27:55.491Z",
+      "lastRefreshedAt": "2026-05-15T06:37:10.759Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -229,7 +229,7 @@
     {
       "city": "gumushane",
       "cityDisplayName": "Gümüşhane",
-      "lastRefreshedAt": "2026-05-14T06:27:57.021Z",
+      "lastRefreshedAt": "2026-05-15T06:37:05.694Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -237,7 +237,7 @@
     {
       "city": "hakkari",
       "cityDisplayName": "Hakkâri",
-      "lastRefreshedAt": "2026-05-14T06:27:58.313Z",
+      "lastRefreshedAt": "2026-05-15T06:37:06.670Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -245,7 +245,7 @@
     {
       "city": "hatay",
       "cityDisplayName": "Hatay",
-      "lastRefreshedAt": "2026-05-14T06:27:58.593Z",
+      "lastRefreshedAt": "2026-05-15T06:37:08.950Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -253,7 +253,7 @@
     {
       "city": "isparta",
       "cityDisplayName": "Isparta",
-      "lastRefreshedAt": "2026-05-14T06:28:00.140Z",
+      "lastRefreshedAt": "2026-05-15T06:37:10.310Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -261,7 +261,7 @@
     {
       "city": "mersin",
       "cityDisplayName": "Mersin",
-      "lastRefreshedAt": "2026-05-14T06:28:01.456Z",
+      "lastRefreshedAt": "2026-05-15T06:37:11.819Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -269,7 +269,7 @@
     {
       "city": "istanbul",
       "cityDisplayName": "İstanbul",
-      "lastRefreshedAt": "2026-05-14T06:28:01.675Z",
+      "lastRefreshedAt": "2026-05-15T06:37:13.557Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -277,7 +277,7 @@
     {
       "city": "izmir",
       "cityDisplayName": "İzmir",
-      "lastRefreshedAt": "2026-05-14T06:28:03.252Z",
+      "lastRefreshedAt": "2026-05-15T06:37:14.004Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -285,7 +285,7 @@
     {
       "city": "kars",
       "cityDisplayName": "Kars",
-      "lastRefreshedAt": "2026-05-14T06:28:10.322Z",
+      "lastRefreshedAt": "2026-05-15T06:37:15.058Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -293,7 +293,7 @@
     {
       "city": "kastamonu",
       "cityDisplayName": "Kastamonu",
-      "lastRefreshedAt": "2026-05-14T06:28:05.065Z",
+      "lastRefreshedAt": "2026-05-15T06:37:16.828Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -301,7 +301,7 @@
     {
       "city": "kayseri",
       "cityDisplayName": "Kayseri",
-      "lastRefreshedAt": "2026-05-14T06:28:06.348Z",
+      "lastRefreshedAt": "2026-05-15T06:37:17.244Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -309,7 +309,7 @@
     {
       "city": "kirklareli",
       "cityDisplayName": "Kırklareli",
-      "lastRefreshedAt": "2026-05-14T06:28:08.170Z",
+      "lastRefreshedAt": "2026-05-15T06:37:18.345Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -317,7 +317,7 @@
     {
       "city": "kirsehir",
       "cityDisplayName": "Kırşehir",
-      "lastRefreshedAt": "2026-05-14T06:28:09.433Z",
+      "lastRefreshedAt": "2026-05-15T06:37:20.092Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -325,7 +325,7 @@
     {
       "city": "kocaeli",
       "cityDisplayName": "Kocaeli",
-      "lastRefreshedAt": "2026-05-14T06:28:11.278Z",
+      "lastRefreshedAt": "2026-05-15T06:37:21.224Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -333,7 +333,7 @@
     {
       "city": "konya",
       "cityDisplayName": "Konya",
-      "lastRefreshedAt": "2026-05-14T06:28:12.516Z",
+      "lastRefreshedAt": "2026-05-15T06:37:21.560Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -341,7 +341,7 @@
     {
       "city": "kutahya",
       "cityDisplayName": "Kütahya",
-      "lastRefreshedAt": "2026-05-14T06:28:13.394Z",
+      "lastRefreshedAt": "2026-05-15T06:37:22.971Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -349,15 +349,16 @@
     {
       "city": "malatya",
       "cityDisplayName": "Malatya",
-      "lastRefreshedAt": "2026-05-14T06:28:14.744Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "read ECONNRESET"
     },
     {
       "city": "manisa",
       "cityDisplayName": "Manisa",
-      "lastRefreshedAt": "2026-05-14T06:28:15.945Z",
+      "lastRefreshedAt": "2026-05-15T06:37:25.157Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -365,7 +366,7 @@
     {
       "city": "kahramanmaras",
       "cityDisplayName": "Kahramanmaraş",
-      "lastRefreshedAt": "2026-05-14T06:28:16.178Z",
+      "lastRefreshedAt": "2026-05-15T06:37:26.201Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -373,7 +374,7 @@
     {
       "city": "mardin",
       "cityDisplayName": "Mardin",
-      "lastRefreshedAt": "2026-05-14T06:28:17.854Z",
+      "lastRefreshedAt": "2026-05-15T06:37:28.417Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -381,7 +382,7 @@
     {
       "city": "mugla",
       "cityDisplayName": "Muğla",
-      "lastRefreshedAt": "2026-05-14T06:28:19.084Z",
+      "lastRefreshedAt": "2026-05-15T06:37:29.458Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -389,7 +390,7 @@
     {
       "city": "mus",
       "cityDisplayName": "Muş",
-      "lastRefreshedAt": "2026-05-14T06:28:19.596Z",
+      "lastRefreshedAt": "2026-05-15T06:37:31.681Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -397,7 +398,7 @@
     {
       "city": "nevsehir",
       "cityDisplayName": "Nevşehir",
-      "lastRefreshedAt": "2026-05-14T06:28:20.660Z",
+      "lastRefreshedAt": "2026-05-15T06:37:32.658Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -405,7 +406,7 @@
     {
       "city": "nigde",
       "cityDisplayName": "Niğde",
-      "lastRefreshedAt": "2026-05-14T06:28:22.212Z",
+      "lastRefreshedAt": "2026-05-15T06:37:33.132Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -413,7 +414,7 @@
     {
       "city": "ordu",
       "cityDisplayName": "Ordu",
-      "lastRefreshedAt": "2026-05-14T06:28:22.676Z",
+      "lastRefreshedAt": "2026-05-15T06:37:34.529Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -421,7 +422,7 @@
     {
       "city": "rize",
       "cityDisplayName": "Rize",
-      "lastRefreshedAt": "2026-05-14T06:28:23.730Z",
+      "lastRefreshedAt": "2026-05-15T06:37:35.917Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -429,7 +430,7 @@
     {
       "city": "sakarya",
       "cityDisplayName": "Sakarya",
-      "lastRefreshedAt": "2026-05-14T06:28:25.318Z",
+      "lastRefreshedAt": "2026-05-15T06:37:36.360Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -437,7 +438,7 @@
     {
       "city": "samsun",
       "cityDisplayName": "Samsun",
-      "lastRefreshedAt": "2026-05-14T06:28:25.787Z",
+      "lastRefreshedAt": "2026-05-15T06:37:37.771Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -445,7 +446,7 @@
     {
       "city": "siirt",
       "cityDisplayName": "Siirt",
-      "lastRefreshedAt": "2026-05-14T06:28:26.829Z",
+      "lastRefreshedAt": "2026-05-15T06:37:39.158Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -453,7 +454,7 @@
     {
       "city": "sinop",
       "cityDisplayName": "Sinop",
-      "lastRefreshedAt": "2026-05-14T06:28:28.384Z",
+      "lastRefreshedAt": "2026-05-15T06:37:45.206Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -461,7 +462,7 @@
     {
       "city": "sivas",
       "cityDisplayName": "Sivas",
-      "lastRefreshedAt": "2026-05-14T06:28:28.895Z",
+      "lastRefreshedAt": "2026-05-15T06:37:40.957Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -469,7 +470,7 @@
     {
       "city": "tekirdag",
       "cityDisplayName": "Tekirdağ",
-      "lastRefreshedAt": "2026-05-14T06:28:29.959Z",
+      "lastRefreshedAt": "2026-05-15T06:37:42.403Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -477,7 +478,7 @@
     {
       "city": "tokat",
       "cityDisplayName": "Tokat",
-      "lastRefreshedAt": "2026-05-14T06:28:31.487Z",
+      "lastRefreshedAt": "2026-05-15T06:37:44.212Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -485,7 +486,7 @@
     {
       "city": "trabzon",
       "cityDisplayName": "Trabzon",
-      "lastRefreshedAt": "2026-05-14T06:28:32.014Z",
+      "lastRefreshedAt": "2026-05-15T06:37:45.655Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -493,7 +494,7 @@
     {
       "city": "tunceli",
       "cityDisplayName": "Tunceli",
-      "lastRefreshedAt": "2026-05-14T06:28:33.044Z",
+      "lastRefreshedAt": "2026-05-15T06:37:47.082Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -501,7 +502,7 @@
     {
       "city": "sanliurfa",
       "cityDisplayName": "Şanlıurfa",
-      "lastRefreshedAt": "2026-05-14T06:28:34.599Z",
+      "lastRefreshedAt": "2026-05-15T06:37:48.389Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -509,7 +510,7 @@
     {
       "city": "usak",
       "cityDisplayName": "Uşak",
-      "lastRefreshedAt": "2026-05-14T06:28:35.061Z",
+      "lastRefreshedAt": "2026-05-15T06:37:48.873Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -517,7 +518,7 @@
     {
       "city": "van",
       "cityDisplayName": "Van",
-      "lastRefreshedAt": "2026-05-14T06:28:36.124Z",
+      "lastRefreshedAt": "2026-05-15T06:37:50.329Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -525,7 +526,7 @@
     {
       "city": "yozgat",
       "cityDisplayName": "Yozgat",
-      "lastRefreshedAt": "2026-05-14T06:28:37.696Z",
+      "lastRefreshedAt": "2026-05-15T06:37:51.645Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -533,7 +534,7 @@
     {
       "city": "zonguldak",
       "cityDisplayName": "Zonguldak",
-      "lastRefreshedAt": "2026-05-14T06:28:38.168Z",
+      "lastRefreshedAt": "2026-05-15T06:37:52.137Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -541,7 +542,7 @@
     {
       "city": "aksaray",
       "cityDisplayName": "Aksaray",
-      "lastRefreshedAt": "2026-05-14T06:28:39.215Z",
+      "lastRefreshedAt": "2026-05-15T06:37:53.565Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -549,7 +550,7 @@
     {
       "city": "bayburt",
       "cityDisplayName": "Bayburt",
-      "lastRefreshedAt": "2026-05-14T06:28:40.962Z",
+      "lastRefreshedAt": "2026-05-15T06:37:54.830Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -557,7 +558,7 @@
     {
       "city": "karaman",
       "cityDisplayName": "Karaman",
-      "lastRefreshedAt": "2026-05-14T06:28:41.253Z",
+      "lastRefreshedAt": "2026-05-15T06:37:55.424Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -565,7 +566,7 @@
     {
       "city": "kirikkale",
       "cityDisplayName": "Kırıkkale",
-      "lastRefreshedAt": "2026-05-14T06:28:42.282Z",
+      "lastRefreshedAt": "2026-05-15T06:37:56.843Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -573,7 +574,7 @@
     {
       "city": "batman",
       "cityDisplayName": "Batman",
-      "lastRefreshedAt": "2026-05-14T06:28:44.091Z",
+      "lastRefreshedAt": "2026-05-15T06:37:58.372Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -581,7 +582,7 @@
     {
       "city": "sirnak",
       "cityDisplayName": "Şırnak",
-      "lastRefreshedAt": "2026-05-14T06:28:44.335Z",
+      "lastRefreshedAt": "2026-05-15T06:37:58.933Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -589,7 +590,7 @@
     {
       "city": "bartin",
       "cityDisplayName": "Bartın",
-      "lastRefreshedAt": "2026-05-14T06:28:45.342Z",
+      "lastRefreshedAt": "2026-05-15T06:37:59.753Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -597,7 +598,7 @@
     {
       "city": "ardahan",
       "cityDisplayName": "Ardahan",
-      "lastRefreshedAt": "2026-05-14T06:28:47.204Z",
+      "lastRefreshedAt": "2026-05-15T06:38:01.631Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -605,7 +606,7 @@
     {
       "city": "igdir",
       "cityDisplayName": "Iğdır",
-      "lastRefreshedAt": "2026-05-14T06:28:47.438Z",
+      "lastRefreshedAt": "2026-05-15T06:38:02.804Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -613,7 +614,7 @@
     {
       "city": "yalova",
       "cityDisplayName": "Yalova",
-      "lastRefreshedAt": "2026-05-14T06:28:48.429Z",
+      "lastRefreshedAt": "2026-05-15T06:38:03.014Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -621,7 +622,7 @@
     {
       "city": "karabuk",
       "cityDisplayName": "Karabük",
-      "lastRefreshedAt": "2026-05-14T06:28:50.318Z",
+      "lastRefreshedAt": "2026-05-15T06:38:04.467Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -629,7 +630,7 @@
     {
       "city": "kilis",
       "cityDisplayName": "Kilis",
-      "lastRefreshedAt": "2026-05-14T06:28:50.828Z",
+      "lastRefreshedAt": "2026-05-15T06:38:05.984Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -637,7 +638,7 @@
     {
       "city": "osmaniye",
       "cityDisplayName": "Osmaniye",
-      "lastRefreshedAt": "2026-05-14T06:28:51.230Z",
+      "lastRefreshedAt": "2026-05-15T06:38:06.249Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
@@ -645,7 +646,7 @@
     {
       "city": "duzce",
       "cityDisplayName": "Düzce",
-      "lastRefreshedAt": "2026-05-14T06:28:53.406Z",
+      "lastRefreshedAt": "2026-05-15T06:38:07.676Z",
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0
