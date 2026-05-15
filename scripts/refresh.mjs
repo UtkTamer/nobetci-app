@@ -1,5 +1,5 @@
 import axios from 'axios';
-import * as cheerio from 'cheerio';
+import { chromium } from 'playwright';
 import { createHash } from 'crypto';
 import { readFileSync, writeFileSync, mkdirSync } from 'fs';
 import { resolve, dirname } from 'path';
@@ -104,10 +104,13 @@ const MAX_POLL_ATTEMPTS = 20;
 const POLL_DELAY_MS = 3000;
 const MAX_GEOCODE_RETRIES = 3;
 
-const CONCURRENCY = 3;
+const CONCURRENCY = 2;
 const CITY_RETRY_ATTEMPTS = 2;
-const CITY_RETRY_DELAY_MS = 5000;
-const INTER_CITY_DELAY_MS = 2000;
+const CITY_RETRY_DELAY_MS = 8000;
+const INTER_CITY_DELAY_MS = 3000;
+
+const PAGE_TIMEOUT = 60_000;
+const NAV_TIMEOUT = 90_000;
 
 const CACHE_PATH = resolve(__dirname, 'geocode-cache.json');
 const OUTPUT_DIR = resolve(__dirname, '..', 'docs', 'api');
@@ -145,48 +148,24 @@ function formatDutyDate(date) {
   return `${day}/${month}/${year}`;
 }
 
-function extractToken(html) {
-  const match = html.match(/name="token"\s+value="([^"]+)"/i);
-  return match?.[1] ?? null;
-}
+// ---------------------------------------------------------------------------
+// Playwright browser (shared across workers)
+// ---------------------------------------------------------------------------
 
-function extractBodyToken(html) {
-  const match = html.match(/<body[^>]*data-token="([^"]+)"/i);
-  return match?.[1] ?? null;
-}
+let _browser = null;
 
-function extractRedirectUrl(html) {
-  const match = html.match(/var redirectURL = '([^']+)'/i);
-  return match?.[1] ?? null;
-}
-
-function parseCookies(setCookieHeaders) {
-  if (!setCookieHeaders || setCookieHeaders.length === 0) return '';
-  return setCookieHeaders
-    .map((c) => c.split(';', 1)[0]?.trim() ?? '')
-    .filter((c) => c.length > 0)
-    .join('; ');
-}
-
-function mergeCookies(existing, next) {
-  const map = new Map();
-  for (const source of [existing, next]) {
-    for (const cookie of source.split(';')) {
-      const trimmed = cookie.trim();
-      if (!trimmed) continue;
-      const sep = trimmed.indexOf('=');
-      if (sep < 1) continue;
-      map.set(trimmed.slice(0, sep).trim(), trimmed.slice(sep + 1).trim());
-    }
+async function getBrowser() {
+  if (!_browser) {
+    _browser = await chromium.launch({ headless: true });
   }
-  return [...map.entries()].map(([k, v]) => `${k}=${v}`).join('; ');
+  return _browser;
 }
 
-function toAbsoluteUrl(pathOrUrl) {
-  if (pathOrUrl.startsWith('http://') || pathOrUrl.startsWith('https://')) {
-    return pathOrUrl;
+async function closeBrowser() {
+  if (_browser) {
+    await _browser.close();
+    _browser = null;
   }
-  return new URL(pathOrUrl, EDEVLET_URL).toString();
 }
 
 function cleanText(value) {
@@ -327,121 +306,83 @@ async function geocode(rawAddress, district, city) {
 }
 
 // ---------------------------------------------------------------------------
-// E-Devlet scraping
+// E-Devlet scraping via Playwright
 // ---------------------------------------------------------------------------
 
-async function startSession() {
-  const response = await axios.get(EDEVLET_URL, {
-    headers: DEFAULT_HEADERS,
-    maxRedirects: 5,
-  });
+async function scrapeCity(city) {
+  const browser = await getBrowser();
+  const page = await browser.newPage();
 
-  const token = extractToken(response.data);
-  if (!token) throw new Error('Failed to extract e-Devlet CSRF token');
+  try {
+    await page.setExtraHTTPHeaders({
+      'Accept-Language': 'tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7',
+    });
 
-  return {
-    token,
-    cookieHeader: parseCookies(response.headers['set-cookie']),
-  };
-}
+    // Load the page and wait for Vue.js to render
+    await page.goto(EDEVLET_URL, { waitUntil: 'networkidle', timeout: NAV_TIMEOUT });
+    await page.waitForSelector('form[name="mainForm"], form#mainForm', { timeout: PAGE_TIMEOUT });
 
-async function submitSearchForm(cookieHeader, token, plateCode, dutyDate) {
-  const body = new URLSearchParams({
-    plakaKodu: plateCode,
-    nobetTarihi: dutyDate,
-    token,
-    btn: 'Sorgula',
-  }).toString();
-
-  const response = await axios.post(`${EDEVLET_URL}?submit`, body, {
-    headers: {
-      ...DEFAULT_HEADERS,
-      'Content-Type': 'application/x-www-form-urlencoded',
-      Cookie: cookieHeader,
-    },
-    maxRedirects: 0,
-    validateStatus: (status) => status < 400,
-  });
-
-  const nextCookies = mergeCookies(
-    cookieHeader,
-    parseCookies(response.headers['set-cookie']),
-  );
-
-  return {
-    cookieHeader: nextCookies,
-    asyncToken: extractBodyToken(response.data),
-    redirectUrl: extractRedirectUrl(response.data),
-  };
-}
-
-async function waitForResults(state) {
-  if (!state.asyncToken || !state.redirectUrl) {
-    return `${EDEVLET_URL}?nobetci=Eczaneler`;
-  }
-
-  for (let attempt = 0; attempt < MAX_POLL_ATTEMPTS; attempt++) {
-    if (attempt > 0) await sleep(POLL_DELAY_MS);
-
-    const response = await axios.post(
-      `${EDEVLET_URL}?nobetci=Eczaneler&submit`,
-      new URLSearchParams({
-        ajax: '1',
-        token: state.asyncToken,
-        asyncQueue: '',
-        redirectURL: state.redirectUrl,
-      }).toString(),
-      {
-        headers: {
-          ...DEFAULT_HEADERS,
-          'Content-Type':
-            'application/x-www-form-urlencoded; charset=UTF-8',
-          'X-Requested-With': 'XMLHttpRequest',
-          Cookie: state.cookieHeader,
-          Referer: `${EDEVLET_URL}?nobetci=Eczaneler`,
-        },
-      },
-    );
-
-    if (response.data?.requestStatus === 'FINISHED') {
-      const redirectUrl = response.data.redirectURL;
-      if (typeof redirectUrl === 'string' && redirectUrl.length > 0) {
-        return toAbsoluteUrl(redirectUrl);
+    // City selector — Vue.js may render a <select> or similar
+    const plateSelect = await page.$('select[name="plakaKodu"]');
+    if (plateSelect) {
+      await page.selectOption('select[name="plakaKodu"]', city.plateCode);
+    } else {
+      // Try text input fallback
+      const plateInput = await page.$('input[name="plakaKodu"]');
+      if (plateInput) {
+        await plateInput.fill(city.plateCode);
       }
-      return `${EDEVLET_URL}?nobetci=Eczaneler`;
     }
+
+    // Select today's date (first nobetTarihi radio)
+    const todayRadio = await page.$('input[name="nobetTarihi"]');
+    if (todayRadio) {
+      await todayRadio.click();
+    }
+
+    // Submit form and wait for navigation / network idle
+    await Promise.all([
+      page.waitForNavigation({ waitUntil: 'networkidle', timeout: NAV_TIMEOUT }).catch(() => {}),
+      page.click('input[name="btn"][type="submit"], button[type="submit"]'),
+    ]);
+
+    // Wait for results table (or empty-state)
+    const tableSelector = '#searchTable, table.nobetci-table, .result-table, main table';
+    const hasTable = await page
+      .waitForSelector(tableSelector, { timeout: PAGE_TIMEOUT })
+      .then(() => true)
+      .catch(() => false);
+
+    if (!hasTable) return [];
+
+    // Extract rows from the table
+    const records = await page.evaluate(() => {
+      const candidates = [
+        '#searchTable tr',
+        'table tr',
+      ];
+      let rows = [];
+      for (const sel of candidates) {
+        const found = document.querySelectorAll(sel);
+        if (found.length > 1) { rows = Array.from(found); break; }
+      }
+      const results = [];
+      for (const row of rows) {
+        const cols = row.querySelectorAll('td');
+        if (cols.length < 4) continue;
+        const name    = cols[0].textContent.replace(/\s+/g, ' ').trim();
+        const district = cols[1].textContent.replace(/\s+/g, ' ').trim();
+        const phone    = cols[2].textContent.replace(/\s+/g, ' ').replace(/\bAra\b/gi, '').trim();
+        const address  = cols[3].textContent.replace(/\s+/g, ' ').trim();
+        if (name && address) results.push({ name, district, phoneNumber: phone, address });
+      }
+      return results;
+    });
+
+    return records;
+  } finally {
+    await page.close();
   }
-
-  throw new Error('Timed out waiting for e-Devlet results');
-}
-
-async function fetchResultsHtml(cookieHeader, resultsUrl) {
-  const response = await axios.get(resultsUrl, {
-    headers: { ...DEFAULT_HEADERS, Cookie: cookieHeader },
-  });
-  return response.data;
-}
-
-function parsePharmacyHtml(html) {
-  const $ = cheerio.load(html);
-  const rows = $('#searchTable tr').toArray();
-  const records = [];
-
-  for (const row of rows) {
-    const cols = $(row).find('td');
-    if (cols.length < 4) continue;
-
-    const name = cleanText(cols.eq(0).text());
-    const district = cleanText(cols.eq(1).text());
-    const phoneNumber = cleanPhone(cols.eq(2).text());
-    const address = cleanText(cols.eq(3).text());
-
-    if (!name || !address) continue;
-
-    records.push({ name, district, phoneNumber, address });
-  }
-
-  return records;
 }
 
 // ---------------------------------------------------------------------------
@@ -449,23 +390,9 @@ function parsePharmacyHtml(html) {
 // ---------------------------------------------------------------------------
 
 async function refreshCity(city) {
-  console.log(`\n[${city.displayName}] Starting e-Devlet scrape...`);
+  console.log(`\n[${city.displayName}] Starting Playwright scrape...`);
 
-  const session = await startSession();
-  const dutyDate = formatDutyDate(new Date());
-  console.log(`  Session OK, duty date: ${dutyDate}`);
-
-  const searchState = await submitSearchForm(
-    session.cookieHeader,
-    session.token,
-    city.plateCode,
-    dutyDate,
-  );
-  console.log('  Search submitted, waiting for results...');
-
-  const resultsPath = await waitForResults(searchState);
-  const html = await fetchResultsHtml(searchState.cookieHeader, resultsPath);
-  const records = parsePharmacyHtml(html);
+  const records = await scrapeCity(city);
   console.log(`  Found ${records.length} pharmacies`);
 
   // Geocode
@@ -629,6 +556,9 @@ async function main() {
   });
 
   await runWithConcurrency(tasks, CONCURRENCY);
+
+  // Close the shared browser
+  await closeBrowser();
 
   // Persist geocode cache after all cities (not per-city, to avoid race conditions)
   saveCache();
