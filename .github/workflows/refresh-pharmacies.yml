@@ -14,9 +14,33 @@ permissions:
   pages: write
 
 jobs:
-  refresh:
+  refresh-shards:
+    name: Refresh shard ${{ matrix.shard.id }}
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        shard:
+          - id: 1
+            cities: adana,adiyaman,afyonkarahisar,agri,amasya,ankara,antalya,artvin,aydin
+          - id: 2
+            cities: balikesir,bilecik,bingol,bitlis,bolu,burdur,bursa,canakkale,cankiri
+          - id: 3
+            cities: corum,denizli,diyarbakir,edirne,elazig,erzincan,erzurum,eskisehir,gaziantep
+          - id: 4
+            cities: giresun,gumushane,hakkari,hatay,isparta,mersin,istanbul,izmir,kars
+          - id: 5
+            cities: kastamonu,kayseri,kirklareli,kirsehir,kocaeli,konya,kutahya,malatya,manisa
+          - id: 6
+            cities: kahramanmaras,mardin,mugla,mus,nevsehir,nigde,ordu,rize,sakarya
+          - id: 7
+            cities: samsun,siirt,sinop,sivas,tekirdag,tokat,trabzon,tunceli,sanliurfa
+          - id: 8
+            cities: usak,van,yozgat,zonguldak,aksaray,bayburt,karaman,kirikkale,batman
+          - id: 9
+            cities: sirnak,bartin,ardahan,igdir,yalova,karabuk,kilis,osmaniye,duzce
 
     steps:
       - name: Checkout repository
@@ -37,13 +61,95 @@ jobs:
 
       - name: Run pharmacy refresh
         working-directory: scripts
+        env:
+          CITY_FILTER: ${{ matrix.shard.cities }}
         run: node refresh.mjs
 
-      - name: Commit updated data and cache
+      - name: Prepare shard artifact
+        run: |
+          mkdir -p shard-output/docs/api
+          IFS=',' read -ra CITY_LIST <<< "${{ matrix.shard.cities }}"
+          for city in "${CITY_LIST[@]}"; do
+            cp "docs/api/${city}.json" "shard-output/docs/api/${city}.json"
+          done
+          cp "docs/api/health.json" "shard-output/docs/api/health.json"
+
+      - name: Upload shard artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: shard-${{ matrix.shard.id }}
+          path: shard-output/docs/api
+          if-no-files-found: error
+
+  merge-and-commit:
+    name: Merge shard outputs
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    needs: refresh-shards
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Download shard artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: shard-artifacts
+
+      - name: Merge shard outputs
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+
+          const root = process.cwd();
+          const artifactRoot = path.join(root, 'shard-artifacts');
+          const outputDir = path.join(root, 'docs', 'api');
+
+          const shardDirs = fs.readdirSync(artifactRoot)
+            .map((name) => path.join(artifactRoot, name))
+            .filter((fullPath) => fs.statSync(fullPath).isDirectory());
+
+          const mergedHealthCities = [];
+
+          for (const shardDir of shardDirs) {
+            const files = fs.readdirSync(shardDir);
+            for (const file of files) {
+              const source = path.join(shardDir, file);
+              if (file === 'health.json') {
+                const parsed = JSON.parse(fs.readFileSync(source, 'utf8'));
+                mergedHealthCities.push(...parsed.cities);
+                continue;
+              }
+
+              if (file.endsWith('.json')) {
+                const target = path.join(outputDir, file);
+                fs.copyFileSync(source, target);
+              }
+            }
+          }
+
+          mergedHealthCities.sort((left, right) =>
+            left.cityDisplayName.localeCompare(right.cityDisplayName, 'tr'),
+          );
+
+          const health = {
+            ok: mergedHealthCities.every((city) => !city.error),
+            checkedAt: new Date().toISOString(),
+            cities: mergedHealthCities,
+          };
+
+          fs.writeFileSync(
+            path.join(outputDir, 'health.json'),
+            `${JSON.stringify(health, null, 2)}\n`,
+          );
+          NODE
+
+      - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/api/ scripts/geocode-cache.json
+          git add docs/api/
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
