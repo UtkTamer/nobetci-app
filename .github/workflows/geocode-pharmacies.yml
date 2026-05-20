@@ -1,9 +1,9 @@
-name: Refresh pharmacies
+name: Geocode pharmacies
 
 on:
   schedule:
-    # 06:00 Europe/Istanbul = 03:00 UTC
-    - cron: '0 3 * * *'
+    # 07:30 Europe/Istanbul = 04:30 UTC
+    - cron: '30 4 * * *'
   workflow_dispatch:
 
 env:
@@ -11,16 +11,15 @@ env:
 
 permissions:
   contents: write
-  pages: write
 
 jobs:
-  refresh-shards:
-    name: Refresh shard ${{ matrix.shard.id }}
+  geocode-shards:
+    name: Geocode shard ${{ matrix.shard.id }}
     runs-on: ubuntu-latest
     timeout-minutes: 45
     strategy:
       fail-fast: false
-      max-parallel: 3
+      max-parallel: 2
       matrix:
         shard:
           - id: 1
@@ -55,38 +54,36 @@ jobs:
         working-directory: scripts
         run: npm ci
 
-      - name: Install Playwright browsers
-        working-directory: scripts
-        run: npx playwright install chromium --with-deps
-
-      - name: Run pharmacy refresh
+      - name: Run pharmacy geocoding
         working-directory: scripts
         env:
           CITY_FILTER: ${{ matrix.shard.cities }}
-          SKIP_GEOCODE: '1'
+          GEOCODE_ONLY: '1'
         run: node refresh.mjs
 
       - name: Prepare shard artifact
         run: |
           mkdir -p shard-output/docs/api
+          mkdir -p shard-output/scripts
           IFS=',' read -ra CITY_LIST <<< "${{ matrix.shard.cities }}"
           for city in "${CITY_LIST[@]}"; do
             cp "docs/api/${city}.json" "shard-output/docs/api/${city}.json"
           done
           cp "docs/api/health.json" "shard-output/docs/api/health.json"
+          cp "scripts/geocode-cache.json" "shard-output/scripts/geocode-cache-${{ matrix.shard.id }}.json"
 
       - name: Upload shard artifact
         uses: actions/upload-artifact@v4
         with:
-          name: shard-${{ matrix.shard.id }}
-          path: shard-output/docs/api
+          name: geocode-shard-${{ matrix.shard.id }}
+          path: shard-output
           if-no-files-found: error
 
   merge-and-commit:
-    name: Merge shard outputs
+    name: Merge geocode outputs
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    needs: refresh-shards
+    needs: geocode-shards
 
     steps:
       - name: Checkout repository
@@ -106,26 +103,44 @@ jobs:
           const root = process.cwd();
           const artifactRoot = path.join(root, 'shard-artifacts');
           const outputDir = path.join(root, 'docs', 'api');
+          const cachePath = path.join(root, 'scripts', 'geocode-cache.json');
 
           const shardDirs = fs.readdirSync(artifactRoot)
             .map((name) => path.join(artifactRoot, name))
             .filter((fullPath) => fs.statSync(fullPath).isDirectory());
 
           const mergedHealthCities = [];
+          const mergedCache = {};
 
           for (const shardDir of shardDirs) {
-            const files = fs.readdirSync(shardDir);
-            for (const file of files) {
-              const source = path.join(shardDir, file);
-              if (file === 'health.json') {
-                const parsed = JSON.parse(fs.readFileSync(source, 'utf8'));
-                mergedHealthCities.push(...parsed.cities);
-                continue;
-              }
+            const docsDir = path.join(shardDir, 'docs', 'api');
+            if (fs.existsSync(docsDir)) {
+              const files = fs.readdirSync(docsDir);
+              for (const file of files) {
+                const source = path.join(docsDir, file);
+                if (file === 'health.json') {
+                  const parsed = JSON.parse(fs.readFileSync(source, 'utf8'));
+                  mergedHealthCities.push(...parsed.cities);
+                  continue;
+                }
 
-              if (file.endsWith('.json')) {
-                const target = path.join(outputDir, file);
-                fs.copyFileSync(source, target);
+                if (file.endsWith('.json')) {
+                  const target = path.join(outputDir, file);
+                  fs.copyFileSync(source, target);
+                }
+              }
+            }
+
+            const scriptsDir = path.join(shardDir, 'scripts');
+            if (fs.existsSync(scriptsDir)) {
+              const cacheFiles = fs.readdirSync(scriptsDir)
+                .filter((file) => file.startsWith('geocode-cache-') && file.endsWith('.json'));
+
+              for (const file of cacheFiles) {
+                Object.assign(
+                  mergedCache,
+                  JSON.parse(fs.readFileSync(path.join(scriptsDir, file), 'utf8')),
+                );
               }
             }
           }
@@ -144,16 +159,21 @@ jobs:
             path.join(outputDir, 'health.json'),
             `${JSON.stringify(health, null, 2)}\n`,
           );
+
+          fs.writeFileSync(
+            cachePath,
+            `${JSON.stringify(mergedCache, null, 2)}\n`,
+          );
           NODE
 
-      - name: Commit updated data
+      - name: Commit updated coordinates
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/api/
+          git add docs/api/ scripts/geocode-cache.json
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore: refresh pharmacy data [skip ci]"
+            git commit -m "chore: geocode pharmacy data [skip ci]"
             git push
           fi

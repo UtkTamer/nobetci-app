@@ -121,6 +121,7 @@ const selectedCitySlugs = (process.env.CITY_FILTER ?? '')
   .map((item) => item.trim())
   .filter(Boolean);
 const skipGeocode = process.env.SKIP_GEOCODE === '1';
+const geocodeOnly = process.env.GEOCODE_ONLY === '1';
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -243,6 +244,69 @@ function loadCache() {
 
 function saveCache() {
   writeFileSync(CACHE_PATH, JSON.stringify(geocodeCache, null, 2) + '\n');
+}
+
+function readJson(path) {
+  try {
+    return JSON.parse(readFileSync(path, 'utf-8'));
+  } catch {
+    return null;
+  }
+}
+
+function getCityOutputPath(citySlug) {
+  return resolve(OUTPUT_DIR, `${citySlug}.json`);
+}
+
+function normalizeAddress(value) {
+  return cleanText(value).toLocaleLowerCase('tr');
+}
+
+function attachExistingCoordinates(city, records) {
+  const existing = readJson(getCityOutputPath(city.slug));
+  const existingPharmacies = existing?.pharmacies ?? [];
+  if (existingPharmacies.length === 0) {
+    return 0;
+  }
+
+  const byId = new Map();
+  const byAddress = new Map();
+
+  for (const pharmacy of existingPharmacies) {
+    if (pharmacy.latitude == null || pharmacy.longitude == null) {
+      continue;
+    }
+
+    byId.set(pharmacy.id, pharmacy);
+    byAddress.set(
+      normalizeAddress(`${pharmacy.name}|${pharmacy.address}|${pharmacy.district ?? ''}`),
+      pharmacy,
+    );
+  }
+
+  let reused = 0;
+
+  for (const record of records) {
+    if (record.latitude != null && record.longitude != null) {
+      continue;
+    }
+
+    const id = generateId(record.name, record.district, city.slug);
+    const addressKey = normalizeAddress(
+      `${record.name}|${record.address}|${record.district ?? ''}`,
+    );
+    const match = byId.get(id) ?? byAddress.get(addressKey);
+
+    if (!match) {
+      continue;
+    }
+
+    record.latitude = match.latitude;
+    record.longitude = match.longitude;
+    reused++;
+  }
+
+  return reused;
 }
 
 let nominatimQueue = Promise.resolve();
@@ -458,10 +522,23 @@ async function refreshCity(city) {
   const records = await scrapeCity(city);
   console.log(`  Found ${records.length} pharmacies`);
 
+  const reused = attachExistingCoordinates(city, records);
+  if (reused > 0) {
+    console.log(`  Reused ${reused} existing coordinates`);
+  }
+
   let geocoded = 0;
   let cached = 0;
   if (!skipGeocode) {
+    const missingBeforeGeocode = records.filter(
+      (record) => record.latitude == null || record.longitude == null,
+    ).length;
+
     for (const record of records) {
+      if (record.latitude != null && record.longitude != null) {
+        continue;
+      }
+
       const cacheKey = record.address.toLocaleLowerCase('tr').trim();
       const wasCached = !!geocodeCache[cacheKey];
 
@@ -480,7 +557,7 @@ async function refreshCity(city) {
     }
 
     console.log(
-      `  Geocoded: ${geocoded} new, ${cached} from cache, ${records.length - geocoded - cached} failed`,
+      `  Geocoded: ${geocoded} new, ${cached} from cache, ${missingBeforeGeocode - geocoded - cached} failed`,
     );
   } else {
     console.log('  Geocoding skipped by SKIP_GEOCODE=1');
@@ -508,6 +585,83 @@ async function refreshCity(city) {
       lastVerifiedAt: now,
       source: 'Eczaneler.gen.tr',
       sourceUrl: r.sourceUrl,
+    })),
+  };
+
+  console.log(
+    `  Coordinates: ${withCoords}/${records.length} (${records.length === 0 ? 0 : Math.round((withCoords / records.length) * 100)}%)`,
+  );
+
+  return output;
+}
+
+async function geocodeExistingCity(city) {
+  console.log(`\n[${city.displayName}] Starting geocode-only pass...`);
+
+  const existing = readJson(getCityOutputPath(city.slug));
+  if (!existing?.pharmacies) {
+    throw new Error('Existing city JSON not found for geocode-only pass.');
+  }
+
+  const records = existing.pharmacies.map((pharmacy) => ({
+    ...pharmacy,
+    latitude: pharmacy.latitude ?? null,
+    longitude: pharmacy.longitude ?? null,
+  }));
+
+  let geocoded = 0;
+  let cached = 0;
+  const missingBeforeGeocode = records.filter(
+    (record) => record.latitude == null || record.longitude == null,
+  ).length;
+
+  for (const record of records) {
+    if (record.latitude != null && record.longitude != null) {
+      continue;
+    }
+
+    const cacheKey = record.address.toLocaleLowerCase('tr').trim();
+    const wasCached = !!geocodeCache[cacheKey];
+
+    const coords = await geocode(
+      record.address,
+      record.district,
+      city.displayName,
+    );
+
+    if (!coords) {
+      continue;
+    }
+
+    record.latitude = coords.latitude;
+    record.longitude = coords.longitude;
+
+    if (wasCached) {
+      cached++;
+    } else {
+      geocoded++;
+    }
+  }
+
+  console.log(
+    `  Geocoded: ${geocoded} new, ${cached} from cache, ${missingBeforeGeocode - geocoded - cached} failed`,
+  );
+
+  const now = new Date().toISOString();
+  const withCoords = records.filter((record) => record.latitude != null).length;
+
+  const output = {
+    city: existing.city ?? city.slug,
+    cityDisplayName: existing.cityDisplayName ?? city.displayName,
+    updatedAt: now,
+    isStale: false,
+    pharmacies: records.map((record) => ({
+      ...record,
+      latitude: record.latitude ?? null,
+      longitude: record.longitude ?? null,
+      source: record.source ?? 'Eczaneler.gen.tr',
+      sourceUrl: record.sourceUrl ?? `${SOURCE_BASE_URL}/nobetci-${city.slug}`,
+      lastVerifiedAt: now,
     })),
   };
 
@@ -571,6 +725,7 @@ async function main() {
 
   console.log('=== Nobetci Pharmacy Refresh ===');
   console.log(`Date: ${new Date().toISOString()}`);
+  console.log(`Mode: ${geocodeOnly ? 'geocode-only' : skipGeocode ? 'scrape-only' : 'scrape+geocode'}`);
   console.log(`Cities: ${citiesToRefresh.length}, Concurrency: ${CONCURRENCY}\n`);
 
   mkdirSync(OUTPUT_DIR, { recursive: true });
@@ -590,7 +745,9 @@ async function main() {
 
   const tasks = citiesToRefresh.map((city, i) => async () => {
     try {
-      const output = await refreshCityWithRetry(city);
+      const output = geocodeOnly
+        ? await geocodeExistingCity(city)
+        : await refreshCityWithRetry(city);
       writeFileSync(
         resolve(OUTPUT_DIR, `${city.slug}.json`),
         JSON.stringify(output, null, 2) + '\n',
@@ -629,8 +786,10 @@ async function main() {
 
   await closeBrowser();
 
-  // Persist geocode cache after all cities (not per-city, to avoid race conditions)
-  saveCache();
+  if (!skipGeocode || geocodeOnly) {
+    // Persist geocode cache after all cities (not per-city, to avoid race conditions)
+    saveCache();
+  }
 
   const succeeded = healthItems.filter((h) => !h.error).length;
   const failed = healthItems.filter((h) => h.error).length;
