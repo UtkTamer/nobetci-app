@@ -28,6 +28,10 @@ jobs:
         working-directory: scripts
         run: npm ci
 
+      - name: Install Playwright browsers
+        working-directory: scripts
+        run: npx playwright install chromium --with-deps
+
       - name: Run pharmacy refresh
         working-directory: scripts
         run: node refresh.mjs

@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { chromium } from 'playwright';
 import { createHash } from 'crypto';
 import { readFileSync, writeFileSync, mkdirSync } from 'fs';
 import { resolve, dirname } from 'path';
@@ -144,6 +145,22 @@ function formatDutyDate(date) {
   const month = parts.find((p) => p.type === 'month')?.value ?? '';
   const year = parts.find((p) => p.type === 'year')?.value ?? '';
   return `${day}/${month}/${year}`;
+}
+
+let _browser = null;
+
+async function getBrowser() {
+  if (!_browser) {
+    _browser = await chromium.launch({ headless: true });
+  }
+  return _browser;
+}
+
+async function closeBrowser() {
+  if (_browser) {
+    await _browser.close();
+    _browser = null;
+  }
 }
 
 function cleanText(value) {
@@ -383,18 +400,52 @@ function extractRecordsFromTab(tabHtml, citySlug) {
 }
 
 async function scrapeCity(city) {
-  const response = await axios.get(`${SOURCE_BASE_URL}/nobetci-${city.slug}`, {
-    headers: DEFAULT_HEADERS,
-    timeout: 60_000,
-    responseType: 'text',
-  });
-
-  const tabHtml = extractTodayTabHtml(response.data);
+  const html = await fetchCityHtml(city);
+  const tabHtml = extractTodayTabHtml(html);
   if (!tabHtml) {
     throw new Error('Aktif gun sekmesi parse edilemedi.');
   }
 
   return extractRecordsFromTab(tabHtml, city.slug);
+}
+
+async function fetchCityHtml(city) {
+  const url = `${SOURCE_BASE_URL}/nobetci-${city.slug}`;
+
+  try {
+    const response = await axios.get(url, {
+      headers: DEFAULT_HEADERS,
+      timeout: 60_000,
+      responseType: 'text',
+    });
+    return response.data;
+  } catch (error) {
+    const statusCode = error?.response?.status;
+    if (statusCode !== 403) {
+      throw error;
+    }
+
+    console.log('  Source returned 403, retrying with Playwright...');
+    const browser = await getBrowser();
+    const page = await browser.newPage({
+      userAgent: DEFAULT_HEADERS['User-Agent'],
+      locale: 'tr-TR',
+    });
+
+    try {
+      await page.setExtraHTTPHeaders({
+        'Accept-Language': DEFAULT_HEADERS['Accept-Language'],
+      });
+      await page.goto(url, {
+        waitUntil: 'domcontentloaded',
+        timeout: 60_000,
+      });
+      await page.waitForTimeout(4000);
+      return await page.content();
+    } finally {
+      await page.close();
+    }
+  }
 }
 
 // ---------------------------------------------------------------------------
@@ -575,6 +626,8 @@ async function main() {
   });
 
   await runWithConcurrency(tasks, CONCURRENCY);
+
+  await closeBrowser();
 
   // Persist geocode cache after all cities (not per-city, to avoid race conditions)
   saveCache();
