@@ -25,27 +25,45 @@ jobs:
     timeout-minutes: 45
     strategy:
       fail-fast: false
-      max-parallel: 2
+      max-parallel: 1
       matrix:
         shard:
           - id: 1
-            cities: adana,adiyaman,afyonkarahisar,agri,amasya,ankara,antalya,artvin,aydin
+            cities: adana,adiyaman,afyonkarahisar,agri,amasya
           - id: 2
-            cities: balikesir,bilecik,bingol,bitlis,bolu,burdur,bursa,canakkale,cankiri
+            cities: ankara,antalya,artvin,aydin
           - id: 3
-            cities: corum,denizli,diyarbakir,edirne,elazig,erzincan,erzurum,eskisehir,gaziantep
+            cities: balikesir,bilecik,bingol,bitlis,bolu
           - id: 4
-            cities: giresun,gumushane,hakkari,hatay,isparta,mersin,istanbul,izmir,kars
+            cities: burdur,bursa,canakkale,cankiri
           - id: 5
-            cities: kastamonu,kayseri,kirklareli,kirsehir,kocaeli,konya,kutahya,malatya,manisa
+            cities: corum,denizli,diyarbakir,edirne,elazig
           - id: 6
-            cities: kahramanmaras,mardin,mugla,mus,nevsehir,nigde,ordu,rize,sakarya
+            cities: erzincan,erzurum,eskisehir,gaziantep
           - id: 7
-            cities: samsun,siirt,sinop,sivas,tekirdag,tokat,trabzon,tunceli,sanliurfa
+            cities: giresun,gumushane,hakkari,hatay,isparta
           - id: 8
-            cities: usak,van,yozgat,zonguldak,aksaray,bayburt,karaman,kirikkale,batman
+            cities: mersin,istanbul,izmir,kars
           - id: 9
-            cities: sirnak,bartin,ardahan,igdir,yalova,karabuk,kilis,osmaniye,duzce
+            cities: kastamonu,kayseri,kirklareli,kirsehir,kocaeli
+          - id: 10
+            cities: konya,kutahya,malatya,manisa
+          - id: 11
+            cities: kahramanmaras,mardin,mugla,mus,nevsehir
+          - id: 12
+            cities: nigde,ordu,rize,sakarya
+          - id: 13
+            cities: samsun,siirt,sinop,sivas,tekirdag
+          - id: 14
+            cities: tokat,trabzon,tunceli,sanliurfa
+          - id: 15
+            cities: usak,van,yozgat,zonguldak,aksaray
+          - id: 16
+            cities: bayburt,karaman,kirikkale,batman
+          - id: 17
+            cities: sirnak,bartin,ardahan,igdir,yalova
+          - id: 18
+            cities: karabuk,kilis,osmaniye,duzce
 
     steps:
       - name: Checkout repository
