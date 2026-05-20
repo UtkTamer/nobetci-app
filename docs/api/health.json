@@ -1,350 +1,393 @@
 {
   "ok": false,
-  "checkedAt": "2026-05-15T06:38:07.694Z",
+  "checkedAt": "2026-05-20T14:22:51.440Z",
   "cities": [
     {
       "city": "adana",
       "cityDisplayName": "Adana",
-      "lastRefreshedAt": "2026-05-15T06:36:35.279Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "adiyaman",
       "cityDisplayName": "Adıyaman",
-      "lastRefreshedAt": "2026-05-15T06:36:37.057Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "afyonkarahisar",
       "cityDisplayName": "Afyonkarahisar",
-      "lastRefreshedAt": "2026-05-15T06:36:36.394Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "agri",
       "cityDisplayName": "Ağrı",
-      "lastRefreshedAt": "2026-05-15T06:36:38.181Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "amasya",
       "cityDisplayName": "Amasya",
-      "lastRefreshedAt": "2026-05-15T06:36:39.640Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "ankara",
       "cityDisplayName": "Ankara",
-      "lastRefreshedAt": "2026-05-15T06:36:40.340Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "antalya",
       "cityDisplayName": "Antalya",
-      "lastRefreshedAt": "2026-05-15T06:36:41.475Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "artvin",
       "cityDisplayName": "Artvin",
-      "lastRefreshedAt": "2026-05-15T06:36:42.937Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "aydin",
       "cityDisplayName": "Aydın",
-      "lastRefreshedAt": "2026-05-15T06:36:44.261Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "balikesir",
       "cityDisplayName": "Balıkesir",
-      "lastRefreshedAt": "2026-05-15T06:36:44.686Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "bilecik",
       "cityDisplayName": "Bilecik",
-      "lastRefreshedAt": "2026-05-15T06:36:45.843Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "bingol",
       "cityDisplayName": "Bingöl",
-      "lastRefreshedAt": "2026-05-15T06:36:47.527Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "bitlis",
       "cityDisplayName": "Bitlis",
-      "lastRefreshedAt": "2026-05-15T06:36:48.534Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "bolu",
       "cityDisplayName": "Bolu",
-      "lastRefreshedAt": "2026-05-15T06:36:49.088Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "burdur",
       "cityDisplayName": "Burdur",
-      "lastRefreshedAt": "2026-05-15T06:36:50.413Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "bursa",
       "cityDisplayName": "Bursa",
-      "lastRefreshedAt": "2026-05-15T06:36:51.814Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "canakkale",
       "cityDisplayName": "Çanakkale",
-      "lastRefreshedAt": "2026-05-15T06:36:52.327Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "cankiri",
       "cityDisplayName": "Çankırı",
-      "lastRefreshedAt": "2026-05-15T06:36:53.667Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "corum",
       "cityDisplayName": "Çorum",
-      "lastRefreshedAt": "2026-05-15T06:36:55.070Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "denizli",
       "cityDisplayName": "Denizli",
-      "lastRefreshedAt": "2026-05-15T06:36:55.535Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "diyarbakir",
       "cityDisplayName": "Diyarbakır",
-      "lastRefreshedAt": "2026-05-15T06:36:56.930Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "edirne",
       "cityDisplayName": "Edirne",
-      "lastRefreshedAt": "2026-05-15T06:36:58.330Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "elazig",
       "cityDisplayName": "Elazığ",
-      "lastRefreshedAt": "2026-05-15T06:36:58.785Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "erzincan",
       "cityDisplayName": "Erzincan",
-      "lastRefreshedAt": "2026-05-15T06:37:00.210Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "erzurum",
       "cityDisplayName": "Erzurum",
-      "lastRefreshedAt": "2026-05-15T06:37:01.553Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "eskisehir",
       "cityDisplayName": "Eskişehir",
-      "lastRefreshedAt": "2026-05-15T06:37:02.042Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "gaziantep",
       "cityDisplayName": "Gaziantep",
-      "lastRefreshedAt": "2026-05-15T06:37:03.450Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "giresun",
       "cityDisplayName": "Giresun",
-      "lastRefreshedAt": "2026-05-15T06:37:10.759Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "gumushane",
       "cityDisplayName": "Gümüşhane",
-      "lastRefreshedAt": "2026-05-15T06:37:05.694Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "hakkari",
       "cityDisplayName": "Hakkâri",
-      "lastRefreshedAt": "2026-05-15T06:37:06.670Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "hatay",
       "cityDisplayName": "Hatay",
-      "lastRefreshedAt": "2026-05-15T06:37:08.950Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "isparta",
       "cityDisplayName": "Isparta",
-      "lastRefreshedAt": "2026-05-15T06:37:10.310Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "mersin",
       "cityDisplayName": "Mersin",
-      "lastRefreshedAt": "2026-05-15T06:37:11.819Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "istanbul",
       "cityDisplayName": "İstanbul",
-      "lastRefreshedAt": "2026-05-15T06:37:13.557Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "izmir",
       "cityDisplayName": "İzmir",
-      "lastRefreshedAt": "2026-05-15T06:37:14.004Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "kars",
       "cityDisplayName": "Kars",
-      "lastRefreshedAt": "2026-05-15T06:37:15.058Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "kastamonu",
       "cityDisplayName": "Kastamonu",
-      "lastRefreshedAt": "2026-05-15T06:37:16.828Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "kayseri",
       "cityDisplayName": "Kayseri",
-      "lastRefreshedAt": "2026-05-15T06:37:17.244Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "kirklareli",
       "cityDisplayName": "Kırklareli",
-      "lastRefreshedAt": "2026-05-15T06:37:18.345Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "kirsehir",
       "cityDisplayName": "Kırşehir",
-      "lastRefreshedAt": "2026-05-15T06:37:20.092Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "kocaeli",
       "cityDisplayName": "Kocaeli",
-      "lastRefreshedAt": "2026-05-15T06:37:21.224Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "konya",
       "cityDisplayName": "Konya",
-      "lastRefreshedAt": "2026-05-15T06:37:21.560Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "kutahya",
       "cityDisplayName": "Kütahya",
-      "lastRefreshedAt": "2026-05-15T06:37:22.971Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "malatya",
@@ -353,303 +396,340 @@
       "pharmacyCount": 0,
       "withCoordinates": 0,
       "coordCoveragePct": 0,
-      "error": "read ECONNRESET"
+      "error": "Request failed with status code 403"
     },
     {
       "city": "manisa",
       "cityDisplayName": "Manisa",
-      "lastRefreshedAt": "2026-05-15T06:37:25.157Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "kahramanmaras",
       "cityDisplayName": "Kahramanmaraş",
-      "lastRefreshedAt": "2026-05-15T06:37:26.201Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "mardin",
       "cityDisplayName": "Mardin",
-      "lastRefreshedAt": "2026-05-15T06:37:28.417Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "mugla",
       "cityDisplayName": "Muğla",
-      "lastRefreshedAt": "2026-05-15T06:37:29.458Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "mus",
       "cityDisplayName": "Muş",
-      "lastRefreshedAt": "2026-05-15T06:37:31.681Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "nevsehir",
       "cityDisplayName": "Nevşehir",
-      "lastRefreshedAt": "2026-05-15T06:37:32.658Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "nigde",
       "cityDisplayName": "Niğde",
-      "lastRefreshedAt": "2026-05-15T06:37:33.132Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "ordu",
       "cityDisplayName": "Ordu",
-      "lastRefreshedAt": "2026-05-15T06:37:34.529Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "rize",
       "cityDisplayName": "Rize",
-      "lastRefreshedAt": "2026-05-15T06:37:35.917Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "sakarya",
       "cityDisplayName": "Sakarya",
-      "lastRefreshedAt": "2026-05-15T06:37:36.360Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "samsun",
       "cityDisplayName": "Samsun",
-      "lastRefreshedAt": "2026-05-15T06:37:37.771Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "siirt",
       "cityDisplayName": "Siirt",
-      "lastRefreshedAt": "2026-05-15T06:37:39.158Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "sinop",
       "cityDisplayName": "Sinop",
-      "lastRefreshedAt": "2026-05-15T06:37:45.206Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "sivas",
       "cityDisplayName": "Sivas",
-      "lastRefreshedAt": "2026-05-15T06:37:40.957Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "tekirdag",
       "cityDisplayName": "Tekirdağ",
-      "lastRefreshedAt": "2026-05-15T06:37:42.403Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "tokat",
       "cityDisplayName": "Tokat",
-      "lastRefreshedAt": "2026-05-15T06:37:44.212Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "trabzon",
       "cityDisplayName": "Trabzon",
-      "lastRefreshedAt": "2026-05-15T06:37:45.655Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "tunceli",
       "cityDisplayName": "Tunceli",
-      "lastRefreshedAt": "2026-05-15T06:37:47.082Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "sanliurfa",
       "cityDisplayName": "Şanlıurfa",
-      "lastRefreshedAt": "2026-05-15T06:37:48.389Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "usak",
       "cityDisplayName": "Uşak",
-      "lastRefreshedAt": "2026-05-15T06:37:48.873Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "van",
       "cityDisplayName": "Van",
-      "lastRefreshedAt": "2026-05-15T06:37:50.329Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "yozgat",
       "cityDisplayName": "Yozgat",
-      "lastRefreshedAt": "2026-05-15T06:37:51.645Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "zonguldak",
       "cityDisplayName": "Zonguldak",
-      "lastRefreshedAt": "2026-05-15T06:37:52.137Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "aksaray",
       "cityDisplayName": "Aksaray",
-      "lastRefreshedAt": "2026-05-15T06:37:53.565Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "bayburt",
       "cityDisplayName": "Bayburt",
-      "lastRefreshedAt": "2026-05-15T06:37:54.830Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "karaman",
       "cityDisplayName": "Karaman",
-      "lastRefreshedAt": "2026-05-15T06:37:55.424Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "kirikkale",
       "cityDisplayName": "Kırıkkale",
-      "lastRefreshedAt": "2026-05-15T06:37:56.843Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "batman",
       "cityDisplayName": "Batman",
-      "lastRefreshedAt": "2026-05-15T06:37:58.372Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "sirnak",
       "cityDisplayName": "Şırnak",
-      "lastRefreshedAt": "2026-05-15T06:37:58.933Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "bartin",
       "cityDisplayName": "Bartın",
-      "lastRefreshedAt": "2026-05-15T06:37:59.753Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "ardahan",
       "cityDisplayName": "Ardahan",
-      "lastRefreshedAt": "2026-05-15T06:38:01.631Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "igdir",
       "cityDisplayName": "Iğdır",
-      "lastRefreshedAt": "2026-05-15T06:38:02.804Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "yalova",
       "cityDisplayName": "Yalova",
-      "lastRefreshedAt": "2026-05-15T06:38:03.014Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "karabuk",
       "cityDisplayName": "Karabük",
-      "lastRefreshedAt": "2026-05-15T06:38:04.467Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "kilis",
       "cityDisplayName": "Kilis",
-      "lastRefreshedAt": "2026-05-15T06:38:05.984Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "osmaniye",
       "cityDisplayName": "Osmaniye",
-      "lastRefreshedAt": "2026-05-15T06:38:06.249Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     },
     {
       "city": "duzce",
       "cityDisplayName": "Düzce",
-      "lastRefreshedAt": "2026-05-15T06:38:07.676Z",
+      "lastRefreshedAt": null,
       "pharmacyCount": 0,
       "withCoordinates": 0,
-      "coordCoveragePct": 0
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     }
   ]
 }
