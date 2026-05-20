@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { chromium } from 'playwright';
 import { createHash } from 'crypto';
 import { readFileSync, writeFileSync, mkdirSync } from 'fs';
 import { resolve, dirname } from 'path';
@@ -95,22 +94,15 @@ const CITIES = [
   { slug: 'duzce', displayName: 'Düzce', plateCode: '81' },
 ];
 
-const EDEVLET_URL =
-  'https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama';
+const SOURCE_BASE_URL = 'https://www.eczaneler.gen.tr';
 
 const NOMINATIM_URL = 'https://nominatim.openstreetmap.org/search';
 const NOMINATIM_DELAY_MS = 1200;
-const MAX_POLL_ATTEMPTS = 20;
-const POLL_DELAY_MS = 3000;
-const MAX_GEOCODE_RETRIES = 3;
 
 const CONCURRENCY = 5;
 const CITY_RETRY_ATTEMPTS = 2;
 const CITY_RETRY_DELAY_MS = 5000;
 const INTER_CITY_DELAY_MS = 1000;
-
-const PAGE_TIMEOUT = 45_000;
-const NAV_TIMEOUT = 60_000;
 
 const CACHE_PATH = resolve(__dirname, 'geocode-cache.json');
 const OUTPUT_DIR = resolve(__dirname, '..', 'docs', 'api');
@@ -122,6 +114,12 @@ const DEFAULT_HEADERS = {
   'User-Agent':
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36',
 };
+
+const selectedCitySlugs = (process.env.CITY_FILTER ?? '')
+  .split(',')
+  .map((item) => item.trim())
+  .filter(Boolean);
+const skipGeocode = process.env.SKIP_GEOCODE === '1';
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -148,32 +146,34 @@ function formatDutyDate(date) {
   return `${day}/${month}/${year}`;
 }
 
-// ---------------------------------------------------------------------------
-// Playwright browser (shared across workers)
-// ---------------------------------------------------------------------------
-
-let _browser = null;
-
-async function getBrowser() {
-  if (!_browser) {
-    _browser = await chromium.launch({ headless: true });
-  }
-  return _browser;
-}
-
-async function closeBrowser() {
-  if (_browser) {
-    await _browser.close();
-    _browser = null;
-  }
-}
-
 function cleanText(value) {
   return value.replace(/\s+/g, ' ').trim();
 }
 
 function cleanPhone(value) {
   return cleanText(value).replace(/\bAra\b/gi, '').trim();
+}
+
+function decodeHtml(value) {
+  return value
+    .replace(/&nbsp;/gi, ' ')
+    .replace(/&#39;|&apos;/gi, "'")
+    .replace(/&quot;/gi, '"')
+    .replace(/&amp;/gi, '&')
+    .replace(/&uuml;/gi, 'ü')
+    .replace(/&Uuml;/gi, 'Ü')
+    .replace(/&ouml;/gi, 'ö')
+    .replace(/&Ouml;/gi, 'Ö')
+    .replace(/&ccedil;/gi, 'ç')
+    .replace(/&Ccedil;/gi, 'Ç')
+    .replace(/&scedil;/gi, 'ş')
+    .replace(/&Scedil;/gi, 'Ş')
+    .replace(/&raquo;/gi, '»')
+    .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(Number(code)));
+}
+
+function stripTags(value) {
+  return cleanText(decodeHtml(value).replace(/<[^>]+>/g, ' '));
 }
 
 // ---------------------------------------------------------------------------
@@ -306,76 +306,95 @@ async function geocode(rawAddress, district, city) {
 }
 
 // ---------------------------------------------------------------------------
-// E-Devlet scraping via Playwright
+// Eczaneler.gen.tr scraping
 // ---------------------------------------------------------------------------
 
-async function scrapeCity(city) {
-  const browser = await getBrowser();
-  const page = await browser.newPage();
-
-  try {
-    await page.setExtraHTTPHeaders({
-      'Accept-Language': 'tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7',
-    });
-
-    // domcontentloaded is much faster than networkidle for Vue.js apps
-    await page.goto(EDEVLET_URL, { waitUntil: 'domcontentloaded', timeout: NAV_TIMEOUT });
-
-    // Wait for the form's submit button — confirms Vue.js rendered the form
-    await page.waitForSelector('input[name="btn"][type="submit"], button[type="submit"]', {
-      timeout: PAGE_TIMEOUT,
-    });
-
-    // City selector — Vue.js may render a <select>
-    const plateSelect = await page.$('select[name="plakaKodu"]');
-    if (plateSelect) {
-      await page.selectOption('select[name="plakaKodu"]', city.plateCode);
-    } else {
-      const plateInput = await page.$('input[name="plakaKodu"]');
-      if (plateInput) await plateInput.fill(city.plateCode);
-    }
-
-    // Select today's date radio
-    const todayRadio = await page.$('input[name="nobetTarihi"]');
-    if (todayRadio) await todayRadio.click();
-
-    // Click submit — Vue.js SPA may not trigger a full navigation,
-    // so don't use waitForNavigation; instead wait for the result element.
-    await page.click('input[name="btn"][type="submit"], button[type="submit"]');
-
-    // Wait for results table OR a "no results" indicator
-    const resultEl = await page
-      .waitForSelector(
-        '#searchTable tr td, .no-result, .emptyResult, [class*="noResult"], [class*="empty-result"]',
-        { timeout: PAGE_TIMEOUT },
-      )
-      .catch(() => null);
-
-    if (!resultEl) return [];
-
-    // Extract pharmacy rows from whatever table is present
-    const records = await page.evaluate(() => {
-      for (const sel of ['#searchTable tr', 'table tr']) {
-        const rows = Array.from(document.querySelectorAll(sel));
-        const results = [];
-        for (const row of rows) {
-          const cols = row.querySelectorAll('td');
-          if (cols.length < 4) continue;
-          const name     = cols[0].textContent.replace(/\s+/g, ' ').trim();
-          const district = cols[1].textContent.replace(/\s+/g, ' ').trim();
-          const phone    = cols[2].textContent.replace(/\s+/g, ' ').replace(/\bAra\b/gi, '').trim();
-          const address  = cols[3].textContent.replace(/\s+/g, ' ').trim();
-          if (name && address) results.push({ name, district, phoneNumber: phone, address });
-        }
-        if (results.length > 0) return results;
-      }
-      return [];
-    });
-
-    return records;
-  } finally {
-    await page.close();
+function extractTodayTabHtml(html) {
+  const activeMatch = html.match(
+    /<div class="tab-pane[^"]*show active[^"]*" id="nav-bugun"[\s\S]*?<\/table>\s*<\/div>/i,
+  );
+  if (activeMatch) {
+    return activeMatch[0];
   }
+
+  const fallbackMatch = html.match(
+    /<div class="tab-pane[^"]*" id="nav-bugun"[\s\S]*?<\/table>\s*<\/div>/i,
+  );
+  return fallbackMatch?.[0] ?? '';
+}
+
+function extractDetailsHtml(rowHtml) {
+  const match = rowHtml.match(
+    /<div class=['"]col-lg-6['"]>([\s\S]*?)<\/div><div class=['"]col-lg-3 py-lg-2['"]>/i,
+  );
+  return match?.[1] ?? '';
+}
+
+function extractDistrict(detailsHtml) {
+  const parts = [
+    ...detailsHtml.matchAll(
+      /<span class="[^"]*(?:bg-info|bg-secondary)[^"]*">([\s\S]*?)<\/span>/gi,
+    ),
+  ]
+    .map((match) => stripTags(match[1]))
+    .filter(Boolean)
+
+  return parts.join(' ').trim();
+}
+
+function extractAddress(detailsHtml) {
+  const addressHtml = detailsHtml
+    .replace(/<div class="py-2">[\s\S]*?<\/div>/gi, ' ')
+    .replace(/<div class="my-2">[\s\S]*?<\/div>/gi, ' ')
+    .replace(/<br\s*\/?>/gi, ' ');
+
+  return stripTags(addressHtml).replace(/\(\s*Akşam[^)]*\)/gi, '').trim();
+}
+
+function extractRecordsFromTab(tabHtml, citySlug) {
+  const rowMatches = tabHtml.match(
+    /<tr><td colspan="3" class="border-bottom">[\s\S]*?<\/td><\/tr>/gi,
+  ) ?? [];
+
+  return rowMatches
+    .map((rowHtml) => {
+      const detailsHtml = extractDetailsHtml(rowHtml);
+      const sourcePath = rowHtml.match(/<a href="([^"]+)"/i)?.[1] ?? '';
+
+      return {
+        name: stripTags(
+          rowHtml.match(/<span class="isim">([\s\S]*?)<\/span>/i)?.[1] ?? '',
+        ),
+        address: extractAddress(detailsHtml),
+        district: extractDistrict(detailsHtml),
+        phoneNumber: cleanPhone(
+          stripTags(
+            rowHtml.match(
+              /<div class=['"]col-lg-3 py-lg-2['"]>([\s\S]*?)<\/div>/i,
+            )?.[1] ?? '',
+          ),
+        ),
+        sourceUrl: sourcePath
+          ? new URL(sourcePath, SOURCE_BASE_URL).toString()
+          : `${SOURCE_BASE_URL}/nobetci-${citySlug}`,
+      };
+    })
+    .filter((record) => record.name && record.address);
+}
+
+async function scrapeCity(city) {
+  const response = await axios.get(`${SOURCE_BASE_URL}/nobetci-${city.slug}`, {
+    headers: DEFAULT_HEADERS,
+    timeout: 60_000,
+    responseType: 'text',
+  });
+
+  const tabHtml = extractTodayTabHtml(response.data);
+  if (!tabHtml) {
+    throw new Error('Aktif gun sekmesi parse edilemedi.');
+  }
+
+  return extractRecordsFromTab(tabHtml, city.slug);
 }
 
 // ---------------------------------------------------------------------------
@@ -383,35 +402,38 @@ async function scrapeCity(city) {
 // ---------------------------------------------------------------------------
 
 async function refreshCity(city) {
-  console.log(`\n[${city.displayName}] Starting Playwright scrape...`);
+  console.log(`\n[${city.displayName}] Starting source scrape...`);
 
   const records = await scrapeCity(city);
   console.log(`  Found ${records.length} pharmacies`);
 
-  // Geocode
   let geocoded = 0;
   let cached = 0;
-  for (const record of records) {
-    const cacheKey = record.address.toLocaleLowerCase('tr').trim();
-    const wasCached = !!geocodeCache[cacheKey];
+  if (!skipGeocode) {
+    for (const record of records) {
+      const cacheKey = record.address.toLocaleLowerCase('tr').trim();
+      const wasCached = !!geocodeCache[cacheKey];
 
-    const coords = await geocode(
-      record.address,
-      record.district,
-      city.displayName,
-    );
+      const coords = await geocode(
+        record.address,
+        record.district,
+        city.displayName,
+      );
 
-    if (coords) {
-      record.latitude = coords.latitude;
-      record.longitude = coords.longitude;
-      if (wasCached) cached++;
-      else geocoded++;
+      if (coords) {
+        record.latitude = coords.latitude;
+        record.longitude = coords.longitude;
+        if (wasCached) cached++;
+        else geocoded++;
+      }
     }
-  }
 
-  console.log(
-    `  Geocoded: ${geocoded} new, ${cached} from cache, ${records.length - geocoded - cached} failed`,
-  );
+    console.log(
+      `  Geocoded: ${geocoded} new, ${cached} from cache, ${records.length - geocoded - cached} failed`,
+    );
+  } else {
+    console.log('  Geocoding skipped by SKIP_GEOCODE=1');
+  }
 
   // Build output
   const now = new Date().toISOString();
@@ -433,8 +455,8 @@ async function refreshCity(city) {
       dutyStart: null,
       dutyEnd: null,
       lastVerifiedAt: now,
-      source: 'e-Devlet / TİTCK',
-      sourceUrl: EDEVLET_URL,
+      source: 'Eczaneler.gen.tr',
+      sourceUrl: r.sourceUrl,
     })),
   };
 
@@ -492,9 +514,13 @@ async function runWithConcurrency(tasks, concurrency) {
 // ---------------------------------------------------------------------------
 
 async function main() {
+  const citiesToRefresh = selectedCitySlugs.length
+    ? CITIES.filter((city) => selectedCitySlugs.includes(city.slug))
+    : CITIES;
+
   console.log('=== Nobetci Pharmacy Refresh ===');
   console.log(`Date: ${new Date().toISOString()}`);
-  console.log(`Cities: ${CITIES.length}, Concurrency: ${CONCURRENCY}\n`);
+  console.log(`Cities: ${citiesToRefresh.length}, Concurrency: ${CONCURRENCY}\n`);
 
   mkdirSync(OUTPUT_DIR, { recursive: true });
   loadCache();
@@ -509,9 +535,9 @@ async function main() {
     JSON.stringify(citiesJson, null, 2) + '\n',
   );
 
-  const healthItems = new Array(CITIES.length);
+  const healthItems = new Array(citiesToRefresh.length);
 
-  const tasks = CITIES.map((city, i) => async () => {
+  const tasks = citiesToRefresh.map((city, i) => async () => {
     try {
       const output = await refreshCityWithRetry(city);
       writeFileSync(
@@ -549,9 +575,6 @@ async function main() {
   });
 
   await runWithConcurrency(tasks, CONCURRENCY);
-
-  // Close the shared browser
-  await closeBrowser();
 
   // Persist geocode cache after all cities (not per-city, to avoid race conditions)
   saveCache();
