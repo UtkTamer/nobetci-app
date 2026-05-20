@@ -104,13 +104,13 @@ const MAX_POLL_ATTEMPTS = 20;
 const POLL_DELAY_MS = 3000;
 const MAX_GEOCODE_RETRIES = 3;
 
-const CONCURRENCY = 2;
+const CONCURRENCY = 5;
 const CITY_RETRY_ATTEMPTS = 2;
-const CITY_RETRY_DELAY_MS = 8000;
-const INTER_CITY_DELAY_MS = 3000;
+const CITY_RETRY_DELAY_MS = 5000;
+const INTER_CITY_DELAY_MS = 1000;
 
-const PAGE_TIMEOUT = 60_000;
-const NAV_TIMEOUT = 90_000;
+const PAGE_TIMEOUT = 45_000;
+const NAV_TIMEOUT = 60_000;
 
 const CACHE_PATH = resolve(__dirname, 'geocode-cache.json');
 const OUTPUT_DIR = resolve(__dirname, '..', 'docs', 'api');
@@ -318,65 +318,58 @@ async function scrapeCity(city) {
       'Accept-Language': 'tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7',
     });
 
-    // Load the page and wait for Vue.js to render
-    await page.goto(EDEVLET_URL, { waitUntil: 'networkidle', timeout: NAV_TIMEOUT });
-    await page.waitForSelector('form[name="mainForm"], form#mainForm', { timeout: PAGE_TIMEOUT });
+    // domcontentloaded is much faster than networkidle for Vue.js apps
+    await page.goto(EDEVLET_URL, { waitUntil: 'domcontentloaded', timeout: NAV_TIMEOUT });
 
-    // City selector — Vue.js may render a <select> or similar
+    // Wait for the form's submit button — confirms Vue.js rendered the form
+    await page.waitForSelector('input[name="btn"][type="submit"], button[type="submit"]', {
+      timeout: PAGE_TIMEOUT,
+    });
+
+    // City selector — Vue.js may render a <select>
     const plateSelect = await page.$('select[name="plakaKodu"]');
     if (plateSelect) {
       await page.selectOption('select[name="plakaKodu"]', city.plateCode);
     } else {
-      // Try text input fallback
       const plateInput = await page.$('input[name="plakaKodu"]');
-      if (plateInput) {
-        await plateInput.fill(city.plateCode);
-      }
+      if (plateInput) await plateInput.fill(city.plateCode);
     }
 
-    // Select today's date (first nobetTarihi radio)
+    // Select today's date radio
     const todayRadio = await page.$('input[name="nobetTarihi"]');
-    if (todayRadio) {
-      await todayRadio.click();
-    }
+    if (todayRadio) await todayRadio.click();
 
-    // Submit form and wait for navigation / network idle
-    await Promise.all([
-      page.waitForNavigation({ waitUntil: 'networkidle', timeout: NAV_TIMEOUT }).catch(() => {}),
-      page.click('input[name="btn"][type="submit"], button[type="submit"]'),
-    ]);
+    // Click submit — Vue.js SPA may not trigger a full navigation,
+    // so don't use waitForNavigation; instead wait for the result element.
+    await page.click('input[name="btn"][type="submit"], button[type="submit"]');
 
-    // Wait for results table (or empty-state)
-    const tableSelector = '#searchTable, table.nobetci-table, .result-table, main table';
-    const hasTable = await page
-      .waitForSelector(tableSelector, { timeout: PAGE_TIMEOUT })
-      .then(() => true)
-      .catch(() => false);
+    // Wait for results table OR a "no results" indicator
+    const resultEl = await page
+      .waitForSelector(
+        '#searchTable tr td, .no-result, .emptyResult, [class*="noResult"], [class*="empty-result"]',
+        { timeout: PAGE_TIMEOUT },
+      )
+      .catch(() => null);
 
-    if (!hasTable) return [];
+    if (!resultEl) return [];
 
-    // Extract rows from the table
+    // Extract pharmacy rows from whatever table is present
     const records = await page.evaluate(() => {
-      const candidates = [
-        '#searchTable tr',
-        'table tr',
-      ];
-      let rows = [];
-      for (const sel of candidates) {
-        const found = document.querySelectorAll(sel);
-        if (found.length > 1) { rows = Array.from(found); break; }
+      for (const sel of ['#searchTable tr', 'table tr']) {
+        const rows = Array.from(document.querySelectorAll(sel));
+        const results = [];
+        for (const row of rows) {
+          const cols = row.querySelectorAll('td');
+          if (cols.length < 4) continue;
+          const name     = cols[0].textContent.replace(/\s+/g, ' ').trim();
+          const district = cols[1].textContent.replace(/\s+/g, ' ').trim();
+          const phone    = cols[2].textContent.replace(/\s+/g, ' ').replace(/\bAra\b/gi, '').trim();
+          const address  = cols[3].textContent.replace(/\s+/g, ' ').trim();
+          if (name && address) results.push({ name, district, phoneNumber: phone, address });
+        }
+        if (results.length > 0) return results;
       }
-      const results = [];
-      for (const row of rows) {
-        const cols = row.querySelectorAll('td');
-        if (cols.length < 4) continue;
-        const name    = cols[0].textContent.replace(/\s+/g, ' ').trim();
-        const district = cols[1].textContent.replace(/\s+/g, ' ').trim();
-        const phone    = cols[2].textContent.replace(/\s+/g, ' ').replace(/\bAra\b/gi, '').trim();
-        const address  = cols[3].textContent.replace(/\s+/g, ' ').trim();
-        if (name && address) results.push({ name, district, phoneNumber: phone, address });
-      }
-      return results;
+      return [];
     });
 
     return records;
