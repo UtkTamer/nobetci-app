@@ -463,18 +463,60 @@ function extractRecordsFromTab(tabHtml, citySlug) {
     .filter((record) => record.name && record.address);
 }
 
-async function scrapeCity(city) {
-  const html = await fetchCityHtml(city);
+function extractExpectedPharmacyCount(html) {
+  const match = html.match(
+    /Bugün\s+[^<]+?\s+ilinde\s*<b>(\d+)<\/b>\s*nöbetçi eczane bulunuyor\./i,
+  );
+  return match ? Number(match[1]) : null;
+}
+
+function parseCityHtml(html, city) {
   const tabHtml = extractTodayTabHtml(html);
   if (!tabHtml) {
     throw new Error('Aktif gun sekmesi parse edilemedi.');
   }
 
-  return extractRecordsFromTab(tabHtml, city.slug);
+  const records = extractRecordsFromTab(tabHtml, city.slug);
+  const expectedCount = extractExpectedPharmacyCount(html);
+
+  return { records, expectedCount };
 }
 
-async function fetchCityHtml(city) {
+async function scrapeCity(city) {
+  const html = await fetchCityHtml(city);
+  const parsed = parseCityHtml(html, city);
+
+  if (parsed.records.length > 0) {
+    return parsed.records;
+  }
+
+  if (parsed.expectedCount === 0) {
+    return parsed.records;
+  }
+
+  console.warn(
+    `  Source returned 0 parsed pharmacies${parsed.expectedCount != null ? ` despite expected count ${parsed.expectedCount}` : ''}, retrying with Playwright...`,
+  );
+
+  const browserHtml = await fetchCityHtml(city, { forcePlaywright: true });
+  const browserParsed = parseCityHtml(browserHtml, city);
+
+  if (browserParsed.records.length === 0 && browserParsed.expectedCount !== 0) {
+    throw new Error(
+      `Parsed 0 pharmacies after Playwright fallback${browserParsed.expectedCount != null ? ` (page says ${browserParsed.expectedCount})` : ''}.`,
+    );
+  }
+
+  return browserParsed.records;
+}
+
+async function fetchCityHtml(city, options = {}) {
+  const { forcePlaywright = false } = options;
   const url = `${SOURCE_BASE_URL}/nobetci-${city.slug}`;
+
+  if (forcePlaywright) {
+    return fetchCityHtmlWithPlaywright(url);
+  }
 
   try {
     const response = await axios.get(url, {
@@ -490,25 +532,29 @@ async function fetchCityHtml(city) {
     }
 
     console.log('  Source returned 403, retrying with Playwright...');
-    const browser = await getBrowser();
-    const page = await browser.newPage({
-      userAgent: DEFAULT_HEADERS['User-Agent'],
-      locale: 'tr-TR',
-    });
+    return fetchCityHtmlWithPlaywright(url);
+  }
+}
 
-    try {
-      await page.setExtraHTTPHeaders({
-        'Accept-Language': DEFAULT_HEADERS['Accept-Language'],
-      });
-      await page.goto(url, {
-        waitUntil: 'domcontentloaded',
-        timeout: 60_000,
-      });
-      await page.waitForTimeout(4000);
-      return await page.content();
-    } finally {
-      await page.close();
-    }
+async function fetchCityHtmlWithPlaywright(url) {
+  const browser = await getBrowser();
+  const page = await browser.newPage({
+    userAgent: DEFAULT_HEADERS['User-Agent'],
+    locale: 'tr-TR',
+  });
+
+  try {
+    await page.setExtraHTTPHeaders({
+      'Accept-Language': DEFAULT_HEADERS['Accept-Language'],
+    });
+    await page.goto(url, {
+      waitUntil: 'domcontentloaded',
+      timeout: 60_000,
+    });
+    await page.waitForTimeout(4000);
+    return await page.content();
+  } finally {
+    await page.close();
   }
 }
 
