@@ -5,6 +5,11 @@ on:
     # 07:30 Europe/Istanbul = 04:30 UTC
     - cron: '30 4 * * *'
   workflow_dispatch:
+    inputs:
+      city_filter:
+        description: Comma separated city slugs (default: ankara)
+        required: false
+        default: ankara
   workflow_run:
     workflows:
       - Refresh pharmacies
@@ -18,52 +23,13 @@ permissions:
   contents: write
 
 jobs:
-  geocode-shards:
-    name: Geocode shard ${{ matrix.shard.id }}
+  geocode-ankara:
+    name: Geocode pharmacies
     runs-on: ubuntu-latest
     if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     timeout-minutes: 45
-    strategy:
-      fail-fast: false
-      max-parallel: 1
-      matrix:
-        shard:
-          - id: 1
-            cities: adana,adiyaman,afyonkarahisar,agri,amasya
-          - id: 2
-            cities: ankara,antalya,artvin,aydin
-          - id: 3
-            cities: balikesir,bilecik,bingol,bitlis,bolu
-          - id: 4
-            cities: burdur,bursa,canakkale,cankiri
-          - id: 5
-            cities: corum,denizli,diyarbakir,edirne,elazig
-          - id: 6
-            cities: erzincan,erzurum,eskisehir,gaziantep
-          - id: 7
-            cities: giresun,gumushane,hakkari,hatay,isparta
-          - id: 8
-            cities: mersin,istanbul,izmir,kars
-          - id: 9
-            cities: kastamonu,kayseri,kirklareli,kirsehir,kocaeli
-          - id: 10
-            cities: konya,kutahya,malatya,manisa
-          - id: 11
-            cities: kahramanmaras,mardin,mugla,mus,nevsehir
-          - id: 12
-            cities: nigde,ordu,rize,sakarya
-          - id: 13
-            cities: samsun,siirt,sinop,sivas,tekirdag
-          - id: 14
-            cities: tokat,trabzon,tunceli,sanliurfa
-          - id: 15
-            cities: usak,van,yozgat,zonguldak,aksaray
-          - id: 16
-            cities: bayburt,karaman,kirikkale,batman
-          - id: 17
-            cities: sirnak,bartin,ardahan,igdir,yalova
-          - id: 18
-            cities: karabuk,kilis,osmaniye,duzce
+    env:
+      CITY_FILTER: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.city_filter || 'ankara' }}
 
     steps:
       - name: Checkout repository
@@ -73,6 +39,8 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 24
+          cache: npm
+          cache-dependency-path: scripts/package-lock.json
 
       - name: Install dependencies
         working-directory: scripts
@@ -81,120 +49,20 @@ jobs:
       - name: Run pharmacy geocoding
         working-directory: scripts
         env:
-          CITY_FILTER: ${{ matrix.shard.cities }}
+          CITY_FILTER: ${{ env.CITY_FILTER }}
           GEOCODE_ONLY: '1'
         run: node refresh.mjs
-
-      - name: Prepare shard artifact
-        run: |
-          mkdir -p shard-output/docs/api
-          mkdir -p shard-output/scripts
-          IFS=',' read -ra CITY_LIST <<< "${{ matrix.shard.cities }}"
-          for city in "${CITY_LIST[@]}"; do
-            cp "docs/api/${city}.json" "shard-output/docs/api/${city}.json"
-          done
-          cp "docs/api/health.json" "shard-output/docs/api/health.json"
-          cp "scripts/geocode-cache.json" "shard-output/scripts/geocode-cache-${{ matrix.shard.id }}.json"
-
-      - name: Upload shard artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: geocode-shard-${{ matrix.shard.id }}
-          path: shard-output
-          if-no-files-found: error
-
-  merge-and-commit:
-    name: Merge geocode outputs
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    needs: geocode-shards
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v5
-
-      - name: Download shard artifacts
-        uses: actions/download-artifact@v4
-        with:
-          path: shard-artifacts
-
-      - name: Merge shard outputs
-        run: |
-          node - <<'NODE'
-          const fs = require('fs');
-          const path = require('path');
-
-          const root = process.cwd();
-          const artifactRoot = path.join(root, 'shard-artifacts');
-          const outputDir = path.join(root, 'docs', 'api');
-          const cachePath = path.join(root, 'scripts', 'geocode-cache.json');
-
-          const shardDirs = fs.readdirSync(artifactRoot)
-            .map((name) => path.join(artifactRoot, name))
-            .filter((fullPath) => fs.statSync(fullPath).isDirectory());
-
-          const mergedHealthCities = [];
-          const mergedCache = {};
-
-          for (const shardDir of shardDirs) {
-            const docsDir = path.join(shardDir, 'docs', 'api');
-            if (fs.existsSync(docsDir)) {
-              const files = fs.readdirSync(docsDir);
-              for (const file of files) {
-                const source = path.join(docsDir, file);
-                if (file === 'health.json') {
-                  const parsed = JSON.parse(fs.readFileSync(source, 'utf8'));
-                  mergedHealthCities.push(...parsed.cities);
-                  continue;
-                }
-
-                if (file.endsWith('.json')) {
-                  const target = path.join(outputDir, file);
-                  fs.copyFileSync(source, target);
-                }
-              }
-            }
-
-            const scriptsDir = path.join(shardDir, 'scripts');
-            if (fs.existsSync(scriptsDir)) {
-              const cacheFiles = fs.readdirSync(scriptsDir)
-                .filter((file) => file.startsWith('geocode-cache-') && file.endsWith('.json'));
-
-              for (const file of cacheFiles) {
-                Object.assign(
-                  mergedCache,
-                  JSON.parse(fs.readFileSync(path.join(scriptsDir, file), 'utf8')),
-                );
-              }
-            }
-          }
-
-          mergedHealthCities.sort((left, right) =>
-            left.cityDisplayName.localeCompare(right.cityDisplayName, 'tr'),
-          );
-
-          const health = {
-            ok: mergedHealthCities.every((city) => !city.error),
-            checkedAt: new Date().toISOString(),
-            cities: mergedHealthCities,
-          };
-
-          fs.writeFileSync(
-            path.join(outputDir, 'health.json'),
-            `${JSON.stringify(health, null, 2)}\n`,
-          );
-
-          fs.writeFileSync(
-            cachePath,
-            `${JSON.stringify(mergedCache, null, 2)}\n`,
-          );
-          NODE
 
       - name: Commit updated coordinates
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/api/ scripts/geocode-cache.json
+          IFS=',' read -ra CITY_LIST <<< "${CITY_FILTER}"
+          FILES="docs/api/health.json docs/api/cities.json scripts/geocode-cache.json"
+          for city in "${CITY_LIST[@]}"; do
+            FILES="$FILES docs/api/${city}.json"
+          done
+          git add $FILES
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else

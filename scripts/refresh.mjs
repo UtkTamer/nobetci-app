@@ -95,7 +95,22 @@ const CITIES = [
   { slug: 'duzce', displayName: 'Düzce', plateCode: '81' },
 ];
 
-const SOURCE_BASE_URL = 'https://www.eczaneler.gen.tr';
+const CITY_SOURCE_OVERRIDES = {
+  ankara: 'aeo',
+};
+
+const SOURCE_PROVIDERS = {
+  eczaneler: {
+    displayName: 'Eczaneler.gen.tr',
+    baseUrl: 'https://www.eczaneler.gen.tr',
+  },
+  aeo: {
+    displayName: 'Ankara Eczaci Odasi',
+    pageUrl: 'https://www.aeo.org.tr/nobetci-eczaneler',
+    apiUrl: 'https://www.aeo.org.tr/getPharmacies',
+  },
+};
+const ECZANELER_BASE_URL = SOURCE_PROVIDERS.eczaneler.baseUrl;
 
 const NOMINATIM_URL = 'https://nominatim.openstreetmap.org/search';
 const NOMINATIM_DELAY_MS = 1200;
@@ -258,6 +273,20 @@ function getCityOutputPath(citySlug) {
   return resolve(OUTPUT_DIR, `${citySlug}.json`);
 }
 
+function getSourceKeyForCity(city) {
+  return CITY_SOURCE_OVERRIDES[city.slug] ?? 'eczaneler';
+}
+
+function getSourceConfigForCity(city) {
+  const key = getSourceKeyForCity(city);
+  const provider = SOURCE_PROVIDERS[key];
+  if (!provider) {
+    throw new Error(`Unknown source provider: ${key}`);
+  }
+
+  return { key, provider };
+}
+
 function normalizeAddress(value) {
   return cleanText(value).toLocaleLowerCase('tr');
 }
@@ -387,7 +416,7 @@ async function geocode(rawAddress, district, city) {
 }
 
 // ---------------------------------------------------------------------------
-// Eczaneler.gen.tr scraping
+// Source providers
 // ---------------------------------------------------------------------------
 
 function extractTodayTabHtml(html) {
@@ -456,8 +485,8 @@ function extractRecordsFromTab(tabHtml, citySlug) {
           ),
         ),
         sourceUrl: sourcePath
-          ? new URL(sourcePath, SOURCE_BASE_URL).toString()
-          : `${SOURCE_BASE_URL}/nobetci-${citySlug}`,
+          ? new URL(sourcePath, ECZANELER_BASE_URL).toString()
+          : `${ECZANELER_BASE_URL}/nobetci-${citySlug}`,
       };
     })
     .filter((record) => record.name && record.address);
@@ -483,7 +512,16 @@ function parseCityHtml(html, city) {
 }
 
 async function scrapeCity(city) {
-  const html = await fetchCityHtml(city);
+  const { provider } = getSourceConfigForCity(city);
+  if (provider === SOURCE_PROVIDERS.aeo) {
+    return scrapeCityFromAeo(city, provider);
+  }
+
+  return scrapeCityFromEczaneler(city, provider);
+}
+
+async function scrapeCityFromEczaneler(city, provider) {
+  const html = await fetchCityHtml(city, provider);
   const parsed = parseCityHtml(html, city);
 
   if (parsed.records.length > 0) {
@@ -498,7 +536,7 @@ async function scrapeCity(city) {
     `  Source returned 0 parsed pharmacies${parsed.expectedCount != null ? ` despite expected count ${parsed.expectedCount}` : ''}, retrying with Playwright...`,
   );
 
-  const browserHtml = await fetchCityHtml(city, { forcePlaywright: true });
+  const browserHtml = await fetchCityHtml(city, provider, { forcePlaywright: true });
   const browserParsed = parseCityHtml(browserHtml, city);
 
   if (browserParsed.records.length === 0 && browserParsed.expectedCount !== 0) {
@@ -510,9 +548,9 @@ async function scrapeCity(city) {
   return browserParsed.records;
 }
 
-async function fetchCityHtml(city, options = {}) {
+async function fetchCityHtml(city, provider, options = {}) {
   const { forcePlaywright = false } = options;
-  const url = `${SOURCE_BASE_URL}/nobetci-${city.slug}`;
+  const url = `${provider.baseUrl}/nobetci-${city.slug}`;
 
   if (forcePlaywright) {
     return fetchCityHtmlWithPlaywright(url);
@@ -534,6 +572,77 @@ async function fetchCityHtml(city, options = {}) {
     console.log('  Source returned 403, retrying with Playwright...');
     return fetchCityHtmlWithPlaywright(url);
   }
+}
+
+function decodeEscapedText(value = '') {
+  return decodeHtml(value)
+    .replace(/\\u([\dA-Fa-f]{4})/g, (_, code) => String.fromCharCode(Number.parseInt(code, 16)))
+    .replace(/\\\//g, '/')
+    .replace(/\\"/g, '"');
+}
+
+function parseAeoRecords(html, provider) {
+  const decodedHtml = decodeEscapedText(html);
+  const rowChunks = decodedHtml
+    .split(/<div class="inline-box"/i)
+    .slice(1)
+    .map((chunk) => `<div class="inline-box"${chunk}`);
+
+  return rowChunks.map((decodedRow) => {
+    const district = decodeEscapedText(decodedRow.match(/data-district="([^"]*)"/i)?.[1] ?? '');
+    const name = stripTags(decodedRow.match(/<h4>([\s\S]*?)<\/h4>/i)?.[1] ?? '');
+
+    const paragraphHtml = decodedRow.match(/<p>([\s\S]*?)<\/p>/i)?.[1] ?? '';
+    const addressHtml = paragraphHtml.replace(/<span[\s\S]*?<\/span>/i, '').replace(/<br\s*\/?>/gi, ' ');
+    const address = stripTags(addressHtml);
+    const phoneNumber = cleanPhone(
+      stripTags(
+        decodedRow.match(/<a href="tel:([^"]+)"/i)?.[1]
+        ?? paragraphHtml.match(/<span>([\s\S]*?)<\/span>/i)?.[1]
+        ?? '',
+      ),
+    );
+    const sourceUrl = decodedRow.match(/<a href="([^"]*google\.com\/maps\/search\/\?api=1[^"]*)"/i)?.[1]
+      ?? provider.pageUrl;
+    const queryMatch = sourceUrl.match(/[?&]query=([^&"]+)/i);
+    const [latitude, longitude] = (queryMatch?.[1] ?? '')
+      .split(',')
+      .map((value) => Number(value.trim()));
+
+    return {
+      name,
+      address,
+      district,
+      phoneNumber,
+      sourceUrl,
+      latitude: Number.isFinite(latitude) ? latitude : null,
+      longitude: Number.isFinite(longitude) ? longitude : null,
+    };
+  }).filter((record) => record.name && record.address);
+}
+
+async function scrapeCityFromAeo(city, provider) {
+  const nowInIstanbul = new Date(
+    new Date().toLocaleString('en-US', { timeZone: 'Europe/Istanbul' }),
+  );
+  const formattedDate = `${nowInIstanbul.getFullYear()}-${String(nowInIstanbul.getMonth() + 1).padStart(2, '0')}-${String(nowInIstanbul.getDate()).padStart(2, '0')}`;
+
+  const response = await axios.get(`${provider.apiUrl}/${formattedDate}`, {
+    headers: DEFAULT_HEADERS,
+    timeout: 60_000,
+    responseType: 'json',
+  });
+
+  if (response.data?.status !== 'success') {
+    throw new Error('AEO source returned non-success status.');
+  }
+
+  const records = parseAeoRecords(response.data?.html ?? '', provider);
+  if (records.length === 0) {
+    throw new Error('AEO source returned zero parsed pharmacies.');
+  }
+
+  return records;
 }
 
 async function fetchCityHtmlWithPlaywright(url) {
@@ -564,6 +673,7 @@ async function fetchCityHtmlWithPlaywright(url) {
 
 async function refreshCity(city) {
   console.log(`\n[${city.displayName}] Starting source scrape...`);
+  const { provider } = getSourceConfigForCity(city);
 
   const records = await scrapeCity(city);
   console.log(`  Found ${records.length} pharmacies`);
@@ -629,7 +739,7 @@ async function refreshCity(city) {
       dutyStart: null,
       dutyEnd: null,
       lastVerifiedAt: now,
-      source: 'Eczaneler.gen.tr',
+      source: provider.displayName,
       sourceUrl: r.sourceUrl,
     })),
   };
@@ -643,6 +753,7 @@ async function refreshCity(city) {
 
 async function geocodeExistingCity(city) {
   console.log(`\n[${city.displayName}] Starting geocode-only pass...`);
+  const { provider } = getSourceConfigForCity(city);
 
   const existing = readJson(getCityOutputPath(city.slug));
   if (!existing?.pharmacies) {
@@ -705,8 +816,9 @@ async function geocodeExistingCity(city) {
       ...record,
       latitude: record.latitude ?? null,
       longitude: record.longitude ?? null,
-      source: record.source ?? 'Eczaneler.gen.tr',
-      sourceUrl: record.sourceUrl ?? `${SOURCE_BASE_URL}/nobetci-${city.slug}`,
+      source: record.source ?? provider.displayName,
+      sourceUrl: record.sourceUrl
+        ?? (provider.pageUrl ?? `${provider.baseUrl}/nobetci-${city.slug}`),
       lastVerifiedAt: now,
     })),
   };

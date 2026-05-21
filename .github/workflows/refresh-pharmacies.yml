@@ -5,6 +5,11 @@ on:
     # 06:00 Europe/Istanbul = 03:00 UTC
     - cron: '0 3 * * *'
   workflow_dispatch:
+    inputs:
+      city_filter:
+        description: Comma separated city slugs (default: ankara)
+        required: false
+        default: ankara
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -14,51 +19,12 @@ permissions:
   pages: write
 
 jobs:
-  refresh-shards:
-    name: Refresh shard ${{ matrix.shard.id }}
+  refresh-ankara:
+    name: Refresh pharmacies
     runs-on: ubuntu-latest
     timeout-minutes: 45
-    strategy:
-      fail-fast: false
-      max-parallel: 2
-      matrix:
-        shard:
-          - id: 1
-            cities: adana,adiyaman,afyonkarahisar,agri,amasya
-          - id: 2
-            cities: ankara,antalya,artvin,aydin
-          - id: 3
-            cities: balikesir,bilecik,bingol,bitlis,bolu
-          - id: 4
-            cities: burdur,bursa,canakkale,cankiri
-          - id: 5
-            cities: corum,denizli,diyarbakir,edirne,elazig
-          - id: 6
-            cities: erzincan,erzurum,eskisehir,gaziantep
-          - id: 7
-            cities: giresun,gumushane,hakkari,hatay,isparta
-          - id: 8
-            cities: mersin,istanbul,izmir,kars
-          - id: 9
-            cities: kastamonu,kayseri,kirklareli,kirsehir,kocaeli
-          - id: 10
-            cities: konya,kutahya,malatya,manisa
-          - id: 11
-            cities: kahramanmaras,mardin,mugla,mus,nevsehir
-          - id: 12
-            cities: nigde,ordu,rize,sakarya
-          - id: 13
-            cities: samsun,siirt,sinop,sivas,tekirdag
-          - id: 14
-            cities: tokat,trabzon,tunceli,sanliurfa
-          - id: 15
-            cities: usak,van,yozgat,zonguldak,aksaray
-          - id: 16
-            cities: bayburt,karaman,kirikkale,batman
-          - id: 17
-            cities: sirnak,bartin,ardahan,igdir,yalova
-          - id: 18
-            cities: karabuk,kilis,osmaniye,duzce
+    env:
+      CITY_FILTER: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.city_filter || 'ankara' }}
 
     steps:
       - name: Checkout repository
@@ -68,10 +34,20 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 24
+          cache: npm
+          cache-dependency-path: scripts/package-lock.json
 
       - name: Install dependencies
         working-directory: scripts
         run: npm ci
+
+      - name: Restore Playwright browser cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('scripts/package-lock.json') }}
+          restore-keys: |
+            playwright-${{ runner.os }}-
 
       - name: Install Playwright browsers
         working-directory: scripts
@@ -80,95 +56,20 @@ jobs:
       - name: Run pharmacy refresh
         working-directory: scripts
         env:
-          CITY_FILTER: ${{ matrix.shard.cities }}
+          CITY_FILTER: ${{ env.CITY_FILTER }}
           SKIP_GEOCODE: '1'
         run: node refresh.mjs
-
-      - name: Prepare shard artifact
-        run: |
-          mkdir -p shard-output/docs/api
-          IFS=',' read -ra CITY_LIST <<< "${{ matrix.shard.cities }}"
-          for city in "${CITY_LIST[@]}"; do
-            cp "docs/api/${city}.json" "shard-output/docs/api/${city}.json"
-          done
-          cp "docs/api/health.json" "shard-output/docs/api/health.json"
-
-      - name: Upload shard artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: shard-${{ matrix.shard.id }}
-          path: shard-output/docs/api
-          if-no-files-found: error
-
-  merge-and-commit:
-    name: Merge shard outputs
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    needs: refresh-shards
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v5
-
-      - name: Download shard artifacts
-        uses: actions/download-artifact@v4
-        with:
-          path: shard-artifacts
-
-      - name: Merge shard outputs
-        run: |
-          node - <<'NODE'
-          const fs = require('fs');
-          const path = require('path');
-
-          const root = process.cwd();
-          const artifactRoot = path.join(root, 'shard-artifacts');
-          const outputDir = path.join(root, 'docs', 'api');
-
-          const shardDirs = fs.readdirSync(artifactRoot)
-            .map((name) => path.join(artifactRoot, name))
-            .filter((fullPath) => fs.statSync(fullPath).isDirectory());
-
-          const mergedHealthCities = [];
-
-          for (const shardDir of shardDirs) {
-            const files = fs.readdirSync(shardDir);
-            for (const file of files) {
-              const source = path.join(shardDir, file);
-              if (file === 'health.json') {
-                const parsed = JSON.parse(fs.readFileSync(source, 'utf8'));
-                mergedHealthCities.push(...parsed.cities);
-                continue;
-              }
-
-              if (file.endsWith('.json')) {
-                const target = path.join(outputDir, file);
-                fs.copyFileSync(source, target);
-              }
-            }
-          }
-
-          mergedHealthCities.sort((left, right) =>
-            left.cityDisplayName.localeCompare(right.cityDisplayName, 'tr'),
-          );
-
-          const health = {
-            ok: mergedHealthCities.every((city) => !city.error),
-            checkedAt: new Date().toISOString(),
-            cities: mergedHealthCities,
-          };
-
-          fs.writeFileSync(
-            path.join(outputDir, 'health.json'),
-            `${JSON.stringify(health, null, 2)}\n`,
-          );
-          NODE
 
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/api/
+          IFS=',' read -ra CITY_LIST <<< "${CITY_FILTER}"
+          FILES="docs/api/health.json docs/api/cities.json"
+          for city in "${CITY_LIST[@]}"; do
+            FILES="$FILES docs/api/${city}.json"
+          done
+          git add $FILES
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
