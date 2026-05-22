@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       city_filter:
-        description: Comma separated city slugs (default: ankara)
+        description: "Comma separated city slugs (default: ankara)"
         required: false
         default: ankara
 
