@@ -1,14 +1,15 @@
 {
-  "ok": true,
-  "checkedAt": "2026-07-08T06:43:51.403Z",
+  "ok": false,
+  "checkedAt": "2026-07-09T06:51:49.670Z",
   "cities": [
     {
       "city": "ankara",
       "cityDisplayName": "Ankara",
-      "lastRefreshedAt": "2026-07-08T06:43:51.387Z",
-      "pharmacyCount": 59,
-      "withCoordinates": 59,
-      "coordCoveragePct": 100
+      "lastRefreshedAt": null,
+      "pharmacyCount": 0,
+      "withCoordinates": 0,
+      "coordCoveragePct": 0,
+      "error": "Request failed with status code 403"
     }
   ]
 }
