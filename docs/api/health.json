@@ -1,11 +1,11 @@
 {
   "ok": true,
-  "checkedAt": "2026-09-02T07:50:17.845Z",
+  "checkedAt": "2026-09-02T08:53:48.356Z",
   "cities": [
     {
       "city": "ankara",
       "cityDisplayName": "Ankara",
-      "lastRefreshedAt": "2026-09-02T07:50:17.818Z",
+      "lastRefreshedAt": "2026-09-02T08:53:48.336Z",
       "pharmacyCount": 59,
       "withCoordinates": 59,
       "coordCoveragePct": 100
