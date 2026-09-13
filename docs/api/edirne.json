@@ -1,7 +1,7 @@
 {
   "city": "edirne",
   "cityDisplayName": "Edirne",
-  "updatedAt": "2026-09-13T12:16:59.975Z",
+  "updatedAt": "2026-09-13T12:17:35.031Z",
   "isStale": false,
   "pharmacies": [
     {
@@ -14,7 +14,7 @@
       "longitude": 26.594302,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:59.975Z",
+      "lastVerifiedAt": "2026-09-13T12:17:35.031Z",
       "source": "edirneeo.org.tr",
       "sourceUrl": "https://www.edirneeo.org.tr/nobetci-eczaneler"
     },
@@ -28,7 +28,7 @@
       "longitude": 26.568071,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:59.975Z",
+      "lastVerifiedAt": "2026-09-13T12:17:35.031Z",
       "source": "edirneeo.org.tr",
       "sourceUrl": "https://www.edirneeo.org.tr/nobetci-eczaneler"
     },
@@ -42,7 +42,7 @@
       "longitude": 26.554119,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:59.975Z",
+      "lastVerifiedAt": "2026-09-13T12:17:35.031Z",
       "source": "edirneeo.org.tr",
       "sourceUrl": "https://www.edirneeo.org.tr/nobetci-eczaneler"
     },
@@ -56,7 +56,7 @@
       "longitude": 26.084178,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:59.975Z",
+      "lastVerifiedAt": "2026-09-13T12:17:35.031Z",
       "source": "edirneeo.org.tr",
       "sourceUrl": "https://www.edirneeo.org.tr/nobetci-eczaneler"
     },
@@ -70,7 +70,7 @@
       "longitude": 26.821152,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:59.975Z",
+      "lastVerifiedAt": "2026-09-13T12:17:35.031Z",
       "source": "edirneeo.org.tr",
       "sourceUrl": "https://www.edirneeo.org.tr/nobetci-eczaneler"
     },
@@ -84,7 +84,7 @@
       "longitude": 26.383545,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:59.975Z",
+      "lastVerifiedAt": "2026-09-13T12:17:35.031Z",
       "source": "edirneeo.org.tr",
       "sourceUrl": "https://www.edirneeo.org.tr/nobetci-eczaneler"
     },
@@ -98,7 +98,7 @@
       "longitude": 26.627719,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:59.975Z",
+      "lastVerifiedAt": "2026-09-13T12:17:35.031Z",
       "source": "edirneeo.org.tr",
       "sourceUrl": "https://www.edirneeo.org.tr/nobetci-eczaneler"
     },
@@ -112,7 +112,7 @@
       "longitude": 26.732826,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:59.975Z",
+      "lastVerifiedAt": "2026-09-13T12:17:35.031Z",
       "source": "edirneeo.org.tr",
       "sourceUrl": "https://www.edirneeo.org.tr/nobetci-eczaneler"
     },
@@ -126,7 +126,7 @@
       "longitude": 26.418703,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:59.975Z",
+      "lastVerifiedAt": "2026-09-13T12:17:35.031Z",
       "source": "edirneeo.org.tr",
       "sourceUrl": "https://www.edirneeo.org.tr/nobetci-eczaneler"
     },
@@ -140,7 +140,7 @@
       "longitude": 26.688424,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:59.975Z",
+      "lastVerifiedAt": "2026-09-13T12:17:35.031Z",
       "source": "edirneeo.org.tr",
       "sourceUrl": "https://www.edirneeo.org.tr/nobetci-eczaneler"
     },
@@ -154,7 +154,7 @@
       "longitude": 26.910025,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:59.975Z",
+      "lastVerifiedAt": "2026-09-13T12:17:35.031Z",
       "source": "edirneeo.org.tr",
       "sourceUrl": "https://www.edirneeo.org.tr/nobetci-eczaneler"
     }

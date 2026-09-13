@@ -1,7 +1,7 @@
 {
   "city": "duzce",
   "cityDisplayName": "Düzce",
-  "updatedAt": "2026-09-13T12:17:05.711Z",
+  "updatedAt": "2026-09-13T12:17:38.164Z",
   "isStale": false,
   "pharmacies": [
     {
@@ -14,7 +14,7 @@
       "longitude": 31.231062,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:17:05.711Z",
+      "lastVerifiedAt": "2026-09-13T12:17:38.164Z",
       "source": "duzceeo.org",
       "sourceUrl": "https://www.duzceeo.org/nobetci-eczaneler"
     },
@@ -28,7 +28,7 @@
       "longitude": 31.17211,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:17:05.711Z",
+      "lastVerifiedAt": "2026-09-13T12:17:38.164Z",
       "source": "duzceeo.org",
       "sourceUrl": "https://www.duzceeo.org/nobetci-eczaneler"
     },
@@ -42,7 +42,7 @@
       "longitude": 31.182246,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:17:05.711Z",
+      "lastVerifiedAt": "2026-09-13T12:17:38.164Z",
       "source": "duzceeo.org",
       "sourceUrl": "https://www.duzceeo.org/nobetci-eczaneler"
     },
@@ -56,7 +56,7 @@
       "longitude": 31.142346,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:17:05.711Z",
+      "lastVerifiedAt": "2026-09-13T12:17:38.164Z",
       "source": "duzceeo.org",
       "sourceUrl": "https://www.duzceeo.org/nobetci-eczaneler"
     },
@@ -70,7 +70,7 @@
       "longitude": 30.951819,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:17:05.711Z",
+      "lastVerifiedAt": "2026-09-13T12:17:38.164Z",
       "source": "duzceeo.org",
       "sourceUrl": "https://www.duzceeo.org/nobetci-eczaneler"
     },
@@ -84,7 +84,7 @@
       "longitude": 31.048442,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:17:05.711Z",
+      "lastVerifiedAt": "2026-09-13T12:17:38.164Z",
       "source": "duzceeo.org",
       "sourceUrl": "https://www.duzceeo.org/nobetci-eczaneler"
     },
@@ -98,7 +98,7 @@
       "longitude": 30.996618,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:17:05.711Z",
+      "lastVerifiedAt": "2026-09-13T12:17:38.164Z",
       "source": "duzceeo.org",
       "sourceUrl": "https://www.duzceeo.org/nobetci-eczaneler"
     },
@@ -112,7 +112,7 @@
       "longitude": 30.937799,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:17:05.711Z",
+      "lastVerifiedAt": "2026-09-13T12:17:38.164Z",
       "source": "duzceeo.org",
       "sourceUrl": "https://www.duzceeo.org/nobetci-eczaneler"
     },
@@ -126,7 +126,7 @@
       "longitude": 31.310877,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:17:05.711Z",
+      "lastVerifiedAt": "2026-09-13T12:17:38.164Z",
       "source": "duzceeo.org",
       "sourceUrl": "https://www.duzceeo.org/nobetci-eczaneler"
     },
@@ -140,7 +140,7 @@
       "longitude": 31.444089,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:17:05.711Z",
+      "lastVerifiedAt": "2026-09-13T12:17:38.164Z",
       "source": "duzceeo.org",
       "sourceUrl": "https://www.duzceeo.org/nobetci-eczaneler"
     }

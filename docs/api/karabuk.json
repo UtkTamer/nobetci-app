@@ -1,7 +1,7 @@
 {
   "city": "karabuk",
   "cityDisplayName": "Karabük",
-  "updatedAt": "2026-09-13T12:17:04.569Z",
+  "updatedAt": "2026-09-13T12:17:38.058Z",
   "isStale": false,
   "pharmacies": [
     {
@@ -14,7 +14,7 @@
       "longitude": 32.668108,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:17:04.569Z",
+      "lastVerifiedAt": "2026-09-13T12:17:38.058Z",
       "source": "kastamonueo.org.tr",
       "sourceUrl": "https://www.kastamonueo.org.tr/nobetci-eczaneler/78"
     },
@@ -28,7 +28,7 @@
       "longitude": 32.624799,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:17:04.569Z",
+      "lastVerifiedAt": "2026-09-13T12:17:38.058Z",
       "source": "kastamonueo.org.tr",
       "sourceUrl": "https://www.kastamonueo.org.tr/nobetci-eczaneler/78"
     },
@@ -42,7 +42,7 @@
       "longitude": 32.956794,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:17:04.569Z",
+      "lastVerifiedAt": "2026-09-13T12:17:38.058Z",
       "source": "kastamonueo.org.tr",
       "sourceUrl": "https://www.kastamonueo.org.tr/nobetci-eczaneler/78"
     },
@@ -56,7 +56,7 @@
       "longitude": 32.529563,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:17:04.569Z",
+      "lastVerifiedAt": "2026-09-13T12:17:38.058Z",
       "source": "kastamonueo.org.tr",
       "sourceUrl": "https://www.kastamonueo.org.tr/nobetci-eczaneler/78"
     },
@@ -70,7 +70,7 @@
       "longitude": 32.683959,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:17:04.569Z",
+      "lastVerifiedAt": "2026-09-13T12:17:38.058Z",
       "source": "kastamonueo.org.tr",
       "sourceUrl": "https://www.kastamonueo.org.tr/nobetci-eczaneler/78"
     },
@@ -84,7 +84,7 @@
       "longitude": 32.3299,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:17:04.569Z",
+      "lastVerifiedAt": "2026-09-13T12:17:38.058Z",
       "source": "kastamonueo.org.tr",
       "sourceUrl": "https://www.kastamonueo.org.tr/nobetci-eczaneler/78"
     }

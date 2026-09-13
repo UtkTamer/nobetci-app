@@ -1,7 +1,7 @@
 {
   "city": "bursa",
   "cityDisplayName": "Bursa",
-  "updatedAt": "2026-09-13T12:16:58.077Z",
+  "updatedAt": "2026-09-13T12:17:34.029Z",
   "isStale": false,
   "pharmacies": [
     {
@@ -14,7 +14,7 @@
       "longitude": 28.9482491,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -28,7 +28,7 @@
       "longitude": 28.8460552,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -42,7 +42,7 @@
       "longitude": 28.9816962,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -56,7 +56,7 @@
       "longitude": 28.9601326,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -70,7 +70,7 @@
       "longitude": 28.971312,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -84,7 +84,7 @@
       "longitude": 28.91053,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -98,7 +98,7 @@
       "longitude": 28.9864705,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -112,7 +112,7 @@
       "longitude": 29.0580145,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -126,7 +126,7 @@
       "longitude": 29.0126,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -140,7 +140,7 @@
       "longitude": 29.059771,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -154,7 +154,7 @@
       "longitude": 29.0034288,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -168,7 +168,7 @@
       "longitude": 29.0663588,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -182,7 +182,7 @@
       "longitude": 28.9715139,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -196,7 +196,7 @@
       "longitude": 28.943202,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -210,7 +210,7 @@
       "longitude": 29.1166194,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -224,7 +224,7 @@
       "longitude": 29.0936422,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -238,7 +238,7 @@
       "longitude": 29.1206825,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -252,7 +252,7 @@
       "longitude": 29.0761542,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -266,7 +266,7 @@
       "longitude": 28.8825165,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -280,7 +280,7 @@
       "longitude": 29.155044,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -294,7 +294,7 @@
       "longitude": 29.155666,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -308,7 +308,7 @@
       "longitude": 29.189998,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -322,7 +322,7 @@
       "longitude": 29.1551839,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -336,7 +336,7 @@
       "longitude": 29.513531,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -350,7 +350,7 @@
       "longitude": 29.50797,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -364,7 +364,7 @@
       "longitude": 29.5330408,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -378,7 +378,7 @@
       "longitude": 29.719909,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -392,7 +392,7 @@
       "longitude": 28.361033,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -406,7 +406,7 @@
       "longitude": 29.203327,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -420,7 +420,7 @@
       "longitude": 28.9207527,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -434,7 +434,7 @@
       "longitude": 28.928489,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -448,7 +448,7 @@
       "longitude": 28.905322,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -462,7 +462,7 @@
       "longitude": 28.410963,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -476,7 +476,7 @@
       "longitude": 28.9889148,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -490,7 +490,7 @@
       "longitude": 29.30607,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -504,7 +504,7 @@
       "longitude": 29.0974539,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     },
@@ -518,7 +518,7 @@
       "longitude": 29.651628,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:58.077Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.029Z",
       "source": "beo.org.tr",
       "sourceUrl": "https://www.beo.org.tr/nobetci-eczaneler"
     }

@@ -1,7 +1,7 @@
 {
   "city": "cankiri",
   "cityDisplayName": "Çankırı",
-  "updatedAt": "2026-09-13T12:16:59.840Z",
+  "updatedAt": "2026-09-13T12:17:34.030Z",
   "isStale": false,
   "pharmacies": [
     {
@@ -14,7 +14,7 @@
       "longitude": 33.617889,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:59.840Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.030Z",
       "source": "kastamonueo.org.tr",
       "sourceUrl": "https://www.kastamonueo.org.tr/nobetci-eczaneler/18"
     },
@@ -28,7 +28,7 @@
       "longitude": 33.077574,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:59.840Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.030Z",
       "source": "kastamonueo.org.tr",
       "sourceUrl": "https://www.kastamonueo.org.tr/nobetci-eczaneler/18"
     },
@@ -42,7 +42,7 @@
       "longitude": 33.203646,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:59.840Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.030Z",
       "source": "kastamonueo.org.tr",
       "sourceUrl": "https://www.kastamonueo.org.tr/nobetci-eczaneler/18"
     },
@@ -56,7 +56,7 @@
       "longitude": 32.886882,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:59.840Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.030Z",
       "source": "kastamonueo.org.tr",
       "sourceUrl": "https://www.kastamonueo.org.tr/nobetci-eczaneler/18"
     },
@@ -70,7 +70,7 @@
       "longitude": 33.497933,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:59.840Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.030Z",
       "source": "kastamonueo.org.tr",
       "sourceUrl": "https://www.kastamonueo.org.tr/nobetci-eczaneler/18"
     },
@@ -84,7 +84,7 @@
       "longitude": 33.624245,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:59.840Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.030Z",
       "source": "kastamonueo.org.tr",
       "sourceUrl": "https://www.kastamonueo.org.tr/nobetci-eczaneler/18"
     },
@@ -98,7 +98,7 @@
       "longitude": 33.985127,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:59.840Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.030Z",
       "source": "kastamonueo.org.tr",
       "sourceUrl": "https://www.kastamonueo.org.tr/nobetci-eczaneler/18"
     },
@@ -112,7 +112,7 @@
       "longitude": 33.513908,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:59.840Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.030Z",
       "source": "kastamonueo.org.tr",
       "sourceUrl": "https://www.kastamonueo.org.tr/nobetci-eczaneler/18"
     },
@@ -126,7 +126,7 @@
       "longitude": 33.261544,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:59.840Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.030Z",
       "source": "kastamonueo.org.tr",
       "sourceUrl": "https://www.kastamonueo.org.tr/nobetci-eczaneler/18"
     },
@@ -140,7 +140,7 @@
       "longitude": 33.106451,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:59.840Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.030Z",
       "source": "kastamonueo.org.tr",
       "sourceUrl": "https://www.kastamonueo.org.tr/nobetci-eczaneler/18"
     },
@@ -154,7 +154,7 @@
       "longitude": 33.275366,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:59.840Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.030Z",
       "source": "kastamonueo.org.tr",
       "sourceUrl": "https://www.kastamonueo.org.tr/nobetci-eczaneler/18"
     },
@@ -168,7 +168,7 @@
       "longitude": 33.778797,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:59.840Z",
+      "lastVerifiedAt": "2026-09-13T12:17:34.030Z",
       "source": "kastamonueo.org.tr",
       "sourceUrl": "https://www.kastamonueo.org.tr/nobetci-eczaneler/18"
     }

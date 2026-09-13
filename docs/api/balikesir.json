@@ -1,7 +1,7 @@
 {
   "city": "balikesir",
   "cityDisplayName": "Balıkesir",
-  "updatedAt": "2026-09-13T12:16:55.175Z",
+  "updatedAt": "2026-09-13T12:17:33.027Z",
   "isStale": false,
   "pharmacies": [
     {
@@ -14,7 +14,7 @@
       "longitude": 27.876552,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:55.175Z",
+      "lastVerifiedAt": "2026-09-13T12:17:33.027Z",
       "source": "balikesireczaciodasi.org.tr",
       "sourceUrl": "https://www.balikesireczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -28,7 +28,7 @@
       "longitude": 27.888599,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:55.175Z",
+      "lastVerifiedAt": "2026-09-13T12:17:33.027Z",
       "source": "balikesireczaciodasi.org.tr",
       "sourceUrl": "https://www.balikesireczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -42,7 +42,7 @@
       "longitude": 27.884087,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:55.175Z",
+      "lastVerifiedAt": "2026-09-13T12:17:33.027Z",
       "source": "balikesireczaciodasi.org.tr",
       "sourceUrl": "https://www.balikesireczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -56,7 +56,7 @@
       "longitude": 27.890273,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:55.175Z",
+      "lastVerifiedAt": "2026-09-13T12:17:33.027Z",
       "source": "balikesireczaciodasi.org.tr",
       "sourceUrl": "https://www.balikesireczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -70,7 +70,7 @@
       "longitude": 26.693229,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:55.175Z",
+      "lastVerifiedAt": "2026-09-13T12:17:33.027Z",
       "source": "balikesireczaciodasi.org.tr",
       "sourceUrl": "https://www.balikesireczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -84,7 +84,7 @@
       "longitude": 27.973629,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:55.175Z",
+      "lastVerifiedAt": "2026-09-13T12:17:33.027Z",
       "source": "balikesireczaciodasi.org.tr",
       "sourceUrl": "https://www.balikesireczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -98,7 +98,7 @@
       "longitude": 27.938161,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:55.175Z",
+      "lastVerifiedAt": "2026-09-13T12:17:33.027Z",
       "source": "balikesireczaciodasi.org.tr",
       "sourceUrl": "https://www.balikesireczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -112,7 +112,7 @@
       "longitude": 28.128401,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:55.175Z",
+      "lastVerifiedAt": "2026-09-13T12:17:33.027Z",
       "source": "balikesireczaciodasi.org.tr",
       "sourceUrl": "https://www.balikesireczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -126,7 +126,7 @@
       "longitude": 27.579561,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:55.175Z",
+      "lastVerifiedAt": "2026-09-13T12:17:33.027Z",
       "source": "balikesireczaciodasi.org.tr",
       "sourceUrl": "https://www.balikesireczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -140,7 +140,7 @@
       "longitude": 26.980084,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:55.175Z",
+      "lastVerifiedAt": "2026-09-13T12:17:33.027Z",
       "source": "balikesireczaciodasi.org.tr",
       "sourceUrl": "https://www.balikesireczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -154,7 +154,7 @@
       "longitude": 26.937155,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:55.175Z",
+      "lastVerifiedAt": "2026-09-13T12:17:33.027Z",
       "source": "balikesireczaciodasi.org.tr",
       "sourceUrl": "https://www.balikesireczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -168,7 +168,7 @@
       "longitude": 26.883958,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:55.175Z",
+      "lastVerifiedAt": "2026-09-13T12:17:33.027Z",
       "source": "balikesireczaciodasi.org.tr",
       "sourceUrl": "https://www.balikesireczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -182,7 +182,7 @@
       "longitude": 28.627216,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:55.175Z",
+      "lastVerifiedAt": "2026-09-13T12:17:33.027Z",
       "source": "balikesireczaciodasi.org.tr",
       "sourceUrl": "https://www.balikesireczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -196,7 +196,7 @@
       "longitude": 27.017218,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:55.175Z",
+      "lastVerifiedAt": "2026-09-13T12:17:33.027Z",
       "source": "balikesireczaciodasi.org.tr",
       "sourceUrl": "https://www.balikesireczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -210,7 +210,7 @@
       "longitude": 27.791744,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:55.175Z",
+      "lastVerifiedAt": "2026-09-13T12:17:33.027Z",
       "source": "balikesireczaciodasi.org.tr",
       "sourceUrl": "https://www.balikesireczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -224,7 +224,7 @@
       "longitude": 26.839781,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:55.175Z",
+      "lastVerifiedAt": "2026-09-13T12:17:33.027Z",
       "source": "balikesireczaciodasi.org.tr",
       "sourceUrl": "https://www.balikesireczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -238,7 +238,7 @@
       "longitude": 27.663107,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:55.175Z",
+      "lastVerifiedAt": "2026-09-13T12:17:33.027Z",
       "source": "balikesireczaciodasi.org.tr",
       "sourceUrl": "https://www.balikesireczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -252,7 +252,7 @@
       "longitude": 27.098545,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:55.175Z",
+      "lastVerifiedAt": "2026-09-13T12:17:33.027Z",
       "source": "balikesireczaciodasi.org.tr",
       "sourceUrl": "https://www.balikesireczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -266,7 +266,7 @@
       "longitude": 27.485754,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:55.175Z",
+      "lastVerifiedAt": "2026-09-13T12:17:33.027Z",
       "source": "balikesireczaciodasi.org.tr",
       "sourceUrl": "https://www.balikesireczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -280,7 +280,7 @@
       "longitude": 28.156275,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:55.175Z",
+      "lastVerifiedAt": "2026-09-13T12:17:33.027Z",
       "source": "balikesireczaciodasi.org.tr",
       "sourceUrl": "https://www.balikesireczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -294,7 +294,7 @@
       "longitude": 27.967795,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:55.175Z",
+      "lastVerifiedAt": "2026-09-13T12:17:33.027Z",
       "source": "balikesireczaciodasi.org.tr",
       "sourceUrl": "https://www.balikesireczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -308,7 +308,7 @@
       "longitude": 27.653517,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:55.175Z",
+      "lastVerifiedAt": "2026-09-13T12:17:33.027Z",
       "source": "balikesireczaciodasi.org.tr",
       "sourceUrl": "https://www.balikesireczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -322,7 +322,7 @@
       "longitude": 28.172288,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:55.175Z",
+      "lastVerifiedAt": "2026-09-13T12:17:33.027Z",
       "source": "balikesireczaciodasi.org.tr",
       "sourceUrl": "https://www.balikesireczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -336,7 +336,7 @@
       "longitude": 28.15141,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:55.175Z",
+      "lastVerifiedAt": "2026-09-13T12:17:33.027Z",
       "source": "balikesireczaciodasi.org.tr",
       "sourceUrl": "https://www.balikesireczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -350,7 +350,7 @@
       "longitude": 26.985651,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:55.175Z",
+      "lastVerifiedAt": "2026-09-13T12:17:33.027Z",
       "source": "balikesireczaciodasi.org.tr",
       "sourceUrl": "https://www.balikesireczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -364,7 +364,7 @@
       "longitude": 26.739504,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:55.175Z",
+      "lastVerifiedAt": "2026-09-13T12:17:33.027Z",
       "source": "balikesireczaciodasi.org.tr",
       "sourceUrl": "https://www.balikesireczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -378,7 +378,7 @@
       "longitude": 26.944898,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:55.175Z",
+      "lastVerifiedAt": "2026-09-13T12:17:33.027Z",
       "source": "balikesireczaciodasi.org.tr",
       "sourceUrl": "https://www.balikesireczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -392,7 +392,7 @@
       "longitude": 26.663101,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:55.175Z",
+      "lastVerifiedAt": "2026-09-13T12:17:33.027Z",
       "source": "balikesireczaciodasi.org.tr",
       "sourceUrl": "https://www.balikesireczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -406,7 +406,7 @@
       "longitude": 26.781491,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:55.175Z",
+      "lastVerifiedAt": "2026-09-13T12:17:33.027Z",
       "source": "balikesireczaciodasi.org.tr",
       "sourceUrl": "https://www.balikesireczaciodasi.org.tr/nobetci-eczaneler"
     }

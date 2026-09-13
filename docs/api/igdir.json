@@ -1,7 +1,7 @@
 {
   "city": "igdir",
   "cityDisplayName": "Iğdır",
-  "updatedAt": "2026-09-13T12:17:04.388Z",
+  "updatedAt": "2026-09-13T12:17:37.065Z",
   "isStale": false,
   "pharmacies": [
     {
@@ -14,7 +14,7 @@
       "longitude": 44.514356,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:17:04.388Z",
+      "lastVerifiedAt": "2026-09-13T12:17:37.065Z",
       "source": "erzurumeo.org.tr",
       "sourceUrl": "https://www.erzurumeo.org.tr/nobetci-eczaneler/76"
     },
@@ -28,7 +28,7 @@
       "longitude": 44.049751,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:17:04.388Z",
+      "lastVerifiedAt": "2026-09-13T12:17:37.065Z",
       "source": "erzurumeo.org.tr",
       "sourceUrl": "https://www.erzurumeo.org.tr/nobetci-eczaneler/76"
     },
@@ -42,7 +42,7 @@
       "longitude": 43.663304,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:17:04.388Z",
+      "lastVerifiedAt": "2026-09-13T12:17:37.065Z",
       "source": "erzurumeo.org.tr",
       "sourceUrl": "https://www.erzurumeo.org.tr/nobetci-eczaneler/76"
     }

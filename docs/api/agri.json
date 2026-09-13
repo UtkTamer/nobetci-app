@@ -1,7 +1,7 @@
 {
   "city": "agri",
   "cityDisplayName": "Ağrı",
-  "updatedAt": "2026-09-13T12:16:53.459Z",
+  "updatedAt": "2026-09-13T12:17:32.026Z",
   "isStale": false,
   "pharmacies": [
     {
@@ -14,7 +14,7 @@
       "longitude": 43.053492,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:53.459Z",
+      "lastVerifiedAt": "2026-09-13T12:17:32.026Z",
       "source": "agrieo.org.tr",
       "sourceUrl": "https://www.agrieo.org.tr/nobetci-eczaneler"
     },
@@ -28,7 +28,7 @@
       "longitude": 43.005459,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:53.459Z",
+      "lastVerifiedAt": "2026-09-13T12:17:32.026Z",
       "source": "agrieo.org.tr",
       "sourceUrl": "https://www.agrieo.org.tr/nobetci-eczaneler"
     },
@@ -42,7 +42,7 @@
       "longitude": 43.670828,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:53.459Z",
+      "lastVerifiedAt": "2026-09-13T12:17:32.026Z",
       "source": "agrieo.org.tr",
       "sourceUrl": "https://www.agrieo.org.tr/nobetci-eczaneler"
     },
@@ -56,7 +56,7 @@
       "longitude": 44.090033,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:53.459Z",
+      "lastVerifiedAt": "2026-09-13T12:17:32.026Z",
       "source": "agrieo.org.tr",
       "sourceUrl": "https://www.agrieo.org.tr/nobetci-eczaneler"
     },
@@ -70,7 +70,7 @@
       "longitude": 42.676397,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:53.459Z",
+      "lastVerifiedAt": "2026-09-13T12:17:32.026Z",
       "source": "agrieo.org.tr",
       "sourceUrl": "https://www.agrieo.org.tr/nobetci-eczaneler"
     },
@@ -84,7 +84,7 @@
       "longitude": 42.988588,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:53.459Z",
+      "lastVerifiedAt": "2026-09-13T12:17:32.026Z",
       "source": "agrieo.org.tr",
       "sourceUrl": "https://www.agrieo.org.tr/nobetci-eczaneler"
     },
@@ -98,7 +98,7 @@
       "longitude": 42.862017,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:53.459Z",
+      "lastVerifiedAt": "2026-09-13T12:17:32.026Z",
       "source": "agrieo.org.tr",
       "sourceUrl": "https://www.agrieo.org.tr/nobetci-eczaneler"
     },
@@ -112,7 +112,7 @@
       "longitude": 43.374546,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:53.459Z",
+      "lastVerifiedAt": "2026-09-13T12:17:32.026Z",
       "source": "agrieo.org.tr",
       "sourceUrl": "https://www.agrieo.org.tr/nobetci-eczaneler"
     },
@@ -126,7 +126,7 @@
       "longitude": 42.770822,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:16:53.459Z",
+      "lastVerifiedAt": "2026-09-13T12:17:32.026Z",
       "source": "agrieo.org.tr",
       "sourceUrl": "https://www.agrieo.org.tr/nobetci-eczaneler"
     }
