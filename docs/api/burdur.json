@@ -1,7 +1,92 @@
 {
   "city": "burdur",
   "cityDisplayName": "Burdur",
-  "updatedAt": "2026-05-21T08:07:51.454Z",
+  "updatedAt": "2026-09-13T12:03:27.487Z",
   "isStale": false,
-  "pharmacies": []
+  "pharmacies": [
+    {
+      "id": "f4c5dbabf1d4f51ade099cd548b02e87",
+      "name": "HAYAT ECZANESİ",
+      "address": "YENİ MAHALLE ŞEHİT TEĞMEN HALİL DEMİRÖRS CADDESİ NO:2/B",
+      "phoneNumber": "02482321010",
+      "district": "MERKEZ",
+      "latitude": 37.723508,
+      "longitude": 30.291353,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:27.487Z",
+      "source": "burdureo.org.tr",
+      "sourceUrl": "https://www.burdureo.org.tr/nobetci-eczaneler"
+    },
+    {
+      "id": "1f379fad43da94aaf0840d45b39b880c",
+      "name": "KARDELEN ECZANESİ",
+      "address": "SANAYİ MAHALLESİ ORHANGAZİ CADDESİ NO:4/5",
+      "phoneNumber": "02483257943",
+      "district": "BUCAK",
+      "latitude": 37.469993,
+      "longitude": 30.565374,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:27.487Z",
+      "source": "burdureo.org.tr",
+      "sourceUrl": "https://www.burdureo.org.tr/nobetci-eczaneler"
+    },
+    {
+      "id": "9cba16cd4773b137ba32fc0703e33c81",
+      "name": "ŞENEL ECZANESİ",
+      "address": "PAZAR MAHALLESİ CUMHURİYET CADDESİ NO: 69/ A",
+      "phoneNumber": "02484116070",
+      "district": "GÖLHİSAR",
+      "latitude": 37.145019,
+      "longitude": 29.508884,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:27.487Z",
+      "source": "burdureo.org.tr",
+      "sourceUrl": "https://www.burdureo.org.tr/nobetci-eczaneler"
+    },
+    {
+      "id": "8265dac3352726f0cd28139a756fe7cd",
+      "name": "AKDENİZ ECZANESİ",
+      "address": "MERKEZ MAHALLESİ HÜKÜMET CADDESİ NO:8/A",
+      "phoneNumber": "02486182421",
+      "district": "YEŞİLOVA",
+      "latitude": 37.505978,
+      "longitude": 29.752879,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:27.487Z",
+      "source": "burdureo.org.tr",
+      "sourceUrl": "https://www.burdureo.org.tr/nobetci-eczaneler"
+    },
+    {
+      "id": "3725fc62de31996eadf6c33e0e1101f0",
+      "name": "TEFENNİ ECZANESİ",
+      "address": "YOKUŞ MAHALLESİ BURDUR CADDESİ NO:4",
+      "phoneNumber": "02484912036",
+      "district": "TEFENNİ",
+      "latitude": 37.308557,
+      "longitude": 29.774557,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:27.487Z",
+      "source": "burdureo.org.tr",
+      "sourceUrl": "https://www.burdureo.org.tr/nobetci-eczaneler"
+    },
+    {
+      "id": "8a5784d7614309d29f1439f6a74b4d79",
+      "name": "PAZAR ECZANESİ",
+      "address": "PAZAR MAHALLESİ YEŞİLOVA CADDESİ NO:2",
+      "phoneNumber": "02485312729",
+      "district": "KARAMANLI",
+      "latitude": 37.370263,
+      "longitude": 29.822179,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:27.487Z",
+      "source": "burdureo.org.tr",
+      "sourceUrl": "https://www.burdureo.org.tr/nobetci-eczaneler"
+    }
+  ]
 }

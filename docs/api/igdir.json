@@ -1,7 +1,50 @@
 {
   "city": "igdir",
   "cityDisplayName": "Iğdır",
-  "updatedAt": "2026-05-21T08:10:47.415Z",
+  "updatedAt": "2026-09-13T12:03:32.553Z",
   "isStale": false,
-  "pharmacies": []
+  "pharmacies": [
+    {
+      "id": "44475bf05d9bb7777c1a9465ff029bd4",
+      "name": "CAN ECZANESİ",
+      "address": "KARŞIYAKA MAH. MİLLİ EGEMENLİK CAD. NO:37/C",
+      "phoneNumber": "0442 316 97 05",
+      "district": "ARALIK",
+      "latitude": 39.871344,
+      "longitude": 44.514356,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:32.553Z",
+      "source": "erzurumeo.org.tr",
+      "sourceUrl": "https://www.erzurumeo.org.tr/nobetci-eczaneler/76"
+    },
+    {
+      "id": "34d744dbd6c4b2461c43e806b4bba63e",
+      "name": "ONUR ECZANESI",
+      "address": "CUMHURIYET MAHALLESI KAZIM KARABEKIR CADDESI NO.81 IGDIR",
+      "phoneNumber": "04762261827",
+      "district": "MERKEZ",
+      "latitude": 39.915342,
+      "longitude": 44.049751,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:32.553Z",
+      "source": "erzurumeo.org.tr",
+      "sourceUrl": "https://www.erzurumeo.org.tr/nobetci-eczaneler/76"
+    },
+    {
+      "id": "4dfbc34286a176c5574607b81ee758cb",
+      "name": "AYDIN ECZANESİ",
+      "address": "CUMHURİYET MAH.SAĞLIK OCAĞI YOLU SOKAĞI NO:14 TUZLUCA-IĞDIR",
+      "phoneNumber": "04763112222",
+      "district": "TUZLUCA",
+      "latitude": 40.040907,
+      "longitude": 43.663304,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:32.553Z",
+      "source": "erzurumeo.org.tr",
+      "sourceUrl": "https://www.erzurumeo.org.tr/nobetci-eczaneler/76"
+    }
+  ]
 }

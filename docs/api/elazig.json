@@ -1,7 +1,106 @@
 {
   "city": "elazig",
   "cityDisplayName": "Elazığ",
-  "updatedAt": "2026-05-21T08:08:06.923Z",
+  "updatedAt": "2026-09-13T12:03:29.427Z",
   "isStale": false,
-  "pharmacies": []
+  "pharmacies": [
+    {
+      "id": "e2a4d79830ca25290ee2ac7fa066e7cb",
+      "name": "OKUBAY ECZANESİ",
+      "address": "ŞEHİR HASTANESİ AĞIZ DİŞ ÇIKIŞI ULUKENT MAH.17200. SOK.NO:3BA (ŞEHİR HASTANESİ AĞIZ DİŞ ÇIKIŞI)",
+      "phoneNumber": "04242368383",
+      "district": "MERKEZ",
+      "latitude": 38.68958,
+      "longitude": 39.268378,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:29.427Z",
+      "source": "elazigeczaciodasi.org.tr",
+      "sourceUrl": "https://www.elazigeczaciodasi.org.tr/nobetci-eczaneler/elazig"
+    },
+    {
+      "id": "4b161f4f0c626f775580124663157dba",
+      "name": "IHLAMUR ECZANESİ",
+      "address": "İCADİYE MAH.YAKUP ŞEVKİ CAD.NO:32/E",
+      "phoneNumber": "04242122000",
+      "district": "MERKEZ",
+      "latitude": 38.676651,
+      "longitude": 39.228158,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:29.427Z",
+      "source": "elazigeczaciodasi.org.tr",
+      "sourceUrl": "https://www.elazigeczaciodasi.org.tr/nobetci-eczaneler/elazig"
+    },
+    {
+      "id": "5542f52f9841168078572b7aa4335985",
+      "name": "TATAR ECZANESİ",
+      "address": "YENİ MAH.YUNUS EMRE BULVARI NO:54/A",
+      "phoneNumber": "04242332700",
+      "district": "MERKEZ",
+      "latitude": 38.68159,
+      "longitude": 39.214352,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:29.427Z",
+      "source": "elazigeczaciodasi.org.tr",
+      "sourceUrl": "https://www.elazigeczaciodasi.org.tr/nobetci-eczaneler/elazig"
+    },
+    {
+      "id": "e395eb12cd14f70067732dc620a8cd49",
+      "name": "ÇAYDAÇIRA ECZANESİ",
+      "address": "ÇAYDAÇIRA MAH.ADNAN KAHVECİ BUL.NO 114 ÇAYDAÇIRA MUHTARLIK YANI ELAZIĞ-MERKEZ ÇAYDAÇIRA MAH.ADNAN KAHVECİ SOK.NO:114",
+      "phoneNumber": "04245020404",
+      "district": "MERKEZ",
+      "latitude": 38.693113,
+      "longitude": 39.168361,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:29.427Z",
+      "source": "elazigeczaciodasi.org.tr",
+      "sourceUrl": "https://www.elazigeczaciodasi.org.tr/nobetci-eczaneler/elazig"
+    },
+    {
+      "id": "f9112cd9f8ac92acc62d2179a3f6ef33",
+      "name": "SARA ECZANESİ",
+      "address": "YENİ MAH. KALECİK CAD.NO:9/E",
+      "phoneNumber": "04247115005",
+      "district": "KARAKOÇAN",
+      "latitude": 38.955383,
+      "longitude": 40.039575,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:29.427Z",
+      "source": "elazigeczaciodasi.org.tr",
+      "sourceUrl": "https://www.elazigeczaciodasi.org.tr/nobetci-eczaneler/elazig"
+    },
+    {
+      "id": "9d782d3907457773d28850e16fd510a4",
+      "name": "Özkeser ECZANESİ",
+      "address": "Gültepe Mah.Lokman Sok. No:3",
+      "phoneNumber": "04246112529",
+      "district": "KOVANCILAR",
+      "latitude": 38.721908,
+      "longitude": 39.856264,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:29.427Z",
+      "source": "elazigeczaciodasi.org.tr",
+      "sourceUrl": "https://www.elazigeczaciodasi.org.tr/nobetci-eczaneler/elazig"
+    },
+    {
+      "id": "1e80eedeaa298f460502a9786bb94156",
+      "name": "PALU ECZANESİ",
+      "address": "NUMUNE MAH.CUMHURİYET BLV.NO:16",
+      "phoneNumber": "04246512040",
+      "district": "PALU",
+      "latitude": 38.693169,
+      "longitude": 39.927802,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:29.427Z",
+      "source": "elazigeczaciodasi.org.tr",
+      "sourceUrl": "https://www.elazigeczaciodasi.org.tr/nobetci-eczaneler/elazig"
+    }
+  ]
 }

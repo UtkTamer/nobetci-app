@@ -1,7 +1,92 @@
 {
   "city": "karabuk",
   "cityDisplayName": "Karabük",
-  "updatedAt": "2026-05-21T08:10:58.170Z",
+  "updatedAt": "2026-09-13T12:03:33.197Z",
   "isStale": false,
-  "pharmacies": []
+  "pharmacies": [
+    {
+      "id": "03f6fc0f6a3441717aa442c4273a9616",
+      "name": "100. YIL ECZANESİ",
+      "address": "100.YIL MAHALLESI PROF DR BURHANETTİN UYSAL CAD. NO: 26-28/A KARABÜK",
+      "phoneNumber": "0366 214 54 74",
+      "district": "BEŞBİNEVLER",
+      "latitude": 41.217913,
+      "longitude": 32.668108,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:33.197Z",
+      "source": "kastamonueo.org.tr",
+      "sourceUrl": "https://www.kastamonueo.org.tr/nobetci-eczaneler/78"
+    },
+    {
+      "id": "7f1da4f2b9932c8cf6eb7826e2d0886b",
+      "name": "MİRAY ECZANESİ",
+      "address": "YEŞİL MAH. SAFİR BULVARI NO:14A",
+      "phoneNumber": "05011417878",
+      "district": "MERKEZ",
+      "latitude": 41.203938,
+      "longitude": 32.624799,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:33.197Z",
+      "source": "kastamonueo.org.tr",
+      "sourceUrl": "https://www.kastamonueo.org.tr/nobetci-eczaneler/78"
+    },
+    {
+      "id": "3104943d1998fa3cdb25d19626d2796a",
+      "name": "TUĞBA ECZANESİ",
+      "address": "HÜKÜMET CADDESI NO:71/B EFLANI/KARABÜK",
+      "phoneNumber": "03704612427",
+      "district": "EFLANİ",
+      "latitude": 41.423121,
+      "longitude": 32.956794,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:33.197Z",
+      "source": "kastamonueo.org.tr",
+      "sourceUrl": "https://www.kastamonueo.org.tr/nobetci-eczaneler/78"
+    },
+    {
+      "id": "b98a287896a0bc3701438321f0edde63",
+      "name": "ŞİFA ECZANESİ",
+      "address": "MERKEZ MAHALLESI INÖNÜ CADDESI SEN IS HANI NO:1 ESKIPAZAR/KARABÜK",
+      "phoneNumber": "03708183500",
+      "district": "ESKİPAZAR",
+      "latitude": 40.943869,
+      "longitude": 32.529563,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:33.197Z",
+      "source": "kastamonueo.org.tr",
+      "sourceUrl": "https://www.kastamonueo.org.tr/nobetci-eczaneler/78"
+    },
+    {
+      "id": "33b719daeb95fc6f8093ea2aea8f55b5",
+      "name": "SEDA ŞAHİN ECZANESİ",
+      "address": "ATATÜRK MAH. AKTER SOKAK 2.AKTER SİTESİ B-BLOK NO:9/C SAFRANBOLU KARABÜK",
+      "phoneNumber": "03707122266",
+      "district": "SAFRANBOLU",
+      "latitude": 41.251841,
+      "longitude": 32.683959,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:33.197Z",
+      "source": "kastamonueo.org.tr",
+      "sourceUrl": "https://www.kastamonueo.org.tr/nobetci-eczaneler/78"
+    },
+    {
+      "id": "d4241e919d1c62da11e3eb6d2f7f9c18",
+      "name": "GÖKÇE ECZANESİ",
+      "address": "INÖNÜ CADDESI NO:2/A YENICE/KARABÜK",
+      "phoneNumber": "03707664455",
+      "district": "YENİCE",
+      "latitude": 41.199702,
+      "longitude": 32.3299,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:33.197Z",
+      "source": "kastamonueo.org.tr",
+      "sourceUrl": "https://www.kastamonueo.org.tr/nobetci-eczaneler/78"
+    }
+  ]
 }

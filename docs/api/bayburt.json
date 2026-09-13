@@ -1,7 +1,36 @@
 {
   "city": "bayburt",
   "cityDisplayName": "Bayburt",
-  "updatedAt": "2026-05-21T08:10:32.857Z",
+  "updatedAt": "2026-09-13T12:03:31.960Z",
   "isStale": false,
-  "pharmacies": []
+  "pharmacies": [
+    {
+      "id": "80aadfc716287d783b2d694b8d4f42f2",
+      "name": "DOĞA ECZANESİ",
+      "address": "TUZCUZADE MAH. VALİ NİHAT ÜÇYILDIZ CAD. NO:32/A MERKEZ/BAYBURT",
+      "phoneNumber": "0442 316 97 05",
+      "district": "MERKEZ",
+      "latitude": 40.25437,
+      "longitude": 40.223399,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:31.960Z",
+      "source": "erzurumeo.org.tr",
+      "sourceUrl": "https://www.erzurumeo.org.tr/nobetci-eczaneler/69"
+    },
+    {
+      "id": "3eb209f4d96257b2d39e41cea05d13e7",
+      "name": "ŞİMŞEK ECZANESİ",
+      "address": "ŞİRİN MAH.DR. ÜLKÜ GÜNEY CAD. NO:29/B",
+      "phoneNumber": "05539259878",
+      "district": "DEMİRÖZÜ",
+      "latitude": 40.16445,
+      "longitude": 39.893121,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:31.960Z",
+      "source": "erzurumeo.org.tr",
+      "sourceUrl": "https://www.erzurumeo.org.tr/nobetci-eczaneler/69"
+    }
+  ]
 }

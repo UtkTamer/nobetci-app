@@ -1,7 +1,92 @@
 {
   "city": "gumushane",
   "cityDisplayName": "Gümüşhane",
-  "updatedAt": "2026-05-21T08:08:33.205Z",
+  "updatedAt": "2026-09-13T12:03:30.723Z",
   "isStale": false,
-  "pharmacies": []
+  "pharmacies": [
+    {
+      "id": "f70e761a6f548ba34004e21fc57f4943",
+      "name": "SAĞLIK ECZANESİ",
+      "address": "KARAER MAH.ATATÜRK CAD.NO:13/A",
+      "phoneNumber": "0 462 321 31 01",
+      "district": "BAŞKANDAN",
+      "latitude": 40.458946,
+      "longitude": 39.479165,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:30.723Z",
+      "source": "trabzoneczaciodasi.org.tr",
+      "sourceUrl": "https://www.trabzoneczaciodasi.org.tr/nobetci-eczaneler/29"
+    },
+    {
+      "id": "c9410e0549c954449de7900231b2d2cf",
+      "name": "DEVA ECZANESİ",
+      "address": "CUMHURİYET MAH.AYDIN DOĞAN CAD. NO:164/A",
+      "phoneNumber": "04563171129",
+      "district": "KELKİT",
+      "latitude": 40.128061,
+      "longitude": 39.435345,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:30.723Z",
+      "source": "trabzoneczaciodasi.org.tr",
+      "sourceUrl": "https://www.trabzoneczaciodasi.org.tr/nobetci-eczaneler/29"
+    },
+    {
+      "id": "126de827341d8d61a6d34e8109efc47e",
+      "name": "YAŞAM ECZANESİ",
+      "address": "TEKKE MAH.ŞEHİT TEĞMEN TUNA KARA CAD. NO:18/A",
+      "phoneNumber": "04565117720",
+      "district": "ŞİRAN",
+      "latitude": 40.188902,
+      "longitude": 39.1239,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:30.723Z",
+      "source": "trabzoneczaciodasi.org.tr",
+      "sourceUrl": "https://www.trabzoneczaciodasi.org.tr/nobetci-eczaneler/29"
+    },
+    {
+      "id": "4a651ba33c88caeb7f4aac84316d7069",
+      "name": "TORUL ECZANESİ",
+      "address": "MERKEZ MAH.ATATÜRK CAD.NO:55/A TORUL ÇARŞI İÇİ HALK BANKASI YANI",
+      "phoneNumber": "04566112222",
+      "district": "TORUL",
+      "latitude": 40.557738,
+      "longitude": 39.292833,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:30.723Z",
+      "source": "trabzoneczaciodasi.org.tr",
+      "sourceUrl": "https://www.trabzoneczaciodasi.org.tr/nobetci-eczaneler/29"
+    },
+    {
+      "id": "2b52f476ad7da1dddfc9824016217946",
+      "name": "HUZUR ECZANESİ",
+      "address": "OLTAN SUNGURLU CAD.NO:45",
+      "phoneNumber": "04564115202",
+      "district": "KÖSE",
+      "latitude": 40.209271,
+      "longitude": 39.65357,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:30.723Z",
+      "source": "trabzoneczaciodasi.org.tr",
+      "sourceUrl": "https://www.trabzoneczaciodasi.org.tr/nobetci-eczaneler/29"
+    },
+    {
+      "id": "4554cf14a550480621a91f67e90d06d0",
+      "name": "KÜRTÜN SIMGE ECZANESİ",
+      "address": "2.TRANSIT CADDE NO:3/B BELEDİYE YANI ÖĞRETMEN EVİ KARŞISI",
+      "phoneNumber": "04567116393",
+      "district": "KÜRTÜN",
+      "latitude": 40.700709,
+      "longitude": 39.087943,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:30.723Z",
+      "source": "trabzoneczaciodasi.org.tr",
+      "sourceUrl": "https://www.trabzoneczaciodasi.org.tr/nobetci-eczaneler/29"
+    }
+  ]
 }

@@ -1,7 +1,92 @@
 {
   "city": "bilecik",
   "cityDisplayName": "Bilecik",
-  "updatedAt": "2026-05-21T08:07:38.600Z",
+  "updatedAt": "2026-09-13T12:03:25.978Z",
   "isStale": false,
-  "pharmacies": []
+  "pharmacies": [
+    {
+      "id": "33b520ded840bb8d313b78267fc17e1e",
+      "name": "DOĞA ECZANESİ",
+      "address": "HÜRRİYET MAH.ALTI EYLÜL 1 SOK. NO:18/A 3 Nolu Sağlık Ocağı Karşısı",
+      "phoneNumber": "0 222 221 2686",
+      "district": "MERKEZ",
+      "latitude": 40.155282,
+      "longitude": 29.982103,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:25.978Z",
+      "source": "eskisehireo.org.tr",
+      "sourceUrl": "https://www.eskisehireo.org.tr/bilecik-nobetci-eczaneler"
+    },
+    {
+      "id": "25d5d8f95dce6c52a43bd542e5707f24",
+      "name": "GÜL ECZANESİ",
+      "address": "YENİ MAH. DR. İSMAİL BAKKALCIOĞLU CAD. NO:23/A",
+      "phoneNumber": "02283154436",
+      "district": "BOZÜYÜK",
+      "latitude": 39.904987,
+      "longitude": 30.038195,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:25.978Z",
+      "source": "eskisehireo.org.tr",
+      "sourceUrl": "https://www.eskisehireo.org.tr/bilecik-nobetci-eczaneler"
+    },
+    {
+      "id": "5a5cbb9ce7c7c604793853b9a9776aa9",
+      "name": "GÖLPAZARI ECZANESİ",
+      "address": "İSTİKLAL MAH. GAZİPAŞA MEYDANI NO:3/B",
+      "phoneNumber": "02284113078",
+      "district": "GÖLPAZARI",
+      "latitude": 40.282586,
+      "longitude": 30.314307,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:25.978Z",
+      "source": "eskisehireo.org.tr",
+      "sourceUrl": "https://www.eskisehireo.org.tr/bilecik-nobetci-eczaneler"
+    },
+    {
+      "id": "c0b407d690b15a013d5a173b87e7bbf6",
+      "name": "SENA ECZANESİ",
+      "address": "Haceloğlu Mah. Hürriyet Cd. No:25/A",
+      "phoneNumber": "02282022122",
+      "district": "OSMANELİ",
+      "latitude": 40.360363,
+      "longitude": 30.017854,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:25.978Z",
+      "source": "eskisehireo.org.tr",
+      "sourceUrl": "https://www.eskisehireo.org.tr/bilecik-nobetci-eczaneler"
+    },
+    {
+      "id": "552a9185e579bc748ff3df333545a97b",
+      "name": "HAYAT ECZANESİ",
+      "address": "ISTASYON CAD.NO:17PAZARYERI/BILECIK",
+      "phoneNumber": "02283812044",
+      "district": "PAZARYERİ",
+      "latitude": 39.995582,
+      "longitude": 29.90451,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:25.978Z",
+      "source": "eskisehireo.org.tr",
+      "sourceUrl": "https://www.eskisehireo.org.tr/bilecik-nobetci-eczaneler"
+    },
+    {
+      "id": "e38bacc8464906f36e3a66f5139bf1d0",
+      "name": "FATİH ECZANESİ",
+      "address": "KAYHAN MAH. ERTUĞRULGAZİ CAD. NO:68/1",
+      "phoneNumber": "02283614544",
+      "district": "SÖĞÜT",
+      "latitude": 40.019926,
+      "longitude": 30.18056,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:25.978Z",
+      "source": "eskisehireo.org.tr",
+      "sourceUrl": "https://www.eskisehireo.org.tr/bilecik-nobetci-eczaneler"
+    }
+  ]
 }

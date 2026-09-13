@@ -1,7 +1,78 @@
 {
   "city": "bingol",
   "cityDisplayName": "Bingöl",
-  "updatedAt": "2026-05-21T08:07:38.600Z",
+  "updatedAt": "2026-09-13T12:03:25.863Z",
   "isStale": false,
-  "pharmacies": []
+  "pharmacies": [
+    {
+      "id": "cf81f25f0953d68843bb270423c342e9",
+      "name": "DERMAN ECZANESİ",
+      "address": "YENISEHIR MAH.GENÇ CAD. NO:99",
+      "phoneNumber": "4262131297",
+      "district": "MERKEZ",
+      "latitude": 38.88509,
+      "longitude": 40.497388,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:25.863Z",
+      "source": "elazigeczaciodasi.org.tr",
+      "sourceUrl": "https://www.elazigeczaciodasi.org.tr/nobetci-eczaneler/bingol"
+    },
+    {
+      "id": "8faa2dda99cf42cbc9dfb3ad95ff5de7",
+      "name": "TABİAT ECZANESİ",
+      "address": "BNGLDEVLETHASTANESKARISI SARAY MAH.HASAN BASRİ CAD. NO:60/19",
+      "phoneNumber": "04265020059",
+      "district": "MERKEZ",
+      "latitude": 38.893061,
+      "longitude": 40.511476,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:25.863Z",
+      "source": "elazigeczaciodasi.org.tr",
+      "sourceUrl": "https://www.elazigeczaciodasi.org.tr/nobetci-eczaneler/bingol"
+    },
+    {
+      "id": "bde314144f46bcdf6437d683f88eeda1",
+      "name": "SAGLIK ECZANESİ",
+      "address": "BINGÖL CAD. NO:7/A GENÇ/ BINGÖL",
+      "phoneNumber": "04264113602",
+      "district": "GENÇ",
+      "latitude": 38.749442,
+      "longitude": 40.549506,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:25.863Z",
+      "source": "elazigeczaciodasi.org.tr",
+      "sourceUrl": "https://www.elazigeczaciodasi.org.tr/nobetci-eczaneler/bingol"
+    },
+    {
+      "id": "e392ea9865532d2117e21adc7f9a6ed1",
+      "name": "HAYAT ECZANESİ ECZANESİ",
+      "address": "FATIH CD. NO: 3 KARLIOVA/BINGÖL",
+      "phoneNumber": "04265112765",
+      "district": "KARLIOVA",
+      "latitude": 39.296755,
+      "longitude": 41.013353,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:25.863Z",
+      "source": "elazigeczaciodasi.org.tr",
+      "sourceUrl": "https://www.elazigeczaciodasi.org.tr/nobetci-eczaneler/bingol"
+    },
+    {
+      "id": "d7dc6ab17828c5fd089192c3f6097075",
+      "name": "SOLHAN ECZANESİ",
+      "address": "YENİ MAH 345.SOK NO:2/A",
+      "phoneNumber": "04267112066",
+      "district": "SOLHAN",
+      "latitude": 38.959194,
+      "longitude": 41.039174,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:25.863Z",
+      "source": "elazigeczaciodasi.org.tr",
+      "sourceUrl": "https://www.elazigeczaciodasi.org.tr/nobetci-eczaneler/bingol"
+    }
+  ]
 }

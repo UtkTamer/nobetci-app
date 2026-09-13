@@ -1,7 +1,106 @@
 {
   "city": "erzincan",
   "cityDisplayName": "Erzincan",
-  "updatedAt": "2026-05-21T08:08:20.495Z",
+  "updatedAt": "2026-09-13T12:03:29.791Z",
   "isStale": false,
-  "pharmacies": []
+  "pharmacies": [
+    {
+      "id": "18f164e8dac9ad1091fa39774f746b9f",
+      "name": "FIRAT ECZANESİ",
+      "address": "KARAAĞAÇ MAH.755 SOK.NO:11 ERZİNCAN",
+      "phoneNumber": "04462240204",
+      "district": "ADVERS ETKİ BİLDİRİMİ",
+      "latitude": 39.745357,
+      "longitude": 39.494286,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:29.791Z",
+      "source": "erzincaneo.org.tr",
+      "sourceUrl": "https://erzincaneo.org.tr/nobetci-eczaneler"
+    },
+    {
+      "id": "338724d7395d5aeba719cb04c690fade",
+      "name": "KÜBRA NAZIR ECZANESİ",
+      "address": "KARAAGAÇ MAHALLESI SEHIT YÜZBASI FATIH DEVRAVUT CADDESI NO: 27/1 ERZINCAN",
+      "phoneNumber": "04462233366",
+      "district": "MERKEZ",
+      "latitude": 39.74556,
+      "longitude": 39.494322,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:29.791Z",
+      "source": "erzincaneo.org.tr",
+      "sourceUrl": "https://erzincaneo.org.tr/nobetci-eczaneler"
+    },
+    {
+      "id": "69af1d22eef947ff0263405b9cfe3072",
+      "name": "GÜLİZ ECZANESİ",
+      "address": "ATATÜRK MAH HÜKÜMET CAD. NO:17/C ÇAYIRLI ERZINCAN",
+      "phoneNumber": "04463113403",
+      "district": "ÇAYIRLI",
+      "latitude": 39.807329,
+      "longitude": 40.03736,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:29.791Z",
+      "source": "erzincaneo.org.tr",
+      "sourceUrl": "https://erzincaneo.org.tr/nobetci-eczaneler"
+    },
+    {
+      "id": "cee38d9d7aa39a84953aea69d1ca1491",
+      "name": "FATMA ECZANESİ",
+      "address": "ABDULLAHPAŞA MAH.HÜKÜMET CAD.NO:17/B",
+      "phoneNumber": "05416368983",
+      "district": "İLİÇ",
+      "latitude": 39.455163,
+      "longitude": 38.562801,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:29.791Z",
+      "source": "erzincaneo.org.tr",
+      "sourceUrl": "https://erzincaneo.org.tr/nobetci-eczaneler"
+    },
+    {
+      "id": "8c45cdb84cc46490c429fc93fee20d89",
+      "name": "KÜBRA NUR ECZANESİ",
+      "address": "HÜKÜMET MAH.ŞEHİT METİN DAĞ SOK.NO:4-B REFAHİYE-ERZİNCAN",
+      "phoneNumber": "04466113238",
+      "district": "REFAHİYE",
+      "latitude": 39.899171,
+      "longitude": 38.768184,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:29.791Z",
+      "source": "erzincaneo.org.tr",
+      "sourceUrl": "https://erzincaneo.org.tr/nobetci-eczaneler"
+    },
+    {
+      "id": "aa0d9d1570a5c3edbc7aa7cdaf39f8b0",
+      "name": "YENİ BARIŞ ECZANESİ",
+      "address": "KAZIM KARABEKIR MAH. KERVANSARAY CAD. NO: 13/C TERCAN",
+      "phoneNumber": "04464412525",
+      "district": "TERCAN",
+      "latitude": 39.778541,
+      "longitude": 40.380459,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:29.791Z",
+      "source": "erzincaneo.org.tr",
+      "sourceUrl": "https://erzincaneo.org.tr/nobetci-eczaneler"
+    },
+    {
+      "id": "d8805f7d47ce6dca4966b879c9ecf8b4",
+      "name": "ÜZÜMLÜ ECZANESİ",
+      "address": "FATIH MAH.ERZİNCAN BULVARI ÜZÜMLÜ DEVLET HASTANESİ KARŞISI NO:112/B ÜZÜMLÜ ERZINCAN",
+      "phoneNumber": "04464112313",
+      "district": "ÜZÜMLÜ",
+      "latitude": 39.697854,
+      "longitude": 39.683889,
+      "dutyStart": null,
+      "dutyEnd": null,
+      "lastVerifiedAt": "2026-09-13T12:03:29.791Z",
+      "source": "erzincaneo.org.tr",
+      "sourceUrl": "https://erzincaneo.org.tr/nobetci-eczaneler"
+    }
+  ]
 }
