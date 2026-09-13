@@ -1,15 +1,14 @@
 name: Geocode pharmacies
 
+# Runs after every refresh; no separate cron, which used to fire a second,
+# redundant pass every day.
 on:
-  schedule:
-    # 07:30 Europe/Istanbul = 04:30 UTC
-    - cron: '30 4 * * *'
   workflow_dispatch:
     inputs:
       city_filter:
-        description: "Comma separated city slugs (default: ankara)"
+        description: "Comma separated city slugs (blank = all configured cities)"
         required: false
-        default: ankara
+        default: ""
   workflow_run:
     workflows:
       - Refresh pharmacies
@@ -23,13 +22,13 @@ permissions:
   contents: write
 
 jobs:
-  geocode-ankara:
+  geocode:
     name: Geocode pharmacies
     runs-on: ubuntu-latest
     if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     timeout-minutes: 45
     env:
-      CITY_FILTER: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.city_filter || 'ankara' }}
+      CITY_FILTER: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.city_filter || '' }}
 
     steps:
       - name: Checkout repository
@@ -57,12 +56,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          IFS=',' read -ra CITY_LIST <<< "${CITY_FILTER}"
-          FILES="docs/api/health.json docs/api/cities.json scripts/geocode-cache.json"
-          for city in "${CITY_LIST[@]}"; do
-            FILES="$FILES docs/api/${city}.json"
-          done
-          git add $FILES
+          git add docs/api scripts/geocode-cache.json
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else

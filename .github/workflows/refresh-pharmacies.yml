@@ -7,9 +7,9 @@ on:
   workflow_dispatch:
     inputs:
       city_filter:
-        description: "Comma separated city slugs (default: ankara)"
+        description: "Comma separated city slugs (blank = all configured cities)"
         required: false
-        default: ankara
+        default: ""
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -19,12 +19,12 @@ permissions:
   pages: write
 
 jobs:
-  refresh-ankara:
+  refresh:
     name: Refresh pharmacies
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
-      CITY_FILTER: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.city_filter || 'ankara' }}
+      CITY_FILTER: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.city_filter || '' }}
 
     steps:
       - name: Checkout repository
@@ -64,12 +64,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          IFS=',' read -ra CITY_LIST <<< "${CITY_FILTER}"
-          FILES="docs/api/health.json docs/api/cities.json"
-          for city in "${CITY_LIST[@]}"; do
-            FILES="$FILES docs/api/${city}.json"
-          done
-          git add $FILES
+          git add docs/api
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else

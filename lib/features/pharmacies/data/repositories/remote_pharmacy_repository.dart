@@ -115,10 +115,18 @@ class RemotePharmacyRepository extends PharmacyRepository {
       );
     }
 
+    final updatedAt = DateTime.parse(decoded['updatedAt'] as String);
+    // Nöbet her gün değiştiği için bir günden eski besleme, dosyadaki bayrak ne
+    // derse desin bayattır.
+    final isOutdated =
+        DateTime.now().toUtc().difference(updatedAt.toUtc()) >
+        const Duration(hours: 24);
+
     return PharmacyFeed(
       city: decoded['cityDisplayName'] as String? ?? citySlug,
-      updatedAt: DateTime.parse(decoded['updatedAt'] as String),
-      isStale: forceStale || (decoded['isStale'] as bool? ?? false),
+      updatedAt: updatedAt,
+      isStale:
+          forceStale || isOutdated || (decoded['isStale'] as bool? ?? false),
       pharmacies: pharmaciesJson
           .whereType<Map<String, dynamic>>()
           .map(_pharmacyFromJson)

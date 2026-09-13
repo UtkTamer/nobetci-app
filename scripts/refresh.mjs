@@ -95,6 +95,44 @@ const CITIES = [
   { slug: 'duzce', displayName: 'Düzce', plateCode: '81' },
 ];
 
+// Per-city source pages. Most provincial chambers run the same CMS family, which
+// renders each pharmacy as a card ending in a Google Maps link that already
+// carries the coordinates -- so these cities need no geocoding at all.
+const CITY_SOURCE_PAGES = {
+  adana: 'https://www.adanaeo.org.tr/nobetci-eczaneler',
+  adiyaman: 'https://www.adiyamaneo.org.tr/nobetci-eczaneler',
+  afyonkarahisar: 'https://www.afyoneczaciodasi.org.tr/nobetci-eczaneler',
+  agri: 'https://www.agrieo.org.tr/nobetci-eczaneler',
+  aksaray: 'https://www.aksarayeo.org.tr/nobetci-eczaneler',
+  antalya: 'https://www.antalyaeo.org.tr/tr/nobetci-eczaneler',
+  artvin: 'https://www.trabzoneczaciodasi.org.tr/nobetci-eczaneler/8',
+  balikesir: 'https://www.balikesireczaciodasi.org.tr/nobetci-eczaneler',
+  batman: 'https://www.batmaneczaciodasi.org.tr/nobetci-eczaneler',
+  bayburt: 'https://www.erzurumeo.org.tr/nobetci-eczaneler/69',
+  bilecik: 'https://www.eskisehireo.org.tr/bilecik-nobetci-eczaneler',
+  bingol: 'https://www.elazigeczaciodasi.org.tr/nobetci-eczaneler/bingol',
+  bitlis: 'https://www.bitlisecza.org.tr/nobetci-eczaneler',
+  bolu: 'https://seobit.org.tr/nobetci-eczaneler',
+  burdur: 'https://www.burdureo.org.tr/nobetci-eczaneler',
+  bursa: 'https://www.beo.org.tr/nobetci-eczaneler',
+  canakkale: 'https://www.canakkaleeo.org.tr/nobetci-eczaneler',
+  cankiri: 'https://www.kastamonueo.org.tr/nobetci-eczaneler/18',
+  corum: 'https://www.corumeo.org.tr/nobetci-eczaneler',
+  diyarbakir: 'https://www.diyarbakireo.org.tr/nobetci-eczaneler',
+  duzce: 'https://www.duzceeo.org/nobetci-eczaneler',
+  edirne: 'https://www.edirneeo.org.tr/nobetci-eczaneler',
+  elazig: 'https://www.elazigeczaciodasi.org.tr/nobetci-eczaneler/elazig',
+  erzincan: 'https://erzincaneo.org.tr/nobetci-eczaneler',
+  erzurum: 'https://www.erzurumeo.org.tr/nobetci-eczaneler/25',
+  eskisehir: 'https://www.eskisehireo.org.tr/eskisehir-nobetci-eczaneler/',
+  gumushane: 'https://www.trabzoneczaciodasi.org.tr/nobetci-eczaneler/29',
+  hatay: 'https://www.hatayeo.org.tr/nobetci-eczaneler',
+  igdir: 'https://www.erzurumeo.org.tr/nobetci-eczaneler/76',
+  isparta: 'https://www.ispartaeo.org.tr/nobetci-eczaneler',
+  izmir: 'https://www.izmireczaciodasi.org.tr/nobetci-eczaneler',
+  karabuk: 'https://www.kastamonueo.org.tr/nobetci-eczaneler/78',
+};
+
 const CITY_SOURCE_OVERRIDES = {
   ankara: 'aeo',
 };
@@ -108,6 +146,10 @@ const SOURCE_PROVIDERS = {
     displayName: 'Ankara Eczaci Odasi',
     pageUrl: 'https://www.aeo.org.tr/nobetci-eczaneler',
     apiUrl: 'https://www.aeo.org.tr/getPharmacies',
+  },
+  // Generic provincial-chamber scraper; the page URL comes from CITY_SOURCE_PAGES.
+  ecza: {
+    displayName: 'Eczaci Odasi',
   },
 };
 const ECZANELER_BASE_URL = SOURCE_PROVIDERS.eczaneler.baseUrl;
@@ -274,7 +316,13 @@ function getCityOutputPath(citySlug) {
 }
 
 function getSourceKeyForCity(city) {
-  return CITY_SOURCE_OVERRIDES[city.slug] ?? 'eczaneler';
+  if (CITY_SOURCE_OVERRIDES[city.slug]) {
+    return CITY_SOURCE_OVERRIDES[city.slug];
+  }
+  if (CITY_SOURCE_PAGES[city.slug]) {
+    return 'ecza';
+  }
+  return 'eczaneler';
 }
 
 function getSourceConfigForCity(city) {
@@ -285,6 +333,15 @@ function getSourceConfigForCity(city) {
   }
 
   return { key, provider };
+}
+
+function getSourceDisplayName(city) {
+  const { key, provider } = getSourceConfigForCity(city);
+  if (key !== 'ecza') {
+    return provider.displayName;
+  }
+
+  return new URL(CITY_SOURCE_PAGES[city.slug]).hostname.replace(/^www\./, '');
 }
 
 function normalizeAddress(value) {
@@ -512,9 +569,14 @@ function parseCityHtml(html, city) {
 }
 
 async function scrapeCity(city) {
-  const { provider } = getSourceConfigForCity(city);
-  if (provider === SOURCE_PROVIDERS.aeo) {
+  const { key, provider } = getSourceConfigForCity(city);
+
+  if (key === 'aeo') {
     return scrapeCityFromAeo(city, provider);
+  }
+
+  if (key === 'ecza') {
+    return scrapeCityFromEcza(city);
   }
 
   return scrapeCityFromEczaneler(city, provider);
@@ -645,6 +707,249 @@ async function scrapeCityFromAeo(city, provider) {
   return records;
 }
 
+// ---------------------------------------------------------------------------
+// Provincial chamber sites (shared CMS family)
+//
+// Every pharmacy card on these sites ends with a Google Maps link that already
+// carries the coordinates, so the coordinate link doubles as a reliable record
+// separator: one card is the markup between the previous maps link and this one.
+// ---------------------------------------------------------------------------
+
+const ECZA_BAD_DISTRICT_RE = /N[OÖ]BET|KART|FORM|YAZDIR|ECZANE|BUG[UÜ]N|\d{4}/i;
+
+function splitTrailingSmall(rawHtml) {
+  const match = rawHtml.match(/<(small|h5)[^>]*>([\s\S]*?)<\/\1>/i);
+  if (!match) {
+    return { text: stripTags(rawHtml), small: '' };
+  }
+
+  return {
+    text: stripTags(rawHtml.replace(/<(small|h5)[\s\S]*?<\/(?:small|h5)>/gi, ' ')),
+    small: stripTags(match[2]),
+  };
+}
+
+// Section headings such as "SEYHAN BUGÜN NÖBETÇİ ECZANELER" name the district for
+// every card below them, for the sites that do not repeat it on each card.
+function extractEczaSectionDistricts(html) {
+  const sections = [];
+  const re = /<h[1-6][^>]*>([\s\S]{0,200}?)<\/h[1-6]>/gi;
+  let match;
+
+  while ((match = re.exec(html)) !== null) {
+    const text = stripTags(match[1]);
+    if (!/N[OÖ]BET[CÇ][İI]\s*ECZANE/i.test(text)) {
+      continue;
+    }
+
+    const district = text
+      .replace(/\s*(?:BUG[UÜ]N|BU\s*GECE)[\s\S]*$/i, '')
+      .replace(/^\d{1,2}\s+\S+\s+\d{4}\s*/, '')
+      .replace(/['’]?(?:da|de|ta|te)$/i, '')
+      .replace(/^[\s'’-]+|[\s'’-]+$/g, '')
+      .trim();
+
+    if (district && district.length < 30 && !ECZA_BAD_DISTRICT_RE.test(district)) {
+      sections.push({ index: match.index, district });
+    }
+  }
+
+  return sections;
+}
+
+function extractEczaName(segment) {
+  const candidates = [];
+  const headRe = /<(h[1-6]|font)\b[^>]*>([\s\S]{0,400}?)<\/\1>/gi;
+  const telRe = /<a\b[^>]*href=["']tel:[^"']+["'][^>]*>([\s\S]{0,120}?)<\/a>/gi;
+  let match;
+
+  while ((match = headRe.exec(segment)) !== null) {
+    candidates.push({ index: match.index, html: match[2] });
+  }
+  while ((match = telRe.exec(segment)) !== null) {
+    candidates.push({ index: match.index, html: match[1] });
+  }
+
+  candidates.sort((a, b) => a.index - b.index);
+
+  // Last "…ECZANE…" heading in the card wins; earlier ones are page furniture.
+  for (let i = candidates.length - 1; i >= 0; i--) {
+    const { text, small } = splitTrailingSmall(candidates[i].html);
+    if (!/ECZ/i.test(text) || text.length < 5) {
+      continue;
+    }
+
+    if (small) {
+      return { name: text, district: small };
+    }
+
+    const dashIndex = text.lastIndexOf(' - ');
+    if (dashIndex > 0) {
+      return {
+        name: text.slice(0, dashIndex).trim(),
+        district: text.slice(dashIndex + 3).trim(),
+      };
+    }
+
+    return { name: text, district: '' };
+  }
+
+  return null;
+}
+
+function extractEczaDistrict(segment) {
+  const patterns = [
+    /<h5[^>]*>([^<]{2,40})<\/h5>/i,
+    /(?:icon-hand-right|fa-arrow-right)[^>]*>\s*(?:<\/i>)?([^<]{2,40})/i,
+    /class="category[^"]*"[^>]*>([^<]{2,40})<\/a>/i,
+    /<div class="ilcebas"[\s\S]{0,200}?<span>\s*([^<]{2,40})<\/span>/i,
+  ];
+
+  for (const pattern of patterns) {
+    const match = segment.match(pattern);
+    if (!match) {
+      continue;
+    }
+
+    const district = stripTags(match[1]);
+    if (district && !ECZA_BAD_DISTRICT_RE.test(district)) {
+      return district;
+    }
+  }
+
+  return '';
+}
+
+function extractEczaAddress(segment, anchorText) {
+  const re =
+    /(?:fa-home|icon-home|fa-map-marker|icon-map-marker)[^>]*>\s*(?:<\/i>)?([\s\S]{0,400}?)(?=<i\b|<a\b|<\/p>|<\/div>|<br\s*\/?>\s*<i)/gi;
+  let address = '';
+  let match;
+
+  while ((match = re.exec(segment)) !== null) {
+    const candidate = stripTags(match[1]);
+    if (candidate) {
+      address = candidate;
+    }
+  }
+
+  if (!address && anchorText.length > 15 && !/^(?:harita|eczane)/i.test(anchorText)) {
+    address = anchorText;
+  }
+
+  return address;
+}
+
+function extractEczaPhone(segment) {
+  const telMatch = segment.match(/href=["']tel:([^"']+)["']/i);
+  if (telMatch) {
+    return cleanPhone(stripTags(telMatch[1]));
+  }
+
+  const iconMatch = segment.match(
+    /(?:fa-phone|icon-phone)[^>]*>\s*(?:<\/i>)?\s*([0-9()\s\-]{7,20})/i,
+  );
+  return iconMatch ? cleanPhone(iconMatch[1]) : '';
+}
+
+function parseEczaRecords(html, sourceUrl) {
+  const sections = extractEczaSectionDistricts(html);
+  const coordRe =
+    /<a\b[^>]*?maps\?q=(-?\d{1,2}\.\d+),\s*(-?\d{1,3}\.\d+)[^>]*>([\s\S]*?)<\/a>/gi;
+
+  const records = [];
+  let cursor = 0;
+  let match;
+
+  while ((match = coordRe.exec(html)) !== null) {
+    const segment = html.slice(cursor, match.index);
+    cursor = coordRe.lastIndex;
+
+    const heading = extractEczaName(segment);
+    if (!heading) {
+      continue;
+    }
+
+    let district = heading.district;
+    if (!district || ECZA_BAD_DISTRICT_RE.test(district)) {
+      district = extractEczaDistrict(segment);
+    }
+    if (!district) {
+      const enclosing = sections.filter((section) => section.index < match.index);
+      district = enclosing.length ? enclosing[enclosing.length - 1].district : '';
+    }
+
+    records.push({
+      name: heading.name,
+      address: extractEczaAddress(segment, stripTags(match[3])),
+      district,
+      phoneNumber: extractEczaPhone(segment),
+      sourceUrl,
+      latitude: Number(match[1]),
+      longitude: Number(match[2]),
+    });
+  }
+
+  return records.filter((record) => record.name && record.address);
+}
+
+async function scrapeCityFromEcza(city) {
+  const url = CITY_SOURCE_PAGES[city.slug];
+  if (!url) {
+    throw new Error(`No chamber source page configured for ${city.slug}.`);
+  }
+
+  const html = await fetchHtml(url);
+  const records = parseEczaRecords(html, url);
+
+  if (records.length === 0) {
+    throw new Error('Chamber source returned zero parsed pharmacies.');
+  }
+
+  return records;
+}
+
+// Most of these sites serve UTF-8, but a few still emit windows-1254, so decode
+// from bytes rather than trusting axios' default.
+async function fetchHtml(url) {
+  let response;
+
+  try {
+    response = await axios.get(url, {
+      headers: DEFAULT_HEADERS,
+      timeout: 60_000,
+      responseType: 'arraybuffer',
+    });
+  } catch (error) {
+    if (error?.response?.status !== 403) {
+      throw error;
+    }
+
+    console.log('  Source returned 403, retrying with Playwright...');
+    return fetchCityHtmlWithPlaywright(url);
+  }
+
+  const buffer = Buffer.from(response.data);
+  const head = buffer.subarray(0, 4096).toString('latin1');
+  const declared = head.match(/charset=["']?([\w-]+)/i)?.[1]?.toLowerCase();
+
+  if (declared && /1254|iso-8859-9/.test(declared)) {
+    return decodeLatin5(buffer);
+  }
+
+  // Decode strictly: a page that merely *contains* a replacement character is
+  // still valid UTF-8, so only a decode error should send us to windows-1254.
+  try {
+    return new TextDecoder('utf-8', { fatal: true }).decode(buffer);
+  } catch {
+    return decodeLatin5(buffer);
+  }
+}
+
+function decodeLatin5(buffer) {
+  return new TextDecoder('windows-1254').decode(buffer);
+}
+
 async function fetchCityHtmlWithPlaywright(url) {
   const browser = await getBrowser();
   const page = await browser.newPage({
@@ -673,7 +978,6 @@ async function fetchCityHtmlWithPlaywright(url) {
 
 async function refreshCity(city) {
   console.log(`\n[${city.displayName}] Starting source scrape...`);
-  const { provider } = getSourceConfigForCity(city);
 
   const records = await scrapeCity(city);
   console.log(`  Found ${records.length} pharmacies`);
@@ -739,7 +1043,7 @@ async function refreshCity(city) {
       dutyStart: null,
       dutyEnd: null,
       lastVerifiedAt: now,
-      source: provider.displayName,
+      source: getSourceDisplayName(city),
       sourceUrl: r.sourceUrl,
     })),
   };
@@ -877,9 +1181,15 @@ async function runWithConcurrency(tasks, concurrency) {
 // ---------------------------------------------------------------------------
 
 async function main() {
+  // Only cities with a configured source are worth refreshing; the rest have no
+  // working provider yet and would just burn CI time failing.
+  const configuredCities = CITIES.filter(
+    (city) => CITY_SOURCE_PAGES[city.slug] || CITY_SOURCE_OVERRIDES[city.slug],
+  );
+
   const citiesToRefresh = selectedCitySlugs.length
     ? CITIES.filter((city) => selectedCitySlugs.includes(city.slug))
-    : CITIES;
+    : configuredCities;
 
   console.log('=== Nobetci Pharmacy Refresh ===');
   console.log(`Date: ${new Date().toISOString()}`);
@@ -906,6 +1216,20 @@ async function main() {
       const output = geocodeOnly
         ? await geocodeExistingCity(city)
         : await refreshCityWithRetry(city);
+
+      // A source that suddenly parses to nothing is far more likely to be broken
+      // markup than a real day with no pharmacy on duty. Keep the last good file
+      // instead of blanking it -- silently overwriting is how all 81 cities were
+      // wiped on 2026-05-14.
+      if (output.pharmacies.length === 0) {
+        const previous = readJson(getCityOutputPath(city.slug));
+        if ((previous?.pharmacies?.length ?? 0) > 0) {
+          throw new Error(
+            `Parsed 0 pharmacies but ${previous.pharmacies.length} are on file; keeping existing data.`,
+          );
+        }
+      }
+
       writeFileSync(
         resolve(OUTPUT_DIR, `${city.slug}.json`),
         JSON.stringify(output, null, 2) + '\n',
