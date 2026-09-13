@@ -1,7 +1,7 @@
 {
   "city": "diyarbakir",
   "cityDisplayName": "Diyarbakır",
-  "updatedAt": "2026-09-13T12:03:29.096Z",
+  "updatedAt": "2026-09-13T12:16:59.693Z",
   "isStale": false,
   "pharmacies": [
     {
@@ -14,7 +14,7 @@
       "longitude": 40.220776,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:29.096Z",
+      "lastVerifiedAt": "2026-09-13T12:16:59.693Z",
       "source": "diyarbakireo.org.tr",
       "sourceUrl": "https://www.diyarbakireo.org.tr/nobetci-eczaneler"
     },
@@ -28,7 +28,7 @@
       "longitude": 40.2347719,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:29.096Z",
+      "lastVerifiedAt": "2026-09-13T12:16:59.693Z",
       "source": "diyarbakireo.org.tr",
       "sourceUrl": "https://www.diyarbakireo.org.tr/nobetci-eczaneler"
     },
@@ -42,7 +42,7 @@
       "longitude": 40.20984,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:29.096Z",
+      "lastVerifiedAt": "2026-09-13T12:16:59.693Z",
       "source": "diyarbakireo.org.tr",
       "sourceUrl": "https://www.diyarbakireo.org.tr/nobetci-eczaneler"
     },
@@ -56,7 +56,7 @@
       "longitude": 40.201099,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:29.096Z",
+      "lastVerifiedAt": "2026-09-13T12:16:59.693Z",
       "source": "diyarbakireo.org.tr",
       "sourceUrl": "https://www.diyarbakireo.org.tr/nobetci-eczaneler"
     },
@@ -70,7 +70,7 @@
       "longitude": 40.151612,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:29.096Z",
+      "lastVerifiedAt": "2026-09-13T12:16:59.693Z",
       "source": "diyarbakireo.org.tr",
       "sourceUrl": "https://www.diyarbakireo.org.tr/nobetci-eczaneler"
     },
@@ -84,7 +84,7 @@
       "longitude": 40.1801376,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:29.096Z",
+      "lastVerifiedAt": "2026-09-13T12:16:59.693Z",
       "source": "diyarbakireo.org.tr",
       "sourceUrl": "https://www.diyarbakireo.org.tr/nobetci-eczaneler"
     },
@@ -98,7 +98,7 @@
       "longitude": 40.1640472,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:29.096Z",
+      "lastVerifiedAt": "2026-09-13T12:16:59.693Z",
       "source": "diyarbakireo.org.tr",
       "sourceUrl": "https://www.diyarbakireo.org.tr/nobetci-eczaneler"
     },
@@ -112,7 +112,7 @@
       "longitude": 40.140019,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:29.096Z",
+      "lastVerifiedAt": "2026-09-13T12:16:59.693Z",
       "source": "diyarbakireo.org.tr",
       "sourceUrl": "https://www.diyarbakireo.org.tr/nobetci-eczaneler"
     },
@@ -126,7 +126,7 @@
       "longitude": 40.1619283,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:29.096Z",
+      "lastVerifiedAt": "2026-09-13T12:16:59.693Z",
       "source": "diyarbakireo.org.tr",
       "sourceUrl": "https://www.diyarbakireo.org.tr/nobetci-eczaneler"
     },
@@ -140,7 +140,7 @@
       "longitude": 40.772804,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:29.096Z",
+      "lastVerifiedAt": "2026-09-13T12:16:59.693Z",
       "source": "diyarbakireo.org.tr",
       "sourceUrl": "https://www.diyarbakireo.org.tr/nobetci-eczaneler"
     },
@@ -154,7 +154,7 @@
       "longitude": 40.6705494,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:29.096Z",
+      "lastVerifiedAt": "2026-09-13T12:16:59.693Z",
       "source": "diyarbakireo.org.tr",
       "sourceUrl": "https://www.diyarbakireo.org.tr/nobetci-eczaneler"
     },
@@ -168,7 +168,7 @@
       "longitude": 39.4502,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:29.096Z",
+      "lastVerifiedAt": "2026-09-13T12:16:59.693Z",
       "source": "diyarbakireo.org.tr",
       "sourceUrl": "https://www.diyarbakireo.org.tr/nobetci-eczaneler"
     },
@@ -182,7 +182,7 @@
       "longitude": 39.29407,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:29.096Z",
+      "lastVerifiedAt": "2026-09-13T12:16:59.693Z",
       "source": "diyarbakireo.org.tr",
       "sourceUrl": "https://www.diyarbakireo.org.tr/nobetci-eczaneler"
     },
@@ -196,7 +196,7 @@
       "longitude": 40.070389,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:29.096Z",
+      "lastVerifiedAt": "2026-09-13T12:16:59.693Z",
       "source": "diyarbakireo.org.tr",
       "sourceUrl": "https://www.diyarbakireo.org.tr/nobetci-eczaneler"
     },
@@ -210,7 +210,7 @@
       "longitude": 40.0858878,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:29.096Z",
+      "lastVerifiedAt": "2026-09-13T12:16:59.693Z",
       "source": "diyarbakireo.org.tr",
       "sourceUrl": "https://www.diyarbakireo.org.tr/nobetci-eczaneler"
     },
@@ -224,7 +224,7 @@
       "longitude": 40.4007,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:29.096Z",
+      "lastVerifiedAt": "2026-09-13T12:16:59.693Z",
       "source": "diyarbakireo.org.tr",
       "sourceUrl": "https://www.diyarbakireo.org.tr/nobetci-eczaneler"
     },
@@ -238,7 +238,7 @@
       "longitude": 40.780801,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:29.096Z",
+      "lastVerifiedAt": "2026-09-13T12:16:59.693Z",
       "source": "diyarbakireo.org.tr",
       "sourceUrl": "https://www.diyarbakireo.org.tr/nobetci-eczaneler"
     },
@@ -252,7 +252,7 @@
       "longitude": 41.0033,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:29.096Z",
+      "lastVerifiedAt": "2026-09-13T12:16:59.693Z",
       "source": "diyarbakireo.org.tr",
       "sourceUrl": "https://www.diyarbakireo.org.tr/nobetci-eczaneler"
     }

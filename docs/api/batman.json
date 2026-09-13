@@ -1,7 +1,7 @@
 {
   "city": "batman",
   "cityDisplayName": "Batman",
-  "updatedAt": "2026-09-13T12:03:32.555Z",
+  "updatedAt": "2026-09-13T12:17:04.189Z",
   "isStale": false,
   "pharmacies": [
     {
@@ -14,7 +14,7 @@
       "longitude": 41.13662,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:32.555Z",
+      "lastVerifiedAt": "2026-09-13T12:17:04.189Z",
       "source": "batmaneczaciodasi.org.tr",
       "sourceUrl": "https://www.batmaneczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -28,7 +28,7 @@
       "longitude": 41.142377,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:32.555Z",
+      "lastVerifiedAt": "2026-09-13T12:17:04.189Z",
       "source": "batmaneczaciodasi.org.tr",
       "sourceUrl": "https://www.batmaneczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -42,7 +42,7 @@
       "longitude": 41.116937,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:32.555Z",
+      "lastVerifiedAt": "2026-09-13T12:17:04.189Z",
       "source": "batmaneczaciodasi.org.tr",
       "sourceUrl": "https://www.batmaneczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -56,7 +56,7 @@
       "longitude": 41.125571,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:32.555Z",
+      "lastVerifiedAt": "2026-09-13T12:17:04.189Z",
       "source": "batmaneczaciodasi.org.tr",
       "sourceUrl": "https://www.batmaneczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -70,7 +70,7 @@
       "longitude": 41.500702,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:32.555Z",
+      "lastVerifiedAt": "2026-09-13T12:17:04.189Z",
       "source": "batmaneczaciodasi.org.tr",
       "sourceUrl": "https://www.batmaneczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -84,7 +84,7 @@
       "longitude": 41.384648,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:32.555Z",
+      "lastVerifiedAt": "2026-09-13T12:17:04.189Z",
       "source": "batmaneczaciodasi.org.tr",
       "sourceUrl": "https://www.batmaneczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -98,7 +98,7 @@
       "longitude": 41.290215,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:32.555Z",
+      "lastVerifiedAt": "2026-09-13T12:17:04.189Z",
       "source": "batmaneczaciodasi.org.tr",
       "sourceUrl": "https://www.batmaneczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -112,7 +112,7 @@
       "longitude": 41.41225,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:32.555Z",
+      "lastVerifiedAt": "2026-09-13T12:17:04.189Z",
       "source": "batmaneczaciodasi.org.tr",
       "sourceUrl": "https://www.batmaneczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -126,7 +126,7 @@
       "longitude": 41.5178,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:32.555Z",
+      "lastVerifiedAt": "2026-09-13T12:17:04.189Z",
       "source": "batmaneczaciodasi.org.tr",
       "sourceUrl": "https://www.batmaneczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -140,7 +140,7 @@
       "longitude": 41.517785,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:32.555Z",
+      "lastVerifiedAt": "2026-09-13T12:17:04.189Z",
       "source": "batmaneczaciodasi.org.tr",
       "sourceUrl": "https://www.batmaneczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -154,7 +154,7 @@
       "longitude": 42.271749,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:32.555Z",
+      "lastVerifiedAt": "2026-09-13T12:17:04.189Z",
       "source": "batmaneczaciodasi.org.tr",
       "sourceUrl": "https://www.batmaneczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -168,7 +168,7 @@
       "longitude": 41.691815,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:32.555Z",
+      "lastVerifiedAt": "2026-09-13T12:17:04.189Z",
       "source": "batmaneczaciodasi.org.tr",
       "sourceUrl": "https://www.batmaneczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -182,7 +182,7 @@
       "longitude": 41.782945,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:32.555Z",
+      "lastVerifiedAt": "2026-09-13T12:17:04.189Z",
       "source": "batmaneczaciodasi.org.tr",
       "sourceUrl": "https://www.batmaneczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -196,7 +196,7 @@
       "longitude": 42.550175,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:32.555Z",
+      "lastVerifiedAt": "2026-09-13T12:17:04.189Z",
       "source": "batmaneczaciodasi.org.tr",
       "sourceUrl": "https://www.batmaneczaciodasi.org.tr/nobetci-eczaneler"
     },
@@ -210,7 +210,7 @@
       "longitude": 41.45576,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:32.555Z",
+      "lastVerifiedAt": "2026-09-13T12:17:04.189Z",
       "source": "batmaneczaciodasi.org.tr",
       "sourceUrl": "https://www.batmaneczaciodasi.org.tr/nobetci-eczaneler"
     }

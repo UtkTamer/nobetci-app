@@ -1,7 +1,7 @@
 {
   "city": "adana",
   "cityDisplayName": "Adana",
-  "updatedAt": "2026-09-13T12:03:23.352Z",
+  "updatedAt": "2026-09-13T12:16:52.162Z",
   "isStale": false,
   "pharmacies": [
     {
@@ -14,7 +14,7 @@
       "longitude": 35.27953,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -28,7 +28,7 @@
       "longitude": 35.324384,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -42,7 +42,7 @@
       "longitude": 35.314898,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -56,7 +56,7 @@
       "longitude": 35.299446,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -70,7 +70,7 @@
       "longitude": 35.325469,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -84,7 +84,7 @@
       "longitude": 35.240692,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -98,7 +98,7 @@
       "longitude": 35.325292,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -112,7 +112,7 @@
       "longitude": 35.318296,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -126,7 +126,7 @@
       "longitude": 35.299184,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -140,7 +140,7 @@
       "longitude": 35.321128,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -154,7 +154,7 @@
       "longitude": 35.302929,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -168,7 +168,7 @@
       "longitude": 35.293804,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -182,7 +182,7 @@
       "longitude": 35.252234,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -196,7 +196,7 @@
       "longitude": 35.283294,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -210,7 +210,7 @@
       "longitude": 35.35781478881836,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -224,7 +224,7 @@
       "longitude": 35.375956,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -238,7 +238,7 @@
       "longitude": 35.346088,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -252,7 +252,7 @@
       "longitude": 35.370144,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -266,7 +266,7 @@
       "longitude": 35.402076,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -280,7 +280,7 @@
       "longitude": 35.389571,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -294,7 +294,7 @@
       "longitude": 35.647848,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -308,7 +308,7 @@
       "longitude": 35.112186,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -322,7 +322,7 @@
       "longitude": 35.384119,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -336,7 +336,7 @@
       "longitude": 35.811342,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -350,7 +350,7 @@
       "longitude": 35.819213,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -364,7 +364,7 @@
       "longitude": 35.793648,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -378,7 +378,7 @@
       "longitude": 34.793521,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -392,7 +392,7 @@
       "longitude": 34.87347,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -406,7 +406,7 @@
       "longitude": 35.911924,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -420,7 +420,7 @@
       "longitude": 35.828783,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -434,7 +434,7 @@
       "longitude": 35.792085,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -448,7 +448,7 @@
       "longitude": 36.217922,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -462,7 +462,7 @@
       "longitude": 36.089603000000004,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -476,7 +476,7 @@
       "longitude": 35.058475,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     },
@@ -490,7 +490,7 @@
       "longitude": 35.392546,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-13T12:03:23.352Z",
+      "lastVerifiedAt": "2026-09-13T12:16:52.162Z",
       "source": "adanaeo.org.tr",
       "sourceUrl": "https://www.adanaeo.org.tr/nobetci-eczaneler"
     }
