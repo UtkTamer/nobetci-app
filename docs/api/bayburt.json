@@ -1,7 +1,7 @@
 {
   "city": "bayburt",
   "cityDisplayName": "Bayburt",
-  "updatedAt": "2026-09-14T08:47:12.116Z",
+  "updatedAt": "2026-09-14T08:47:41.997Z",
   "isStale": false,
   "pharmacies": [
     {
@@ -14,7 +14,7 @@
       "longitude": 40.225149,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-14T08:47:12.116Z",
+      "lastVerifiedAt": "2026-09-14T08:47:41.997Z",
       "source": "erzurumeo.org.tr",
       "sourceUrl": "https://www.erzurumeo.org.tr/nobetci-eczaneler/69"
     },
@@ -28,7 +28,7 @@
       "longitude": 39.893822,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-14T08:47:12.116Z",
+      "lastVerifiedAt": "2026-09-14T08:47:41.997Z",
       "source": "erzurumeo.org.tr",
       "sourceUrl": "https://www.erzurumeo.org.tr/nobetci-eczaneler/69"
     }

@@ -1,7 +1,7 @@
 {
   "city": "isparta",
   "cityDisplayName": "Isparta",
-  "updatedAt": "2026-09-14T08:47:11.992Z",
+  "updatedAt": "2026-09-14T08:47:40.931Z",
   "isStale": false,
   "pharmacies": [
     {
@@ -14,7 +14,7 @@
       "longitude": 30.545179,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-14T08:47:11.992Z",
+      "lastVerifiedAt": "2026-09-14T08:47:40.931Z",
       "source": "ispartaeo.org.tr",
       "sourceUrl": "https://www.ispartaeo.org.tr/nobetci-eczaneler"
     },
@@ -28,7 +28,7 @@
       "longitude": 30.523881,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-14T08:47:11.992Z",
+      "lastVerifiedAt": "2026-09-14T08:47:40.931Z",
       "source": "ispartaeo.org.tr",
       "sourceUrl": "https://www.ispartaeo.org.tr/nobetci-eczaneler"
     },
@@ -42,7 +42,7 @@
       "longitude": 30.565095,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-14T08:47:11.992Z",
+      "lastVerifiedAt": "2026-09-14T08:47:40.931Z",
       "source": "ispartaeo.org.tr",
       "sourceUrl": "https://www.ispartaeo.org.tr/nobetci-eczaneler"
     },
@@ -56,7 +56,7 @@
       "longitude": 30.3027,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-14T08:47:11.992Z",
+      "lastVerifiedAt": "2026-09-14T08:47:40.931Z",
       "source": "ispartaeo.org.tr",
       "sourceUrl": "https://www.ispartaeo.org.tr/nobetci-eczaneler"
     },
@@ -70,7 +70,7 @@
       "longitude": 30.847282,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-14T08:47:11.992Z",
+      "lastVerifiedAt": "2026-09-14T08:47:40.931Z",
       "source": "ispartaeo.org.tr",
       "sourceUrl": "https://www.ispartaeo.org.tr/nobetci-eczaneler"
     },
@@ -84,7 +84,7 @@
       "longitude": 31.01495,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-14T08:47:11.992Z",
+      "lastVerifiedAt": "2026-09-14T08:47:40.931Z",
       "source": "ispartaeo.org.tr",
       "sourceUrl": "https://www.ispartaeo.org.tr/nobetci-eczaneler"
     },
@@ -98,7 +98,7 @@
       "longitude": 30.550862,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-14T08:47:11.992Z",
+      "lastVerifiedAt": "2026-09-14T08:47:40.931Z",
       "source": "ispartaeo.org.tr",
       "sourceUrl": "https://www.ispartaeo.org.tr/nobetci-eczaneler"
     },
@@ -112,7 +112,7 @@
       "longitude": 31.177972,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-14T08:47:11.992Z",
+      "lastVerifiedAt": "2026-09-14T08:47:40.931Z",
       "source": "ispartaeo.org.tr",
       "sourceUrl": "https://www.ispartaeo.org.tr/nobetci-eczaneler"
     },
@@ -126,7 +126,7 @@
       "longitude": 31.366574,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-14T08:47:11.992Z",
+      "lastVerifiedAt": "2026-09-14T08:47:40.931Z",
       "source": "ispartaeo.org.tr",
       "sourceUrl": "https://www.ispartaeo.org.tr/nobetci-eczaneler"
     }

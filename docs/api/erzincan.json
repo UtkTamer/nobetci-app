@@ -1,7 +1,7 @@
 {
   "city": "erzincan",
   "cityDisplayName": "Erzincan",
-  "updatedAt": "2026-09-14T08:47:10.064Z",
+  "updatedAt": "2026-09-14T08:47:39.767Z",
   "isStale": false,
   "pharmacies": [
     {
@@ -14,7 +14,7 @@
       "longitude": 39.495657,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-14T08:47:10.064Z",
+      "lastVerifiedAt": "2026-09-14T08:47:39.767Z",
       "source": "erzincaneo.org.tr",
       "sourceUrl": "https://erzincaneo.org.tr/nobetci-eczaneler"
     },
@@ -28,7 +28,7 @@
       "longitude": 39.488721,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-14T08:47:10.064Z",
+      "lastVerifiedAt": "2026-09-14T08:47:39.767Z",
       "source": "erzincaneo.org.tr",
       "sourceUrl": "https://erzincaneo.org.tr/nobetci-eczaneler"
     },
@@ -42,7 +42,7 @@
       "longitude": 40.03736,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-14T08:47:10.064Z",
+      "lastVerifiedAt": "2026-09-14T08:47:39.767Z",
       "source": "erzincaneo.org.tr",
       "sourceUrl": "https://erzincaneo.org.tr/nobetci-eczaneler"
     },
@@ -56,7 +56,7 @@
       "longitude": 38.564214,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-14T08:47:10.064Z",
+      "lastVerifiedAt": "2026-09-14T08:47:39.767Z",
       "source": "erzincaneo.org.tr",
       "sourceUrl": "https://erzincaneo.org.tr/nobetci-eczaneler"
     },
@@ -70,7 +70,7 @@
       "longitude": 38.768826,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-14T08:47:10.064Z",
+      "lastVerifiedAt": "2026-09-14T08:47:39.767Z",
       "source": "erzincaneo.org.tr",
       "sourceUrl": "https://erzincaneo.org.tr/nobetci-eczaneler"
     },
@@ -84,7 +84,7 @@
       "longitude": 40.38003,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-14T08:47:10.064Z",
+      "lastVerifiedAt": "2026-09-14T08:47:39.767Z",
       "source": "erzincaneo.org.tr",
       "sourceUrl": "https://erzincaneo.org.tr/nobetci-eczaneler"
     },
@@ -98,7 +98,7 @@
       "longitude": 39.683683,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-14T08:47:10.064Z",
+      "lastVerifiedAt": "2026-09-14T08:47:39.767Z",
       "source": "erzincaneo.org.tr",
       "sourceUrl": "https://erzincaneo.org.tr/nobetci-eczaneler"
     }
