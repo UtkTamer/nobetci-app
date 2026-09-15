@@ -1,7 +1,7 @@
 {
   "city": "burdur",
   "cityDisplayName": "Burdur",
-  "updatedAt": "2026-09-15T08:34:17.391Z",
+  "updatedAt": "2026-09-15T08:34:46.265Z",
   "isStale": false,
   "pharmacies": [
     {
@@ -14,7 +14,7 @@
       "longitude": 30.292459,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-15T08:34:17.391Z",
+      "lastVerifiedAt": "2026-09-15T08:34:46.265Z",
       "source": "burdureo.org.tr",
       "sourceUrl": "https://www.burdureo.org.tr/nobetci-eczaneler"
     },
@@ -28,7 +28,7 @@
       "longitude": 30.565347,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-15T08:34:17.391Z",
+      "lastVerifiedAt": "2026-09-15T08:34:46.265Z",
       "source": "burdureo.org.tr",
       "sourceUrl": "https://www.burdureo.org.tr/nobetci-eczaneler"
     },
@@ -42,7 +42,7 @@
       "longitude": 29.510317,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-15T08:34:17.391Z",
+      "lastVerifiedAt": "2026-09-15T08:34:46.265Z",
       "source": "burdureo.org.tr",
       "sourceUrl": "https://www.burdureo.org.tr/nobetci-eczaneler"
     },
@@ -56,7 +56,7 @@
       "longitude": 29.754327,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-15T08:34:17.391Z",
+      "lastVerifiedAt": "2026-09-15T08:34:46.265Z",
       "source": "burdureo.org.tr",
       "sourceUrl": "https://www.burdureo.org.tr/nobetci-eczaneler"
     },
@@ -70,7 +70,7 @@
       "longitude": 29.778183,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-15T08:34:17.391Z",
+      "lastVerifiedAt": "2026-09-15T08:34:46.265Z",
       "source": "burdureo.org.tr",
       "sourceUrl": "https://www.burdureo.org.tr/nobetci-eczaneler"
     },
@@ -84,7 +84,7 @@
       "longitude": 29.821359,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-15T08:34:17.391Z",
+      "lastVerifiedAt": "2026-09-15T08:34:46.265Z",
       "source": "burdureo.org.tr",
       "sourceUrl": "https://www.burdureo.org.tr/nobetci-eczaneler"
     }

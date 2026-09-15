@@ -1,7 +1,7 @@
 {
   "city": "artvin",
   "cityDisplayName": "Artvin",
-  "updatedAt": "2026-09-15T08:34:14.931Z",
+  "updatedAt": "2026-09-15T08:34:45.263Z",
   "isStale": false,
   "pharmacies": [
     {
@@ -14,7 +14,7 @@
       "longitude": 41.817755,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-15T08:34:14.931Z",
+      "lastVerifiedAt": "2026-09-15T08:34:45.263Z",
       "source": "trabzoneczaciodasi.org.tr",
       "sourceUrl": "https://www.trabzoneczaciodasi.org.tr/nobetci-eczaneler/8"
     },
@@ -28,7 +28,7 @@
       "longitude": 42.076622,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-15T08:34:14.931Z",
+      "lastVerifiedAt": "2026-09-15T08:34:45.263Z",
       "source": "trabzoneczaciodasi.org.tr",
       "sourceUrl": "https://www.trabzoneczaciodasi.org.tr/nobetci-eczaneler/8"
     },
@@ -42,7 +42,7 @@
       "longitude": 41.309179,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-15T08:34:14.931Z",
+      "lastVerifiedAt": "2026-09-15T08:34:45.263Z",
       "source": "trabzoneczaciodasi.org.tr",
       "sourceUrl": "https://www.trabzoneczaciodasi.org.tr/nobetci-eczaneler/8"
     },
@@ -56,7 +56,7 @@
       "longitude": 41.676883,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-15T08:34:14.931Z",
+      "lastVerifiedAt": "2026-09-15T08:34:45.263Z",
       "source": "trabzoneczaciodasi.org.tr",
       "sourceUrl": "https://www.trabzoneczaciodasi.org.tr/nobetci-eczaneler/8"
     },
@@ -70,7 +70,7 @@
       "longitude": 41.449249,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-15T08:34:14.931Z",
+      "lastVerifiedAt": "2026-09-15T08:34:45.263Z",
       "source": "trabzoneczaciodasi.org.tr",
       "sourceUrl": "https://www.trabzoneczaciodasi.org.tr/nobetci-eczaneler/8"
     },
@@ -84,7 +84,7 @@
       "longitude": 41.564243,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-15T08:34:14.931Z",
+      "lastVerifiedAt": "2026-09-15T08:34:45.263Z",
       "source": "trabzoneczaciodasi.org.tr",
       "sourceUrl": "https://www.trabzoneczaciodasi.org.tr/nobetci-eczaneler/8"
     },
@@ -98,7 +98,7 @@
       "longitude": 42.357178,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-15T08:34:14.931Z",
+      "lastVerifiedAt": "2026-09-15T08:34:45.263Z",
       "source": "trabzoneczaciodasi.org.tr",
       "sourceUrl": "https://www.trabzoneczaciodasi.org.tr/nobetci-eczaneler/8"
     },
@@ -112,7 +112,7 @@
       "longitude": 41.533447,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-15T08:34:14.931Z",
+      "lastVerifiedAt": "2026-09-15T08:34:45.263Z",
       "source": "trabzoneczaciodasi.org.tr",
       "sourceUrl": "https://www.trabzoneczaciodasi.org.tr/nobetci-eczaneler/8"
     },
@@ -126,7 +126,7 @@
       "longitude": 41.528607,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-15T08:34:14.931Z",
+      "lastVerifiedAt": "2026-09-15T08:34:45.263Z",
       "source": "trabzoneczaciodasi.org.tr",
       "sourceUrl": "https://www.trabzoneczaciodasi.org.tr/nobetci-eczaneler/8"
     }
