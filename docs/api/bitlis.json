@@ -1,7 +1,7 @@
 {
   "city": "bitlis",
   "cityDisplayName": "Bitlis",
-  "updatedAt": "2026-09-16T08:28:17.537Z",
+  "updatedAt": "2026-09-16T08:28:47.973Z",
   "isStale": false,
   "pharmacies": [
     {
@@ -14,7 +14,7 @@
       "longitude": 42.142093,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:17.537Z",
+      "lastVerifiedAt": "2026-09-16T08:28:47.973Z",
       "source": "bitlisecza.org.tr",
       "sourceUrl": "https://www.bitlisecza.org.tr/nobetci-eczaneler"
     },
@@ -28,7 +28,7 @@
       "longitude": 42.733328,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:17.537Z",
+      "lastVerifiedAt": "2026-09-16T08:28:47.973Z",
       "source": "bitlisecza.org.tr",
       "sourceUrl": "https://www.bitlisecza.org.tr/nobetci-eczaneler"
     },
@@ -42,7 +42,7 @@
       "longitude": 42.476424,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:17.537Z",
+      "lastVerifiedAt": "2026-09-16T08:28:47.973Z",
       "source": "bitlisecza.org.tr",
       "sourceUrl": "https://www.bitlisecza.org.tr/nobetci-eczaneler"
     },
@@ -56,7 +56,7 @@
       "longitude": 42.021093,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:17.537Z",
+      "lastVerifiedAt": "2026-09-16T08:28:47.973Z",
       "source": "bitlisecza.org.tr",
       "sourceUrl": "https://www.bitlisecza.org.tr/nobetci-eczaneler"
     },
@@ -70,7 +70,7 @@
       "longitude": 42.424644,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:17.537Z",
+      "lastVerifiedAt": "2026-09-16T08:28:47.973Z",
       "source": "bitlisecza.org.tr",
       "sourceUrl": "https://www.bitlisecza.org.tr/nobetci-eczaneler"
     },
@@ -84,7 +84,7 @@
       "longitude": 41.925997,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:17.537Z",
+      "lastVerifiedAt": "2026-09-16T08:28:47.973Z",
       "source": "bitlisecza.org.tr",
       "sourceUrl": "https://www.bitlisecza.org.tr/nobetci-eczaneler"
     },
@@ -98,7 +98,7 @@
       "longitude": 42.186342,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:17.537Z",
+      "lastVerifiedAt": "2026-09-16T08:28:47.973Z",
       "source": "bitlisecza.org.tr",
       "sourceUrl": "https://www.bitlisecza.org.tr/nobetci-eczaneler"
     },
@@ -112,7 +112,7 @@
       "longitude": 42.280466,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:17.537Z",
+      "lastVerifiedAt": "2026-09-16T08:28:47.973Z",
       "source": "bitlisecza.org.tr",
       "sourceUrl": "https://www.bitlisecza.org.tr/nobetci-eczaneler"
     }

@@ -1,7 +1,7 @@
 {
   "city": "adiyaman",
   "cityDisplayName": "Adıyaman",
-  "updatedAt": "2026-09-16T08:28:13.460Z",
+  "updatedAt": "2026-09-16T08:28:46.970Z",
   "isStale": false,
   "pharmacies": [
     {
@@ -14,7 +14,7 @@
       "longitude": 38.320449,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:13.460Z",
+      "lastVerifiedAt": "2026-09-16T08:28:46.970Z",
       "source": "adiyamaneo.org.tr",
       "sourceUrl": "https://www.adiyamaneo.org.tr/nobetci-eczaneler"
     },
@@ -28,7 +28,7 @@
       "longitude": 38.282602,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:13.460Z",
+      "lastVerifiedAt": "2026-09-16T08:28:46.970Z",
       "source": "adiyamaneo.org.tr",
       "sourceUrl": "https://www.adiyamaneo.org.tr/nobetci-eczaneler"
     },
@@ -42,7 +42,7 @@
       "longitude": 38.282862,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:13.460Z",
+      "lastVerifiedAt": "2026-09-16T08:28:46.970Z",
       "source": "adiyamaneo.org.tr",
       "sourceUrl": "https://www.adiyamaneo.org.tr/nobetci-eczaneler"
     },
@@ -56,7 +56,7 @@
       "longitude": 37.864085,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:13.460Z",
+      "lastVerifiedAt": "2026-09-16T08:28:46.970Z",
       "source": "adiyamaneo.org.tr",
       "sourceUrl": "https://www.adiyamaneo.org.tr/nobetci-eczaneler"
     },
@@ -70,7 +70,7 @@
       "longitude": 38.23787,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:13.460Z",
+      "lastVerifiedAt": "2026-09-16T08:28:46.970Z",
       "source": "adiyamaneo.org.tr",
       "sourceUrl": "https://www.adiyamaneo.org.tr/nobetci-eczaneler"
     },
@@ -84,7 +84,7 @@
       "longitude": 37.650171,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:13.460Z",
+      "lastVerifiedAt": "2026-09-16T08:28:46.970Z",
       "source": "adiyamaneo.org.tr",
       "sourceUrl": "https://www.adiyamaneo.org.tr/nobetci-eczaneler"
     },
@@ -98,7 +98,7 @@
       "longitude": 38.605693,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:13.460Z",
+      "lastVerifiedAt": "2026-09-16T08:28:46.970Z",
       "source": "adiyamaneo.org.tr",
       "sourceUrl": "https://www.adiyamaneo.org.tr/nobetci-eczaneler"
     },
@@ -112,7 +112,7 @@
       "longitude": 38.60564,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:13.460Z",
+      "lastVerifiedAt": "2026-09-16T08:28:46.970Z",
       "source": "adiyamaneo.org.tr",
       "sourceUrl": "https://www.adiyamaneo.org.tr/nobetci-eczaneler"
     },
@@ -126,7 +126,7 @@
       "longitude": 38.630824,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:13.460Z",
+      "lastVerifiedAt": "2026-09-16T08:28:46.970Z",
       "source": "adiyamaneo.org.tr",
       "sourceUrl": "https://www.adiyamaneo.org.tr/nobetci-eczaneler"
     }

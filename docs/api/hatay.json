@@ -1,7 +1,7 @@
 {
   "city": "hatay",
   "cityDisplayName": "Hatay",
-  "updatedAt": "2026-09-16T08:28:22.753Z",
+  "updatedAt": "2026-09-16T08:28:50.978Z",
   "isStale": false,
   "pharmacies": [
     {
@@ -14,7 +14,7 @@
       "longitude": 36.166565,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:22.753Z",
+      "lastVerifiedAt": "2026-09-16T08:28:50.978Z",
       "source": "hatayeo.org.tr",
       "sourceUrl": "https://www.hatayeo.org.tr/nobetci-eczaneler"
     },
@@ -28,7 +28,7 @@
       "longitude": 36.156684,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:22.753Z",
+      "lastVerifiedAt": "2026-09-16T08:28:50.978Z",
       "source": "hatayeo.org.tr",
       "sourceUrl": "https://www.hatayeo.org.tr/nobetci-eczaneler"
     },
@@ -42,7 +42,7 @@
       "longitude": 36.200556,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:22.753Z",
+      "lastVerifiedAt": "2026-09-16T08:28:50.978Z",
       "source": "hatayeo.org.tr",
       "sourceUrl": "https://www.hatayeo.org.tr/nobetci-eczaneler"
     },
@@ -56,7 +56,7 @@
       "longitude": 36.125838,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:22.753Z",
+      "lastVerifiedAt": "2026-09-16T08:28:50.978Z",
       "source": "hatayeo.org.tr",
       "sourceUrl": "https://www.hatayeo.org.tr/nobetci-eczaneler"
     },
@@ -70,7 +70,7 @@
       "longitude": 36.146054,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:22.753Z",
+      "lastVerifiedAt": "2026-09-16T08:28:50.978Z",
       "source": "hatayeo.org.tr",
       "sourceUrl": "https://www.hatayeo.org.tr/nobetci-eczaneler"
     },
@@ -84,7 +84,7 @@
       "longitude": 36.008252,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:22.753Z",
+      "lastVerifiedAt": "2026-09-16T08:28:50.978Z",
       "source": "hatayeo.org.tr",
       "sourceUrl": "https://www.hatayeo.org.tr/nobetci-eczaneler"
     },
@@ -98,7 +98,7 @@
       "longitude": 36.051966,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:22.753Z",
+      "lastVerifiedAt": "2026-09-16T08:28:50.978Z",
       "source": "hatayeo.org.tr",
       "sourceUrl": "https://www.hatayeo.org.tr/nobetci-eczaneler"
     },
@@ -112,7 +112,7 @@
       "longitude": 36.212121,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:22.753Z",
+      "lastVerifiedAt": "2026-09-16T08:28:50.978Z",
       "source": "hatayeo.org.tr",
       "sourceUrl": "https://www.hatayeo.org.tr/nobetci-eczaneler"
     },
@@ -126,7 +126,7 @@
       "longitude": 36.229611,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:22.753Z",
+      "lastVerifiedAt": "2026-09-16T08:28:50.978Z",
       "source": "hatayeo.org.tr",
       "sourceUrl": "https://www.hatayeo.org.tr/nobetci-eczaneler"
     },
@@ -140,7 +140,7 @@
       "longitude": 36.215858,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:22.753Z",
+      "lastVerifiedAt": "2026-09-16T08:28:50.978Z",
       "source": "hatayeo.org.tr",
       "sourceUrl": "https://www.hatayeo.org.tr/nobetci-eczaneler"
     },
@@ -154,7 +154,7 @@
       "longitude": 36.169443,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:22.753Z",
+      "lastVerifiedAt": "2026-09-16T08:28:50.978Z",
       "source": "hatayeo.org.tr",
       "sourceUrl": "https://www.hatayeo.org.tr/nobetci-eczaneler"
     },
@@ -168,7 +168,7 @@
       "longitude": 36.151163,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:22.753Z",
+      "lastVerifiedAt": "2026-09-16T08:28:50.978Z",
       "source": "hatayeo.org.tr",
       "sourceUrl": "https://www.hatayeo.org.tr/nobetci-eczaneler"
     },
@@ -182,7 +182,7 @@
       "longitude": 36.164335,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:22.753Z",
+      "lastVerifiedAt": "2026-09-16T08:28:50.978Z",
       "source": "hatayeo.org.tr",
       "sourceUrl": "https://www.hatayeo.org.tr/nobetci-eczaneler"
     },
@@ -196,7 +196,7 @@
       "longitude": 36.231166,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:22.753Z",
+      "lastVerifiedAt": "2026-09-16T08:28:50.978Z",
       "source": "hatayeo.org.tr",
       "sourceUrl": "https://www.hatayeo.org.tr/nobetci-eczaneler"
     },
@@ -210,7 +210,7 @@
       "longitude": 36.362641,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:22.753Z",
+      "lastVerifiedAt": "2026-09-16T08:28:50.978Z",
       "source": "hatayeo.org.tr",
       "sourceUrl": "https://www.hatayeo.org.tr/nobetci-eczaneler"
     },
@@ -224,7 +224,7 @@
       "longitude": 36.567684,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:22.753Z",
+      "lastVerifiedAt": "2026-09-16T08:28:50.978Z",
       "source": "hatayeo.org.tr",
       "sourceUrl": "https://www.hatayeo.org.tr/nobetci-eczaneler"
     },
@@ -238,7 +238,7 @@
       "longitude": 35.876015,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:22.753Z",
+      "lastVerifiedAt": "2026-09-16T08:28:50.978Z",
       "source": "hatayeo.org.tr",
       "sourceUrl": "https://www.hatayeo.org.tr/nobetci-eczaneler"
     },
@@ -252,7 +252,7 @@
       "longitude": 36.145126,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:22.753Z",
+      "lastVerifiedAt": "2026-09-16T08:28:50.978Z",
       "source": "hatayeo.org.tr",
       "sourceUrl": "https://www.hatayeo.org.tr/nobetci-eczaneler"
     },
@@ -266,7 +266,7 @@
       "longitude": 36.243878,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:22.753Z",
+      "lastVerifiedAt": "2026-09-16T08:28:50.978Z",
       "source": "hatayeo.org.tr",
       "sourceUrl": "https://www.hatayeo.org.tr/nobetci-eczaneler"
     },
@@ -280,7 +280,7 @@
       "longitude": 36.486797,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:22.753Z",
+      "lastVerifiedAt": "2026-09-16T08:28:50.978Z",
       "source": "hatayeo.org.tr",
       "sourceUrl": "https://www.hatayeo.org.tr/nobetci-eczaneler"
     },
@@ -294,7 +294,7 @@
       "longitude": 36.521209,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:22.753Z",
+      "lastVerifiedAt": "2026-09-16T08:28:50.978Z",
       "source": "hatayeo.org.tr",
       "sourceUrl": "https://www.hatayeo.org.tr/nobetci-eczaneler"
     },
@@ -308,7 +308,7 @@
       "longitude": 36.180744,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:22.753Z",
+      "lastVerifiedAt": "2026-09-16T08:28:50.978Z",
       "source": "hatayeo.org.tr",
       "sourceUrl": "https://www.hatayeo.org.tr/nobetci-eczaneler"
     },
@@ -322,7 +322,7 @@
       "longitude": 36.066273,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:22.753Z",
+      "lastVerifiedAt": "2026-09-16T08:28:50.978Z",
       "source": "hatayeo.org.tr",
       "sourceUrl": "https://www.hatayeo.org.tr/nobetci-eczaneler"
     },
@@ -336,7 +336,7 @@
       "longitude": 36.221284,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:22.753Z",
+      "lastVerifiedAt": "2026-09-16T08:28:50.978Z",
       "source": "hatayeo.org.tr",
       "sourceUrl": "https://www.hatayeo.org.tr/nobetci-eczaneler"
     },
@@ -350,7 +350,7 @@
       "longitude": 36.448181,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:22.753Z",
+      "lastVerifiedAt": "2026-09-16T08:28:50.978Z",
       "source": "hatayeo.org.tr",
       "sourceUrl": "https://www.hatayeo.org.tr/nobetci-eczaneler"
     }
