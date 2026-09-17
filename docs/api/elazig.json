@@ -1,7 +1,7 @@
 {
   "city": "elazig",
   "cityDisplayName": "Elazığ",
-  "updatedAt": "2026-09-16T08:28:49.976Z",
+  "updatedAt": "2026-09-17T08:35:36.834Z",
   "isStale": false,
   "pharmacies": [
     {
@@ -14,7 +14,7 @@
       "longitude": 39.25818,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:49.976Z",
+      "lastVerifiedAt": "2026-09-17T08:35:36.834Z",
       "source": "elazigeczaciodasi.org.tr",
       "sourceUrl": "https://www.elazigeczaciodasi.org.tr/nobetci-eczaneler/elazig"
     },
@@ -28,7 +28,7 @@
       "longitude": 39.224159,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:49.976Z",
+      "lastVerifiedAt": "2026-09-17T08:35:36.834Z",
       "source": "elazigeczaciodasi.org.tr",
       "sourceUrl": "https://www.elazigeczaciodasi.org.tr/nobetci-eczaneler/elazig"
     },
@@ -42,7 +42,7 @@
       "longitude": 39.207872,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:49.976Z",
+      "lastVerifiedAt": "2026-09-17T08:35:36.834Z",
       "source": "elazigeczaciodasi.org.tr",
       "sourceUrl": "https://www.elazigeczaciodasi.org.tr/nobetci-eczaneler/elazig"
     },
@@ -56,7 +56,7 @@
       "longitude": 39.157107,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:49.976Z",
+      "lastVerifiedAt": "2026-09-17T08:35:36.834Z",
       "source": "elazigeczaciodasi.org.tr",
       "sourceUrl": "https://www.elazigeczaciodasi.org.tr/nobetci-eczaneler/elazig"
     },
@@ -70,7 +70,7 @@
       "longitude": 40.03583,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:49.976Z",
+      "lastVerifiedAt": "2026-09-17T08:35:36.834Z",
       "source": "elazigeczaciodasi.org.tr",
       "sourceUrl": "https://www.elazigeczaciodasi.org.tr/nobetci-eczaneler/elazig"
     },
@@ -84,7 +84,7 @@
       "longitude": 39.865381,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:49.976Z",
+      "lastVerifiedAt": "2026-09-17T08:35:36.834Z",
       "source": "elazigeczaciodasi.org.tr",
       "sourceUrl": "https://www.elazigeczaciodasi.org.tr/nobetci-eczaneler/elazig"
     },
@@ -98,7 +98,7 @@
       "longitude": 39.927578,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:49.976Z",
+      "lastVerifiedAt": "2026-09-17T08:35:36.834Z",
       "source": "elazigeczaciodasi.org.tr",
       "sourceUrl": "https://www.elazigeczaciodasi.org.tr/nobetci-eczaneler/elazig"
     }

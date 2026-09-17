@@ -1,7 +1,7 @@
 {
   "city": "gumushane",
   "cityDisplayName": "Gümüşhane",
-  "updatedAt": "2026-09-16T08:28:50.977Z",
+  "updatedAt": "2026-09-17T08:35:37.836Z",
   "isStale": false,
   "pharmacies": [
     {
@@ -14,7 +14,7 @@
       "longitude": 39.48302,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:50.977Z",
+      "lastVerifiedAt": "2026-09-17T08:35:37.836Z",
       "source": "trabzoneczaciodasi.org.tr",
       "sourceUrl": "https://www.trabzoneczaciodasi.org.tr/nobetci-eczaneler/29"
     },
@@ -28,7 +28,7 @@
       "longitude": 39.435985,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:50.977Z",
+      "lastVerifiedAt": "2026-09-17T08:35:37.836Z",
       "source": "trabzoneczaciodasi.org.tr",
       "sourceUrl": "https://www.trabzoneczaciodasi.org.tr/nobetci-eczaneler/29"
     },
@@ -42,7 +42,7 @@
       "longitude": 39.124014,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:50.977Z",
+      "lastVerifiedAt": "2026-09-17T08:35:37.836Z",
       "source": "trabzoneczaciodasi.org.tr",
       "sourceUrl": "https://www.trabzoneczaciodasi.org.tr/nobetci-eczaneler/29"
     },
@@ -56,7 +56,7 @@
       "longitude": 39.292833,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:50.977Z",
+      "lastVerifiedAt": "2026-09-17T08:35:37.836Z",
       "source": "trabzoneczaciodasi.org.tr",
       "sourceUrl": "https://www.trabzoneczaciodasi.org.tr/nobetci-eczaneler/29"
     },
@@ -70,7 +70,7 @@
       "longitude": 39.657931,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:50.977Z",
+      "lastVerifiedAt": "2026-09-17T08:35:37.836Z",
       "source": "trabzoneczaciodasi.org.tr",
       "sourceUrl": "https://www.trabzoneczaciodasi.org.tr/nobetci-eczaneler/29"
     },
@@ -84,7 +84,7 @@
       "longitude": 39.087943,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:50.977Z",
+      "lastVerifiedAt": "2026-09-17T08:35:37.836Z",
       "source": "trabzoneczaciodasi.org.tr",
       "sourceUrl": "https://www.trabzoneczaciodasi.org.tr/nobetci-eczaneler/29"
     }

@@ -1,7 +1,7 @@
 {
   "city": "ankara",
   "cityDisplayName": "Ankara",
-  "updatedAt": "2026-09-16T08:28:46.971Z",
+  "updatedAt": "2026-09-17T08:35:33.829Z",
   "isStale": false,
   "pharmacies": [
     {
@@ -14,7 +14,7 @@
       "longitude": 32.817669510841,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.921869733785,32.817669510841"
     },
@@ -28,7 +28,7 @@
       "longitude": 32.805540561676,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.981323220513,32.805540561676"
     },
@@ -42,7 +42,7 @@
       "longitude": 32.779470831156,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.978897464859,32.779470831156"
     },
@@ -56,7 +56,7 @@
       "longitude": 32.885297387838,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.934850485194,32.885297387838"
     },
@@ -70,7 +70,7 @@
       "longitude": 32.900065295398,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.917627985058,32.900065295398"
     },
@@ -84,7 +84,7 @@
       "longitude": 32.92367041111,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.91537843507,32.92367041111"
     },
@@ -98,7 +98,7 @@
       "longitude": 32.858181595802,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.912505445546,32.858181595802"
     },
@@ -112,7 +112,7 @@
       "longitude": 32.849200218916,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.92336107185,32.849200218916"
     },
@@ -126,7 +126,7 @@
       "longitude": 32.857489585876,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.933704921334,32.857489585876"
     },
@@ -140,7 +140,7 @@
       "longitude": 32.85684511804,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.982946851254,32.85684511804"
     },
@@ -154,7 +154,7 @@
       "longitude": 32.835130691528,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.970698790828,32.835130691528"
     },
@@ -168,7 +168,7 @@
       "longitude": 32.943184592295,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.964638693759,32.943184592295"
     },
@@ -182,7 +182,7 @@
       "longitude": 32.880195948255,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.960703865505,32.880195948255"
     },
@@ -196,7 +196,7 @@
       "longitude": 32.873840332031,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.99420227831,32.873840332031"
     },
@@ -210,7 +210,7 @@
       "longitude": 32.85883379267,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=40.018402252893,32.85883379267"
     },
@@ -224,7 +224,7 @@
       "longitude": 32.845805883408,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.850490296883,32.845805883408"
     },
@@ -238,7 +238,7 @@
       "longitude": 32.835216522217,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.875426592904,32.835216522217"
     },
@@ -252,7 +252,7 @@
       "longitude": 32.59315520525,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.970723457697,32.59315520525"
     },
@@ -266,7 +266,7 @@
       "longitude": 32.556221187115,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.957404109259,32.556221187115"
     },
@@ -280,7 +280,7 @@
       "longitude": 32.65267342329,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.858394016588,32.65267342329"
     },
@@ -294,7 +294,7 @@
       "longitude": 32.712520211935,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.855993243437,32.712520211935"
     },
@@ -308,7 +308,7 @@
       "longitude": 32.724221348763,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.994333789592,32.724221348763"
     },
@@ -322,7 +322,7 @@
       "longitude": 32.717982530594,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.961842809822,32.717982530594"
     },
@@ -336,7 +336,7 @@
       "longitude": 32.584188580513,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.994502288052,32.584188580513"
     },
@@ -350,7 +350,7 @@
       "longitude": 32.168050318032,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.587603874107,32.168050318032"
     },
@@ -364,7 +364,7 @@
       "longitude": 32.89735579611,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=40.045191160202,32.89735579611"
     },
@@ -378,7 +378,7 @@
       "longitude": 32.895492464304,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=40.048147893448,32.895492464304"
     },
@@ -392,7 +392,7 @@
       "longitude": 33.455055579543,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.870072394501,33.455055579543"
     },
@@ -406,7 +406,7 @@
       "longitude": 32.599369883537,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.999774846887,32.599369883537"
     },
@@ -420,7 +420,7 @@
       "longitude": 32.532323664598,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=40.013293500468,32.532323664598"
     },
@@ -434,7 +434,7 @@
       "longitude": 32.612644135952,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.956604331281,32.612644135952"
     },
@@ -448,7 +448,7 @@
       "longitude": 32.640198469162,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.945048654595,32.640198469162"
     },
@@ -462,7 +462,7 @@
       "longitude": 32.638167965242,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.939995002803,32.638167965242"
     },
@@ -476,7 +476,7 @@
       "longitude": 33.50582242012,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.843941781938,33.50582242012"
     },
@@ -490,7 +490,7 @@
       "longitude": 33.490121066579,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.839898070948,33.490121066579"
     },
@@ -504,7 +504,7 @@
       "longitude": 32.673718035221,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=40.198711724363,32.673718035221"
     },
@@ -518,7 +518,7 @@
       "longitude": 32.619610410329,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.887092810069,32.619610410329"
     },
@@ -532,7 +532,7 @@
       "longitude": 31.930308938026,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=40.162255565118,31.930308938026"
     },
@@ -546,7 +546,7 @@
       "longitude": 31.343994140625,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=40.178873314347,31.343994140625"
     },
@@ -560,7 +560,7 @@
       "longitude": 32.829639387201,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.789746371821,32.829639387201"
     },
@@ -574,7 +574,7 @@
       "longitude": 33.547831177711,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=38.935725258573,33.547831177711"
     },
@@ -588,7 +588,7 @@
       "longitude": 32.244186401367,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=40.20877009282,32.244186401367"
     },
@@ -602,7 +602,7 @@
       "longitude": 33.031983375549,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=40.22966050719,33.031983375549"
     },
@@ -616,7 +616,7 @@
       "longitude": 32.495874166489,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.43555081365,32.495874166489"
     },
@@ -630,7 +630,7 @@
       "longitude": 32.8777074,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.8836521,32.8777074"
     },
@@ -644,7 +644,7 @@
       "longitude": 32.649907059968,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=40.473941852389,32.649907059968"
     },
@@ -658,7 +658,7 @@
       "longitude": 33.179740905762,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.99790093652,33.179740905762"
     },
@@ -672,7 +672,7 @@
       "longitude": 33.715695217252,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.916098977986,33.715695217252"
     },
@@ -686,7 +686,7 @@
       "longitude": 33.231246292526,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.918668904078,33.231246292526"
     },
@@ -700,7 +700,7 @@
       "longitude": 32.354539185762,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.726681681766,32.354539185762"
     },
@@ -714,7 +714,7 @@
       "longitude": 33.409390577835,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=40.111110189041,33.409390577835"
     },
@@ -728,7 +728,7 @@
       "longitude": 33.089060678612,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=40.138125125025,33.089060678612"
     },
@@ -742,7 +742,7 @@
       "longitude": 34.032409787178,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.943547507072,34.032409787178"
     },
@@ -756,7 +756,7 @@
       "longitude": 32.331390380859,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=40.012890779526,32.331390380859"
     },
@@ -770,7 +770,7 @@
       "longitude": 33.12433719635,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.551987767008,33.12433719635"
     },
@@ -784,7 +784,7 @@
       "longitude": 33.114105784334,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:46.971Z",
+      "lastVerifiedAt": "2026-09-17T08:35:33.829Z",
       "source": "Ankara Eczaci Odasi",
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=39.970676179525,33.114105784334"
     }

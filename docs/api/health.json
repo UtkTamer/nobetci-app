@@ -1,56 +1,51 @@
 {
-  "ok": false,
-  "checkedAt": "2026-09-17T08:35:19.479Z",
+  "ok": true,
+  "checkedAt": "2026-09-17T08:35:39.855Z",
   "cities": [
     {
       "city": "adana",
       "cityDisplayName": "Adana",
-      "lastRefreshedAt": null,
-      "pharmacyCount": 0,
-      "withCoordinates": 0,
-      "coordCoveragePct": 0,
-      "error": "Chamber source returned zero parsed pharmacies."
+      "lastRefreshedAt": "2026-09-17T08:35:32.826Z",
+      "pharmacyCount": 34,
+      "withCoordinates": 34,
+      "coordCoveragePct": 100
     },
     {
       "city": "adiyaman",
       "cityDisplayName": "Adıyaman",
-      "lastRefreshedAt": null,
-      "pharmacyCount": 0,
-      "withCoordinates": 0,
-      "coordCoveragePct": 0,
-      "error": "Chamber source returned zero parsed pharmacies."
+      "lastRefreshedAt": "2026-09-17T08:35:33.828Z",
+      "pharmacyCount": 9,
+      "withCoordinates": 9,
+      "coordCoveragePct": 100
     },
     {
       "city": "afyonkarahisar",
       "cityDisplayName": "Afyonkarahisar",
-      "lastRefreshedAt": null,
-      "pharmacyCount": 0,
-      "withCoordinates": 0,
-      "coordCoveragePct": 0,
-      "error": "Chamber source returned zero parsed pharmacies."
+      "lastRefreshedAt": "2026-09-17T08:35:33.828Z",
+      "pharmacyCount": 15,
+      "withCoordinates": 15,
+      "coordCoveragePct": 100
     },
     {
       "city": "agri",
       "cityDisplayName": "Ağrı",
-      "lastRefreshedAt": null,
-      "pharmacyCount": 0,
-      "withCoordinates": 0,
-      "coordCoveragePct": 0,
-      "error": "Chamber source returned zero parsed pharmacies."
+      "lastRefreshedAt": "2026-09-17T08:35:33.829Z",
+      "pharmacyCount": 9,
+      "withCoordinates": 9,
+      "coordCoveragePct": 100
     },
     {
       "city": "ankara",
       "cityDisplayName": "Ankara",
-      "lastRefreshedAt": null,
-      "pharmacyCount": 0,
-      "withCoordinates": 0,
-      "coordCoveragePct": 0,
-      "error": "Request failed with status code 403"
+      "lastRefreshedAt": "2026-09-17T08:35:33.829Z",
+      "pharmacyCount": 56,
+      "withCoordinates": 56,
+      "coordCoveragePct": 100
     },
     {
       "city": "antalya",
       "cityDisplayName": "Antalya",
-      "lastRefreshedAt": "2026-09-17T08:33:33.753Z",
+      "lastRefreshedAt": "2026-09-17T08:35:33.830Z",
       "pharmacyCount": 40,
       "withCoordinates": 40,
       "coordCoveragePct": 100
@@ -58,245 +53,218 @@
     {
       "city": "artvin",
       "cityDisplayName": "Artvin",
-      "lastRefreshedAt": null,
-      "pharmacyCount": 0,
-      "withCoordinates": 0,
-      "coordCoveragePct": 0,
-      "error": "Chamber source returned zero parsed pharmacies."
+      "lastRefreshedAt": "2026-09-17T08:35:34.830Z",
+      "pharmacyCount": 9,
+      "withCoordinates": 9,
+      "coordCoveragePct": 100
     },
     {
       "city": "balikesir",
       "cityDisplayName": "Balıkesir",
-      "lastRefreshedAt": null,
-      "pharmacyCount": 0,
-      "withCoordinates": 0,
-      "coordCoveragePct": 0,
-      "error": "Chamber source returned zero parsed pharmacies."
+      "lastRefreshedAt": "2026-09-17T08:35:34.830Z",
+      "pharmacyCount": 29,
+      "withCoordinates": 29,
+      "coordCoveragePct": 100
     },
     {
       "city": "bilecik",
       "cityDisplayName": "Bilecik",
-      "lastRefreshedAt": null,
-      "pharmacyCount": 0,
-      "withCoordinates": 0,
-      "coordCoveragePct": 0,
-      "error": "Chamber source returned zero parsed pharmacies."
+      "lastRefreshedAt": "2026-09-17T08:35:34.831Z",
+      "pharmacyCount": 6,
+      "withCoordinates": 6,
+      "coordCoveragePct": 100
     },
     {
       "city": "bingol",
       "cityDisplayName": "Bingöl",
-      "lastRefreshedAt": null,
-      "pharmacyCount": 0,
-      "withCoordinates": 0,
-      "coordCoveragePct": 0,
-      "error": "Chamber source returned zero parsed pharmacies."
+      "lastRefreshedAt": "2026-09-17T08:35:34.831Z",
+      "pharmacyCount": 5,
+      "withCoordinates": 5,
+      "coordCoveragePct": 100
     },
     {
       "city": "bitlis",
       "cityDisplayName": "Bitlis",
-      "lastRefreshedAt": null,
-      "pharmacyCount": 0,
-      "withCoordinates": 0,
-      "coordCoveragePct": 0,
-      "error": "Chamber source returned zero parsed pharmacies."
+      "lastRefreshedAt": "2026-09-17T08:35:34.831Z",
+      "pharmacyCount": 8,
+      "withCoordinates": 8,
+      "coordCoveragePct": 100
     },
     {
       "city": "bolu",
       "cityDisplayName": "Bolu",
-      "lastRefreshedAt": null,
-      "pharmacyCount": 0,
-      "withCoordinates": 0,
-      "coordCoveragePct": 0,
-      "error": "Chamber source returned zero parsed pharmacies."
+      "lastRefreshedAt": "2026-09-17T08:35:35.831Z",
+      "pharmacyCount": 7,
+      "withCoordinates": 7,
+      "coordCoveragePct": 100
     },
     {
       "city": "burdur",
       "cityDisplayName": "Burdur",
-      "lastRefreshedAt": null,
-      "pharmacyCount": 0,
-      "withCoordinates": 0,
-      "coordCoveragePct": 0,
-      "error": "Chamber source returned zero parsed pharmacies."
+      "lastRefreshedAt": "2026-09-17T08:35:35.832Z",
+      "pharmacyCount": 6,
+      "withCoordinates": 6,
+      "coordCoveragePct": 100
     },
     {
       "city": "bursa",
       "cityDisplayName": "Bursa",
-      "lastRefreshedAt": null,
-      "pharmacyCount": 0,
-      "withCoordinates": 0,
-      "coordCoveragePct": 0,
-      "error": "Chamber source returned zero parsed pharmacies."
+      "lastRefreshedAt": "2026-09-17T08:35:35.832Z",
+      "pharmacyCount": 34,
+      "withCoordinates": 34,
+      "coordCoveragePct": 100
     },
     {
       "city": "canakkale",
       "cityDisplayName": "Çanakkale",
-      "lastRefreshedAt": null,
-      "pharmacyCount": 0,
-      "withCoordinates": 0,
-      "coordCoveragePct": 0,
-      "error": "Chamber source returned zero parsed pharmacies."
+      "lastRefreshedAt": "2026-09-17T08:35:35.833Z",
+      "pharmacyCount": 17,
+      "withCoordinates": 17,
+      "coordCoveragePct": 100
     },
     {
       "city": "cankiri",
       "cityDisplayName": "Çankırı",
-      "lastRefreshedAt": null,
-      "pharmacyCount": 0,
-      "withCoordinates": 0,
-      "coordCoveragePct": 0,
-      "error": "Chamber source returned zero parsed pharmacies."
+      "lastRefreshedAt": "2026-09-17T08:35:35.833Z",
+      "pharmacyCount": 12,
+      "withCoordinates": 12,
+      "coordCoveragePct": 100
     },
     {
       "city": "corum",
       "cityDisplayName": "Çorum",
-      "lastRefreshedAt": null,
-      "pharmacyCount": 0,
-      "withCoordinates": 0,
-      "coordCoveragePct": 0,
-      "error": "Chamber source returned zero parsed pharmacies."
+      "lastRefreshedAt": "2026-09-17T08:35:36.833Z",
+      "pharmacyCount": 16,
+      "withCoordinates": 16,
+      "coordCoveragePct": 100
     },
     {
       "city": "diyarbakir",
       "cityDisplayName": "Diyarbakır",
-      "lastRefreshedAt": null,
-      "pharmacyCount": 0,
-      "withCoordinates": 0,
-      "coordCoveragePct": 0,
-      "error": "Chamber source returned zero parsed pharmacies."
+      "lastRefreshedAt": "2026-09-17T08:35:36.833Z",
+      "pharmacyCount": 14,
+      "withCoordinates": 14,
+      "coordCoveragePct": 100
     },
     {
       "city": "edirne",
       "cityDisplayName": "Edirne",
-      "lastRefreshedAt": null,
-      "pharmacyCount": 0,
-      "withCoordinates": 0,
-      "coordCoveragePct": 0,
-      "error": "Chamber source returned zero parsed pharmacies."
+      "lastRefreshedAt": "2026-09-17T08:35:36.833Z",
+      "pharmacyCount": 11,
+      "withCoordinates": 11,
+      "coordCoveragePct": 100
     },
     {
       "city": "elazig",
       "cityDisplayName": "Elazığ",
-      "lastRefreshedAt": null,
-      "pharmacyCount": 0,
-      "withCoordinates": 0,
-      "coordCoveragePct": 0,
-      "error": "Chamber source returned zero parsed pharmacies."
+      "lastRefreshedAt": "2026-09-17T08:35:36.834Z",
+      "pharmacyCount": 7,
+      "withCoordinates": 7,
+      "coordCoveragePct": 100
     },
     {
       "city": "erzincan",
       "cityDisplayName": "Erzincan",
-      "lastRefreshedAt": null,
-      "pharmacyCount": 0,
-      "withCoordinates": 0,
-      "coordCoveragePct": 0,
-      "error": "Chamber source returned zero parsed pharmacies."
+      "lastRefreshedAt": "2026-09-17T08:35:36.834Z",
+      "pharmacyCount": 7,
+      "withCoordinates": 7,
+      "coordCoveragePct": 100
     },
     {
       "city": "erzurum",
       "cityDisplayName": "Erzurum",
-      "lastRefreshedAt": null,
-      "pharmacyCount": 0,
-      "withCoordinates": 0,
-      "coordCoveragePct": 0,
-      "error": "Chamber source returned zero parsed pharmacies."
+      "lastRefreshedAt": "2026-09-17T08:35:37.835Z",
+      "pharmacyCount": 19,
+      "withCoordinates": 19,
+      "coordCoveragePct": 100
     },
     {
       "city": "eskisehir",
       "cityDisplayName": "Eskişehir",
-      "lastRefreshedAt": null,
-      "pharmacyCount": 0,
-      "withCoordinates": 0,
-      "coordCoveragePct": 0,
-      "error": "Chamber source returned zero parsed pharmacies."
+      "lastRefreshedAt": "2026-09-17T08:35:37.835Z",
+      "pharmacyCount": 14,
+      "withCoordinates": 14,
+      "coordCoveragePct": 100
     },
     {
       "city": "gumushane",
       "cityDisplayName": "Gümüşhane",
-      "lastRefreshedAt": null,
-      "pharmacyCount": 0,
-      "withCoordinates": 0,
-      "coordCoveragePct": 0,
-      "error": "Chamber source returned zero parsed pharmacies."
+      "lastRefreshedAt": "2026-09-17T08:35:37.836Z",
+      "pharmacyCount": 6,
+      "withCoordinates": 6,
+      "coordCoveragePct": 100
     },
     {
       "city": "hatay",
       "cityDisplayName": "Hatay",
-      "lastRefreshedAt": null,
-      "pharmacyCount": 0,
-      "withCoordinates": 0,
-      "coordCoveragePct": 0,
-      "error": "Chamber source returned zero parsed pharmacies."
+      "lastRefreshedAt": "2026-09-17T08:35:37.836Z",
+      "pharmacyCount": 25,
+      "withCoordinates": 25,
+      "coordCoveragePct": 100
     },
     {
       "city": "isparta",
       "cityDisplayName": "Isparta",
-      "lastRefreshedAt": null,
-      "pharmacyCount": 0,
-      "withCoordinates": 0,
-      "coordCoveragePct": 0,
-      "error": "Chamber source returned zero parsed pharmacies."
+      "lastRefreshedAt": "2026-09-17T08:35:37.837Z",
+      "pharmacyCount": 8,
+      "withCoordinates": 8,
+      "coordCoveragePct": 100
     },
     {
       "city": "izmir",
       "cityDisplayName": "İzmir",
-      "lastRefreshedAt": null,
-      "pharmacyCount": 0,
-      "withCoordinates": 0,
-      "coordCoveragePct": 0,
-      "error": "Chamber source returned zero parsed pharmacies."
+      "lastRefreshedAt": "2026-09-17T08:35:38.836Z",
+      "pharmacyCount": 72,
+      "withCoordinates": 72,
+      "coordCoveragePct": 100
     },
     {
       "city": "aksaray",
       "cityDisplayName": "Aksaray",
-      "lastRefreshedAt": null,
-      "pharmacyCount": 0,
-      "withCoordinates": 0,
-      "coordCoveragePct": 0,
-      "error": "Chamber source returned zero parsed pharmacies."
+      "lastRefreshedAt": "2026-09-17T08:35:38.837Z",
+      "pharmacyCount": 13,
+      "withCoordinates": 13,
+      "coordCoveragePct": 100
     },
     {
       "city": "bayburt",
       "cityDisplayName": "Bayburt",
-      "lastRefreshedAt": null,
-      "pharmacyCount": 0,
-      "withCoordinates": 0,
-      "coordCoveragePct": 0,
-      "error": "Chamber source returned zero parsed pharmacies."
+      "lastRefreshedAt": "2026-09-17T08:35:38.837Z",
+      "pharmacyCount": 2,
+      "withCoordinates": 2,
+      "coordCoveragePct": 100
     },
     {
       "city": "batman",
       "cityDisplayName": "Batman",
-      "lastRefreshedAt": null,
-      "pharmacyCount": 0,
-      "withCoordinates": 0,
-      "coordCoveragePct": 0,
-      "error": "Chamber source returned zero parsed pharmacies."
+      "lastRefreshedAt": "2026-09-17T08:35:38.838Z",
+      "pharmacyCount": 14,
+      "withCoordinates": 14,
+      "coordCoveragePct": 100
     },
     {
       "city": "igdir",
       "cityDisplayName": "Iğdır",
-      "lastRefreshedAt": null,
-      "pharmacyCount": 0,
-      "withCoordinates": 0,
-      "coordCoveragePct": 0,
-      "error": "Chamber source returned zero parsed pharmacies."
+      "lastRefreshedAt": "2026-09-17T08:35:38.838Z",
+      "pharmacyCount": 3,
+      "withCoordinates": 3,
+      "coordCoveragePct": 100
     },
     {
       "city": "karabuk",
       "cityDisplayName": "Karabük",
-      "lastRefreshedAt": null,
-      "pharmacyCount": 0,
-      "withCoordinates": 0,
-      "coordCoveragePct": 0,
-      "error": "Chamber source returned zero parsed pharmacies."
+      "lastRefreshedAt": "2026-09-17T08:35:39.839Z",
+      "pharmacyCount": 6,
+      "withCoordinates": 6,
+      "coordCoveragePct": 100
     },
     {
       "city": "duzce",
       "cityDisplayName": "Düzce",
-      "lastRefreshedAt": null,
-      "pharmacyCount": 0,
-      "withCoordinates": 0,
-      "coordCoveragePct": 0,
-      "error": "Chamber source returned zero parsed pharmacies."
+      "lastRefreshedAt": "2026-09-17T08:35:39.839Z",
+      "pharmacyCount": 10,
+      "withCoordinates": 10,
+      "coordCoveragePct": 100
     }
   ]
 }

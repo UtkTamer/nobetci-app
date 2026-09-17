@@ -1,7 +1,7 @@
 {
   "city": "bolu",
   "cityDisplayName": "Bolu",
-  "updatedAt": "2026-09-16T08:28:48.974Z",
+  "updatedAt": "2026-09-17T08:35:35.831Z",
   "isStale": false,
   "pharmacies": [
     {
@@ -14,7 +14,7 @@
       "longitude": 31.573172,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:48.974Z",
+      "lastVerifiedAt": "2026-09-17T08:35:35.831Z",
       "source": "seobit.org.tr",
       "sourceUrl": "https://seobit.org.tr/nobetci-eczaneler"
     },
@@ -28,7 +28,7 @@
       "longitude": 31.59132,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:48.974Z",
+      "lastVerifiedAt": "2026-09-17T08:35:35.831Z",
       "source": "seobit.org.tr",
       "sourceUrl": "https://seobit.org.tr/nobetci-eczaneler"
     },
@@ -42,7 +42,7 @@
       "longitude": 30.781362,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:48.974Z",
+      "lastVerifiedAt": "2026-09-17T08:35:35.831Z",
       "source": "seobit.org.tr",
       "sourceUrl": "https://seobit.org.tr/nobetci-eczaneler"
     },
@@ -56,7 +56,7 @@
       "longitude": 31.209643,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:48.974Z",
+      "lastVerifiedAt": "2026-09-17T08:35:35.831Z",
       "source": "seobit.org.tr",
       "sourceUrl": "https://seobit.org.tr/nobetci-eczaneler"
     },
@@ -70,7 +70,7 @@
       "longitude": 32.075371,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:48.974Z",
+      "lastVerifiedAt": "2026-09-17T08:35:35.831Z",
       "source": "seobit.org.tr",
       "sourceUrl": "https://seobit.org.tr/nobetci-eczaneler"
     },
@@ -84,7 +84,7 @@
       "longitude": 32.195351,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:48.974Z",
+      "lastVerifiedAt": "2026-09-17T08:35:35.831Z",
       "source": "seobit.org.tr",
       "sourceUrl": "https://seobit.org.tr/nobetci-eczaneler"
     },
@@ -98,7 +98,7 @@
       "longitude": 32.032257,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-16T08:28:48.974Z",
+      "lastVerifiedAt": "2026-09-17T08:35:35.831Z",
       "source": "seobit.org.tr",
       "sourceUrl": "https://seobit.org.tr/nobetci-eczaneler"
     }
