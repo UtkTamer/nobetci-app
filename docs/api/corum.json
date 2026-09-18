@@ -1,7 +1,7 @@
 {
   "city": "corum",
   "cityDisplayName": "Çorum",
-  "updatedAt": "2026-09-18T08:08:31.327Z",
+  "updatedAt": "2026-09-18T08:08:59.311Z",
   "isStale": false,
   "pharmacies": [
     {
@@ -14,7 +14,7 @@
       "longitude": 34.960658,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:31.327Z",
+      "lastVerifiedAt": "2026-09-18T08:08:59.311Z",
       "source": "corumeo.org.tr",
       "sourceUrl": "https://www.corumeo.org.tr/nobetci-eczaneler"
     },
@@ -28,7 +28,7 @@
       "longitude": 34.962978,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:31.327Z",
+      "lastVerifiedAt": "2026-09-18T08:08:59.311Z",
       "source": "corumeo.org.tr",
       "sourceUrl": "https://www.corumeo.org.tr/nobetci-eczaneler"
     },
@@ -42,7 +42,7 @@
       "longitude": 34.971352,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:31.327Z",
+      "lastVerifiedAt": "2026-09-18T08:08:59.311Z",
       "source": "corumeo.org.tr",
       "sourceUrl": "https://www.corumeo.org.tr/nobetci-eczaneler"
     },
@@ -56,7 +56,7 @@
       "longitude": 34.841966,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:31.327Z",
+      "lastVerifiedAt": "2026-09-18T08:08:59.311Z",
       "source": "corumeo.org.tr",
       "sourceUrl": "https://www.corumeo.org.tr/nobetci-eczaneler"
     },
@@ -70,7 +70,7 @@
       "longitude": 34.257872,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:31.327Z",
+      "lastVerifiedAt": "2026-09-18T08:08:59.311Z",
       "source": "corumeo.org.tr",
       "sourceUrl": "https://www.corumeo.org.tr/nobetci-eczaneler"
     },
@@ -84,7 +84,7 @@
       "longitude": 34.608311,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:31.327Z",
+      "lastVerifiedAt": "2026-09-18T08:08:59.311Z",
       "source": "corumeo.org.tr",
       "sourceUrl": "https://www.corumeo.org.tr/nobetci-eczaneler"
     },
@@ -98,7 +98,7 @@
       "longitude": 34.813001,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:31.327Z",
+      "lastVerifiedAt": "2026-09-18T08:08:59.311Z",
       "source": "corumeo.org.tr",
       "sourceUrl": "https://www.corumeo.org.tr/nobetci-eczaneler"
     },
@@ -112,7 +112,7 @@
       "longitude": 34.472593,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:31.327Z",
+      "lastVerifiedAt": "2026-09-18T08:08:59.311Z",
       "source": "corumeo.org.tr",
       "sourceUrl": "https://www.corumeo.org.tr/nobetci-eczaneler"
     },
@@ -126,7 +126,7 @@
       "longitude": 34.487147,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:31.327Z",
+      "lastVerifiedAt": "2026-09-18T08:08:59.311Z",
       "source": "corumeo.org.tr",
       "sourceUrl": "https://www.corumeo.org.tr/nobetci-eczaneler"
     },
@@ -140,7 +140,7 @@
       "longitude": 34.886135,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:31.327Z",
+      "lastVerifiedAt": "2026-09-18T08:08:59.311Z",
       "source": "corumeo.org.tr",
       "sourceUrl": "https://www.corumeo.org.tr/nobetci-eczaneler"
     },
@@ -154,7 +154,7 @@
       "longitude": 35.297295,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:31.327Z",
+      "lastVerifiedAt": "2026-09-18T08:08:59.311Z",
       "source": "corumeo.org.tr",
       "sourceUrl": "https://www.corumeo.org.tr/nobetci-eczaneler"
     },
@@ -168,7 +168,7 @@
       "longitude": 34.701991,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:31.327Z",
+      "lastVerifiedAt": "2026-09-18T08:08:59.311Z",
       "source": "corumeo.org.tr",
       "sourceUrl": "https://www.corumeo.org.tr/nobetci-eczaneler"
     },
@@ -182,7 +182,7 @@
       "longitude": 35.249687,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:31.327Z",
+      "lastVerifiedAt": "2026-09-18T08:08:59.311Z",
       "source": "corumeo.org.tr",
       "sourceUrl": "https://www.corumeo.org.tr/nobetci-eczaneler"
     },
@@ -196,7 +196,7 @@
       "longitude": 34.804667,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:31.327Z",
+      "lastVerifiedAt": "2026-09-18T08:08:59.311Z",
       "source": "corumeo.org.tr",
       "sourceUrl": "https://www.corumeo.org.tr/nobetci-eczaneler"
     },
@@ -210,7 +210,7 @@
       "longitude": 34.382798,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:31.327Z",
+      "lastVerifiedAt": "2026-09-18T08:08:59.311Z",
       "source": "corumeo.org.tr",
       "sourceUrl": "https://www.corumeo.org.tr/nobetci-eczaneler"
     },
@@ -224,7 +224,7 @@
       "longitude": 34.448454,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:31.327Z",
+      "lastVerifiedAt": "2026-09-18T08:08:59.311Z",
       "source": "corumeo.org.tr",
       "sourceUrl": "https://www.corumeo.org.tr/nobetci-eczaneler"
     }

@@ -1,7 +1,7 @@
 {
   "city": "bingol",
   "cityDisplayName": "Bingöl",
-  "updatedAt": "2026-09-18T08:08:27.898Z",
+  "updatedAt": "2026-09-18T08:08:57.308Z",
   "isStale": false,
   "pharmacies": [
     {
@@ -14,7 +14,7 @@
       "longitude": 40.493298,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:27.898Z",
+      "lastVerifiedAt": "2026-09-18T08:08:57.308Z",
       "source": "elazigeczaciodasi.org.tr",
       "sourceUrl": "https://www.elazigeczaciodasi.org.tr/nobetci-eczaneler/bingol"
     },
@@ -28,7 +28,7 @@
       "longitude": 40.503042,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:27.898Z",
+      "lastVerifiedAt": "2026-09-18T08:08:57.308Z",
       "source": "elazigeczaciodasi.org.tr",
       "sourceUrl": "https://www.elazigeczaciodasi.org.tr/nobetci-eczaneler/bingol"
     },
@@ -42,7 +42,7 @@
       "longitude": 40.559953,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:27.898Z",
+      "lastVerifiedAt": "2026-09-18T08:08:57.308Z",
       "source": "elazigeczaciodasi.org.tr",
       "sourceUrl": "https://www.elazigeczaciodasi.org.tr/nobetci-eczaneler/bingol"
     },
@@ -56,7 +56,7 @@
       "longitude": 41.012314,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:27.898Z",
+      "lastVerifiedAt": "2026-09-18T08:08:57.308Z",
       "source": "elazigeczaciodasi.org.tr",
       "sourceUrl": "https://www.elazigeczaciodasi.org.tr/nobetci-eczaneler/bingol"
     },
@@ -70,7 +70,7 @@
       "longitude": 41.055191,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:27.898Z",
+      "lastVerifiedAt": "2026-09-18T08:08:57.308Z",
       "source": "elazigeczaciodasi.org.tr",
       "sourceUrl": "https://www.elazigeczaciodasi.org.tr/nobetci-eczaneler/bingol"
     }

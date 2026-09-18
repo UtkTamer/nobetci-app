@@ -1,7 +1,7 @@
 {
   "city": "aksaray",
   "cityDisplayName": "Aksaray",
-  "updatedAt": "2026-09-18T08:08:35.334Z",
+  "updatedAt": "2026-09-18T08:09:01.315Z",
   "isStale": false,
   "pharmacies": [
     {
@@ -14,7 +14,7 @@
       "longitude": 34.026042,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:35.334Z",
+      "lastVerifiedAt": "2026-09-18T08:09:01.315Z",
       "source": "aksarayeo.org.tr",
       "sourceUrl": "https://www.aksarayeo.org.tr/nobetci-eczaneler"
     },
@@ -28,7 +28,7 @@
       "longitude": 34.035324,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:35.334Z",
+      "lastVerifiedAt": "2026-09-18T08:09:01.315Z",
       "source": "aksarayeo.org.tr",
       "sourceUrl": "https://www.aksarayeo.org.tr/nobetci-eczaneler"
     },
@@ -42,7 +42,7 @@
       "longitude": 34.007538,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:35.334Z",
+      "lastVerifiedAt": "2026-09-18T08:09:01.315Z",
       "source": "aksarayeo.org.tr",
       "sourceUrl": "https://www.aksarayeo.org.tr/nobetci-eczaneler"
     },
@@ -56,7 +56,7 @@
       "longitude": 33.915362,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:35.334Z",
+      "lastVerifiedAt": "2026-09-18T08:09:01.315Z",
       "source": "aksarayeo.org.tr",
       "sourceUrl": "https://www.aksarayeo.org.tr/nobetci-eczaneler"
     },
@@ -70,7 +70,7 @@
       "longitude": 33.412066,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:35.334Z",
+      "lastVerifiedAt": "2026-09-18T08:09:01.315Z",
       "source": "aksarayeo.org.tr",
       "sourceUrl": "https://www.aksarayeo.org.tr/nobetci-eczaneler"
     },
@@ -84,7 +84,7 @@
       "longitude": 34.346012,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:35.334Z",
+      "lastVerifiedAt": "2026-09-18T08:09:01.315Z",
       "source": "aksarayeo.org.tr",
       "sourceUrl": "https://www.aksarayeo.org.tr/nobetci-eczaneler"
     },
@@ -98,7 +98,7 @@
       "longitude": 34.369584,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:35.334Z",
+      "lastVerifiedAt": "2026-09-18T08:09:01.315Z",
       "source": "aksarayeo.org.tr",
       "sourceUrl": "https://www.aksarayeo.org.tr/nobetci-eczaneler"
     },
@@ -112,7 +112,7 @@
       "longitude": 34.07042,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:35.334Z",
+      "lastVerifiedAt": "2026-09-18T08:09:01.315Z",
       "source": "aksarayeo.org.tr",
       "sourceUrl": "https://www.aksarayeo.org.tr/nobetci-eczaneler"
     },
@@ -126,7 +126,7 @@
       "longitude": 33.542803,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:35.334Z",
+      "lastVerifiedAt": "2026-09-18T08:09:01.315Z",
       "source": "aksarayeo.org.tr",
       "sourceUrl": "https://www.aksarayeo.org.tr/nobetci-eczaneler"
     },
@@ -140,7 +140,7 @@
       "longitude": 34.163769,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:35.334Z",
+      "lastVerifiedAt": "2026-09-18T08:09:01.315Z",
       "source": "aksarayeo.org.tr",
       "sourceUrl": "https://www.aksarayeo.org.tr/nobetci-eczaneler"
     },
@@ -154,7 +154,7 @@
       "longitude": 34.164095,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:35.334Z",
+      "lastVerifiedAt": "2026-09-18T08:09:01.315Z",
       "source": "aksarayeo.org.tr",
       "sourceUrl": "https://www.aksarayeo.org.tr/nobetci-eczaneler"
     },
@@ -168,7 +168,7 @@
       "longitude": 33.724499,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:35.334Z",
+      "lastVerifiedAt": "2026-09-18T08:09:01.315Z",
       "source": "aksarayeo.org.tr",
       "sourceUrl": "https://www.aksarayeo.org.tr/nobetci-eczaneler"
     },
@@ -182,7 +182,7 @@
       "longitude": 34.377001,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-18T08:08:35.334Z",
+      "lastVerifiedAt": "2026-09-18T08:09:01.315Z",
       "source": "aksarayeo.org.tr",
       "sourceUrl": "https://www.aksarayeo.org.tr/nobetci-eczaneler"
     }
