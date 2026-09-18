@@ -1,20 +1,20 @@
 {
   "city": "bayburt",
   "cityDisplayName": "Bayburt",
-  "updatedAt": "2026-09-17T08:35:38.837Z",
+  "updatedAt": "2026-09-18T08:08:34.876Z",
   "isStale": false,
   "pharmacies": [
     {
-      "id": "767886ce23c3f25050bae69303bec333",
-      "name": "UZUNLAR ECZANESİ",
-      "address": "ŞEYHHAYRAN MAH. TÜRKİSTAN CAD. NO:22/G KEREM MANAVI KARŞISI",
+      "id": "1e741ff529a002eafc2de2679cb4b109",
+      "name": "VERASELİ MERKEZ ECZANESİ",
+      "address": "ŞEYHHAYRAN MAH.SEBAHATTİN SAVACI CAD.NO:19/B",
       "phoneNumber": "0442 316 97 05",
       "district": "MERKEZ",
-      "latitude": 40.258127,
-      "longitude": 40.224182,
+      "latitude": 40.259842,
+      "longitude": 40.226,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-17T08:35:38.837Z",
+      "lastVerifiedAt": "2026-09-18T08:08:34.876Z",
       "source": "erzurumeo.org.tr",
       "sourceUrl": "https://www.erzurumeo.org.tr/nobetci-eczaneler/69"
     },
@@ -28,7 +28,7 @@
       "longitude": 39.893822,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-17T08:35:38.837Z",
+      "lastVerifiedAt": "2026-09-18T08:08:34.876Z",
       "source": "erzurumeo.org.tr",
       "sourceUrl": "https://www.erzurumeo.org.tr/nobetci-eczaneler/69"
     }
