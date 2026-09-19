@@ -1,7 +1,7 @@
 {
   "city": "erzurum",
   "cityDisplayName": "Erzurum",
-  "updatedAt": "2026-09-19T07:57:43.702Z",
+  "updatedAt": "2026-09-19T07:58:18.206Z",
   "isStale": false,
   "pharmacies": [
     {
@@ -14,7 +14,7 @@
       "longitude": 41.239377,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:43.702Z",
+      "lastVerifiedAt": "2026-09-19T07:58:18.206Z",
       "source": "erzurumeo.org.tr",
       "sourceUrl": "https://www.erzurumeo.org.tr/nobetci-eczaneler/25"
     },
@@ -28,7 +28,7 @@
       "longitude": 41.260407,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:43.702Z",
+      "lastVerifiedAt": "2026-09-19T07:58:18.206Z",
       "source": "erzurumeo.org.tr",
       "sourceUrl": "https://www.erzurumeo.org.tr/nobetci-eczaneler/25"
     },
@@ -42,7 +42,7 @@
       "longitude": 41.274958,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:43.702Z",
+      "lastVerifiedAt": "2026-09-19T07:58:18.206Z",
       "source": "erzurumeo.org.tr",
       "sourceUrl": "https://www.erzurumeo.org.tr/nobetci-eczaneler/25"
     },
@@ -56,7 +56,7 @@
       "longitude": 41.266198,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:43.702Z",
+      "lastVerifiedAt": "2026-09-19T07:58:18.206Z",
       "source": "erzurumeo.org.tr",
       "sourceUrl": "https://www.erzurumeo.org.tr/nobetci-eczaneler/25"
     },
@@ -70,7 +70,7 @@
       "longitude": 41.191834,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:43.702Z",
+      "lastVerifiedAt": "2026-09-19T07:58:18.206Z",
       "source": "erzurumeo.org.tr",
       "sourceUrl": "https://www.erzurumeo.org.tr/nobetci-eczaneler/25"
     },
@@ -84,7 +84,7 @@
       "longitude": 41.111012,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:43.702Z",
+      "lastVerifiedAt": "2026-09-19T07:58:18.206Z",
       "source": "erzurumeo.org.tr",
       "sourceUrl": "https://www.erzurumeo.org.tr/nobetci-eczaneler/25"
     },
@@ -98,7 +98,7 @@
       "longitude": 41.697082,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:43.702Z",
+      "lastVerifiedAt": "2026-09-19T07:58:18.206Z",
       "source": "erzurumeo.org.tr",
       "sourceUrl": "https://www.erzurumeo.org.tr/nobetci-eczaneler/25"
     },
@@ -112,7 +112,7 @@
       "longitude": 42.169023,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:43.702Z",
+      "lastVerifiedAt": "2026-09-19T07:58:18.206Z",
       "source": "erzurumeo.org.tr",
       "sourceUrl": "https://www.erzurumeo.org.tr/nobetci-eczaneler/25"
     },
@@ -126,7 +126,7 @@
       "longitude": 41.002012,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:43.702Z",
+      "lastVerifiedAt": "2026-09-19T07:58:18.206Z",
       "source": "erzurumeo.org.tr",
       "sourceUrl": "https://www.erzurumeo.org.tr/nobetci-eczaneler/25"
     },
@@ -140,7 +140,7 @@
       "longitude": 42.112435,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:43.702Z",
+      "lastVerifiedAt": "2026-09-19T07:58:18.206Z",
       "source": "erzurumeo.org.tr",
       "sourceUrl": "https://www.erzurumeo.org.tr/nobetci-eczaneler/25"
     },
@@ -154,7 +154,7 @@
       "longitude": 42.143158,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:43.702Z",
+      "lastVerifiedAt": "2026-09-19T07:58:18.206Z",
       "source": "erzurumeo.org.tr",
       "sourceUrl": "https://www.erzurumeo.org.tr/nobetci-eczaneler/25"
     },
@@ -168,7 +168,7 @@
       "longitude": 41.866455,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:43.702Z",
+      "lastVerifiedAt": "2026-09-19T07:58:18.206Z",
       "source": "erzurumeo.org.tr",
       "sourceUrl": "https://www.erzurumeo.org.tr/nobetci-eczaneler/25"
     },
@@ -182,7 +182,7 @@
       "longitude": 41.988532,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:43.702Z",
+      "lastVerifiedAt": "2026-09-19T07:58:18.206Z",
       "source": "erzurumeo.org.tr",
       "sourceUrl": "https://www.erzurumeo.org.tr/nobetci-eczaneler/25"
     },
@@ -196,7 +196,7 @@
       "longitude": 40.688814,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:43.702Z",
+      "lastVerifiedAt": "2026-09-19T07:58:18.206Z",
       "source": "erzurumeo.org.tr",
       "sourceUrl": "https://www.erzurumeo.org.tr/nobetci-eczaneler/25"
     },
@@ -210,7 +210,7 @@
       "longitude": 41.675693,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:43.702Z",
+      "lastVerifiedAt": "2026-09-19T07:58:18.206Z",
       "source": "erzurumeo.org.tr",
       "sourceUrl": "https://www.erzurumeo.org.tr/nobetci-eczaneler/25"
     },
@@ -224,7 +224,7 @@
       "longitude": 41.506751,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:43.702Z",
+      "lastVerifiedAt": "2026-09-19T07:58:18.206Z",
       "source": "erzurumeo.org.tr",
       "sourceUrl": "https://www.erzurumeo.org.tr/nobetci-eczaneler/25"
     },
@@ -238,7 +238,7 @@
       "longitude": 41.549917,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:43.702Z",
+      "lastVerifiedAt": "2026-09-19T07:58:18.206Z",
       "source": "erzurumeo.org.tr",
       "sourceUrl": "https://www.erzurumeo.org.tr/nobetci-eczaneler/25"
     },
@@ -252,7 +252,7 @@
       "longitude": 41.545879,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:43.702Z",
+      "lastVerifiedAt": "2026-09-19T07:58:18.206Z",
       "source": "erzurumeo.org.tr",
       "sourceUrl": "https://www.erzurumeo.org.tr/nobetci-eczaneler/25"
     },
@@ -266,7 +266,7 @@
       "longitude": 40.978092,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:43.702Z",
+      "lastVerifiedAt": "2026-09-19T07:58:18.206Z",
       "source": "erzurumeo.org.tr",
       "sourceUrl": "https://www.erzurumeo.org.tr/nobetci-eczaneler/25"
     }

@@ -1,7 +1,7 @@
 {
   "city": "antalya",
   "cityDisplayName": "Antalya",
-  "updatedAt": "2026-09-19T07:57:36.270Z",
+  "updatedAt": "2026-09-19T07:58:14.200Z",
   "isStale": false,
   "pharmacies": [
     {
@@ -14,7 +14,7 @@
       "longitude": 30.6803039029,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -28,7 +28,7 @@
       "longitude": 30.6903390326,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -42,7 +42,7 @@
       "longitude": 30.725168958306313,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -56,7 +56,7 @@
       "longitude": 30.712464171,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -70,7 +70,7 @@
       "longitude": 30.7178654718,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -84,7 +84,7 @@
       "longitude": 30.7512850285,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -98,7 +98,7 @@
       "longitude": 30.79664861064938,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -112,7 +112,7 @@
       "longitude": 30.691013836,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -126,7 +126,7 @@
       "longitude": 30.745040103793144,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -140,7 +140,7 @@
       "longitude": 30.70906667,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -154,7 +154,7 @@
       "longitude": 30.7212454,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -168,7 +168,7 @@
       "longitude": 30.660546669013435,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -182,7 +182,7 @@
       "longitude": 30.6051868768,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -196,7 +196,7 @@
       "longitude": 30.632596537470818,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -210,7 +210,7 @@
       "longitude": 30.59739589691162,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -224,7 +224,7 @@
       "longitude": 30.849129259586334,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -238,7 +238,7 @@
       "longitude": 31.99434533715248,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -252,7 +252,7 @@
       "longitude": 31.9961353519,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -266,7 +266,7 @@
       "longitude": 32.03305900096893,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -280,7 +280,7 @@
       "longitude": 32.10120269334378,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -294,7 +294,7 @@
       "longitude": 31.868162155151367,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -308,7 +308,7 @@
       "longitude": 31.445823,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -322,7 +322,7 @@
       "longitude": 30.197376608848572,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -336,7 +336,7 @@
       "longitude": 29.921771585941315,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -350,7 +350,7 @@
       "longitude": 29.4135029171,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -364,7 +364,7 @@
       "longitude": 29.583939,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -378,7 +378,7 @@
       "longitude": 29.984957079202598,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -392,7 +392,7 @@
       "longitude": 30.148378014564514,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -406,7 +406,7 @@
       "longitude": 30.134147105971696,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -420,7 +420,7 @@
       "longitude": 30.213528624479277,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -434,7 +434,7 @@
       "longitude": 30.28696,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -448,7 +448,7 @@
       "longitude": 30.558528006076813,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -462,7 +462,7 @@
       "longitude": 30.579173,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -476,7 +476,7 @@
       "longitude": 31.09726309776306,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -490,7 +490,7 @@
       "longitude": 31.0570533093954,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -504,7 +504,7 @@
       "longitude": 32.31348242651291,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -518,7 +518,7 @@
       "longitude": 31.786279678344727,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     },
@@ -532,7 +532,7 @@
       "longitude": 30.735134,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:36.270Z",
+      "lastVerifiedAt": "2026-09-19T07:58:14.200Z",
       "source": "antalyaeo.org.tr",
       "sourceUrl": "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
     }

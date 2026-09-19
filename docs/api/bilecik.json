@@ -1,7 +1,7 @@
 {
   "city": "bilecik",
   "cityDisplayName": "Bilecik",
-  "updatedAt": "2026-09-19T07:57:37.404Z",
+  "updatedAt": "2026-09-19T07:58:15.201Z",
   "isStale": false,
   "pharmacies": [
     {
@@ -14,7 +14,7 @@
       "longitude": 29.979285,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:37.404Z",
+      "lastVerifiedAt": "2026-09-19T07:58:15.201Z",
       "source": "eskisehireo.org.tr",
       "sourceUrl": "https://www.eskisehireo.org.tr/bilecik-nobetci-eczaneler"
     },
@@ -28,7 +28,7 @@
       "longitude": 30.036101,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:37.404Z",
+      "lastVerifiedAt": "2026-09-19T07:58:15.201Z",
       "source": "eskisehireo.org.tr",
       "sourceUrl": "https://www.eskisehireo.org.tr/bilecik-nobetci-eczaneler"
     },
@@ -42,7 +42,7 @@
       "longitude": 30.314307,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:37.404Z",
+      "lastVerifiedAt": "2026-09-19T07:58:15.201Z",
       "source": "eskisehireo.org.tr",
       "sourceUrl": "https://www.eskisehireo.org.tr/bilecik-nobetci-eczaneler"
     },
@@ -56,7 +56,7 @@
       "longitude": 30.013634,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:37.404Z",
+      "lastVerifiedAt": "2026-09-19T07:58:15.201Z",
       "source": "eskisehireo.org.tr",
       "sourceUrl": "https://www.eskisehireo.org.tr/bilecik-nobetci-eczaneler"
     },
@@ -70,7 +70,7 @@
       "longitude": 29.90451,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:37.404Z",
+      "lastVerifiedAt": "2026-09-19T07:58:15.201Z",
       "source": "eskisehireo.org.tr",
       "sourceUrl": "https://www.eskisehireo.org.tr/bilecik-nobetci-eczaneler"
     },
@@ -84,7 +84,7 @@
       "longitude": 30.182809,
       "dutyStart": null,
       "dutyEnd": null,
-      "lastVerifiedAt": "2026-09-19T07:57:37.404Z",
+      "lastVerifiedAt": "2026-09-19T07:58:15.201Z",
       "source": "eskisehireo.org.tr",
       "sourceUrl": "https://www.eskisehireo.org.tr/bilecik-nobetci-eczaneler"
     }
